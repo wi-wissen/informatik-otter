@@ -9,7 +9,7 @@ const errors = [];
 const warn = [];
 const err = (id, msg) => errors.push(`${id}: ${msg}`);
 const shorts = new Map();
-const FORMATS = ['choice', 'sort-list', 'match', 'graph-pick', 'pixel-grid', 'command-sequence', 'input', 'custom'];
+const FORMATS = ['choice', 'sort-list', 'match', 'graph-pick', 'pixel-grid', 'command-sequence', 'input', 'place', 'hotspots', 'custom'];
 const RESERVED = new Set(['tasks', 'topics', 'teachers', 'solutions', '_astro', 'pagefind']);
 
 function walkStrings(v, fn) {

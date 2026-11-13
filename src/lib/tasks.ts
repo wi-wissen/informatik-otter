@@ -41,7 +41,7 @@ export const label = {
 
 export const formatLabel: Record<string, string> = {
   choice: 'Auswahl', 'sort-list': 'Reihenfolge', match: 'Zuordnen', 'graph-pick': 'Graph',
-  'pixel-grid': 'Raster', 'command-sequence': 'Befehle', input: 'Eingabe', custom: 'Interaktiv',
+  'pixel-grid': 'Raster', 'command-sequence': 'Befehle', input: 'Eingabe', place: 'Ablegen', hotspots: 'Klickpunkte', custom: 'Interaktiv',
 };
 
 /** "Klasse 3–4 (leicht), 5–6 (mittel)" */

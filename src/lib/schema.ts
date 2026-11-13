@@ -92,6 +92,30 @@ export const interaction = z.discriminatedUnion('format', [
     }),
   }),
   z.object({
+    format: z.literal('place'),
+    props: z.object({
+      items: z.array(item).min(1),
+      zones: z.array(z.object({ id: z.string(), label: z.string().optional(), x: z.number().optional(), y: z.number().optional(), w: z.number().optional(), h: z.number().optional(), capacity: z.number().int().min(1).optional() })).min(1),
+      background: z.string().optional(),
+      width: z.number().optional(),
+      height: z.number().optional(),
+      reusable: z.boolean().default(false),
+      trayLabel: z.string().optional(),
+      initial: z.record(z.string(), z.union([z.string(), z.array(z.string())])).optional(),
+    }),
+  }),
+  z.object({
+    format: z.literal('hotspots'),
+    props: z.object({
+      background: z.string(),
+      width: z.number(),
+      height: z.number(),
+      spots: z.array(z.object({ id: z.string(), x: z.number(), y: z.number(), w: z.number().optional(), h: z.number().optional(), label: z.string().optional() })).min(1),
+      states: z.array(z.object({ id: z.string(), label: z.string().optional(), image: z.string().optional() })).min(2),
+      spotSize: z.number().optional(),
+    }),
+  }),
+  z.object({
     format: z.literal('custom'),
     props: z.record(z.string(), z.unknown()).default({}),
   }),

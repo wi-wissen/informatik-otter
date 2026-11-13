@@ -1,5 +1,5 @@
 ---
-answer: { anna: s4, bert: s1, carl: s3, dora: s2, ella: s5 }
+answer: { s1: bert, s2: dora, s3: carl, s4: anna, s5: ella }
 ---
 Das folgende Bild zeigt die Wege der fünf Kinder.
 

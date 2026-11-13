@@ -15,6 +15,8 @@ Paths in `props` that start with `./` are files in the task folder (usually `./i
 | `pixel-grid` | colour cells in a grid (index 0 = empty colour; wide grids scroll sideways) | `rows`, `cols`, `palette: ["#fff", "#000"]`, `initial?: [[0,1],...]`, `locked?` | `answer: [[0,1,0],[1,1,0]]` (palette indices) |
 | `command-sequence` | build a program from command buttons | `commands: [{id, label?, image?}]`, `maxLength?` | `answer: [up, up, right]` |
 | `input` | type a number or a word | `kind: number\|text`, `placeholder?`, `prefix?`, `suffix?`, `caseSensitive?` | `answer: "42"` (compared trimmed, case-insensitive unless `caseSensitive`) |
+| `place` | drag things onto fields (also tap-tap) | `items: [...]`, `zones: [{id, label?, x?, y?, w?, h?, capacity?}]`, `background?`, `width`, `height` (coordinates of the picture), `reusable?` (items can be used several times, e.g. arrows), `initial?` | `answer: { zone: item }`; zones with `capacity` > 1: `{ zone: [items] }` (sorted); empty zones are left out |
+| `hotspots` | click places on a picture that switch between states (e.g. ? → rechts → links) | `background`, `width`, `height`, `spots: [{id, x, y, w?, h?, label?}]`, `states: [{id, label?, image?}]` (first state = untouched) | `answer: { spot: state }` for every spot not in the first state |
 | `custom` | anything else | free | free; `Task.vue` in the task folder must `emit('answer', value)` |
 
 Several correct answers: use `answers: [[a, b], [b, a]]` instead of `answer`.

@@ -8,6 +8,8 @@ import GraphPick from './formats/GraphPick.vue';
 import PixelGrid from './formats/PixelGrid.vue';
 import CommandSequence from './formats/CommandSequence.vue';
 import Input from './formats/Input.vue';
+import Place from './formats/Place.vue';
+import Hotspots from './formats/Hotspots.vue';
 import { isCorrect } from '../lib/answer';
 
 const props = defineProps<{ taskId: string; format: string; props: Record<string, unknown>; solutionUrl: string }>();
@@ -15,7 +17,7 @@ const props = defineProps<{ taskId: string; format: string; props: Record<string
 const customs = import.meta.glob('../content/tasks/*/Task.vue');
 const formats: Record<string, unknown> = {
   choice: Choice, 'sort-list': SortList, match: Match, 'graph-pick': GraphPick,
-  'pixel-grid': PixelGrid, 'command-sequence': CommandSequence, input: Input,
+  'pixel-grid': PixelGrid, 'command-sequence': CommandSequence, input: Input, place: Place, hotspots: Hotspots,
 };
 const component = computed(() => {
   if (props.format !== 'custom') return formats[props.format];

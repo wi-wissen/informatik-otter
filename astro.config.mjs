@@ -7,4 +7,6 @@ export default defineConfig({
   integrations: [vue()],
   trailingSlash: 'ignore',
   build: { format: 'directory' },
+  // per checkout, so parallel worktrees sharing node_modules do not share a content cache
+  cacheDir: './.astro-cache',
 });
