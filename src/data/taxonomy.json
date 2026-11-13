@@ -91,6 +91,7 @@
     "binary-numbers": { "label": "Binärzahlen", "topic": "encoding" },
     "run-length-encoding": { "label": "Lauflängenkodierung", "topic": "compression" },
     "huffman": { "label": "Huffman-Kodierung", "topic": "compression" },
+    "prefix-code": { "label": "Präfixcode", "topic": "compression" },
     "parity-bit": { "label": "Paritätsbit", "topic": "error-detection" },
     "hamming-code": { "label": "Hamming-Code", "topic": "error-detection" },
     "checksum": { "label": "Prüfsumme", "topic": "error-detection" },
