@@ -25,12 +25,8 @@ const single = [
         <legend>Klassenstufe</legend>
         <div class="chips">{Object.keys(taxonomy.grades).map((g) => <button type="button" class="chip outline" data-value={g} aria-pressed="false">{g}</button>)}</div>
       </fieldset>
-      <fieldset data-facet="gi" data-mode="one">
-        <legend>GI-Inhaltsbereich</legend>
-        <div class="stack">{gis.map((g) => <button type="button" class="chip outline wide" data-value={g} aria-pressed="false">{label.giContent(g)}</button>)}</div>
-      </fieldset>
       <fieldset data-facet="topics" data-mode="all">
-        <legend>Thema</legend>
+        <legend>Thema nach GI-Inhaltsbereich</legend>
         {topicsByGi.map((grp) => (
           <div class="group" data-gi-group={grp.gi}>
             <span class="sub">{label.giContent(grp.gi)}</span>
@@ -41,12 +37,14 @@ const single = [
       </fieldset>
       <details class="more">
         <summary>Weitere Filter</summary>
+        <div class="more-body">
         {single.map((f) => (
           <fieldset data-facet={f.key} data-mode="one">
             <legend>{f.title}</legend>
             <div class="chips">{f.options.map(([v, l]) => <button type="button" class="chip outline" data-value={v} aria-pressed="false">{l}</button>)}</div>
           </fieldset>
         ))}
+        </div>
       </details>
     </aside>
     <section class="results">
@@ -65,7 +63,7 @@ const single = [
   const cards = [...document.querySelectorAll<HTMLElement>('.task-card')];
   const q = document.getElementById('q') as HTMLInputElement;
   const params = new URLSearchParams(location.search);
-  const paramName: Record<string, string> = { grades: 'grade', topics: 'topic', gi: 'gi', format: 'format', source: 'source' };
+  const paramName: Record<string, string> = { grades: 'grade', topics: 'topic', format: 'format', source: 'source' };
   const state: Record<string, Set<string>> = {};
   const sets = document.querySelectorAll<HTMLFieldSetElement>('[data-facet]');
 
@@ -80,17 +78,9 @@ const single = [
       apply();
     }));
   });
-  // a topic in the URL implies its GI area for the topic list
   q.value = params.get('q') ?? '';
 
   function apply() {
-    const gi = [...state.gi][0];
-    // show only topics of the chosen GI area; drop chosen topics outside it
-    document.querySelectorAll<HTMLElement>('[data-gi-group]').forEach((g) => {
-      const visible = !gi || g.dataset.giGroup === gi;
-      g.hidden = !visible;
-      if (!visible) g.querySelectorAll<HTMLButtonElement>('button').forEach((b) => state.topics.delete(b.dataset.value!));
-    });
     sets.forEach((fs) => fs.querySelectorAll<HTMLButtonElement>('button').forEach((b) =>
       b.setAttribute('aria-pressed', String(state[fs.dataset.facet!].has(b.dataset.value!)))));
 
@@ -100,7 +90,7 @@ const single = [
       const has = (key: string) => (c.dataset[key] ?? '').split(' ');
       let ok = !text || c.dataset.text!.includes(text);
       if (ok && state.topics.size) ok = [...state.topics].every((t) => has('topics').includes(t));
-      for (const key of ['grades', 'gi', 'format', 'source']) {
+      for (const key of ['grades', 'format', 'source']) {
         if (ok && state[key].size) ok = [...state[key]].some((v) => has(key).includes(v));
       }
       c.hidden = !ok;
@@ -143,11 +133,12 @@ const single = [
   .chip:disabled { opacity: .4; cursor: default; }
   .chip:disabled:hover { background: transparent; color: var(--ink); }
   .group[hidden] { display: none; }
-  .group + .group { margin-top: 6px; }
+  .group + .group { margin-top: 10px; }
+  .sub { font-weight: 700; color: var(--ink); }
   .sub { font-size: .8rem; color: var(--muted); }
   .note { font-size: .78rem; color: var(--muted); }
   .more summary { cursor: pointer; font-weight: 700; font-size: .9rem; color: var(--primary); }
-  .more[open] { display: grid; gap: 14px; }
+  .more-body { display: grid; gap: 18px; margin-top: 14px; }
   .results { display: grid; gap: 16px; align-content: start; min-width: 0; }
   .head { display: grid; gap: 10px; }
   h1 { font-size: 2rem; }
