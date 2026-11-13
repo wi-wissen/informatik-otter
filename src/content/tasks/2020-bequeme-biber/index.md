@@ -1,0 +1,37 @@
+---
+short: S6Lc
+title: Bequeme Biber
+summary: Beim Wechsel der Tageszeit sollen die Biber im Rathaus nur eine Flagge umstecken müssen. Wie müssen die Flaggen angeordnet sein?
+grades:
+  "7-8": easy
+gi:
+  content: [information-data]
+  process: [modelling, reasoning]
+topics: [encoding, error-detection]
+methods: [binary-numbers]
+mascot: beaver
+interaction:
+  format: pixel-grid
+  props:
+    rows: 8
+    cols: 3
+    palette: ["#e53935", "#1a237e"]
+    initial: [[1, 1, 1], [0, 1, 1], [0, 0, 1], [1, 0, 1], [1, 0, 0], [1, 1, 0], [0, 1, 0], [0, 0, 0]]
+source:
+  type: original
+  work: Informatik-Biber 2020
+  year: 2020
+  page: 11
+  url: https://bwinf.de/fileadmin/wettbewerbe/biber/2020/Biberheft_2020_final_mit_Loesungen.pdf
+  country: CH
+  license: CC BY-SA 4.0
+---
+In einem Dorf leben sehr bequeme Biber. Sie teilen den Tag in nur 8 Zeitabschnitte zu je 3 Stunden ein. Am Rathaus zeigen drei Flaggen den aktuellen Zeitabschnitt an. Es gibt zwei Arten von Flaggen: rotes Quadrat und blaues Dreieck.
+
+![Eine Uhr mit acht Zeitabschnitten, zu jedem gehört ein Rathaus mit drei Flaggen](./img/wheel.png)
+
+Die Flaggenanzeige ist so aber noch nicht bequem genug. Die Biber wünschen sich: Immer wenn ein neuer Zeitabschnitt beginnt, soll nur eine Flagge gewechselt werden. Das gilt auch beim Wechsel von einem Tag zum nächsten, also um Mitternacht.
+
+Im Gitter steht jede Zeile für einen Zeitabschnitt, beginnend mit 0–3 Uhr (im Bild rechts oben) und dann im Uhrzeigersinn weiter bis 21–24 Uhr. Jede Spalte ist eine der drei Flaggen (von links nach rechts). Rot steht für das rote Quadrat, Blau für das blaue Dreieck.
+
+**Ändere die Flaggenanzeige so, wie die Biber wünschen.**
