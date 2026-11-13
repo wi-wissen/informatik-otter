@@ -391,6 +391,22 @@
     "deque": {
       "label": "Deque (Warteschlange mit zwei Enden)",
       "topic": "data-structures"
+    },
+    "pledge-algorithm": {
+      "label": "Pledge-Algorithmus",
+      "topic": "graphs"
+    },
+    "cellular-automaton": {
+      "label": "Zellulärer Automat",
+      "topic": "automata"
+    },
+    "syntax-diagram": {
+      "label": "Syntaxdiagramm",
+      "topic": "formal-languages"
+    },
+    "aggregate": {
+      "label": "Aggregat (zusammengesetzte Datenstruktur)",
+      "topic": "data-structures"
     }
   }
 }
