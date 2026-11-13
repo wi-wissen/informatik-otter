@@ -1,0 +1,42 @@
+---
+// Short link + QR code for the board. QR is rendered at build time.
+import QRCode from 'qrcode';
+import { SITE } from '../lib/tasks';
+interface Props { short: string }
+const { short } = Astro.props;
+const url = `${SITE}/${short}`;
+const svg = await QRCode.toString(url, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#10313a', light: '#ffffff' } });
+const host = new URL(SITE).host;
+---
+<section class="share" aria-label="Teilen">
+  <h2>Teilen</h2>
+  <p class="link"><span class="host">{host}/</span><b>{short}</b></p>
+  <div class="row">
+    <button type="button" class="btn small" data-copy={url}>Link kopieren</button>
+    <details>
+      <summary class="btn secondary small">QR-Code</summary>
+      <div class="qr" set:html={svg} />
+    </details>
+  </div>
+</section>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) => {
+    b.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(b.dataset.copy!); b.textContent = 'Kopiert!'; }
+      catch { b.textContent = b.dataset.copy!; }
+      setTimeout(() => (b.textContent = 'Link kopieren'), 2000);
+    });
+  });
+</script>
+<style>
+  .share { display: grid; gap: 10px; }
+  h2 { font-size: 1.1rem; }
+  .link { font: 500 1rem var(--font-mono); overflow-wrap: anywhere; }
+  .link .host { color: var(--muted); }
+  .link b { color: var(--primary); font-size: 1.3rem; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: start; }
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  .qr { margin-top: 10px; width: 200px; background: #fff; border-radius: 10px; padding: 8px; }
+  .qr :global(svg) { width: 100%; height: auto; display: block; }
+</style>

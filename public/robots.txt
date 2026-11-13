@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /solutions/
+Disallow: /teachers/llms-full.txt
+
+Sitemap: https://informatik-otter.wi7.net/sitemap.txt

@@ -1,0 +1,28 @@
+---
+import { label, formatLabel, gradeRange, type TaskEntry } from '../lib/tasks';
+interface Props { task: TaskEntry }
+const { task } = Astro.props;
+const d = task.data;
+const hardest = Object.values(d.grades).includes('hard') ? 3 : Object.values(d.grades).includes('medium') ? 2 : 1;
+---
+<a class="card task-card" href={`/tasks/${task.id}/`}
+   data-grades={Object.keys(d.grades).join(' ')} data-topics={d.topics.join(' ')} data-gi={d.gi.content.join(' ')}
+   data-format={d.interaction.format} data-source={d.source.type}
+   data-text={`${d.title} ${d.summary} ${d.topics.map(label.topic).join(' ')}`.toLowerCase()}>
+  <div class="top"><span>{d.source.year ?? ''}{d.source.type === 'synthetic' ? ' · Otter' : ''}</span><span class="stars" aria-label={`Schwierigkeit ${hardest} von 3`}>{'★'.repeat(hardest)}<span class="off">{'★'.repeat(3 - hardest)}</span></span></div>
+  <h3>{d.title}</h3>
+  <p class="muted">{d.summary}</p>
+  <div class="chips">
+    {d.topics.slice(0, 2).map((t) => <span class="chip">{label.topic(t)}</span>)}
+    <span class="chip sun">{gradeRange(d.grades)}</span>
+    <span class="chip outline">{formatLabel[d.interaction.format]}</span>
+    {d.source.type === 'synthetic' && <span class="chip otter">Otter</span>}
+  </div>
+</a>
+<style>
+  .top { display: flex; justify-content: space-between; font: 500 .75rem var(--font-mono); color: var(--muted); }
+  .stars { color: var(--sun); letter-spacing: 1px; }
+  .stars .off { opacity: .3; }
+  h3 { font-size: 1.12rem; }
+  p { font-size: .92rem; }
+</style>

@@ -1,0 +1,81 @@
+---
+// Four boxes for a short code. Navigates to /<code> when it exists, otherwise explains and suggests.
+interface Props { value?: string; button?: string; id?: string }
+const { value = '', button = '→', id = 'code' } = Astro.props;
+const chars = [...value].slice(0, 4);
+---
+<div class="code-input" data-code-input>
+  <form class="form" autocomplete="off">
+    <div class="boxes" role="group" aria-label="Code, vier Zeichen">
+      {[0, 1, 2, 3].map((i) => (
+        <input id={`${id}-${i}`} maxlength="2" spellcheck="false" autocapitalize="off" autocorrect="off" aria-label={`Zeichen ${i + 1}`} value={chars[i] ?? ''} />
+      ))}
+    </div>
+    <button class="go" type="submit" aria-label="Los">{button}</button>
+  </form>
+  <p class="msg" aria-live="polite"><slot>Genau so eintippen, wie er dasteht. Groß und klein ist ein Unterschied.</slot></p>
+</div>
+<script>
+  import { ALPHABET, LOOKALIKE, suggest, type Codes } from '../lib/shortcode';
+  let codes: Codes | null = null;
+  const load = async () => (codes ??= await fetch('/short-codes.json').then((r) => r.json()));
+
+  document.querySelectorAll<HTMLElement>('[data-code-input]').forEach((root) => {
+    const boxes = [...root.querySelectorAll<HTMLInputElement>('input')];
+    const msg = root.querySelector<HTMLElement>('.msg')!;
+    const put = (i: number, c: string) => {
+      const v = LOOKALIKE[c] ?? c;
+      boxes[i].value = v;
+      boxes[i].classList.toggle('bad', !!v && !ALPHABET.includes(v));
+    };
+    const fill = (text: string, start: number) => {
+      let i = start;
+      for (const c of text.replace(/\s/g, '').replace(/^.*\//, '')) { if (i > 3) break; put(i++, c); }
+      return i;
+    };
+    boxes.forEach((b, i) => {
+      b.addEventListener('input', () => {
+        const v = b.value; b.value = '';
+        if (!v) return;
+        const next = fill(v, i);
+        boxes[Math.min(next, 3)].focus();
+      });
+      b.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !b.value && i > 0) { e.preventDefault(); boxes[i - 1].value = ''; boxes[i - 1].focus(); }
+        if (e.key === 'ArrowLeft' && i > 0) boxes[i - 1].focus();
+        if (e.key === 'ArrowRight' && i < 3) boxes[i + 1].focus();
+      });
+      b.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const next = fill(e.clipboardData?.getData('text') ?? '', 0);
+        boxes[Math.max(0, Math.min(next, 4) - 1)].focus();
+      });
+      b.addEventListener('focus', () => b.select());
+    });
+    root.querySelector('form')!.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const code = boxes.map((b) => b.value).join('');
+      const bad = [...code].filter((c) => !ALPHABET.includes(c));
+      if (bad.length) { msg.innerHTML = `<span class="err">„${bad.join(' ')}“ kommt in Codes nicht vor.</span>`; return; }
+      if (code.length < 4) { msg.innerHTML = `<span class="err">Es fehlen noch ${4 - code.length} Zeichen.</span>`; return; }
+      const all = await load();
+      if (all[code]) { location.href = `/${code}/`; return; }
+      const near = suggest(all, code);
+      msg.innerHTML = near.length
+        ? `<span class="err">Diesen Code gibt es nicht.</span> Meintest du ${near.map((k) => `<a href="/${k}/">${k}</a> (${all[k].title})`).join(' oder ')}?`
+        : `<span class="err">Diesen Code gibt es nicht.</span> Schau noch mal genau hin.`;
+    });
+  });
+</script>
+<style>
+  .code-input { display: grid; gap: 8px; }
+  .form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .boxes { display: flex; gap: 6px; }
+  input { width: 48px; height: 56px; text-align: center; font: 700 1.55rem var(--font-mono); color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; caret-color: var(--primary); padding: 0; }
+  input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px var(--primary-soft); }
+  input.bad { border-color: var(--bad); box-shadow: 0 0 0 4px var(--bad-soft); }
+  .go { height: 56px; min-width: 56px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #3b2a00; font: 700 1.2rem var(--font-display); cursor: pointer; box-shadow: 0 3px 0 color-mix(in srgb, var(--sun) 60%, #000); }
+  .msg { font-size: .92rem; color: var(--muted); }
+  .msg :global(.err) { color: var(--bad); font-weight: 700; }
+  .msg :global(a) { font-family: var(--font-mono); font-weight: 700; }
+</style>

@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import TaskCard from '../../components/TaskCard.astro';
+import { getTasks, label, formatLabel } from '../../lib/tasks';
+import taxonomy from '../../data/taxonomy.json';
+
+const tasks = await getTasks();
+const used = (pick: (t: (typeof tasks)[number]) => string[]) => new Set(tasks.flatMap(pick));
+const topics = Object.keys(taxonomy.topics).filter((k) => used((t) => t.data.topics).has(k));
+const gis = Object.keys(taxonomy.giContent).filter((k) => used((t) => t.data.gi.content).has(k));
+const formats = Object.keys(formatLabel).filter((k) => used((t) => [t.data.interaction.format]).has(k));
+const facets = [
+  { key: 'grades', title: 'Klassenstufe', options: Object.keys(taxonomy.grades).map((k) => [k, k]) },
+  { key: 'topics', title: 'Thema', options: topics.map((k) => [k, label.topic(k)]) },
+  { key: 'gi', title: 'GI-Inhaltsbereich', options: gis.map((k) => [k, label.giContent(k)]) },
+  { key: 'format', title: 'Format', options: formats.map((k) => [k, formatLabel[k]]) },
+  { key: 'source', title: 'Quelle', options: [['original', 'Informatik-Biber'], ['synthetic', 'Otter-Varianten']] },
+];
+---
+<Base title="Aufgaben" description="Alle Knobelaufgaben, filterbar nach Klasse, Thema und GI-Bildungsstandards.">
+  <div class="in catalog">
+    <aside class="facets" aria-label="Filter">
+      {facets.map((f) => (
+        <fieldset data-facet={f.key}>
+          <legend>{f.title}</legend>
+          <div class="chips">{f.options.map(([v, l]) => <button type="button" class="chip outline" data-value={v} aria-pressed="false">{l}</button>)}</div>
+        </fieldset>
+      ))}
+    </aside>
+    <section class="results">
+      <div class="head">
+        <h1>Aufgaben</h1>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="q" type="search" placeholder="Suchen, z. B. Geheimschrift" aria-label="Aufgaben durchsuchen" /></label>
+        <p class="count muted" aria-live="polite"><span id="count">{tasks.length}</span> von {tasks.length} Aufgaben · <button type="button" id="reset" class="linkish">Filter zurücksetzen</button></p>
+      </div>
+      <div class="grid" id="grid">{tasks.map((t) => <TaskCard task={t} />)}</div>
+      <p id="empty" class="muted" hidden>Keine Aufgabe passt. Lockere die Filter.</p>
+    </section>
+  </div>
+</Base>
+<script>
+  const cards = [...document.querySelectorAll<HTMLElement>('.task-card')];
+  const state: Record<string, Set<string>> = {};
+  const q = document.getElementById('q') as HTMLInputElement;
+  const params = new URLSearchParams(location.search);
+  document.querySelectorAll<HTMLFieldSetElement>('[data-facet]').forEach((fs) => {
+    const key = fs.dataset.facet!;
+    state[key] = new Set(params.getAll(key === 'topics' ? 'topic' : key));
+    fs.querySelectorAll<HTMLButtonElement>('button').forEach((b) => {
+      b.setAttribute('aria-pressed', String(state[key].has(b.dataset.value!)));
+      b.addEventListener('click', () => {
+        const v = b.dataset.value!;
+        state[key].has(v) ? state[key].delete(v) : state[key].add(v);
+        b.setAttribute('aria-pressed', String(state[key].has(v)));
+        apply();
+      });
+    });
+  });
+  q.value = params.get('q') ?? '';
+  function apply() {
+    const text = q.value.trim().toLowerCase();
+    let n = 0;
+    for (const c of cards) {
+      let ok = !text || c.dataset.text!.includes(text);
+      for (const [key, set] of Object.entries(state)) {
+        if (!ok || set.size === 0) continue;
+        const vals = (c.dataset[key] ?? '').split(' ');
+        ok = vals.some((v) => set.has(v));
+      }
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('count')!.textContent = String(n);
+    document.getElementById('empty')!.hidden = n > 0;
+  }
+  q.addEventListener('input', apply);
+  document.getElementById('reset')!.addEventListener('click', () => {
+    Object.values(state).forEach((s) => s.clear());
+    document.querySelectorAll('[data-facet] button').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    q.value = ''; apply();
+  });
+  apply();
+</script>
+<style>
+  .catalog { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 28px; padding-block: 20px 0; }
+  .facets { display: grid; gap: 16px; align-content: start; }
+  fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 8px; }
+  legend { font: 700 .75rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .chip[aria-pressed="true"] { background: var(--primary); color: var(--primary-ink); border-color: var(--primary); }
+  .results { display: grid; gap: 16px; align-content: start; min-width: 0; }
+  .head { display: grid; gap: 10px; }
+  h1 { font-size: 2rem; }
+  .search { display: flex; align-items: center; gap: 8px; border: 2px solid var(--line); border-radius: 999px; padding: 9px 16px; background: var(--surface); }
+  .search:focus-within { border-color: var(--primary); }
+  .search input { border: 0; background: transparent; font: inherit; color: var(--ink); flex: 1; min-width: 0; outline: none; }
+  .count { font-size: .9rem; }
+  .linkish { background: none; border: 0; padding: 0; color: var(--primary); text-decoration: underline; cursor: pointer; font: inherit; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+  .grid :global([hidden]) { display: none; }
+  @media (max-width: 760px) { .catalog { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import TaskView from '../../components/TaskView.astro';
+import ShareBox from '../../components/ShareBox.astro';
+import { getTasks, label, formatLabel, gradeText, sourceNote } from '../../lib/tasks';
+
+export async function getStaticPaths() {
+  return (await getTasks()).map((task) => ({ params: { id: task.id }, props: { task } }));
+}
+const { task } = Astro.props;
+const d = task.data;
+---
+<Base title={d.title} description={d.summary} footerSource={sourceNote(task)}>
+  <div class="in layout">
+    <div class="main"><TaskView task={task} /></div>
+    <aside>
+      <dl class="meta">
+        <dt>Klassen</dt><dd>{Object.entries(d.grades).map(([g, diff]) => <span class="chip sun">{g}: {label.difficulty(diff)}</span>)}</dd>
+        <dt>Themen</dt><dd>{d.topics.map((t) => <a class="chip" href={`/tasks/?topic=${t}`}>{label.topic(t)}</a>)}</dd>
+        <dt>GI-Inhaltsbereich</dt><dd>{d.gi.content.map((c) => <span class="chip outline">{label.giContent(c)}</span>)}</dd>
+        {d.gi.process.length > 0 && <><dt>GI-Prozessbereich</dt><dd>{d.gi.process.map((p) => <span class="chip outline">{label.giProcess(p)}</span>)}</dd></>}
+        <dt>Format</dt><dd><span class="chip outline">{formatLabel[d.interaction.format]}</span></dd>
+        <dt>Quelle</dt><dd class="src">
+          {d.source.type === 'synthetic' ? <span class="chip otter">Otter-Variante</span> : null}
+          {d.source.url ? <a href={d.source.url} rel="noopener">{d.source.work}</a> : d.source.work}{d.source.page && `, S. ${d.source.page}`}
+          {d.source.bebras_id && <span class="muted"> · Bebras {d.source.bebras_id}</span>}
+          <span class="muted"> · {d.source.license}</span>
+        </dd>
+      </dl>
+      <ShareBox short={d.short} />
+    </aside>
+  </div>
+</Base>
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 32px; padding-block: 20px 0; align-items: start; }
+  aside { display: grid; gap: 22px; position: sticky; top: 16px; }
+  .meta { margin: 0; display: grid; gap: 6px; }
+  dt { font: 700 .75rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+  dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .src { display: block; font-size: .9rem; }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } aside { position: static; } }
+</style>

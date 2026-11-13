@@ -1,0 +1,103 @@
+---
+// GitHub Pages serves this for every unknown path. If the path looks like a short code, help fix it.
+import Base from '../layouts/Base.astro';
+import Otter from '../components/Otter.astro';
+import ShortCodeInput from '../components/ShortCodeInput.astro';
+---
+<Base title="Nicht gefunden" variant="focus" noindex>
+  <div class="in narrow nf">
+    <div class="head">
+      <Otter size={110} />
+      <div><h1 id="nf-title">Hier ist nichts.</h1><p class="muted" id="nf-sub">Vielleicht hat sich beim Abtippen ein Fehler eingeschlichen.</p></div>
+    </div>
+    <div id="nf-code" hidden>
+      <p class="label">Du hast eingegeben</p>
+      <div class="term" id="nf-term"></div>
+      <p class="legend"><span><i class="fx"></i>ersetzt</span><span><i class="bd"></i>gibt es nicht</span><span><i class="ms"></i>fehlt oder zu viel</span></p>
+      <ul class="checks" id="nf-checks"></ul>
+      <div id="nf-sugs"></div>
+    </div>
+    <div class="fix card">
+      <p class="label" id="nf-fix-label">Code korrigieren</p>
+      <ShortCodeInput id="nf" button="Nochmal" />
+    </div>
+    <p class="muted more"><a href="/">Zur Startseite</a></p>
+  </div>
+</Base>
+<script>
+  import { analyse, suggest, type Codes } from '../lib/shortcode';
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const path = decodeURIComponent(location.pathname.replace(/^\/+|\/+$/g, ''));
+  const looksLikeCode = /^[^/.]{1,8}$/.test(path);
+  if (!looksLikeCode) {
+    document.getElementById('nf-title')!.textContent = 'Diese Seite gibt es nicht.';
+    document.getElementById('nf-sub')!.textContent = `Unter /${path} haben wir nichts gefunden.`;
+    document.getElementById('nf-fix-label')!.textContent = 'Hast du einen Code?';
+  } else {
+    const a = analyse(path);
+    const codes: Codes = await fetch('/short-codes.json').then((r) => r.json()).catch(() => ({}));
+    const exact = a.chars.every((c) => c.kind !== 'bad') && codes[a.normalized];
+    if (exact && a.normalized !== path) location.replace(`/${a.normalized}/`);
+    document.getElementById('nf-code')!.hidden = false;
+    let term = `<span class="host">${location.host}/</span>`;
+    a.chars.forEach((c, i) => {
+      const cls = i >= 4 ? 'extra' : c.kind === 'fixed' ? 'fixed' : c.kind === 'bad' ? 'bad' : '';
+      term += `<span class="ch ${cls}">${esc(c.c)}</span>`;
+    });
+    for (let i = a.chars.length; i < 4; i++) term += '<span class="ch miss">_</span>';
+    document.getElementById('nf-term')!.innerHTML = term + '<span class="cur"></span>';
+    const checks: [string, string][] = [];
+    const n = a.chars.length;
+    checks.push(n === 4 ? ['y', '4 Zeichen'] : ['n', n < 4 ? `Nur ${n} Zeichen. Ein Code hat 4.` : `${n} Zeichen. Ein Code hat nur 4.`]);
+    const bad = a.chars.filter((c) => c.kind === 'bad');
+    checks.push(bad.length ? ['n', `Diese Zeichen gibt es in Codes nicht: <code>${esc(bad.map((c) => c.c).join(' '))}</code>`] : ['y', 'Nur erlaubte Zeichen']);
+    a.chars.filter((c) => c.kind === 'fixed').forEach((c) => checks.push(['f', `<code>${esc(c.c)}</code> kommt in Codes nicht vor, wir haben <code>${c.n}</code> gelesen.`]));
+    const sugs = bad.length ? [] : suggest(codes, a.normalized);
+    if (sugs.some((s) => s.toLowerCase() === a.normalized.toLowerCase())) checks.push(['f', 'Groß und klein ist ein Unterschied.']);
+    if (n === 4 && !bad.length) checks.push(['n', 'Diesen Code gibt es nicht.']);
+    document.getElementById('nf-checks')!.innerHTML = checks
+      .map(([k, t]) => `<li><span class="ic ${k}">${k === 'y' ? '✓' : k === 'n' ? '✗' : '!'}</span><span>${t}</span></li>`).join('');
+    if (sugs.length) {
+      document.getElementById('nf-sugs')!.innerHTML = `<p class="label">Meintest du</p>` + sugs.map((s) => {
+        const marked = [...s].map((ch, i) => (ch !== a.normalized[i] ? `<span class="diff">${ch}</span>` : ch)).join('');
+        return `<a class="sug" href="/${s}/"><b>${marked}</b><span>${esc(codes[s].title)}</span><span aria-hidden="true">→</span></a>`;
+      }).join('');
+    }
+    // prefill the boxes with what was typed
+    const boxes = document.querySelectorAll<HTMLInputElement>('.fix input');
+    [...a.normalized].slice(0, 4).forEach((c, i) => { if (boxes[i]) boxes[i].value = c; });
+  }
+</script>
+<style>
+  .nf { display: grid; gap: 20px; padding-block: 16px 0; }
+  .head { display: grid; grid-template-columns: 110px 1fr; gap: 20px; align-items: center; }
+  h1 { font-size: clamp(2rem, 5.5vw, 2.8rem); }
+  .label { font: 700 .8rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  #nf-code { display: grid; gap: 10px; }
+  #nf-code[hidden] { display: none; }
+  .term { background: var(--term-bg); color: var(--term-ink); border-radius: var(--radius); padding: 16px 18px; font: 500 clamp(1rem, 3.6vw, 1.35rem)/1.4 var(--font-mono); overflow-x: auto; white-space: nowrap; }
+  .term :global(.host) { color: var(--term-dim); }
+  .term :global(.ch) { display: inline-block; padding: 0 1px; border-radius: 4px; }
+  .term :global(.fixed) { background: var(--sun); color: #3b2a00; }
+  .term :global(.bad) { background: var(--bad); color: #fff; }
+  .term :global(.extra) { color: var(--term-dim); text-decoration: line-through; }
+  .term :global(.miss) { color: var(--term-dim); }
+  .term :global(.cur) { display: inline-block; width: .55em; height: 1.1em; background: var(--primary); vertical-align: text-bottom; margin-left: 2px; animation: blink 1s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .82rem; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 5px; }
+  .fx { background: var(--sun); } .bd { background: var(--bad); } .ms { background: var(--term-dim); }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .checks :global(li) { display: grid; grid-template-columns: 26px 1fr; gap: 8px; }
+  .checks :global(.ic) { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 700 .8rem var(--font-body); }
+  .checks :global(.y) { background: var(--primary-soft); color: var(--primary); }
+  .checks :global(.n) { background: var(--bad-soft); color: var(--bad); }
+  .checks :global(.f) { background: var(--sun-soft); color: var(--sun-ink); }
+  #nf-sugs :global(.sug) { display: flex; gap: 12px; align-items: center; justify-content: space-between; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 12px 16px; color: var(--ink); text-decoration: none; margin-bottom: 8px; }
+  #nf-sugs :global(.sug:hover) { border-color: var(--primary); }
+  #nf-sugs :global(.sug b) { font: 700 1.2rem var(--font-mono); color: var(--primary); }
+  #nf-sugs :global(.sug span:nth-child(2)) { flex: 1; }
+  #nf-sugs :global(.diff) { background: var(--sun-soft); border-radius: 3px; }
+  .fix { padding: 18px; }
+  @media (max-width: 520px) { .head { grid-template-columns: 70px 1fr; } .head :global(svg) { width: 70px; height: 70px; } }
+</style>

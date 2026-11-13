@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTasks, label } from '../../lib/tasks';
+import taxonomy from '../../data/taxonomy.json';
+const tasks = await getTasks();
+const byGi = Object.entries(taxonomy.giContent).map(([gi, giLabel]) => ({
+  gi, giLabel,
+  topics: Object.entries(taxonomy.topics).filter(([, t]) => t.gi === gi)
+    .map(([k, t]) => ({ k, label: t.label, n: tasks.filter((x) => x.data.topics.includes(k)).length }))
+    .filter((t) => t.n > 0),
+})).filter((g) => g.topics.length > 0);
+---
+<Base title="Themen" description="Aufgaben nach Themen und GI-Inhaltsbereichen.">
+  <div class="in page">
+    <h1>Themen</h1>
+    <p class="muted">Geordnet nach den Inhaltsbereichen der GI-Bildungsstandards.</p>
+    {byGi.map((g) => (
+      <section>
+        <h2>{g.giLabel}</h2>
+        <div class="grid">{g.topics.map((t) => <a class="card topic" href={`/tasks/?topic=${t.k}`}><b>{t.label}</b><span class="muted">{t.n} {t.n === 1 ? 'Aufgabe' : 'Aufgaben'}</span></a>)}</div>
+      </section>
+    ))}
+  </div>
+</Base>
+<style>
+  .page { display: grid; gap: 22px; padding-block: 20px 0; }
+  h1 { font-size: 2.4rem; }
+  section { display: grid; gap: 12px; }
+  h2 { font-size: 1.3rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .topic b { font-family: var(--font-display); font-size: 1.1rem; }
+</style>

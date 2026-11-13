@@ -1,0 +1,67 @@
+---
+import '@fontsource/fredoka/500.css';
+import '@fontsource/fredoka/600.css';
+import '@fontsource/fredoka/700.css';
+import '@fontsource/atkinson-hyperlegible/400.css';
+import '@fontsource/atkinson-hyperlegible/700.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '@fontsource/jetbrains-mono/700.css';
+import '../styles/global.css';
+import Otter from '../components/Otter.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** focus = short-link view: no navigation, logo not linked */
+  variant?: 'full' | 'focus';
+  noindex?: boolean;
+  footerSource?: string;
+}
+const { title, description = 'Knobelaufgaben, in denen Informatik steckt. Aus dem Informatik-Biber, verortet nach GI-Bildungsstandards.', variant = 'full', noindex = false, footerSource } = Astro.props;
+const fullTitle = title === 'Informatik-Otter' ? title : `${title} · Informatik-Otter`;
+const path = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+  <meta name="theme-color" content="#0a6f7d" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="in">
+      {variant === 'full'
+        ? <a class="wordmark" href="/" aria-label="Informatik-Otter Startseite"><Otter size={40} /><span>Informatik-<b>Otter</b></span></a>
+        : <span class="wordmark"><Otter size={34} /><span>Informatik-<b>Otter</b></span></span>}
+      {variant === 'full' && (
+        <nav aria-label="Hauptnavigation">
+          <a href="/tasks/" aria-current={path.startsWith('/tasks') ? 'page' : undefined}>Aufgaben</a>
+          <a href="/topics/" aria-current={path.startsWith('/topics') ? 'page' : undefined}>Themen</a>
+          <a href="/teachers/" aria-current={path.startsWith('/teachers') ? 'page' : undefined}>Für Lehrer:innen</a>
+        </nav>
+      )}
+    </div>
+  </header>
+  <main><slot /></main>
+  <SiteFooter source={footerSource} />
+</body>
+</html>
+<style>
+  .site-header .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; font: 700 1.25rem var(--font-display); color: var(--ink); text-decoration: none; }
+  .wordmark b { color: var(--primary); font-weight: 700; }
+  nav { display: flex; gap: 18px; font-weight: 700; font-size: .95rem; flex-wrap: wrap; }
+  nav a { color: var(--ink); text-decoration: none; }
+  nav a:hover, nav a[aria-current="page"] { color: var(--primary); }
+  @media (max-width: 600px) {
+    .site-header .in { flex-wrap: wrap; }
+    nav { gap: 14px; font-size: .9rem; }
+  }
+</style>

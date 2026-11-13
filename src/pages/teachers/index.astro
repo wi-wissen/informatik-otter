@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTasks } from '../../lib/tasks';
+const tasks = await getTasks();
+---
+<Base title="Für Lehrer:innen" description="Knobelaufgaben aus dem Informatik-Biber im Unterricht einsetzen: Kurzlinks, QR-Codes, Verortung nach GI-Bildungsstandards, Lehrer:innen-Modus." noindex>
+  <div class="in narrow page">
+    <h1>Für Lehrer:innen</h1>
+    <p class="lead">Der Informatik-Otter sammelt die {tasks.length} Aufgaben aus dem Informatik-Biber, sortiert nach Klassenstufe, Thema und den Bildungsstandards der Gesellschaft für Informatik (GI). Alle Aufgaben stehen unter freier Lizenz.</p>
+
+    <section class="card">
+      <h2>Im Unterricht</h2>
+      <ol>
+        <li>Aufgabe im <a href="/tasks/">Katalog</a> auswählen.</li>
+        <li>Unter <b>Teilen</b> den Kurzlink oder den QR-Code an die Tafel bringen, z. B. <code>informatik-otter.wi7.net/r7Kq</code>.</li>
+        <li>Die Klasse sieht nur die Aufgabe, ohne Navigation und ohne Lösung. Wer den Code falsch abtippt, bekommt Hilfe beim Korrigieren.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Verortung</h2>
+      <p>Jede Aufgabe hat einen <b>GI-Inhaltsbereich</b> (z. B. Algorithmen), ein oder mehrere <b>Themen</b> (z. B. Sortieren) und, wo es passt, das konkrete <b>Verfahren</b> dahinter (z. B. Dijkstra, Binärsuche). Das Verfahren steht im Hintergrund zur Lösung.</p>
+    </section>
+
+    <section class="card mode" id="mode">
+      <h2>Lehrer:innen-Modus</h2>
+      <p>Im Lehrer:innen-Modus stehen unter jeder Aufgabe zwei zusätzliche Knöpfe: <b>Prüfen</b> sagt, ob die eingestellte Antwort stimmt, <b>Hintergrund</b> zeigt Lösung, Verfahren und „Das ist Informatik!“. Sonst sieht alles aus wie für die Klasse. Der Modus gilt nur in diesem Browser.</p>
+      <p class="state" id="state" role="status">Modus ist aus.</p>
+      <button type="button" class="btn teacher" id="toggle">Lehrer:innen-Modus einschalten</button>
+    </section>
+
+    <section class="card">
+      <h2>Für KI und eigene Varianten</h2>
+      <p>Alle Aufgaben gibt es auch als Text für Sprachmodelle: <a href="/llms.txt">/llms.txt</a> (Übersicht) und <a href="/llms-full.txt">/llms-full.txt</a> (alle Aufgaben). Eigene, neu geschriebene Varianten erscheinen mit dem Otter und stehen unter CC BY-SA 4.0. Mitmachen geht über <a href="https://github.com/wi-wissen/informatik-otter" rel="noopener">GitHub</a>.</p>
+    </section>
+  </div>
+</Base>
+<script>
+  const KEY = 'informatik-otter:teacher';
+  const state = document.getElementById('state')!;
+  const btn = document.getElementById('toggle')!;
+  const read = () => { try { return localStorage.getItem(KEY) === '1'; } catch { return false; } };
+  function show() {
+    const on = read();
+    state.textContent = on ? 'Modus ist an (in diesem Browser).' : 'Modus ist aus.';
+    state.classList.toggle('on', on);
+    btn.textContent = on ? 'Lehrer:innen-Modus ausschalten' : 'Lehrer:innen-Modus einschalten';
+  }
+  btn.addEventListener('click', () => {
+    try { read() ? localStorage.removeItem(KEY) : localStorage.setItem(KEY, '1'); } catch { state.textContent = 'Dein Browser erlaubt keinen lokalen Speicher.'; return; }
+    show();
+  });
+  show();
+</script>
+<style>
+  .page { display: grid; gap: 18px; padding-block: 20px 0; }
+  h1 { font-size: 2.4rem; }
+  .lead { font-size: 1.1rem; color: var(--muted); }
+  .card { padding: 22px; gap: 12px; }
+  .card h2 { font-size: 1.35rem; }
+  ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+  .mode { border: 2px solid var(--teacher-soft); }
+  .mode .btn { justify-self: start; }
+  .state { font: 700 .9rem var(--font-mono); padding: 8px 12px; border-radius: 10px; background: var(--sunk); color: var(--muted); justify-self: start; }
+  .state.on { background: var(--teacher-soft); color: var(--teacher); }
+</style>

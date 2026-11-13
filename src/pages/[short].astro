@@ -1,0 +1,15 @@
+---
+// Short link /<code>: the task without navigation, for students.
+import Base from '../layouts/Base.astro';
+import TaskView from '../components/TaskView.astro';
+import { getTasks, sourceNote } from '../lib/tasks';
+
+export async function getStaticPaths() {
+  return (await getTasks()).map((task) => ({ params: { short: task.data.short }, props: { task } }));
+}
+const { task } = Astro.props;
+---
+<Base title={task.data.title} description={task.data.summary} variant="focus" noindex footerSource={sourceNote(task)}>
+  <div class="in narrow focus"><TaskView task={task} /></div>
+</Base>
+<style>.focus { padding-block: 16px 0; }</style>

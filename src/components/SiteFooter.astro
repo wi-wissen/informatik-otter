@@ -1,0 +1,22 @@
+---
+// Footer: left = where the content comes from, right = contact, privacy, imprint (external pages).
+interface Props { source?: string }
+const { source = 'Aufgaben: Informatik-Biber (BWINF) · eigene Varianten mit Otter' } = Astro.props;
+---
+<footer class="site-footer">
+  <div class="in">
+    <span class="src"><slot>{source}</slot></span>
+    <nav aria-label="Rechtliches">
+      <a href="https://juliandorn.de/contact.php" rel="noopener">Kontakt</a>
+      <a href="https://juliandorn.de/datenschutz.html" rel="noopener">Datenschutz</a>
+      <a href="https://juliandorn.de/impressum.html" rel="noopener">Impressum</a>
+    </nav>
+  </div>
+</footer>
+<style>
+  .site-footer { border-top: 1px solid var(--line); margin-top: 40px; }
+  .in { display: flex; justify-content: space-between; gap: 10px 24px; flex-wrap: wrap; padding-block: 18px; font-size: .85rem; color: var(--muted); }
+  nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  a { color: var(--muted); }
+  a:hover { color: var(--primary); }
+</style>

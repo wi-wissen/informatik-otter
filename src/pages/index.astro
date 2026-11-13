@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import Otter from '../components/Otter.astro';
+import ShortCodeInput from '../components/ShortCodeInput.astro';
+import TaskCard from '../components/TaskCard.astro';
+import { getTasks, label } from '../lib/tasks';
+
+const tasks = await getTasks();
+const topicCount = new Map<string, number>();
+tasks.forEach((t) => t.data.topics.forEach((k) => topicCount.set(k, (topicCount.get(k) ?? 0) + 1)));
+const topTopics = [...topicCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([k]) => k);
+// Taster: one task per topic, up to three
+const seen = new Set<string>();
+const taster = tasks.filter((t) => !seen.has(t.data.topics[0]) && seen.add(t.data.topics[0])).slice(0, 3);
+const years = tasks.map((t) => t.data.source.year).filter(Boolean) as number[];
+---
+<Base title="Informatik-Otter">
+  <section class="hero">
+    <div class="in">
+      <div>
+        <h1>Knobelaufgaben, in denen <span class="hl">Informatik</span> steckt</h1>
+        <p class="lead">Sortieren, verschlüsseln, Wege finden, Regeln knacken: kleine Rätsel, bei denen du wie in der Informatik denkst. Ganz ohne Programmieren.</p>
+        <div class="facts">
+          <span class="fact"><b>{tasks.length}</b> Aufgaben</span>
+          <span class="fact"><b>3–13</b> Klasse</span>
+          <span class="fact"><b>{topicCount.size}</b> Themen</span>
+          <span class="fact">aus dem <b>Informatik-Biber</b>{years.length > 0 && (Math.min(...years) === Math.max(...years) ? ` ${Math.min(...years)}` : ` ${Math.min(...years)}–${Math.max(...years)}`)}</span>
+        </div>
+      </div>
+      <Otter class="hero-otter" size="100%" label="Otter taucht aus einem Teich auf und hält einen gelben Kiesel" />
+    </div>
+  </section>
+
+  <section class="codeband" aria-label="Code eingeben">
+    <div class="in">
+      <h2>Code bekommen?</h2>
+      <ShortCodeInput id="home-code" />
+    </div>
+  </section>
+
+  <section class="ways">
+    <div class="in">
+      <div class="card way">
+        <span class="for">Für alle</span>
+        <h2>Selbst knobeln</h2>
+        <p class="muted">Such dir eine Aufgabe nach Thema oder Klasse aus und probier dich daran.</p>
+        <form class="search" action="/tasks/" method="get"><span aria-hidden="true">⌕</span><input name="q" type="search" placeholder="Was willst du knobeln? z. B. Geheimschrift" aria-label="Aufgaben durchsuchen" /></form>
+        <div class="chips">{topTopics.map((k) => <a class="chip" href={`/tasks/?topic=${k}`}>{label.topic(k)}</a>)}</div>
+        <a class="btn" href="/tasks/">Alle Aufgaben →</a>
+      </div>
+      <div class="card way">
+        <span class="for">Für Lehrer:innen</span>
+        <h2>Im Unterricht einsetzen</h2>
+        <ul class="feats">
+          <li><span class="ic">QR</span><span><b>Kurzlink pro Aufgabe</b><span class="t">Code oder QR-Code an die Tafel, die Klasse landet direkt bei der Aufgabe.</span></span></li>
+          <li><span class="ic">GI</span><span><b>Nach Bildungsstandards verortet</b><span class="t">Inhaltsbereich, Thema und Verfahren, z. B. Dijkstra oder Binärsuche.</span></span></li>
+          <li><span class="ic">✓</span><span><b>Lehrer:innen-Modus</b><span class="t">Antworten prüfen und Hintergrund zur Lösung einblenden.</span></span></li>
+        </ul>
+        <a class="btn secondary" href="/teachers/">So funktioniert's →</a>
+      </div>
+    </div>
+  </section>
+
+  {taster.length > 0 && (
+    <section class="taste">
+      <div class="in">
+        <h2>Zum Reinschnuppern</h2>
+        <div class="cards">{taster.map((t) => <TaskCard task={t} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="origin">
+    <div class="in">
+      <div class="origin-box">
+        <span class="pebble" aria-hidden="true"></span>
+        <p><b>Woher kommen die Aufgaben?</b> Aus dem Wettbewerb <a href="https://bwinf.de/informatik-biber/" rel="noopener">Informatik-Biber</a> der Bundesweiten Informatikwettbewerbe, unter freier Lizenz. Eigene Varianten erkennst du am Otter. Der Informatik-Otter ist ein <a href="https://github.com/wi-wissen/informatik-otter" rel="noopener">offenes</a>, nicht kommerzielles Projekt.</p>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero .in { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: center; padding-block: 28px 40px; }
+  .hero h1 { font-size: clamp(2.3rem, 6.4vw, 3.9rem); letter-spacing: -.01em; }
+  .hl { color: var(--primary); }
+  .lead { font-size: 1.2rem; color: var(--muted); max-width: 46ch; margin-top: 14px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .fact { display: inline-flex; align-items: baseline; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 14px; font-size: .92rem; }
+  .fact b { font-family: var(--font-display); font-size: 1.1rem; }
+  .hero :global(.hero-otter) { width: 100%; height: auto; }
+  @media (max-width: 760px) { .hero .in { grid-template-columns: 1fr; } .hero :global(.hero-otter) { max-width: 170px; justify-self: center; order: -1; } }
+
+  .codeband { background: var(--surface); border-block: 1px solid var(--line); }
+  .codeband .in { display: flex; align-items: center; gap: 14px 24px; flex-wrap: wrap; padding-block: 18px; }
+  .codeband h2 { font-size: 1.3rem; white-space: nowrap; }
+  .codeband :global(.code-input) { display: flex; align-items: center; gap: 10px 20px; flex-wrap: wrap; flex: 1; }
+
+  .ways .in { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding-block: 36px; }
+  @media (max-width: 760px) { .ways .in { grid-template-columns: 1fr; } }
+  .way { padding: 24px; gap: 14px; }
+  .for { font: 700 .78rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .way h2 { font-size: 1.6rem; }
+  .way .btn { justify-self: start; }
+  .search { display: flex; align-items: center; gap: 8px; border: 2px solid var(--line); border-radius: 999px; padding: 10px 16px; background: var(--bg); margin: 0; }
+  .search:focus-within { border-color: var(--primary); }
+  .search input { border: 0; background: transparent; font: inherit; color: var(--ink); flex: 1; min-width: 0; outline: none; }
+  .feats { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .feats li { display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+  .ic { width: 34px; height: 34px; border-radius: 10px; background: var(--sun-soft); display: grid; place-items: center; font: 700 .95rem var(--font-display); }
+  .feats b { display: block; }
+  .t { color: var(--muted); font-size: .93rem; }
+
+  .taste .in { display: grid; gap: 16px; padding-block: 0 40px; }
+  .taste h2 { font-size: 1.5rem; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+
+  .origin-box { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; border: 2px dashed var(--line); border-radius: var(--radius); padding: 16px 20px; }
+  .pebble { width: 40px; height: 40px; border-radius: 50%; background: var(--sun); box-shadow: inset -6px -6px 0 color-mix(in srgb, var(--sun) 70%, #000); }
+  .origin-box p { font-size: .95rem; color: var(--muted); }
+  .origin-box b { color: var(--ink); }
+</style>

@@ -1,0 +1,27 @@
+---
+// Solution page, fetched by TaskPlayer in teacher mode. Not linked, not indexed (robots.txt + noindex).
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getTasks, label } from '../../lib/tasks';
+
+export async function getStaticPaths() {
+  const tasks = await getTasks();
+  const sols = await getCollection('solutions');
+  return tasks.map((task) => ({ params: { id: task.id }, props: { task, solution: sols.find((s) => s.id === task.id) } }));
+}
+const { task, solution } = Astro.props;
+if (!solution) throw new Error(`Task ${task.id}: solution.md is missing`);
+const { Content } = await render(solution);
+const key = JSON.stringify({ answer: solution.data.answer, answers: solution.data.answers });
+---
+<Base title={`Lösung: ${task.data.title}`} variant="focus" noindex>
+  <script is:inline type="application/json" id="answer-key" set:html={key} />
+  <div class="in narrow">
+    <div id="solution">
+      {task.data.methods.length > 0 && (
+        <p class="methods"><strong>Dahinter steckt:</strong> {task.data.methods.map((m) => label.method(m)).join(', ')}</p>
+      )}
+      <Content />
+    </div>
+  </div>
+</Base>
