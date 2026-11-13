@@ -85,10 +85,12 @@ const single = [
       b.setAttribute('aria-pressed', String(state[fs.dataset.facet!].has(b.dataset.value!)))));
 
     const text = q.value.trim().toLowerCase();
+    const terms = text.replace(/ß/g, 'ss').normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/).filter(Boolean);
     let n = 0;
     for (const c of cards) {
       const has = (key: string) => (c.dataset[key] ?? '').split(' ');
-      let ok = !text || c.dataset.text!.includes(text);
+      const words = c.dataset.text!.split(' ');
+      let ok = terms.every((t) => words.some((w) => w.startsWith(t)));
       if (ok && state.topics.size) ok = [...state.topics].every((t) => has('topics').includes(t));
       for (const key of ['grades', 'format', 'source']) {
         if (ok && state[key].size) ok = [...state[key]].some((v) => has(key).includes(v));

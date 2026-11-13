@@ -34,6 +34,7 @@ const path = Astro.url.pathname;
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
   <meta name="theme-color" content="#0a6f7d" />
+  <script is:inline>try{if(localStorage.getItem("informatik-otter:teacher")==="1")document.documentElement.classList.add("teacher")}catch(e){}</script>
 </head>
 <body>
   <header class:list={["site-header", { focus: variant === "focus" }]}>

@@ -134,11 +134,19 @@
   "methods": {
     "insertion-sort": {
       "label": "Sortieren durch Einfügen (Insertionsort)",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Insertionsort",
+        "Sortieren durch Einfügen"
+      ]
     },
     "selection-sort": {
       "label": "Sortieren durch Auswählen (Selectionsort)",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Selectionsort",
+        "Minimumsuche"
+      ]
     },
     "bubble-sort": {
       "label": "Bubblesort",
@@ -146,11 +154,18 @@
     },
     "merge-sort": {
       "label": "Mergesort",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Mergesort",
+        "Sortieren durch Mischen"
+      ]
     },
     "quick-sort": {
       "label": "Quicksort",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Quicksort"
+      ]
     },
     "sorting-network": {
       "label": "Sortiernetzwerk",
@@ -162,51 +177,103 @@
     },
     "linear-search": {
       "label": "Lineare Suche",
-      "topic": "searching"
+      "topic": "searching",
+      "aliases": [
+        "sequentielle Suche"
+      ]
     },
     "binary-search": {
       "label": "Binäre Suche",
-      "topic": "searching"
+      "topic": "searching",
+      "aliases": [
+        "Binärsuche",
+        "Bisektion",
+        "Halbierungsverfahren"
+      ]
     },
     "bfs": {
       "label": "Breitensuche (BFS)",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Breitensuche",
+        "breadth-first search"
+      ]
     },
     "dfs": {
       "label": "Tiefensuche (DFS)",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Tiefensuche",
+        "depth-first search"
+      ]
     },
     "dijkstra": {
       "label": "Dijkstra-Algorithmus",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "kürzester Weg",
+        "kürzeste Wege",
+        "shortest path",
+        "Routenplanung"
+      ]
     },
     "prim": {
       "label": "Algorithmus von Prim (minimaler Spannbaum)",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Spannbaum",
+        "minimaler Spannbaum",
+        "MST"
+      ]
     },
     "kruskal": {
       "label": "Algorithmus von Kruskal (minimaler Spannbaum)",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Spannbaum",
+        "minimaler Spannbaum",
+        "MST"
+      ]
     },
     "graph-coloring": {
       "label": "Graphfärbung",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Färbung",
+        "Graphfärbung"
+      ]
     },
     "euler-path": {
       "label": "Eulerweg",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Euler",
+        "Haus vom Nikolaus"
+      ]
     },
     "hamilton-path": {
       "label": "Hamiltonweg",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Hamilton",
+        "Rundreise"
+      ]
     },
     "topological-sort": {
       "label": "Topologische Sortierung",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Abhängigkeiten",
+        "Reihenfolgeplanung"
+      ]
     },
     "max-flow": {
       "label": "Maximaler Fluss",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Fluss",
+        "Netzwerkfluss"
+      ]
     },
     "matching": {
       "label": "Paarung (Matching)",
@@ -218,11 +285,18 @@
     },
     "greedy": {
       "label": "Greedy-Verfahren",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "gierig",
+        "Greedy"
+      ]
     },
     "dynamic-programming": {
       "label": "Dynamische Programmierung",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "DP"
+      ]
     },
     "backtracking": {
       "label": "Backtracking",
@@ -270,23 +344,45 @@
     },
     "binary-numbers": {
       "label": "Binärzahlen",
-      "topic": "encoding"
+      "topic": "encoding",
+      "aliases": [
+        "Binärsystem",
+        "Dualzahl",
+        "Bits"
+      ]
     },
     "run-length-encoding": {
       "label": "Lauflängenkodierung",
-      "topic": "compression"
+      "topic": "compression",
+      "aliases": [
+        "RLE",
+        "Lauflänge"
+      ]
     },
     "huffman": {
       "label": "Huffman-Kodierung",
-      "topic": "compression"
+      "topic": "compression",
+      "aliases": [
+        "Huffman",
+        "Präfixcode",
+        "Komprimierung"
+      ]
     },
     "parity-bit": {
       "label": "Paritätsbit",
-      "topic": "error-detection"
+      "topic": "error-detection",
+      "aliases": [
+        "Parität",
+        "Prüfbit"
+      ]
     },
     "hamming-code": {
       "label": "Hamming-Code",
-      "topic": "error-detection"
+      "topic": "error-detection",
+      "aliases": [
+        "Hamming",
+        "Fehlerkorrektur"
+      ]
     },
     "checksum": {
       "label": "Prüfsumme",
@@ -294,11 +390,20 @@
     },
     "caesar-cipher": {
       "label": "Caesar-Verschlüsselung",
-      "topic": "cryptography"
+      "topic": "cryptography",
+      "aliases": [
+        "Caesar",
+        "Verschiebechiffre",
+        "Cäsar"
+      ]
     },
     "substitution-cipher": {
       "label": "Ersetzungsverfahren (Substitution)",
-      "topic": "cryptography"
+      "topic": "cryptography",
+      "aliases": [
+        "Substitution",
+        "Geheimschrift"
+      ]
     },
     "visual-cryptography": {
       "label": "Visuelle Kryptografie",
@@ -310,11 +415,22 @@
     },
     "stack": {
       "label": "Stapel (Stack, LIFO)",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Stapel",
+        "Stack",
+        "LIFO",
+        "Keller"
+      ]
     },
     "queue": {
       "label": "Warteschlange (Queue, FIFO)",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Warteschlange",
+        "Queue",
+        "FIFO"
+      ]
     },
     "binary-tree": {
       "label": "Binärbaum",
@@ -330,7 +446,12 @@
     },
     "finite-automaton": {
       "label": "Endlicher Automat",
-      "topic": "automata"
+      "topic": "automata",
+      "aliases": [
+        "DEA",
+        "endlicher Automat",
+        "Zustandsautomat"
+      ]
     },
     "turing-machine": {
       "label": "Turingmaschine",
@@ -346,7 +467,12 @@
     },
     "neural-network": {
       "label": "Neuronales Netz",
-      "topic": "ai"
+      "topic": "ai",
+      "aliases": [
+        "KI",
+        "neuronales Netz",
+        "maschinelles Lernen"
+      ]
     },
     "instruction-set": {
       "label": "Befehlssatz",

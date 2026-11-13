@@ -61,3 +61,18 @@ export function sourceNote(t: TaskEntry) {
   if (s.type === 'synthetic') return `Eigene Aufgabe (Otter), abgeleitet von ${s.derived_from?.join(', ') ?? '–'} · ${s.license}`;
   return `Aufgabe: ${s.work}${s.page ? `, S. ${s.page}` : ''}${s.country ? ` · Idee: Bebras ${s.country}` : ''} · ${s.license}`;
 }
+
+/** Normalized words for the catalog search: title, summary, topics, plus hidden keywords (methods and their aliases). */
+export function normalizeSearch(text: string) {
+  return text.toLowerCase().replace(/ß/g, 'ss').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .split(/[^a-z0-9]+/).filter(Boolean);
+}
+export function searchText(t: TaskEntry) {
+  const d = t.data;
+  const methods = d.methods.flatMap((m) => {
+    const e = (taxonomy.methods as Record<string, { label: string; aliases?: string[] }>)[m];
+    return [m, e?.label ?? '', ...(e?.aliases ?? [])];
+  });
+  const words = normalizeSearch([d.title, d.summary, ...d.topics.map(label.topic), ...methods].join(' '));
+  return [...new Set(words)].join(' ');
+}

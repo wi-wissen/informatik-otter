@@ -19,6 +19,7 @@ const d = task.data;
         <dt>Themen</dt><dd>{d.topics.map((t) => <a class="chip" href={`/tasks/?topic=${t}`}>{label.topic(t)}</a>)}</dd>
         <dt>GI-Inhaltsbereich</dt><dd>{d.gi.content.map((c) => <span class="chip outline">{label.giContent(c)}</span>)}</dd>
         {d.gi.process.length > 0 && <><dt>GI-Prozessbereich</dt><dd>{d.gi.process.map((p) => <span class="chip outline">{label.giProcess(p)}</span>)}</dd></>}
+        {d.methods.length > 0 && <><dt class="teacher-only">Verfahren</dt><dd class="teacher-only">{d.methods.map((m) => <span class="chip method">#{label.method(m)}</span>)}</dd></>}
         <dt>Format</dt><dd><span class="chip outline">{formatLabel[d.interaction.format]}</span></dd>
       </dl>
       <ShareBox short={d.short} title={d.title} />

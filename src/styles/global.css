@@ -108,3 +108,8 @@ a.card:hover { border-color: var(--primary); }
 .prose ul, .prose ol { padding-left: 1.4em; }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* Visible only in teacher mode (class set on <html> from localStorage) */
+.teacher-only { display: none !important; }
+html.teacher .teacher-only { display: flex !important; }
+.chip.method { background: var(--teacher-soft); color: var(--teacher); }
