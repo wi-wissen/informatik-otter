@@ -1,5 +1,5 @@
 ---
-answer: [d7, d4, d1, d0, d5, d6, d2, d3]
+answer: { z1: d7, z2: d4, z3: d1, z4: d0, z5: d5, z6: d6, z7: d2, z8: d3 }
 ---
 Der neue Code lautet **7 4 1 0 5 6 2 3**.
 

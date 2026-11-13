@@ -1,5 +1,7 @@
 ---
-answer: "ABBCCBBBBAAA"
+answers:
+  - { p5: c, p7: b1, p8: b2 }
+  - { p5: c, p7: b2, p8: b1 }
 ---
 ![Die Reihe A B B C C B B B B A A A mit den ersetzten Buchstaben](./img/solution.png)
 

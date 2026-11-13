@@ -13,18 +13,18 @@ topics: [programming, parallelism]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: custom
   props:
-    maxLength: 8
-    commands:
-      - { id: b1, label: Go-Bot 1, image: ./img/bot1.png }
-      - { id: b2, label: Go-Bot 2, image: ./img/bot2.png }
-      - { id: b3, label: Go-Bot 3, image: ./img/bot3.png }
-      - { id: b4, label: Go-Bot 4, image: ./img/bot4.png }
-      - { id: up, label: "↑ hoch" }
-      - { id: down, label: "↓ runter" }
-      - { id: left, label: "← links" }
-      - { id: right, label: "→ rechts" }
+    rows: 10
+    cols: 13
+    steps: 4
+    goal: { row: 3, col: 10 }
+    obstacles: [[0, 2], [0, 12], [2, 6], [2, 11], [3, 4], [3, 11], [6, 0], [7, 7], [8, 1], [8, 11], [9, 4], [9, 8], [9, 11]]
+    bots:
+      - { id: b1, n: 1, row: 0, col: 5, color: "#4fb3cf" }
+      - { id: b2, n: 2, row: 4, col: 9, color: "#6a3fc0" }
+      - { id: b3, n: 3, row: 7, col: 4, color: "#c40000" }
+      - { id: b4, n: 4, row: 2, col: 7, color: "#ff7a1a" }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -49,8 +49,6 @@ Unten links ist ein Spielbrett mit zwei Go-Bots. Mit dieser Befehlsfolge erreich
 ![Spielbrett am Anfang: Go-Bot 3 oben, Go-Bot 1 unten, das Ziel ganz links in der zweiten Zeile](./img/example-start.png) ![Spielbrett am Ende: Go-Bot 3 ist nach rechts gefahren, Go-Bot 1 fährt hoch und dann links zum Ziel](./img/example-end.png)
 
 Unten ist ein anderes Spielbrett mit vier Go-Bots.
-
-![Spielbrett mit den Go-Bots 1 bis 4, mehreren Hindernissen und dem Ziel](./img/board.png)
 
 **Erstelle eine Befehlsfolge mit vier Pfeilen, mit der Go-Bot 1 das Ziel erreicht!**
 

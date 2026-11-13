@@ -13,14 +13,18 @@ topics: [cryptography, encoding]
 methods: [substitution-cipher]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: c1, image: ./img/code1.png, alt: Ogham-Code 1, label: Code 1 }
-      - { id: c2, image: ./img/code2.png, alt: Ogham-Code 2, label: Code 2 }
-      - { id: c3, image: ./img/code3.png, alt: Ogham-Code 3, label: Code 3 }
-      - { id: c4, image: ./img/code4.png, alt: Ogham-Code 4, label: Code 4 }
-    right:
+    background: ./img/board.png
+    width: 720
+    height: 432
+    trayLabel: Wörter
+    zones:
+      - { id: c1, label: "Code 1", x: 5, y: 367, w: 155, h: 50 }
+      - { id: c2, label: "Code 2", x: 190, y: 367, w: 155, h: 50 }
+      - { id: c3, label: "Code 3", x: 375, y: 367, w: 155, h: 50 }
+      - { id: c4, label: "Code 4", x: 560, y: 367, w: 155, h: 50 }
+    items:
       - { id: ananas, label: ANANAS }
       - { id: banane, label: BANANE }
       - { id: melone, label: MELONE }
@@ -39,3 +43,5 @@ Sue kennt das alte irische Alphabet Ogham. Jeder Buchstabe besteht aus einem ode
 Sue benutzt Ogham als Code. Sie kodiert vier Wörter – ihre liebsten Obstsorten: ANANAS, BANANE, MELONE und ORANGE.
 
 **Welches Wort passt zu welchem Ogham-Code?**
+
+Ziehe dazu jedes Wort unter den passenden Code.

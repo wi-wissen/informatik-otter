@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 4
     options:
-      - { id: a, label: A) 5 Tage }
-      - { id: b, label: B) 11 Tage }
-      - { id: c, label: C) 16 Tage }
-      - { id: d, label: D) 32 Tage }
+      - { id: a, label: "5 Tage" }
+      - { id: b, label: "11 Tage" }
+      - { id: c, label: "16 Tage" }
+      - { id: d, label: "32 Tage" }
 source:
   type: original
   work: Informatik-Biber 2024

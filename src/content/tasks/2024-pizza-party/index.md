@@ -12,11 +12,15 @@ topics: [optimization]
 methods: [greedy]
 mascot: beaver
 interaction:
-  format: choice
+  format: place
   props:
-    multiple: true
-    columns: 6
-    options:
+    background: ./img/pizza.png
+    width: 504
+    height: 486
+    trayLabel: Beläge
+    zones:
+      - { id: pizza, label: "Pizza", x: 40, y: 40, w: 424, h: 406, capacity: 3 }
+    items:
       - { id: chili, label: Chili, image: ./img/chili.png, alt: Chili }
       - { id: pilze, label: Pilze, image: ./img/pilze.png, alt: Pilze }
       - { id: kaese, label: Käse, image: ./img/kaese.png, alt: Käse }
@@ -44,3 +48,5 @@ John feiert eine Pizzaparty. Er weiß, welche Beläge sich seine Gäste auf der 
 John möchte eine Pizza mit insgesamt drei Belägen backen. Er wählt drei Beläge so aus, dass er möglichst viele Wünsche seiner Gäste erfüllt.
 
 **Mit welchen drei Belägen erfüllt John die meisten Wünsche?**
+
+Ziehe dazu drei Beläge auf die Pizza.

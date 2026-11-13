@@ -12,12 +12,16 @@ topics: [logic]
 methods: [boolean-logic]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: weather, label: "Erste Lücke: Letzten Sonntag war es …" }
-      - { id: ponds, label: "Zweite Lücke: … und …" }
-    right:
+    background: ./img/satz.png
+    width: 1563
+    height: 100
+    trayLabel: Textbausteine
+    zones:
+      - { id: weather, label: "Erste Lücke (orange)", x: 404, y: 8, w: 230, h: 84 }
+      - { id: ponds, label: "Zweite Lücke (blau)", x: 709, y: 8, w: 815, h: 84 }
+    items:
       - { id: sunny, label: sonnig }
       - { id: notsunny, label: nicht sonnig }
       - { id: all, label: in allen Teichen schwammen Biber }
@@ -37,6 +41,6 @@ Tom sagt: „An sonnigen Tagen schwimmt in jedem Teich mindestens ein Biber.“
 
 Kim antwortet: „Das ist nicht wahr. Am letzten Sonntag wurde deine Aussage widerlegt.“
 
-Was ist am letzten Sonntag passiert? Ergänze den Satz „Letzten Sonntag war es **[erste Lücke]** und **[zweite Lücke]**.“
+**Was ist am letzten Sonntag passiert? Fülle die Lücken so, dass Toms Aussage widerlegt wird.**
 
-**Fülle die Lücken so, dass Toms Aussage widerlegt wird.**
+Ziehe dazu je einen Textbaustein in die erste und in die zweite Lücke des Satzes „Letzten Sonntag war es … und … .“

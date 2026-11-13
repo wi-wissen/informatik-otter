@@ -1,5 +1,9 @@
 ---
-answer: { name: text, eyes: numbers, legs: numbers, wings: yesno, teeth: yesno }
+answers:
+  - { name: text, eyes: num1, legs: num2, wings: yn1, teeth: yn2 }
+  - { name: text, eyes: num1, legs: num2, wings: yn2, teeth: yn1 }
+  - { name: text, eyes: num2, legs: num1, wings: yn1, teeth: yn2 }
+  - { name: text, eyes: num2, legs: num1, wings: yn2, teeth: yn1 }
 ---
 Diese Tabelle enthält für alle sechs Karten die Werte der fünf Eigenschaften:
 

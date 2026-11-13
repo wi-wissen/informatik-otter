@@ -12,11 +12,25 @@ topics: [encoding, compression]
 methods: [parity-bit]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: place
   props:
-    rows: 1
-    cols: 8
-    palette: ["#ffffff", "#d62828", "#1d3a9e"]
+    background: ./img/slots.svg
+    width: 416
+    height: 52
+    reusable: true
+    trayLabel: Bälle
+    zones:
+      - { id: s1, label: "Feld 1", x: 2, y: 2, w: 48, h: 48 }
+      - { id: s2, label: "Feld 2", x: 54, y: 2, w: 48, h: 48 }
+      - { id: s3, label: "Feld 3", x: 106, y: 2, w: 48, h: 48 }
+      - { id: s4, label: "Feld 4", x: 158, y: 2, w: 48, h: 48 }
+      - { id: s5, label: "Feld 5", x: 210, y: 2, w: 48, h: 48 }
+      - { id: s6, label: "Feld 6", x: 262, y: 2, w: 48, h: 48 }
+      - { id: s7, label: "Feld 7", x: 314, y: 2, w: 48, h: 48 }
+      - { id: s8, label: "Feld 8", x: 366, y: 2, w: 48, h: 48 }
+    items:
+      - { id: red, image: ./img/ball-red.svg, alt: roter Ball }
+      - { id: blue, image: ./img/ball-blue.svg, alt: blauer Ball }
 source:
   type: original
   work: Informatik-Biber 2024
@@ -36,4 +50,6 @@ Im zweiten und letzten Schritt formt er die Zwischenfolge so um: Wenn die Zahl *
 
 Eine andere Bälle-Folge beschreibt Emil so: `0, 1, 1, 1, 0, 1, 0, 0`
 
-**Erstelle diese Bälle-Folge! Färbe dazu die acht Felder rot oder blau.**
+**Erstelle diese Bälle-Folge!**
+
+Ziehe dazu rote und blaue Bälle in die acht Felder.

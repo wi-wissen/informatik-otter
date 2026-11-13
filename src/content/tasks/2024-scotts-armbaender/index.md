@@ -12,20 +12,9 @@ topics: [optimization]
 methods: [dynamic-programming]
 mascot: beaver
 interaction:
-  format: choice
+  format: custom
   props:
-    multiple: true
-    columns: 9
-    options:
-      - { id: "5", label: "5" }
-      - { id: "1", label: "1" }
-      - { id: "3", label: "3" }
-      - { id: "2", label: "2" }
-      - { id: "4", label: "4" }
-      - { id: "8", label: "8" }
-      - { id: "6", label: "6" }
-      - { id: "7", label: "7" }
-      - { id: "9", label: "9" }
+    beads: [5, 1, 3, 2, 4, 8, 6, 7, 9]
 source:
   type: original
   work: Informatik-Biber 2024
@@ -53,4 +42,6 @@ Die nächste Perle (die **5**) kann Scott verwenden, aber auch weglegen. Wenn er
 
 Scott bekommt ein neues Röhrchen mit Perlen. Er will daraus ein Armband mit möglichst vielen Perlen machen. Im Röhrchen liegen nacheinander die Perlen **5, 1, 3, 2, 4, 8, 6, 7, 9**.
 
-**Wie kann Scott das schaffen? Wähle alle Perlen aus, die er verwendet, und lasse die anderen weg.**
+**Wie kann Scott das schaffen?**
+
+Entscheide für jede Perle, ob sie verwendet oder weggelegt wird. Die Perlen kommen nacheinander aus dem Röhrchen.

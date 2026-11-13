@@ -1,5 +1,5 @@
 ---
-answer: [b3, up, b2, left, b1, down, b1, right]
+answer: ok
 ---
 Die Befehlsfolge lautet: Go-Bot 3 hoch, Go-Bot 2 links, Go-Bot 1 runter, Go-Bot 1 rechts.
 

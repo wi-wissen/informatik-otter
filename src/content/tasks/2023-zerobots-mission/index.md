@@ -12,14 +12,14 @@ topics: [optimization, programming]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: custom
   props:
-    maxLength: 15
-    commands:
-      - { id: up, label: "↑ hoch" }
-      - { id: down, label: "↓ runter" }
-      - { id: left, label: "← links" }
-      - { id: right, label: "→ rechts" }
+    size: 5
+    start: { row: 4, col: 2, fuel: 9 }
+    base: { row: 1, col: 0 }
+    tanks:
+      - { row: 3, col: 4, fuel: 3, color: "#f28c28" }
+      - { row: 0, col: 4, fuel: 3, color: "#5b8c3a" }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -39,6 +39,6 @@ Alarm: Die Tanks sind fehlerhaft und könnten explodieren!
 
 Das ist Zerobots Mission: Er soll so zur Basisstation (Funkmast) fahren, dass am Ende alle Tanks leer sind (Füllstand 0).
 
-![Raster mit 5 mal 5 Feldern: Zerobot mit Füllstand 9 steht unten in der Mitte (dritte Spalte), ein Austauschtank mit Füllstand 3 steht in der vierten Zeile ganz rechts, ein weiterer mit Füllstand 3 in der ersten Zeile ganz rechts, die Basisstation in der zweiten Zeile ganz links](./img/raster.png)
+**Wie muss Zerobot sich bewegen, um seine Mission zu erfüllen?**
 
-**Wie muss Zerobot sich bewegen, um seine Mission zu erfüllen? Gib die Bewegungen nacheinander ein.**
+Fahre Zerobot mit den Pfeiltasten (oder den Pfeilen unter dem Raster) zur Basisstation. Mit „Einen Schritt zurück“ nimmst du die letzte Bewegung zurück.

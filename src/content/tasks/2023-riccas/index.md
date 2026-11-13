@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 1
     options:
-      - { id: a, label: "A) Alle Riccas haben Zähne." }
-      - { id: b, label: "B) Einige Riccas haben Flügel." }
-      - { id: c, label: "C) Riccas haben entweder Hörner oder drei Augen." }
-      - { id: d, label: "D) Wenn Riccas genau zwei Arme haben, dann haben sie auch genau zwei Beine." }
+      - { id: a, label: "Alle Riccas haben Zähne." }
+      - { id: b, label: "Einige Riccas haben Flügel." }
+      - { id: c, label: "Riccas haben entweder Hörner oder drei Augen." }
+      - { id: d, label: "Wenn Riccas genau zwei Arme haben, dann haben sie auch genau zwei Beine." }
 source:
   type: original
   work: Informatik-Biber 2023

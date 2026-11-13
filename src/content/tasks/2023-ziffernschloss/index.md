@@ -12,11 +12,21 @@ topics: [algorithm-analysis, sorting]
 methods: []
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: erste Stelle
-    endLabel: letzte Stelle
+    background: ./img/slots.svg
+    width: 464
+    height: 58
+    trayLabel: Ziffern
+    zones:
+      - { id: z1, label: "Stelle 1", x: 3, y: 3, w: 52, h: 52 }
+      - { id: z2, label: "Stelle 2", x: 61, y: 3, w: 52, h: 52 }
+      - { id: z3, label: "Stelle 3", x: 119, y: 3, w: 52, h: 52 }
+      - { id: z4, label: "Stelle 4", x: 177, y: 3, w: 52, h: 52 }
+      - { id: z5, label: "Stelle 5", x: 235, y: 3, w: 52, h: 52 }
+      - { id: z6, label: "Stelle 6", x: 293, y: 3, w: 52, h: 52 }
+      - { id: z7, label: "Stelle 7", x: 351, y: 3, w: 52, h: 52 }
+      - { id: z8, label: "Stelle 8", x: 409, y: 3, w: 52, h: 52 }
     items:
       - { id: d0, label: "0" }
       - { id: d1, label: "1" }
@@ -49,4 +59,6 @@ Ein Code aus nur fünf Ziffern ist Bob zu unsicher. Deshalb überlegt er sich ei
 
 3 >> 0 ; 2 >> 1 ; 4 >> 2 ; 4 >> 3 ; 1 >> 4 ; 1 >> 5 ; 1 >> 6 ; 0 >> 7
 
-**Wie lautet der neue Code? Bringe die Ziffern an die richtigen Stellen.**
+**Wie lautet der neue Code?**
+
+Ziehe die Ziffern an die richtigen Stellen.

@@ -12,20 +12,21 @@ topics: [programming]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: place
   props:
-    pick: nodes
-    width: 296
-    height: 38
-    nodeRadius: 12
-    background: ./img/huegel.png
-    hideNodes: false
-    nodeImage: ./img/pick.png
-    nodes:
-      - { id: A, x: 36, y: 19 }
-      - { id: B, x: 114, y: 19 }
-      - { id: C, x: 192, y: 19 }
-      - { id: D, x: 270, y: 19 }
+    background: ./img/huegel-gross.png
+    width: 888
+    height: 204
+    trayLabel: Karottensamen
+    zones:
+      - { id: A, label: "Hügel 1", x: 10, y: 15, w: 205, h: 180 }
+      - { id: B, label: "Hügel 2", x: 227, y: 15, w: 205, h: 180 }
+      - { id: C, label: "Hügel 3", x: 444, y: 15, w: 205, h: 180 }
+      - { id: D, label: "Hügel 4", x: 662, y: 15, w: 205, h: 180 }
+    items:
+      - { id: s1, image: ./img/samen.png, alt: Karottensamen }
+      - { id: s2, image: ./img/samen.png, alt: Karottensamen }
+      - { id: s3, image: ./img/samen.png, alt: Karottensamen }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -49,4 +50,6 @@ Der Kaninchenroboter hat diese Folge von Anweisungen ausgeführt:
 
 Dabei ist der Roboter auf vier Hügeln gewesen. Wir wissen aber nicht, auf welchem Hügel er angefangen hat.
 
-**Auf welche Hügel hat der Roboter die Karottensamen gepflanzt? Tippe die Hügel A bis D (von links nach rechts) an, auf denen ein Samen liegt.**
+**Auf welche Hügel hat der Roboter die Karottensamen gepflanzt?**
+
+Ziehe dazu die drei Karottensamen auf die Hügel.
