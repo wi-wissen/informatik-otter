@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [optimization]
-methods: []
+methods: [convex-hull]
 mascot: beaver
 interaction:
   format: choice

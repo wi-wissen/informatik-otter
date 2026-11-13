@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [searching, graphs]
-methods: [backtracking]
+methods: [state-space-search]
 mascot: beaver
 interaction:
   format: graph-pick

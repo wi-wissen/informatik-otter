@@ -8,7 +8,7 @@ gi:
   content: [languages-automata]
   process: [modelling, reasoning]
 topics: [automata]
-methods: [finite-automaton]
+methods: [cellular-automaton]
 mascot: beaver
 interaction:
   format: custom

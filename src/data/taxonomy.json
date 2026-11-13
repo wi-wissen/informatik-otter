@@ -111,6 +111,10 @@
     "strongly-connected-components": { "label": "Starke Zusammenhangskomponenten", "topic": "graphs" },
     "min-cost-flow": { "label": "Kostenminimaler Fluss", "topic": "graphs" },
     "pareto-optimum": { "label": "Pareto-Optimum", "topic": "optimization" },
-    "diffusion-model": { "label": "Diffusionsmodell", "topic": "ai" }
+    "diffusion-model": { "label": "Diffusionsmodell", "topic": "ai" },
+    "soundex": { "label": "Soundex (phonetische Suche)", "topic": "searching" },
+    "state-space-search": { "label": "Zustandsraumsuche", "topic": "searching" },
+    "convex-hull": { "label": "Konvexe Hülle", "topic": "optimization" },
+    "cellular-automaton": { "label": "Zellulärer Automat", "topic": "automata" }
   }
 }
