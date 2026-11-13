@@ -12,13 +12,22 @@ topics: [graphs, modelling]
 methods: [graph-coloring]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: custom
   props:
-    rows: 2
-    cols: 5
-    palette: ["#ffffff", "#e53935", "#1a237e", "#66bb6a"]
-    initial: [[1, 0, 2, 0, 3], [2, 0, 0, 0, 1]]
-    locked: [[true, false, true, false, true], [true, false, false, false, true]]
+    background: ./img/street.png
+    width: 979
+    height: 407
+    spots:
+      - { id: t2, x: 315, y: 150, w: 140, h: 150, label: "Oberes Haus 2" }
+      - { id: t4, x: 680, y: 150, w: 140, h: 150, label: "Oberes Haus 4" }
+      - { id: b2, x: 315, y: 320, w: 140, h: 150, label: "Unteres Haus 2" }
+      - { id: b3, x: 500, y: 325, w: 140, h: 150, label: "Unteres Haus 3" }
+      - { id: b4, x: 685, y: 320, w: 140, h: 150, label: "Unteres Haus 4" }
+    states:
+      - { id: white, image: ./img/house-white.png, label: Weiß }
+      - { id: red, image: ./img/house-red.png, label: Rot }
+      - { id: blue, image: ./img/house-blue.png, label: Blau }
+      - { id: green, image: ./img/house-green.png, label: Grün }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -35,8 +44,4 @@ An einer Straße sollen alle Häuser bunt angestrichen werden: in Rot, Blau oder
 
 Einige Häuser sind schon fertig.
 
-![Eine Straße mit fünf Häusern oben und fünf unten. Oben von links: rot, weiß, blau, weiß, grün. Unten von links: blau, weiß, weiß, weiß, rot](./img/street.png)
-
-Im Raster steht die obere Zeile für die obere Straßenseite und die untere Zeile für die untere. Die fertigen Häuser sind festgelegt. Die Farben zum Auswählen sind von links nach rechts: Weiß, Rot, Blau, Grün.
-
-**Streiche auch die weißen Häuser nach den Regeln an!**
+**Streiche auch die weißen Häuser nach den Regeln an!** Klicke auf ein weißes Haus, bis es die richtige Farbe hat.

@@ -12,16 +12,18 @@ topics: [encoding]
 methods: [binary-numbers]
 mascot: beaver
 interaction:
-  format: choice
+  format: place
   props:
-    multiple: true
-    columns: 5
-    options:
-      - { id: "1", label: "1" }
-      - { id: "2", label: "2" }
-      - { id: "4", label: "4" }
-      - { id: "8", label: "8" }
-      - { id: "16", label: "16" }
+    reusable: true
+    trayLabel: Beutel
+    zones:
+      - { id: tray, label: Tablett, capacity: 14 }
+    items:
+      - { id: c1, image: ./img/coin-1.png, alt: Münze 1 }
+      - { id: c2, image: ./img/coin-2.png, alt: Münze 2 }
+      - { id: c4, image: ./img/coin-4.png, alt: Münze 4 }
+      - { id: c8, image: ./img/coin-8.png, alt: Münze 8 }
+      - { id: c16, image: ./img/coin-16.png, alt: Münze 16 }
 source:
   type: original
   work: Informatik-Biber 2019
@@ -33,6 +35,4 @@ source:
 ---
 Bibertaler gibt es nur als Münzen, und zwar 1, 2, 4, 8 und 16 Bibertaler. Die Biber bezahlen immer den genauen Betrag, mit so wenigen Münzen wie möglich. Ein Biber kauft Holz und muss 13 Bibertaler bezahlen.
 
-![Ein Beutel mit je einer Münze zu 1, 2, 4, 8 und 16 Bibertalern](./img/purse.png)
-
-**Mit welchen Münzen bezahlt der Biber?** Wähle die Münzen aus.
+**Mit welchen Münzen bezahlt der Biber?** Ziehe die Münzen aus dem Beutel auf das Tablett.

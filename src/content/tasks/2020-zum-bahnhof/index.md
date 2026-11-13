@@ -11,12 +11,16 @@ topics: [programming]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: d1, label: "Grüner Punkt links (Zeile 2, Spalte 2)" }
-      - { id: d2, label: "Grüner Punkt rechts unten (Zeile 3, Spalte 5)" }
-    right:
+    background: ./img/board.png
+    width: 965
+    height: 488
+    trayLabel: Schienenstücke
+    zones:
+      - { id: z1, label: Grüner Punkt links, x: 166, y: 166, w: 156, h: 156 }
+      - { id: z2, label: Grüner Punkt rechts unten, x: 643, y: 325, w: 156, h: 154 }
+    items:
       - { id: p0, image: ./img/piece0.png, alt: "Kurve von unten nach rechts" }
       - { id: p1, image: ./img/piece1.png, alt: "Kurve von unten nach links" }
       - { id: p2, image: ./img/piece2.png, alt: "Kurve von oben nach rechts" }
@@ -32,17 +36,6 @@ source:
   country: PT
   license: CC BY-SA 4.0
 ---
-Der Zug soll zum Bahnhof fahren. Dazu müssen auf die grünen Punkte Schienenstücke gelegt werden.
+**Ziehe Schienen auf die grünen Punkte, so dass der Zug zum Bahnhof fahren kann.**
 
-![Das Gleisnetz: Der Zug steht links in der mittleren Zeile. Oben rechts ist der Bahnhof, in der mittleren Zeile rechts endet ein Gleis an einem Prellbock. Auf die beiden grünen Punkte müssen noch Schienenstücke](./img/board.png)
-
-Zur Auswahl stehen diese sechs Schienenstücke (die Zeilen und Spalten des Gleisnetzes werden von oben links gezählt, die Kurven sind nach den Seiten benannt, die sie verbinden):
-
-1. Kurve von unten nach rechts
-2. Kurve von unten nach links
-3. Kurve von oben nach rechts
-4. Kurve von oben nach links
-5. Gerade waagerecht
-6. Gerade senkrecht
-
-**Welches Schienenstück musst du auf welchen grünen Punkt legen, so dass der Zug zum Bahnhof fahren kann?**
+Der Zug steht links in der mittleren Zeile, oben rechts ist der Bahnhof, in der mittleren Zeile rechts endet ein Gleis an einem Prellbock.

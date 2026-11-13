@@ -1,5 +1,5 @@
 ---
-answer: "3"
+answer: [d3]
 ---
 Das dritte Depot von links (mit 5 Chips) wird erreicht.
 

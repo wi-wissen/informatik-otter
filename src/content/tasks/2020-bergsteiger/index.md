@@ -17,7 +17,8 @@ interaction:
     width: 525.2
     height: 131.2
     background: ./img/mountains.png
-    nodeRadius: 9
+    hideNodes: true
+    nodeRadius: 16
     nodes:
       - { id: g1, x: 39, y: 85, label: "1" }
       - { id: g2, x: 68, y: 98, label: "2" }
@@ -48,6 +49,4 @@ Sobald sie einen Gipfel erreicht hat, schaut sie sich die beiden Nachbar-Gipfel 
 
 Das wiederholt sie so lange, bis sie einen Gipfel erreicht, der keinen höheren Nachbarn hat.
 
-Die Gipfel sind von links nach rechts von 1 bis 11 nummeriert (Gipfel 7 ist der höchste mit der weißen Spitze).
-
-**Von welchen Gipfeln aus erreicht Greta so den höchsten Gipfel?** Tippe die Gipfel an.
+**Von welchen Gipfeln aus erreicht Greta so den höchsten Gipfel?** Klicke die Gipfel an.

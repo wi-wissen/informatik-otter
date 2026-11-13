@@ -1,9 +1,5 @@
 ---
-answers:
-  - [[1, 2, 1], [2, 1, 2], [1, 2, 3]]
-  - [[1, 2, 1], [2, 1, 2], [3, 2, 1]]
-  - [[1, 2, 3], [2, 1, 2], [1, 2, 1]]
-  - [[3, 2, 1], [2, 1, 2], [1, 2, 1]]
+answer: ok
 ---
 Peter vergibt Punkte für benachbarte Blumen-Paare. Jede Linie im Blumenkasten-Bild steht für ein solches Paar. Eine Bepflanzung bekommt möglichst viele Punkte (und ist dann perfekt), wenn so viele Paare wie möglich aus einer roten und einer gelben Blume bestehen. Es muss aber auch mindestens eine orange Blume vorkommen. Um auch mit einer orangen Blume Punkte zu machen, muss sie mit gelben Blumen Paare bilden. Es sollte aber nur so wenige orange-gelbe Paare geben wie möglich, damit so viele Linien bzw. Paare für die Kombination rot-gelb übrig bleiben.
 

@@ -12,18 +12,22 @@ topics: [data-structures, modelling]
 methods: [stack, queue]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: l1, image: ./img/row1.png, alt: "Reihe 1: fünf Schneemänner, von links nach rechts immer größer" }
-      - { id: l2, image: ./img/row2.png, alt: "Reihe 2: fünf Schneemänner, von links nach rechts: mittel, klein, ganz klein, ganz groß, groß" }
-      - { id: l3, image: ./img/row3.png, alt: "Reihe 3: fünf Schneemänner, von links nach rechts immer kleiner" }
-      - { id: l4, image: ./img/row4.png, alt: "Reihe 4: fünf Schneemänner, von links nach rechts: groß, mittel, ganz groß, ganz klein, klein" }
-    right:
-      - { id: r1, image: ./img/stack1.png, alt: "Hutstapel 1: fünf Hüte, oben der kleinste, nach unten immer größer" }
-      - { id: r2, image: ./img/stack2.png, alt: "Hutstapel 2: fünf Hüte, oben der größte, nach unten immer kleiner" }
-      - { id: r3, image: ./img/stack3.png, alt: "Hutstapel 3: fünf Hüte, von oben: mittel, klein, ganz klein, ganz groß, groß" }
-      - { id: r4, image: ./img/stack4.png, alt: "Hutstapel 4: fünf Hüte, von oben: groß, mittel, ganz groß, ganz klein, klein" }
+    background: ./img/board.png
+    width: 552
+    height: 898
+    trayLabel: Hutstapel
+    zones:
+      - { id: z1, label: Reihe 1, x: 2, y: 0, w: 120, h: 221 }
+      - { id: z2, label: Reihe 2, x: 2, y: 227, w: 120, h: 221 }
+      - { id: z3, label: Reihe 3, x: 2, y: 454, w: 120, h: 221 }
+      - { id: z4, label: Reihe 4, x: 2, y: 681, w: 120, h: 221 }
+    items:
+      - { id: s1, image: ./img/stack1.png, alt: "Hutstapel 1: fünf Hüte, oben der kleinste, nach unten immer größer" }
+      - { id: s2, image: ./img/stack2.png, alt: "Hutstapel 2: fünf Hüte, oben der größte, nach unten immer kleiner" }
+      - { id: s3, image: ./img/stack3.png, alt: "Hutstapel 3: fünf Hüte, von oben: mittel, klein, ganz klein, ganz groß, groß" }
+      - { id: s4, image: ./img/stack4.png, alt: "Hutstapel 4: fünf Hüte, von oben: groß, mittel, ganz groß, ganz klein, klein" }
 source:
   type: original
   work: Informatik-Biber 2019
@@ -35,4 +39,4 @@ source:
 ---
 Die Schneemänner bekommen Hüte. Sie stellen sich in vier Reihen an. Jede Reihe sucht sich den passenden Hutstapel aus. Dann nimmt der erste Schneemann (links) den obersten Hut vom Stapel, der zweite den nächsten Hut – und so weiter. Am Ende hat jeder den passenden Hut: Der kleinste Schneemann hat den kleinsten Hut, der zweitkleinste Schneemann den zweitkleinsten Hut – und so weiter.
 
-**Verbinde jede Schneemann-Reihe mit dem passenden Hutstapel.**
+**Verbinde jede Schneemann-Reihe mit dem passenden Hutstapel.** Ziehe dazu jeden Hutstapel neben seine Reihe.

@@ -1,5 +1,5 @@
 ---
-answer: [e, "7"]
+answer: [e, c7]
 ---
 Die Karten **E** und **7** müssen umgedreht werden.
 

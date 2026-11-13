@@ -1,5 +1,5 @@
 ---
-answer: "3"
+answer: [b3]
 ---
 Biber Nummer **3** hält die falsche Flagge hoch.
 

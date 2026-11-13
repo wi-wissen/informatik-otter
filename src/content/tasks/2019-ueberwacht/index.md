@@ -13,20 +13,24 @@ topics: [images]
 methods: []
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: p10, image: ./img/d10.png, alt: "Unterschiedsbild nach 10 Sekunden: ein roter Strich links oben in der Mitte" }
-      - { id: p20, image: ./img/d20.png, alt: "Unterschiedsbild nach 20 Sekunden: zwei rote Striche nebeneinander in der Mitte" }
-      - { id: p30, image: ./img/d30.png, alt: "Unterschiedsbild nach 30 Sekunden: zwei rote Striche links, zwei rote Striche rechts unten" }
-      - { id: p40, image: ./img/d40.png, alt: "Unterschiedsbild nach 40 Sekunden: ein roter Strich links, zwei rote Striche rechts unten" }
-      - { id: p50, image: ./img/d50.png, alt: "Unterschiedsbild nach 50 Sekunden: fünf verstreute rote Quadrate rechts oben" }
-    right:
-      - { id: A, label: "A: Tom trifft Tina." }
-      - { id: B, label: "B: Jemand öffnet die Rathaustür." }
-      - { id: C, label: "C: Tom und Tina gehen Arm in Arm." }
-      - { id: D, label: "D: Wind kommt auf." }
-      - { id: E, label: "E: Jemand schließt die Rathaustür." }
+    background: ./img/board.png
+    width: 709
+    height: 526
+    trayLabel: Ereignisse
+    zones:
+      - { id: p10, label: Nach 10 Sekunden, x: 324, y: 192, w: 60, h: 48 }
+      - { id: p20, label: Nach 20 Sekunden, x: 557, y: 192, w: 60, h: 48 }
+      - { id: p30, label: Nach 30 Sekunden, x: 91, y: 450, w: 60, h: 48 }
+      - { id: p40, label: Nach 40 Sekunden, x: 324, y: 450, w: 60, h: 48 }
+      - { id: p50, label: Nach 50 Sekunden, x: 557, y: 450, w: 60, h: 48 }
+    items:
+      - { id: A, label: A, alt: "A: Tom trifft Tina." }
+      - { id: B, label: B, alt: "B: Jemand öffnet die Rathaustür." }
+      - { id: C, label: C, alt: "C: Tom und Tina gehen Arm in Arm." }
+      - { id: D, label: D, alt: "D: Wind kommt auf." }
+      - { id: E, label: E, alt: "E: Jemand schließt die Rathaustür." }
 source:
   type: original
   work: Informatik-Biber 2019
@@ -52,6 +56,4 @@ Nun sollst du über sechs hintereinander aufgenommene Fotos nachdenken. Unten si
 | D | Wind kommt auf. |
 | E | Jemand schließt die Rathaustür. |
 
-![Das erste Foto: der Marktplatz mit Rathaus und Baum](./img/photo.png)
-
-**Wann wurde welches Ereignis beobachtet?** Ordne jedem Unterschiedsbild das Ereignis zu.
+**Wann wurde welches Ereignis beobachtet?** Ziehe jeden Ereignis-Buchstaben auf die passende Position.

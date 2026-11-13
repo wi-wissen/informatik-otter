@@ -1,5 +1,5 @@
 ---
-answer: [[1, 3, 2, 1, 3], [2, 1, 3, 2, 1]]
+answer: { t2: green, t4: red, b2: red, b3: green, b4: blue }
 ---
 Die Farben der weißen Häuser lassen sich schrittweise bestimmen. Beide Häuser auf der oberen Straßenseite stehen direkt neben Häusern mit verschiedenen Farben. Für den Anstrich der Häuser bleibt also jeweils nur die dritte Farbe übrig, einmal Grün und einmal Rot:
 

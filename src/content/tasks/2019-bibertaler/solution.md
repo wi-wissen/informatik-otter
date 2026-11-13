@@ -1,5 +1,5 @@
 ---
-answer: ["8", "4", "1"]
+answer: { tray: [c1, c4, c8] }
 ---
 Der Biber bezahlt mit den Münzen **8, 4 und 1**. So bezahlt er den genauen Betrag, denn 8 + 4 + 1 = 13 Bibertaler. Mit weniger Münzen kann er nicht bezahlen. Es gibt nämlich keine einzelne Münze und auch keine Kombination von zwei Münzen, mit der man 13 Bibertaler bezahlen kann. Die einzige Kombination von zwei Münzen, die mindestens 13 Bibertaler wert ist, besteht aus zwei 8er-Münzen – aber 8 + 8 = 16, und das ist nicht der genaue Betrag.
 

@@ -1,5 +1,5 @@
 ---
-answer: [fr, se, cz, sl]
+answer: { s1: fr, s2: se, s3: cz, s4: sl }
 ---
 Von der größten zur kleinsten Datei: Frankreich, Schweden, Tschechien, Sierra Leone.
 

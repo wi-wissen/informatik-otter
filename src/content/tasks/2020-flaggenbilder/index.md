@@ -11,11 +11,17 @@ topics: [compression, images]
 methods: [run-length-encoding]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: custom
   props:
-    direction: horizontal
-    startLabel: größte Datei
-    endLabel: kleinste Datei
+    background: ./img/wedge.png
+    width: 1298
+    height: 203
+    trayLabel: Flaggenbilder
+    zones:
+      - { id: s1, label: Platz 1, x: 69, y: 18, w: 262, h: 168 }
+      - { id: s2, label: Platz 2, x: 350, y: 18, w: 262, h: 168 }
+      - { id: s3, label: Platz 3, x: 629, y: 18, w: 262, h: 168 }
+      - { id: s4, label: Platz 4, x: 911, y: 18, w: 262, h: 168 }
     items:
       - { id: sl, image: ./img/sierra-leone.png, alt: "Flagge von Sierra Leone: drei waagerechte Streifen in Grün, Weiß und Blau" }
       - { id: cz, image: ./img/czechia.png, alt: "Flagge von Tschechien: oben Weiß, unten Rot, links ein blaues Dreieck" }
@@ -42,4 +48,4 @@ Ein Beispiel: Eine Pixelzeile, die durch die beiden Klammerpaare (grü,20)(wei,1
 
 Unten siehst du vier Computerbilder von Flaggen: Sierra Leone, Tschechien, Frankreich und Schweden. Die Bilder bestehen alle aus gleich vielen Pixelzeilen mit jeweils gleich vielen Pixeln. Sie wurden als Dateien im GIW-Format gespeichert. Die Größe einer GIW-Datei ergibt sich aus der Anzahl der darin enthaltenen Klammerpaare.
 
-**Ordne die Bilder nach der Größe ihrer GIW-Datei!**
+**Ordne die Bilder nach der Größe ihrer GIW-Datei!** Ziehe sie auf die Plätze: links die größte Datei, rechts die kleinste.

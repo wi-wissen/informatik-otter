@@ -1,7 +1,7 @@
 ---
 answers:
-  - { butterfly: b1, caterpillar: b3, ladybug: b2, snail: b4 }
-  - { butterfly: b1, caterpillar: b3, ladybug: b4, snail: b2 }
+  - { z1: butterfly, z2: ladybug, z3: caterpillar, z4: snail }
+  - { z1: butterfly, z2: snail, z3: caterpillar, z4: ladybug }
 ---
 Es gibt zwei richtige Antworten:
 

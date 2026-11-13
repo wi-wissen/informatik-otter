@@ -3,7 +3,7 @@ answer: [g5, g6, g8]
 ---
 ![Das Gebirge mit Pfeilen und drei eingekreisten Gipfeln](./img/solution.png)
 
-Die Pfeile zeigen, ob Greta von einem Gipfel aus weiter klettert und wohin. Von den drei eingekreisten Gipfeln (5, 6 und 8) aus erreicht Greta also den höchsten Gipfel, entlang der Pfeile.
+Die Pfeile zeigen, ob Greta von einem Gipfel aus weiter klettert und wohin. Von den drei eingekreisten Gipfeln aus erreicht Greta also den höchsten Gipfel, entlang der Pfeile.
 
 ## Das ist Informatik!
 

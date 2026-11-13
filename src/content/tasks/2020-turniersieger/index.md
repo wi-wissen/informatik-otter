@@ -11,20 +11,24 @@ topics: [sorting, graphs]
 methods: [topological-sort]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    multiple: true
-    columns: 3
-    options:
-      - { id: alice, label: "Alice" }
-      - { id: bob, label: "Bob" }
-      - { id: chris, label: "Chris" }
-      - { id: david, label: "David" }
-      - { id: emma, label: "Emma" }
-      - { id: fred, label: "Fred" }
-      - { id: gerald, label: "Gerald" }
-      - { id: henry, label: "Henry" }
-      - { id: ivo, label: "Ivo" }
+    pick: nodes
+    width: 616
+    height: 336
+    background: ./img/games.png
+    hideNodes: true
+    nodeRadius: 48
+    nodes:
+      - { id: alice, x: 75, y: 28, label: "Alice" }
+      - { id: bob, x: 295, y: 28, label: "Bob" }
+      - { id: chris, x: 540, y: 28, label: "Chris" }
+      - { id: david, x: 75, y: 168, label: "David" }
+      - { id: emma, x: 295, y: 168, label: "Emma" }
+      - { id: fred, x: 540, y: 168, label: "Fred" }
+      - { id: gerald, x: 75, y: 308, label: "Gerald" }
+      - { id: henry, x: 295, y: 308, label: "Henry" }
+      - { id: ivo, x: 540, y: 308, label: "Ivo" }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -36,8 +40,6 @@ source:
 ---
 In einem Freiluft-Sportturnier wurden schon einige Partien gespielt. Im Bild unten zeigen die Pfeile, wer dabei gegen wen gewonnen hat. Zum Beispiel hat Bob gegen Alice gewonnen und Alice gegen David.
 
-![Neun Spieler als Kästchen, Pfeile zeigen vom Gewinner zum Verlierer](./img/games.png)
-
 Leider wird das Wetter schlecht. Um die Anzahl der noch nötigen Partien zu verringern, wird eine neue Regel aufgestellt: Es soll derjenige Turniersieger werden, der besser ist als alle anderen.
 
 Wenn A gegen B gewonnen hat, dann gilt:
@@ -47,4 +49,4 @@ Wenn A gegen B gewonnen hat, dann gilt:
 
 Jetzt sollen nur noch die Spieler weitermachen, die nach der neuen Regel noch Turniersieger werden können.
 
-**Welche Spieler können noch Turniersieger werden?** Wähle alle richtigen Namen aus.
+**Welche Spieler können noch Turniersieger werden?** Klicke auf die Namen.
