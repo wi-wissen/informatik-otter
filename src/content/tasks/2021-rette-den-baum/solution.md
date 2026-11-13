@@ -1,0 +1,20 @@
+---
+answer: [e3a, e1a, e1b, e3b, e4, e2a, e1c, e5r]
+---
+Bruno sägt die rot markierten Äste ab, um so schnell wie möglich fertig zu sein: die Blattäste 3 und 1 links unten, die Blattäste 1 und 3 links oben, den Ast 4 in der Mitte, die Blattäste 2 und 1 rechts oben in der Mitte sowie den Ast 5 rechts unten. Das dauert 20.
+
+![Der Baum mit den rot markierten Ästen](./img/solution.png)
+
+Aber warum ist das so? Zunächst können wir ausrechnen, wie viel Zeit Bruno benötigt, wenn er nur die Äste mit Blättern absägt – damit wäre er ja fertig:
+
+1 + 3 + 1 + 3 + 3 + 5 + 2 + 1 + 3 + 2 + 1 = 25
+
+Nun gehen wir in Richtung Stamm weiter und überlegen immer wieder neu, ob es schneller sein könnte, den Ast abzusägen, von dem die bisherigen Äste direkt oder indirekt abzweigen. Nach dem ersten solchen Schritt ergibt sich diese Rechnung (die Funktion „min“ berechnet das Minimum ihrer Argumente):
+
+1 + 3 + min(5, 1 + 3) + min(4, 3 + 5) + min(5, 2 + 1) + min(5, 3 + 2 + 1) = 1 + 3 + 1 + 3 + 4 + 2 + 1 + 5 = 20
+
+Dabei addieren wir die Zeiten der einzelnen Äste nicht zusammen, damit wir noch wissen, welche Äste abzusägen sind. Nach dem nächsten Schritt sind wir schon am Stamm angekommen:
+
+min(9, 1 + 3 + 1 + 3) + min(8, 4 + 2 + 1) + 5 = 1 + 3 + 1 + 3 + 4 + 2 + 1 + 5 = 20
+
+Bruno wird die Äste absägen, die den Summanden entsprechen. Schneller kann er nicht fertig sein.
