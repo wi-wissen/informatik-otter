@@ -109,6 +109,7 @@
     "instruction-set": { "label": "Befehlssatz", "topic": "computer-architecture" },
     "routing": { "label": "Routing", "topic": "networks" },
     "strongly-connected-components": { "label": "Starke Zusammenhangskomponenten", "topic": "graphs" },
-    "min-cost-flow": { "label": "Kostenminimaler Fluss", "topic": "graphs" }
+    "min-cost-flow": { "label": "Kostenminimaler Fluss", "topic": "graphs" },
+    "pareto-optimum": { "label": "Pareto-Optimum", "topic": "optimization" }
   }
 }
