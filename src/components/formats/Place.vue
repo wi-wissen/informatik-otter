@@ -5,10 +5,10 @@ import { computed, onMounted, ref } from 'vue';
 import ItemFace from './ItemFace.vue';
 
 type Item = { id: string; label?: string; image?: string; alt?: string };
-type Zone = { id: string; label?: string; x?: number; y?: number; w?: number; h?: number; capacity?: number };
+type Zone = { id: string; label?: string; x?: number; y?: number; w?: number; h?: number; capacity?: number; accepts?: string[] };
 const props = defineProps<{
   items: Item[]; zones: Zone[]; background?: string; width?: number; height?: number;
-  reusable?: boolean; trayLabel?: string; initial?: Record<string, string | string[]>;
+  reusable?: boolean; trayLabel?: string; initial?: Record<string, string | string[]>; itemSize?: number;
 }>();
 const emit = defineEmits<{ answer: [value: Record<string, string | string[]>] }>();
 
@@ -39,6 +39,7 @@ onMounted(report);
 
 function put(zoneId: string, itemId: string) {
   const z = props.zones.find((x) => x.id === zoneId)!;
+  if (z.accepts && !z.accepts.includes(itemId)) { selected.value = null; return; }
   const next = Object.fromEntries(Object.entries(placed.value).map(([k, v]) => [k, [...v]]));
   if (!props.reusable) for (const k in next) next[k] = next[k].filter((x) => x !== itemId);
   if (next[zoneId].length >= cap(z)) {
@@ -77,7 +78,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 </script>
 
 <template>
-  <div class="place">
+  <div class="place" :style="{ '--item': `${itemSize ?? 64}px` }">
     <div v-if="background" class="board" :style="{ aspectRatio: `${W} / ${H}`, width: `min(100%, 720px, calc(78vh * ${W / H}))` }">
       <img :src="background" alt="" draggable="false" />
       <div v-for="z in zones" :key="z.id" class="zone on-pic" :class="{ target: !!selected }"
@@ -124,7 +125,8 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 .board { position: relative; margin-inline: auto; background: #fff; border-radius: 10px; overflow: hidden; }
 .board img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 .zone { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; border: 2px dashed var(--primary); border-radius: 8px; cursor: pointer; }
-.zone.on-pic { position: absolute; background: color-mix(in srgb, var(--primary-soft) 45%, transparent); }
+.zone.on-pic { position: absolute; background: color-mix(in srgb, var(--primary-soft) 35%, transparent); }
+.zone.on-pic:has(.chip-item) { border-color: transparent; background: transparent; }
 .zone.target { border-color: var(--sun); background: color-mix(in srgb, var(--sun-soft) 70%, transparent); }
 .zone:focus-visible { outline: 3px solid var(--sun); }
 .rows { display: grid; gap: 8px; }
@@ -134,9 +136,11 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 .tray { display: flex; flex-wrap: wrap; gap: 8px; min-height: 64px; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
 .chip-item { border: 2px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 4px 8px; cursor: grab; font: inherit; }
 .chip-item.sel { border-color: var(--sun); background: var(--sun-soft); }
-.chip-item :deep(img) { max-height: 64px; max-width: 96px; }
-.on-pic .chip-item { padding: 2px 4px; }
-.on-pic .chip-item :deep(img) { max-height: 40px; max-width: 60px; }
+.chip-item :deep(img) { max-height: var(--item); max-width: calc(var(--item) * 1.6); }
+.on-pic .chip-item { background: transparent; border-color: transparent; padding: 0; flex: 1 1 0; min-width: 0; height: 100%; display: grid; place-items: center; }
+/* placed pieces fill their field, so they keep their size relative to the picture */
+.on-pic .chip-item :deep(.face) { width: 100%; height: 100%; justify-content: center; }
+.on-pic .chip-item :deep(img) { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
 .empty { color: var(--muted); font-size: .85rem; align-self: center; }
 .hint { font-size: .85rem; color: var(--muted); }
 </style>
