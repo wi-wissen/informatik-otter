@@ -110,6 +110,7 @@
     "routing": { "label": "Routing", "topic": "networks" },
     "strongly-connected-components": { "label": "Starke Zusammenhangskomponenten", "topic": "graphs" },
     "min-cost-flow": { "label": "Kostenminimaler Fluss", "topic": "graphs" },
-    "pareto-optimum": { "label": "Pareto-Optimum", "topic": "optimization" }
+    "pareto-optimum": { "label": "Pareto-Optimum", "topic": "optimization" },
+    "diffusion-model": { "label": "Diffusionsmodell", "topic": "ai" }
   }
 }
