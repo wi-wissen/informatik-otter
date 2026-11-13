@@ -137,10 +137,10 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 .chip-item { border: 2px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 4px 8px; cursor: grab; font: inherit; }
 .chip-item.sel { border-color: var(--sun); background: var(--sun-soft); }
 .chip-item :deep(img) { max-height: var(--item); max-width: calc(var(--item) * 1.6); }
-.on-pic .chip-item { background: transparent; border-color: transparent; padding: 0; flex: 1 1 0; min-width: 0; height: 100%; display: grid; place-items: center; }
+.on-pic .chip-item { background: transparent; border-color: transparent; padding: 0; flex: 0 1 auto; min-width: 0; max-width: 100%; height: 100%; display: grid; place-items: center; }
 /* placed pieces fill their field, so they keep their size relative to the picture */
 .on-pic .chip-item :deep(.face) { width: 100%; height: 100%; justify-content: center; }
-.on-pic .chip-item :deep(img) { max-width: 100%; max-height: 100%; width: 100%; height: 100%; object-fit: contain; }
+.on-pic .chip-item :deep(img) { height: 100%; width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
 .empty { color: var(--muted); font-size: .85rem; align-self: center; }
 .hint { font-size: .85rem; color: var(--muted); }
 </style>

@@ -27,8 +27,6 @@ source:
 ---
 Anna bestellt im Restaurant mit geheimen Botschaften; nur Cäsar der Koch soll sie verstehen. Sie benutzt dazu ihre Geheimscheibe. Diese hat einen äußeren und einen inneren Ring mit den Buchstaben des Alphabets. Zu Anfang stehen die Ringe gleich: A (innen) passt zu A (außen), B passt zu B usw.
 
-![Die Geheimscheibe in Anfangsstellung: zwei Ringe mit dem Alphabet, A innen steht an A außen](./img/wheel.png)
-
 So erstellt Anna eine geheime Botschaft: Zuerst schreibt sie ihre Bestellung auf, z. B. PIZZA. Dann macht sie für jeden Buchstaben:
 
 1. Unter den Buchstaben schreibt sie eine „Dreh-Zahl“.
