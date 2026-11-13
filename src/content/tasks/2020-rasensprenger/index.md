@@ -16,8 +16,8 @@ interaction:
   props:
     rows: 4
     cols: 5
-    palette: ["#dff3a0", "#e91e8c", "#0e7490"]
-    initial: [[0, 0, 1, 0, 0], [1, 0, 0, 0, 1], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0]]
+    palette: ["#dff3a0", "#0e7490", "#e91e8c"]
+    initial: [[0, 0, 2, 0, 0], [2, 0, 0, 0, 2], [0, 2, 0, 0, 0], [0, 0, 2, 0, 0]]
     locked: [[false, false, true, false, false], [true, false, false, false, true], [false, true, false, false, false], [false, false, true, false, false]]
 source:
   type: original
