@@ -1,5 +1,5 @@
 ---
-answer: { b1: m2, b2: m5, b3: m4 }
+answer: { z14: b1, z42: b2, z30: b3 }
 ---
 So kommen die Biber an:
 

@@ -11,14 +11,8 @@ topics: [programming]
 methods: [sequence, loop]
 mascot: beaver
 interaction:
-  format: command-sequence
-  props:
-    maxLength: 7
-    commands:
-      - { id: right, label: Gehe einen Schritt nach rechts }
-      - { id: left, label: Gehe einen Schritt nach links }
-      - { id: up, label: Gehe einen Schritt nach oben }
-      - { id: down, label: Gehe einen Schritt nach unten }
+  format: custom
+  props: {}
 source:
   type: original
   work: Informatik-Biber 2015
@@ -30,7 +24,9 @@ source:
 ---
 Erstelle ein Programm, das das unten gezeigte Zielmuster malt.
 
-Du wählst Anweisungen aus, die nacheinander in den freien Feldern erscheinen. Dein Programm hat höchstens sieben Anweisungen. Es wird sechs Mal hintereinander wiederholt („Wiederhole sechs mal …“). Das Programm startet in einem Feld, das schon gemalt ist; jede Anweisung bewegt den Stift ein Feld weiter und malt dort das Feld.
+Klicke links Anweisungen an, welche dann rechts nacheinander in den freien Feldern erscheinen. Dein Programm hat höchstens sieben Anweisungen und wird sechs Mal hintereinander wiederholt („Wiederhole sechs mal …“). Der Stift startet in einem Feld, das schon gemalt ist; jede Anweisung bewegt ihn ein Feld weiter und malt dort das Feld.
+
+Du kannst dein Programm ausprobieren, indem du auf „Programm ausprobieren“ klickst.
 
 **Zielmuster:**
 

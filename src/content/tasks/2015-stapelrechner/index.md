@@ -13,10 +13,8 @@ topics: [programming, data-structures]
 methods: [postfix-notation, stack]
 mascot: beaver
 interaction:
-  format: input
-  props:
-    kind: text
-    placeholder: z. B. 2 3 +
+  format: custom
+  props: {}
 source:
   type: original
   work: Informatik-Biber 2015
@@ -38,4 +36,4 @@ Für den Stapelrechner wird eine Rechnung auf ungewöhnliche Art beschrieben –
 | 5 + 2 * 3 | 5 2 3 * + |
 | (8 – 2) * (3 + 4) | 8 2 – 3 4 + * |
 
-**Wie wird die Rechnung 4 * (8 + 3) – 2 für den Stapelrechner beschrieben?** Gib die Beschreibung mit Leerzeichen zwischen den Zeichen ein. Für das Minus kannst du „-“ oder „–“ schreiben.
+**Wie wird die Rechnung 4 * (8 + 3) – 2 für den Stapelrechner beschrieben?** Gib die Beschreibung unten ein (mit Leerzeichen zwischen den Zeichen; für das Minus kannst du „-“ oder „–“ schreiben). Klicke auf die Knöpfe, um den Stapelrechner auszuprobieren.

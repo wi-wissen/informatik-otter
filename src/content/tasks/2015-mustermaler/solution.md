@@ -1,5 +1,5 @@
 ---
-answer: [right, up, right, right, down, right]
+answer: ok
 ---
 Für diese Aufgabe ist die Anzahl der Anweisungen auf sieben begrenzt, so dass nur die folgende Lösung möglich ist:
 

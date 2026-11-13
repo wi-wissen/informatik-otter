@@ -11,12 +11,8 @@ topics: [encoding, images]
 methods: [binary-numbers]
 mascot: beaver
 interaction:
-  format: pixel-grid
-  props:
-    rows: 3
-    cols: 3
-    palette: ["#ffffff", "#000000"]
-    initial: [[0, 1, 0], [1, 0, 0], [0, 0, 1]]
+  format: custom
+  props: {}
 source:
   type: original
   work: Informatik-Biber 2015
@@ -40,6 +36,6 @@ Zum Beispiel hat dieser QB-Code den Gesamtwert 16 + 1 = 17.
 
 Die Biber müssen aber aufpassen, wenn sie einen QB-Code drehen. Dann könnte er nämlich einen anderen Gesamtwert bekommen.
 
-Im Raster unten siehst du einen QB-Code mit den schwarzen Feldern oben Mitte, Mitte links und unten rechts.
+Hier siehst du den QB-Code, den du drehen sollst: Seine schwarzen Felder sind oben Mitte, Mitte links und unten rechts.
 
-**Drehe diesen QB-Code so, dass sein Gesamtwert am größten wird.** Male dazu den gedrehten QB-Code in das Raster.
+**Drehe diesen QB-Code so, dass sein Gesamtwert am größten wird.**
