@@ -391,6 +391,22 @@
     "deque": {
       "label": "Deque (Warteschlange mit zwei Enden)",
       "topic": "data-structures"
+    },
+    "soundex": {
+      "label": "Soundex (phonetische Suche)",
+      "topic": "searching"
+    },
+    "state-space-search": {
+      "label": "Zustandsraumsuche",
+      "topic": "searching"
+    },
+    "convex-hull": {
+      "label": "Konvexe Hülle",
+      "topic": "optimization"
+    },
+    "cellular-automaton": {
+      "label": "Zellulärer Automat",
+      "topic": "automata"
     }
   }
 }
