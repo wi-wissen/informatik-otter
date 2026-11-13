@@ -19,7 +19,7 @@ const key = JSON.stringify({ answer: solution.data.answer, answers: solution.dat
   <div class="in narrow">
     <div id="solution">
       {task.data.methods.length > 0 && (
-        <p class="methods"><strong>Dahinter steckt:</strong> {task.data.methods.map((m) => label.method(m)).join(', ')}</p>
+        <p class="methods"><strong>Verfahren:</strong> {task.data.methods.map((m) => label.method(m)).join(', ')}</p>
       )}
       <Content />
     </div>
