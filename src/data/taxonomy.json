@@ -411,6 +411,10 @@
     "chain-code": {
       "label": "Kettencode",
       "topic": "images"
+    },
+    "variable-assignment": {
+      "label": "Variable und Zuweisung",
+      "topic": "modelling"
     }
   }
 }
