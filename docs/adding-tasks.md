@@ -54,7 +54,7 @@ python3 tools/biber_pdf.py render .import/biber<YEAR>.pdf --page 62 --out .impor
 
 Look at the rendered page (the image tool shows it to you). The header line says the grades and
 difficulty, e.g. `3-4: einfach  5-6: –  7-8: mittel`. The flag at the top right is the Bebras country
-the idea came from (two-letter code in `source.country`, e.g. AU, DE, CH, KR).
+the idea came from (ISO two-letter code in `source.country`, e.g. AU, DE, CH, KR, GB for the UK).
 
 ## 4. Cut out pictures
 

@@ -97,6 +97,7 @@ const hint = { nodes: 'Tippe die passenden Punkte an.', edges: 'Tippe die passen
 svg { width: 100%; max-width: 640px; height: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; color: var(--muted); }
 .vis { stroke: var(--muted); stroke-width: 3; }
 .vis.on { stroke: var(--primary); stroke-width: 6; }
+svg.has-bg { background: #fff; }
 .has-bg .vis { stroke: transparent; }
 .has-bg .vis.on { stroke: var(--sun); stroke-width: 14; stroke-linecap: round; }
 .overlay { stroke: var(--sun); stroke-width: 7; stroke-opacity: .55; stroke-linecap: round; pointer-events: none; }
