@@ -177,7 +177,12 @@ any conflict-free colouring), use `custom` and let `Task.vue` check validity and
 For browser checks use `npm run build` and `npx astro preview` (the dev server may not hydrate islands
 when `node_modules` is a symlink).
 
-Rebuild what the student did in the online competition as closely as our formats allow:
+**Rule: the task stays the task.** Rebuild what the student did in the online competition. Never replace
+an interaction by a different question (e.g. "how many clicks?" instead of the click game, "type the
+letters" instead of placing them). Keep the booklet's question text. The booklet's hints ("Ziehe …",
+"Klicke …", pictures of the answer state) tell you what the interaction was.
+
+Pick the closest fit:
 
 - answer options A–D (text or pictures) → `choice`
 - "Bringe in die richtige Reihenfolge" → `sort-list` (items in the booklet's start order)
@@ -186,8 +191,11 @@ Rebuild what the student did in the online competition as closely as our formats
 - colour/flip squares → `pixel-grid`
 - build a sequence of commands → `command-sequence`
 - "Wie viele …?" / enter a word → `input`
-- something else (drag pieces on a board, a little simulation) → `custom` with `Task.vue`. Use it
-  sparingly; if a simpler format captures the question, prefer it and adapt the question text.
+- drag things onto places in a picture or into fields → `place`
+- click places in a picture that switch state (arrows, signs, colours) → `hotspots`
+- anything else (a game, a simulation, a board with moves, rotating, building) → `custom` with `Task.vue`.
+  Build it so it behaves like the original: same pieces, same rules, same goal. Let it check validity
+  itself when many answers are correct (emit `"ok"`).
 
 For `graph-pick` on a picture: crop the picture with `--alpha`, use its size in points as `width`/`height`
 (pixel size divided by the scale; the crop includes the 2 pt padding), and read node positions from the
