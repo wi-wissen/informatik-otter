@@ -439,6 +439,14 @@
     "josephus-problem": {
       "label": "Josephus-Problem (Abzählen)",
       "topic": "algorithm-analysis"
+    },
+    "prefix-code": {
+      "label": "Präfixcode",
+      "topic": "compression"
+    },
+    "minimax": {
+      "label": "Minimax-Verfahren",
+      "topic": "games"
     }
   }
 }
