@@ -12,19 +12,15 @@ topics: [optimization, logic]
 methods: [backtracking]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: alina, label: Alina }
-      - { id: elli, label: Elli }
-      - { id: lara, label: Lara }
-      - { id: mia, label: Mia }
-      - { id: pinar, label: Pinar }
-      - { id: zoe, label: Zoe }
-    right:
-      - { id: r1, label: Zimmer 1 }
-      - { id: r2, label: Zimmer 2 }
-      - { id: r3, label: Zimmer 3 }
+    girls:
+      - { id: alina, name: Alina, plus: [], minus: [elli] }
+      - { id: elli, name: Elli, plus: [], minus: [lara] }
+      - { id: lara, name: Lara, plus: [pinar], minus: [] }
+      - { id: mia, name: Mia, plus: [elli, zoe], minus: [] }
+      - { id: pinar, name: Pinar, plus: [], minus: [alina] }
+      - { id: zoe, name: Zoe, plus: [mia], minus: [lara] }
 source:
   type: original
   work: Informatik-Biber 2018
@@ -43,10 +39,8 @@ Jedes Clubmitglied schreibt auf eine Wunsch-Karte,
 
 im gleichen Zimmer sein möchte.
 
-![Sechs Wunsch-Karten. Alina: +: nichts, –: Elli. Elli: +: nichts, –: Lara. Lara: +: Pinar, –: nichts. Mia: +: Elli, Zoe, –: nichts. Pinar: +: nichts, –: Alina. Zoe: +: Mia, –: Lara.](./img/cards.png)
-
 Die Club-Vorsitzende muss die Mädchen auf die Zimmer verteilen. Sie will alle Zimmer-Wünsche erfüllen.
 
 **Hilf ihr und verteile die Mädchen auf die Zimmer!**
 
-Ordne dazu jedes Mädchen einem der drei Zimmer zu, so dass alle Wünsche erfüllt werden. Zum Glück ist das möglich. (Im Informatik-Biber 2018 wurde diese Aufgabe mit teils anderen Namen verwendet.)
+Ziehe dazu ihre Wunsch-Karten so auf die drei „Zimmer“, dass alle Wünsche erfüllt werden. Zum Glück ist das möglich. (Im Informatik-Biber 2018 wurde diese Aufgabe mit teils anderen Namen verwendet.)

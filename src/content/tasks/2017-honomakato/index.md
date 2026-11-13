@@ -13,26 +13,21 @@ topics: [graphs, networks]
 methods: []
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: custom
   props:
-    pick: edges
+    background: ./img/islands.png
+    alt: "Die Inseln Ho, No, Ma, Ka und To im Meer. Ho hat links ein Glasfaserkabel zum Internet. Kupferkabel führen von Ho nach No, von Ho nach Ka, von Ka nach Ma und von Ka nach To."
     width: 270
     height: 269
-    background: ./img/islands.png
-    hideNodes: true
-    nodes:
-      - { id: Ho, x: 63, y: 146, label: Ho }
-      - { id: No, x: 127, y: 49, label: No }
-      - { id: Ma, x: 230, y: 112, label: Ma }
-      - { id: Ka, x: 155, y: 134, label: Ka }
-      - { id: To, x: 131, y: 238, label: To }
-    edges:
-      - { id: HoMa, from: Ho, to: Ma }
-      - { id: HoTo, from: Ho, to: To }
-      - { id: NoKa, from: No, to: Ka }
-      - { id: NoMa, from: No, to: Ma }
-      - { id: NoTo, from: No, to: To }
-      - { id: MaTo, from: Ma, to: To }
+    main: Ho
+    extra: 2
+    islands:
+      - { id: Ho, x: 63, y: 146 }
+      - { id: No, x: 127, y: 49 }
+      - { id: Ma, x: 230, y: 112 }
+      - { id: Ka, x: 155, y: 134 }
+      - { id: To, x: 131, y: 238 }
+    existing: [[Ho, No], [Ho, Ka], [Ka, Ma], [Ka, To]]
 source:
   type: original
   work: Informatik-Biber 2017
@@ -48,4 +43,4 @@ Die Bewohner von Honomakato möchten eine robuste Verbindung aller Inseln mit de
 
 **Sorge dafür, dass Honomakato eine robuste Verbindung mit dem Internet bekommt. Verlege dazu zwei weitere Kupferkabel zwischen den Inseln.**
 
-Klicke auf die Verbindungslinien, die du als Kabel verlegen möchtest. Es gibt mehrere richtige Antworten.
+Um zwischen zwei Inseln ein Kabel zu verlegen, klicke auf die beiden Inseln und dann auf „verbinden“. Klicke auf „trennen“, um ein Kabel wieder zu entfernen. Es gibt mehrere richtige Antworten.

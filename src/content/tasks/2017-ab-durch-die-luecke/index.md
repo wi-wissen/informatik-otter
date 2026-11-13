@@ -11,12 +11,11 @@ topics: [programming]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: custom
   props:
-    commands:
-      - { id: forward, label: gehe vorwärts }
-      - { id: left, label: drehe nach links }
-      - { id: right, label: drehe nach rechts }
+    rows: ["........", "........", "##.#####", "........"]
+    start: [3, 1]
+    goal: [1, 5]
 source:
   type: original
   work: Informatik-Biber 2017
@@ -28,6 +27,6 @@ source:
 ---
 Der dreieckige Roboter soll vom roten Feld zum grünen Zielfeld gehen.
 
-![Das Spielfeld: Der Roboter steht auf dem roten Feld unten links und schaut nach rechts. In der Mauer über ihm ist eine Lücke, das grüne Zielfeld liegt oben rechts.](./img/maze.png)
+**Programmiere den Roboter!** Ziehe dazu Programmbausteine in dein Programm und füge sie in der richtigen Reihenfolge zusammen.
 
-**Programmiere den Roboter!** Füge dazu die Programmbausteine in der richtigen Reihenfolge zusammen.
+Der Roboter steht unten links auf dem roten Feld und schaut nach rechts. In der Mauer über ihm ist eine Lücke, das grüne Zielfeld liegt oben rechts.

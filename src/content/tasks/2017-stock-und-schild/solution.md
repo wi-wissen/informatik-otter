@@ -1,5 +1,5 @@
 ---
-answer: [t7, t4, t1, t3, t6, t5, t2]
+answer: { f1: t7, f2: t4, f3: t1, f4: t3, f5: t6, f6: t5, f7: t2 }
 ---
 Die Bilder der Freunde müssen so in die Felder bewegt werden, wie es im Bild gezeigt wird. Dann zeigt jeder Stock auf ein Schild. Eine andere Möglichkeit, die Bilder so anzuordnen, dass diese Bedingung erfüllt ist, gibt es nicht.
 

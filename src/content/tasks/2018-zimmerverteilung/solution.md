@@ -1,11 +1,5 @@
 ---
-answers:
-  - { alina: r1, elli: r2, lara: r3, mia: r2, pinar: r3, zoe: r2 }
-  - { alina: r1, elli: r3, lara: r2, mia: r3, pinar: r2, zoe: r3 }
-  - { alina: r2, elli: r1, lara: r3, mia: r1, pinar: r3, zoe: r1 }
-  - { alina: r2, elli: r3, lara: r1, mia: r3, pinar: r1, zoe: r3 }
-  - { alina: r3, elli: r1, lara: r2, mia: r1, pinar: r2, zoe: r1 }
-  - { alina: r3, elli: r2, lara: r1, mia: r2, pinar: r1, zoe: r2 }
+answer: ok
 ---
 Wenn genügend Zimmer vorhanden sind, genügt es, sich auf die positiven Wünsche zu konzentrieren. Das geht so: Für jedes Mädchen M suchen wir ein Zimmer (also: ein Rechteck) mit mindestens einer Wunsch-Karte eines anderen Mädchens M2, so dass M2 auf der Liste „+“ von M oder M auf der Liste „+“ von M2 steht. Gibt es so ein Zimmer, dann ziehen wir die Karte von M auf das Zimmer; sonst ziehen wir die Karte auf ein leeres Zimmer.
 

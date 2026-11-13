@@ -1,5 +1,5 @@
 ---
-answer: [[4, 3], [2, 1]]
+answer: { tl: yellow, tr: blue, bl: green, br: red }
 ---
 Das Bild zeigt, wohin sich die Quadrate bewegen, wenn Simon den Knopf noch einmal drückt. Danach liegen die Farben so wie im Bild rechts: Gelb oben links, Blau oben rechts, Grün unten links, Rot unten rechts.
 

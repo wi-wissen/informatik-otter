@@ -11,11 +11,21 @@ topics: [programming]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: place
   props:
-    rows: 2
-    cols: 2
-    palette: ["#ffffff", "#ff0000", "#22aa33", "#0000ff", "#ffff00"]
+    background: ./img/field.png
+    width: 526
+    height: 263
+    zones:
+      - { id: tl, label: "oben links", x: 136, y: 5, w: 123, h: 123 }
+      - { id: tr, label: "oben rechts", x: 267, y: 5, w: 123, h: 123 }
+      - { id: bl, label: "unten links", x: 136, y: 136, w: 123, h: 123 }
+      - { id: br, label: "unten rechts", x: 267, y: 136, w: 123, h: 123 }
+    items:
+      - { id: red, image: ./img/c-red.png, alt: Rot }
+      - { id: green, image: ./img/c-green.png, alt: Grün }
+      - { id: blue, image: ./img/c-blue.png, alt: Blau }
+      - { id: yellow, image: ./img/c-yellow.png, alt: Gelb }
 source:
   type: original
   work: Informatik-Biber 2018
@@ -39,4 +49,4 @@ Simon drückt den Knopf noch einmal.
 
 **Wo liegen danach die Farben?**
 
-Wähle unter dem Bild eine Farbe aus (von links: Weiß zum Löschen, Rot, Grün, Blau, Gelb) und tippe dann auf das Feld, in dem die Farbe liegt.
+Ziehe die Farben auf den richtigen Platz.

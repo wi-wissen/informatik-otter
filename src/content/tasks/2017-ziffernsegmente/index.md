@@ -11,28 +11,22 @@ topics: [algorithm-analysis, encoding]
 methods: [brute-force]
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: hotspots
   props:
-    pick: edges
-    width: 112
-    height: 198
     background: ./img/display.png
-    hideNodes: true
-    nodes:
-      - { id: TL, x: 13, y: 13 }
-      - { id: TR, x: 99, y: 13 }
-      - { id: ML, x: 13, y: 99 }
-      - { id: MR, x: 99, y: 99 }
-      - { id: BL, x: 13, y: 186 }
-      - { id: BR, x: 99, y: 186 }
-    edges:
-      - { id: top, from: TL, to: TR }
-      - { id: ul, from: TL, to: ML }
-      - { id: ur, from: TR, to: MR }
-      - { id: mid, from: ML, to: MR }
-      - { id: ll, from: ML, to: BL }
-      - { id: lr, from: MR, to: BR }
-      - { id: bottom, from: BL, to: BR }
+    width: 281
+    height: 496
+    states:
+      - { id: off, label: "–" }
+      - { id: on, label: "✓" }
+    spots:
+      - { id: top, label: oberes Segment, x: 140, y: 32, w: 150, h: 44 }
+      - { id: ul, label: oberes linkes Segment, x: 32, y: 140, w: 44, h: 140 }
+      - { id: ur, label: oberes rechtes Segment, x: 248, y: 140, w: 44, h: 140 }
+      - { id: mid, label: mittleres Segment, x: 140, y: 248, w: 150, h: 44 }
+      - { id: ll, label: unteres linkes Segment, x: 32, y: 356, w: 44, h: 140 }
+      - { id: lr, label: unteres rechtes Segment, x: 248, y: 356, w: 44, h: 140 }
+      - { id: bottom, label: unteres Segment, x: 140, y: 464, w: 150, h: 44 }
 source:
   type: original
   work: Informatik-Biber 2017
@@ -48,4 +42,4 @@ In einem Haus mit 10 Stockwerken zeigt der Aufzug das aktuelle Stockwerk mit ein
 
 Um eine Ziffer anzuzeigen, leuchten also mindestens 2 und höchstens 7 Segmente. Vor Kurzem war ein Segment kaputt und blieb dunkel. Trotzdem konnte man alle Ziffern erkennen und voneinander unterscheiden. Die meisten Segmente müssen aber immer funktionieren, damit man die Ziffern voneinander unterscheiden kann.
 
-**Markiere alle Segmente, die immer funktionieren müssen!** Klicke dazu auf die Segmente der Anzeige.
+**Markiere alle Segmente, die immer funktionieren müssen!**

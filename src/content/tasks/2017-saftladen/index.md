@@ -13,18 +13,20 @@ topics: [optimization, graphs]
 methods: [matching]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: anna, label: Anna }
-      - { id: bernard, label: Bernard }
-      - { id: christine, label: Christine }
-      - { id: daniel, label: Daniel }
-    right:
-      - { id: apple, image: ./img/apple.png, alt: Apfelsaft }
-      - { id: pear, image: ./img/pear.png, alt: Birnensaft }
-      - { id: orange, image: ./img/orange.png, alt: Orangensaft }
-      - { id: currant, image: ./img/currant.png, alt: Johannisbeersaft }
+    names: [Anna, Bernard, Christine, Daniel]
+    hearts: [4, 3, 2, 1]
+    juices:
+      - { id: apple, label: Apfelsaft, image: ./img/apple.png }
+      - { id: pear, label: Birnensaft, image: ./img/pear.png }
+      - { id: orange, label: Orangensaft, image: ./img/orange.png }
+      - { id: currant, label: Johannisbeersaft, image: ./img/currant.png }
+    table:
+      - [apple, pear, orange, currant]
+      - [apple, orange, pear, currant]
+      - [apple, orange, pear, currant]
+      - [currant, apple, orange, pear]
 source:
   type: original
   work: Informatik-Biber 2017
@@ -36,13 +38,6 @@ source:
 ---
 Vier Freunde halten bei einem Laden. Dort möchte jeder ein Glas Saft trinken. Die Tabelle zeigt, welchen Saft jeder wie gerne trinkt: je mehr Herzen, desto lieber.
 
-| | 4 Herzen | 3 Herzen | 2 Herzen | 1 Herz |
-|---|---|---|---|---|
-| Anna | Apfelsaft | Birnensaft | Orangensaft | Johannisbeersaft |
-| Bernard | Apfelsaft | Orangensaft | Birnensaft | Johannisbeersaft |
-| Christine | Apfelsaft | Orangensaft | Birnensaft | Johannisbeersaft |
-| Daniel | Johannisbeersaft | Apfelsaft | Orangensaft | Birnensaft |
-
 Der Saftladen ist sehr beliebt und hat von jedem Saft nur noch je ein Glas übrig. Jeder muss also einen anderen Saft bestellen. Die Freunde wollen so bestellen, dass sie insgesamt möglichst zufrieden sind – also möglichst viele Herzen sammeln.
 
-**Bestelle für die vier Freunde so, dass sie insgesamt möglichst viele Herzen sammeln!** Wähle für jede Person ein Glas Saft aus.
+**Bestelle für die vier Freunde so, dass sie insgesamt möglichst viele Herzen sammeln!** Klicke jeweils ein Glas in der Tabelle an, um für eine Person ein Glas Saft zu bestellen.
