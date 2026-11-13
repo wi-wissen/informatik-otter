@@ -30,6 +30,7 @@ const wedge = (k: number) => {
 };
 const centre = (k: number, r: number) => pt(-90 + 45 * k + 22.5, r);
 const label = (k: number) => `${3 * k}–${3 * k + 3} Uhr`;
+const shortLabel = (k: number) => `${3 * k}–${3 * k + 3}`;
 </script>
 
 <template>
@@ -37,14 +38,14 @@ const label = (k: number) => `${3 * k}–${3 * k + 3} Uhr`;
     <svg viewBox="0 0 400 400" role="group" aria-label="Uhr mit acht Zeitabschnitten und je drei Flaggen">
       <path v-for="k in 8" :key="'w' + k" :d="wedge(k - 1)" class="wedge" :class="{ alt: k % 2 === 0 }" />
       <circle :cx="C" :cy="C" r="58" class="face" />
-      <text :x="C" :y="C + 5" class="mid">24 Uhr</text>
+      <text :x="C" :y="C - 4" class="mid">Uhr</text><text :x="C" :y="C + 16" class="mid small">0–24</text>
       <g v-for="(row, s) in flags" :key="s">
-        <text :x="centre(s, 168)[0]" :y="centre(s, 168)[1] + 4" class="lbl">{{ label(s) }}</text>
+        <text :x="centre(s, 172)[0]" :y="centre(s, 172)[1] + 4" class="lbl">{{ shortLabel(s) }}</text>
         <g v-for="(v, j) in row" :key="j" class="flag" role="button" tabindex="0"
            :aria-label="`${label(s)}, Flagge ${j + 1}: ${v ? 'blaues Dreieck' : 'rotes Quadrat'}`"
-           :transform="`translate(${centre(s, 115)[0] + (j - 1) * 34}, ${centre(s, 115)[1] + 22})`"
+           :transform="`translate(${centre(s, 104)[0] + (j - 1) * 27}, ${centre(s, 104)[1] + 20})`"
            @click="toggle(s, j)" @keydown.enter.prevent="toggle(s, j)" @keydown.space.prevent="toggle(s, j)">
-          <rect x="-16" y="-52" width="32" height="58" class="hit" />
+          <rect x="-13" y="-48" width="27" height="54" class="hit" />
           <line x1="0" y1="6" x2="0" y2="-44" class="pole" />
           <rect v-if="!v" x="0" y="-44" width="17" height="14" fill="#e53935" stroke="#7f1d1d" stroke-width="1.5" />
           <polygon v-else points="0,-44 18,-37 0,-30" fill="#1a237e" stroke="#0b1250" stroke-width="1.5" />
@@ -62,6 +63,7 @@ svg { width: 100%; max-width: 480px; height: auto; }
 .wedge.alt { fill: var(--sun-soft); }
 .face { fill: var(--surface); stroke: var(--line); stroke-width: 3; }
 .mid { text-anchor: middle; font: 700 16px var(--font-body); fill: var(--ink); }
+.small { font-size: 12px; font-weight: 500; }
 .lbl { text-anchor: middle; font: 700 13px var(--font-body); fill: var(--ink); }
 .pole { stroke: #5a4636; stroke-width: 3; stroke-linecap: round; }
 .hit { fill: transparent; }

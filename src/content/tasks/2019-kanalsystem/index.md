@@ -26,7 +26,7 @@ interaction:
       - { id: e5, x: 720, y: 518, w: 120, h: 150, label: "Eingang 5" }
       - { id: e6, x: 840, y: 518, w: 120, h: 150, label: "Eingang 6" }
     states:
-      - { id: none, label: "" }
+      - { id: none, label: Grau }
       - { id: B, image: ./img/beaver-b.png, label: Blau }
       - { id: G, image: ./img/beaver-g.png, label: Grün }
 source:

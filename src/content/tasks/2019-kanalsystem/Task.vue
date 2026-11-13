@@ -14,5 +14,5 @@ const emit = defineEmits<{ answer: [value: unknown] }>();
 <style scoped>
 .big :deep(.board) { container-type: inline-size; }
 .big :deep(.spot) { padding: 0; }
-.big :deep(.spot img) { max-width: 12.5cqw; max-height: 14.5cqw; }
+.big :deep(.spot img) { max-width: 11.5cqw; max-height: 13.5cqw; }
 </style>

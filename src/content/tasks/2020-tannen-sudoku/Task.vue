@@ -39,7 +39,7 @@ function onAnswer(v: Record<string, string>) {
 
 <style scoped>
 .big :deep(.board) { container-type: inline-size; max-width: 520px; }
-.big :deep(.on-pic .chip-item) { padding: 0; border-width: 1px; }
+.big :deep(.on-pic .chip-item) { padding: 0; border: 0; background: transparent; }
 .big :deep(.on-pic .chip-item img) { max-width: 14cqw; max-height: 17cqw; }
 .big :deep(.tray .chip-item img) { max-width: 70px; max-height: 90px; }
 </style>

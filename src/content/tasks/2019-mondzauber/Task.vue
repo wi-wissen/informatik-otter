@@ -55,7 +55,7 @@ const name = (v: number | null) => (v === null ? 'noch leer' : v === 1 ? 'Vollmo
 .cards { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .card { display: grid; grid-template-rows: repeat(3, 1fr); gap: 2px; padding: 2px; background: #1b1820; border-radius: 4px; }
 .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.cell { width: clamp(30px, 9vw, 44px); aspect-ratio: 1; display: grid; place-items: center; background: #2b2830; border: 0; padding: 0; }
+.cell { width: clamp(22px, 7vw, 34px); aspect-ratio: 1; display: grid; place-items: center; background: #2b2830; border: 0; padding: 0; }
 .btn-cell { cursor: pointer; }
 .btn-cell.unset { background: #9be7f2; }
 .btn-cell:focus-visible { outline: 3px solid var(--primary); outline-offset: -3px; }

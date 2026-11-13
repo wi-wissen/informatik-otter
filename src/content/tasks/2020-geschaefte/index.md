@@ -18,7 +18,8 @@ interaction:
     width: 174.8
     height: 193.6
     background: ./img/map.png
-    nodeRadius: 9
+    hideNodes: true
+    nodeRadius: 11
     nodes:
       - { id: s1, x: 68.0, y: 30.8, label: "1" }
       - { id: s2, x: 106.0, y: 30.4, label: "2" }
@@ -45,4 +46,4 @@ Eine Landgemeinde will die Versorgung ihrer Dörfer verbessern und dazu Geschäf
 
 Die Karte zeigt die Dörfer als grüne Punkte. An den Straßen zwischen den Dörfern (Linien) liegen Bauplätze für Geschäfte (Quadrate). Von jedem Dorf aus soll man ein Geschäft erreichen können, ohne durch ein anderes Dorf zu fahren. Diese Bedingung muss mit so wenig Geschäften wie möglich erfüllt werden.
 
-**Auf welchen Bauplätzen müssen Geschäfte gebaut werden?** Tippe die Bauplätze an (nummeriert von oben nach unten).
+**Auf welchen Bauplätzen müssen Geschäfte gebaut werden?** Klicke die Bauplätze an.
