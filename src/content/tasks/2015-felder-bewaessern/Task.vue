@@ -12,7 +12,7 @@ const pos: Record<string, P> = {
   F1: [30, 255], F2: [90, 255], F3: [150, 255], F4: [210, 255], F5: [270, 255], F6: [330, 255],
 };
 // [from, to, sluice, side]: an edge with a sluice only carries water when the sluice points that way.
-const edges: [string, string, string?, 'L' | 'R'?][] = [
+const edges: [string, string, string?, ('L' | 'R')?][] = [
   ['S', 'B'], ['S', 'C'],
   ['B', 'A', 'B', 'L'], ['B', 'J', 'B', 'R'],
   ['C', 'J', 'C', 'L'], ['C', 'R', 'C', 'R'],
