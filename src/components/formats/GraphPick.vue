@@ -78,13 +78,13 @@ const hint = { nodes: 'Tippe die passenden Punkte an.', edges: 'Tippe die passen
         <line :x1="byId[e.from].x" :y1="byId[e.from].y" :x2="byId[e.to].x" :y2="byId[e.to].y" class="hit" />
         <text v-if="e.label" :x="mid(e).x" :y="mid(e).y - 6" class="elabel">{{ e.label }}</text>
       </g>
-      <g v-for="n in (hideNodes ? [] : nodes)" :key="n.id" class="node" :class="{ on: chosen.includes(n.id), pickable: pick !== 'edges' }"
+      <g v-for="n in (hideNodes && pick === 'edges' ? [] : nodes)" :key="n.id" class="node" :class="{ on: chosen.includes(n.id), pickable: pick !== 'edges', ghost: hideNodes }"
          :tabindex="pick !== 'edges' ? 0 : -1" role="button" :aria-pressed="chosen.includes(n.id)" :aria-label="n.label ?? n.id"
          @click="clickNode(n.id)" @keydown.enter.prevent="clickNode(n.id)" @keydown.space.prevent="clickNode(n.id)">
         <image v-if="n.image || nodeImage" :href="n.image ?? nodeImage" :x="n.x - R * 1.4" :y="n.y - R * 1.4" :width="R * 2.8" :height="R * 2.8" />
         <circle v-else :cx="n.x" :cy="n.y" :r="R" />
         <circle v-if="n.image || nodeImage" :cx="n.x" :cy="n.y" :r="R * 1.5" class="ring" />
-        <text v-if="n.label" :x="n.x" :y="n.image || nodeImage ? n.y + R * 2.1 : n.y + 5" class="nlabel">{{ n.label }}</text>
+        <text v-if="n.label && !hideNodes" :x="n.x" :y="n.image || nodeImage ? n.y + R * 2.1 : n.y + 5" class="nlabel">{{ n.label }}</text>
         <text v-if="pick === 'path' && chosen.includes(n.id)" :x="n.x + R" :y="n.y - R" class="order">{{ chosen.indexOf(n.id) + 1 }}</text>
       </g>
     </svg>
@@ -113,6 +113,9 @@ svg { width: 100%; max-width: 640px; height: auto; background: var(--surface); b
 .node.on .ring { stroke: var(--sun); stroke-width: 4; fill: transparent; }
 .node:focus-visible { outline: none; }
 .node:focus-visible circle { stroke: var(--primary); stroke-width: 4; }
+.ghost circle { fill: transparent; stroke: transparent; }
+.ghost:hover circle { stroke: var(--primary); stroke-opacity: .5; }
+.ghost.on circle { fill: var(--sun); fill-opacity: .35; stroke: var(--sun); stroke-width: 4; }
 .nlabel { font: 700 14px var(--font-body); fill: var(--ink); text-anchor: middle; pointer-events: none; }
 .order { font: 700 13px var(--font-mono); fill: var(--primary); }
 .bar { display: flex; justify-content: space-between; gap: 8px; align-items: center; flex-wrap: wrap; }

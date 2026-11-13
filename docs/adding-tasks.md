@@ -79,6 +79,7 @@ python3 tools/biber_pdf.py crop .import/biber<YEAR>.pdf --page 62 --bbox 52.2,28
   of a drawing (e.g. an island outline without its label); enlarge the bbox by hand then.
 - A crop can pull in neighbouring text from the page. Choose the bbox so it does not, or crop smaller.
 - Small inline icons in a sentence (a red flag, an apple): write the word instead.
+- Coordinates: a `figures`/`crop` bbox is in PDF points; a page rendered at 80 dpi has 1.111 px per point.
 
 ## 5. Write `index.md`
 
@@ -157,6 +158,12 @@ Text of the "Das ist Informatik!" box.
 Older booklets call the box "Dies ist Informatik!" – use the heading `## Das ist Informatik!` anyway.
 
 ## 7. Choose the interaction
+
+Several correct answers: list them all with `answers: [...]`. If there are very many (any valid plan,
+any conflict-free colouring), use `custom` and let `Task.vue` check validity and emit `"ok"`; the key is then `answer: ok`.
+
+For browser checks use `npm run build` and `npx astro preview` (the dev server may not hydrate islands
+when `node_modules` is a symlink).
 
 Rebuild what the student did in the online competition as closely as our formats allow:
 
