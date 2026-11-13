@@ -407,6 +407,10 @@
     "aggregate": {
       "label": "Aggregat (zusammengesetzte Datenstruktur)",
       "topic": "data-structures"
+    },
+    "chain-code": {
+      "label": "Kettencode",
+      "topic": "images"
     }
   }
 }
