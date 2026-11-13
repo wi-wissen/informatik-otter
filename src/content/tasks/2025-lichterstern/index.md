@@ -17,7 +17,7 @@ interaction:
     width: 228
     height: 217
     background: ./img/star.png
-    nodeImage: ./img/hit.png
+    hideNodes: true
     nodeRadius: 11
     nodes:
       - { id: m1, x: 72, y: 61 }
@@ -54,4 +54,4 @@ Sophie schaltet alle roten Lichter an.
 
 ![Der Lichterstern: fünf rote Lichter außen, die an sind; dazwischen ein Ring aus fünf und innen ein Ring aus fünf blauen und gelben Lichtern, verbunden durch Pfeile](./img/star.png)
 
-**Welche anderen Lichter sind dann auch an? Tippe sie an.**
+**Welche anderen Lichter sind dann auch an?**

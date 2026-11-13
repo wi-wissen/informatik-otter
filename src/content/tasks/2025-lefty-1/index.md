@@ -17,8 +17,8 @@ interaction:
     width: 150
     height: 150
     background: ./img/grid.png
-    nodeImage: ./img/hit.png
-    nodeRadius: 7
+    hideNodes: true
+    nodeRadius: 14
     nodes:
       - { id: r1c1, x: 15, y: 15 }
       - { id: r1c2, x: 45, y: 15 }
@@ -75,4 +75,4 @@ Lefty kann aber nicht alles. Zum Beispiel kann er …
 
 ![Raster aus 5×5 Feldern. Lefty steht unten rechts und zeigt nach oben, das Ziel ist das mittlere Feld. Mauern: zwischen Zeile 1 Spalte 2 und 3; um das Ziel herum links, oben und rechts sowie links vom Feld links daneben (Zeile 3 Spalte 2 hat oben und links eine Mauer); in Zeile 5 über Spalte 2 und zwischen Spalte 2 und 3](./img/grid.png)
 
-**Über welche Felder muss Lefty fahren, um das Ziel zu erreichen? Wähle so wenige Felder wie möglich aus.** Tippe die Felder an, über die Lefty fährt (Start- und Zielfeld nicht mitgezählt).
+**Über welche Felder muss Lefty fahren, um das Ziel zu erreichen? Wähle so wenige Felder wie möglich aus.**

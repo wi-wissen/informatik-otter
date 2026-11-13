@@ -19,8 +19,8 @@ interaction:
     width: 555
     height: 103
     background: ./img/field.png
-    nodeImage: ./img/hit.png
-    nodeRadius: 16
+    hideNodes: true
+    nodeRadius: 15
     nodes:
       - { id: f1, x: 65, y: 55 }
       - { id: f2, x: 96, y: 55 }
@@ -54,4 +54,4 @@ Asterios hat schon 3 Felder der Wiese durchsucht (die hellgrünen Felder, in den
 
 ![Die Wiese von links nach rechts: Die Schnur beginnt links am Griff und geht in die erste Gruppe aus drei dunkelgrünen Feldern. Zwischen den vier Gruppen sind hellgrüne, durchsuchte Felder, in denen die Schnur zu sehen ist](./img/field.png)
 
-**Welches Feld ist das? Tippe das Feld an.**
+**Welches Feld ist das?**

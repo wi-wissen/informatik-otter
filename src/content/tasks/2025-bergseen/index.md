@@ -64,4 +64,4 @@ An jeder Stelle zwischen zwei Seen, an der ein Kanal gebaut werden kann, ist ein
 
 Beachte: Wenn ein Kanal Wasser von einem kleinen Bergsee in einen zweiten ableitet, sammelt sich im zweiten See das überschüssige Wasser aus beiden Seen.
 
-**An welchen Stellen sollen Kanäle gebaut werden? Klicke die Pfeile an.**
+**An welchen Stellen sollen Kanäle gebaut werden?**
