@@ -17,3 +17,13 @@ Die Struktur des Programms ist vorgegeben: Es gibt eine zentrale Wiederholungsan
 Anweisungen in der Schleife werden wiederholt, bis der Kunde den Kopf hebt: also ein Wert gemessen wird, der deutlich kleiner als 1 ist. Die einzige dazu passende Bedingung ist `Nasenlänge < 0,8`.
 
 Vielleicht ist dir aufgefallen, dass das Programm nicht exakt die Werte aus der Tabelle verwendet. In der Praxis kann nämlich nicht kontinuierlich gemessen werden, sondern nur mit einer bestimmten Frequenz (beispielsweise 25 mal pro Sekunde). Da kann es vorkommen, dass z.B. der exakte Wert für das Geradeausschauen von 1,0 gar nicht gemessen wird, weil zuvor beispielsweise 0,95 und danach 1,03 gemessen wird.
+
+## Das ist Informatik!
+
+Der Automat soll Kopfnicken zählen. Dazu bekommt er laufend Zahlen von einer Kamera, die Nasenlänge, und das Programm muss aus diesen Zahlen auf Ereignisse schließen: Kopf gesenkt, wieder geradeaus, Kopf gehoben. Ein Programm, das so mit einer Variablen (Zähler) arbeitet und mit einer Schleife Anweisungen wiederholt, bis eine Bedingung erfüllt ist, ist typisch für die Steuerung von Geräten. Die „warte bis“-Anweisung sorgt dafür, dass die Schritte in der richtigen Reihenfolge ablaufen.
+
+Auffällig sind die Bedingungen mit Schwellwerten wie 1,2 und 1,1 statt der genauen Werte 1,3 und 1. Messgeräte arbeiten nie ganz exakt und messen nur in bestimmten Zeitabständen. Deshalb vergleicht man mit Schwellen, die etwas Spielraum lassen. Dass die beiden Schwellen für „Kopf gesenkt“ und „wieder geradeaus“ verschieden sind, verhindert außerdem, dass ein kleines Zittern des Messwerts als weiteres Nicken gezählt wird.
+
+Das Auswerten von Sensorwerten mit Schwellwerten ist in der Informatik weit verbreitet. Ein Schrittzähler im Smartphone zählt ähnlich Ausschläge des Beschleunigungssensors, und eine automatische Tür öffnet, wenn ein Sensor einen bestimmten Wert überschreitet. Auch Steuerungen in Fabriken und Haushaltsgeräten arbeiten nach diesem Muster.
+
+*Dieser Abschnitt wurde für den Informatik-Otter ergänzt und steht nicht im Biberheft.*

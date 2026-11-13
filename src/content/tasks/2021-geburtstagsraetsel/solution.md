@@ -10,3 +10,13 @@ Kann er das Geschenk auch über weniger als fünf Türen erreichen? Der kürzest
 ![Kette: runder Baustein, Tür L, Dreieck, Tür I, Mond, Tür K, Tanne, Tür C, Kleeblatt, Tür H, Geschenk](./img/chain.png)
 
 Da wir bei der Rückwärtssuche keinen Umweg gemacht haben, gibt es keinen kürzeren Weg. Außerdem ist dies der einzige Weg mit höchstens fünf Türen.
+
+## Das ist Informatik!
+
+Bastian öffnet Türen, um Bausteine zu bekommen, mit denen er weitere Türen öffnen kann. Jede Tür hängt damit von einem Baustein ab, der hinter anderen Türen liegt. Aus diesen Abhängigkeiten lässt sich ein Graph zeichnen, in dem jede Kante sagt: Um diese Tür zu öffnen, brauche ich jenen Baustein. Die Frage ist dann, ob es in diesem Graphen einen Weg vom Anfang zum Ziel gibt und wie lang der kürzeste Weg ist.
+
+Die Lösung geht den Weg rückwärts: Man beginnt beim Ziel und fragt jeweils, was man dafür braucht. Das ist oft klüger als das Vorwärtsprobieren, denn vom Start aus verzweigen sich die Möglichkeiten schnell, vom Ziel aus sind es manchmal viel weniger. Bei einem Rückwärtsvorgehen muss man trotzdem aufpassen: Ein Baustein wird beim Öffnen verbraucht und steht dann nicht mehr zur Verfügung. In der Informatik nennt man das Suche im Zustandsraum, und die Rückwärtssuche trägt den Fachbegriff Backward Chaining.
+
+Rückwärtsschließen wird in der Praxis oft verwendet, etwa in Programmen der Künstlichen Intelligenz, die aus Regeln ein Ziel ableiten, oder in Programmiersprachen wie Prolog. Auch Programme zur Installation von Software gehen ähnlich vor: Sie fragen, was für ein gewünschtes Programm alles installiert sein muss, und prüfen die Abhängigkeiten Schritt für Schritt.
+
+*Dieser Abschnitt wurde für den Informatik-Otter ergänzt und steht nicht im Biberheft.*

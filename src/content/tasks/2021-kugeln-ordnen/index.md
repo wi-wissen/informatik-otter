@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [algorithm-analysis, games]
-methods: [stack, backtracking]
+methods: [stack, backtracking, state-space-search]
 mascot: beaver
 interaction:
   format: custom

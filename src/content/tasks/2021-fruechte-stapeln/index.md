@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [data-structures, logic]
-methods: [stack]
+methods: [stack, constraint-satisfaction]
 mascot: beaver
 interaction:
   format: sort-list

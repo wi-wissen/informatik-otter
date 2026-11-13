@@ -10,7 +10,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, searching]
-methods: [bfs]
+methods: [bfs, dijkstra]
 mascot: beaver
 interaction:
   format: choice
