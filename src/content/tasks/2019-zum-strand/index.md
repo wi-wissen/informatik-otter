@@ -15,10 +15,10 @@ interaction:
   props:
     columns: 2
     options:
-      - { id: a, label: "A) Angela und Fred." }
-      - { id: b, label: "B) Angela, aber Fred nicht." }
-      - { id: c, label: "C) Angela nicht, aber Fred." }
-      - { id: d, label: "D) Keiner von beiden." }
+      - { id: a, label: "Angela und Fred." }
+      - { id: b, label: "Angela, aber Fred nicht." }
+      - { id: c, label: "Angela nicht, aber Fred." }
+      - { id: d, label: "Keiner von beiden." }
 source:
   type: original
   work: Informatik-Biber 2019

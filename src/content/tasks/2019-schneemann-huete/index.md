@@ -35,6 +35,4 @@ source:
 ---
 Die Schneemänner bekommen Hüte. Sie stellen sich in vier Reihen an. Jede Reihe sucht sich den passenden Hutstapel aus. Dann nimmt der erste Schneemann (links) den obersten Hut vom Stapel, der zweite den nächsten Hut – und so weiter. Am Ende hat jeder den passenden Hut: Der kleinste Schneemann hat den kleinsten Hut, der zweitkleinste Schneemann den zweitkleinsten Hut – und so weiter.
 
-![Ein Schneemann mit rotem Hut](./img/snowman.png)
-
 **Verbinde jede Schneemann-Reihe mit dem passenden Hutstapel.**

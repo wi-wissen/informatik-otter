@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 2
     options:
-      - { id: a, label: "A) Ja, Alan ist ein Superstar in dieser Gruppe." }
-      - { id: b, label: "B) Ja, Frances und Robin sind Superstars in dieser Gruppe." }
-      - { id: c, label: "C) Ja, Grace ist ein Superstar in dieser Gruppe." }
-      - { id: d, label: "D) Nein, es gibt keinen Superstar in dieser Gruppe." }
+      - { id: a, label: "Ja, Alan ist ein Superstar in dieser Gruppe." }
+      - { id: b, label: "Ja, Frances und Robin sind Superstars in dieser Gruppe." }
+      - { id: c, label: "Ja, Grace ist ein Superstar in dieser Gruppe." }
+      - { id: d, label: "Nein, es gibt keinen Superstar in dieser Gruppe." }
 source:
   type: original
   work: Informatik-Biber 2019

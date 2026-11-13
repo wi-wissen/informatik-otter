@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 4
     options:
-      - { id: a, label: A) stürmisch }
-      - { id: b, label: B) regnerisch }
-      - { id: c, label: C) bewölkt }
-      - { id: d, label: D) sonnig }
+      - { id: a, label: stürmisch }
+      - { id: b, label: regnerisch }
+      - { id: c, label: bewölkt }
+      - { id: d, label: sonnig }
 source:
   type: original
   work: Informatik-Biber 2019
