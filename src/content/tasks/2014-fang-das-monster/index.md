@@ -12,11 +12,25 @@ topics: [searching]
 methods: [binary-search]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: number
-    placeholder: Anzahl Klicks
-    suffix: Klicks
+    best: 6
+    rows:
+      - "ooooooooooooooo"
+      - "##############o"
+      - "ooooooooooooooo"
+      - "o##############"
+      - "ooooooooooooooo"
+      - "##############o"
+      - "ooooooooooooooo"
+      - "o##############"
+      - "ooooooooooooooo"
+      - "##############o"
+      - "ooooooooooooooo"
+      - "o##############"
+      - "ooooooooooooooo"
+      - "##############o"
+      - "ooooooooooooooo"
 source:
   type: original
   work: Informatik-Biber 2014
@@ -27,8 +41,6 @@ source:
 ---
 Im Keller der Biberburg lebt ein Monster. Es versteckt sich irgendwo in den gelben Zellen. Wo graue Wände sind, kann das Monster nicht sein.
 
-![Der Keller: 127 gelbe Zellen bilden eine lange schlangenförmige Reihe, dazwischen und darum graue Wände](./img/cellar.png)
+Du willst das Monster fangen. Klicke auf eine gelbe Zelle. Die gelben Zellen werden weniger. Klicke wieder auf eine gelbe Zelle. Und so weiter. Wenn nur noch eine gelbe Zelle übrig ist, hast Du das Monster darin gefangen.
 
-Du willst das Monster fangen. Im Computer-Spiel klickt man auf eine gelbe Zelle, und die gelben Zellen werden weniger. Dann klickt man wieder auf eine gelbe Zelle, und so weiter. Wenn nur noch eine gelbe Zelle übrig ist, hat man das Monster darin gefangen.
-
-**Wie viele Klicks braucht man mindestens, um das Monster in jedem Fall zu fangen?**
+**Fang das Monster mit möglichst wenigen Klicks!**

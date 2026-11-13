@@ -1,7 +1,5 @@
 ---
-answers:
-  - [t0b1, t2b2, t4b3, t6b4, t8b5]
-  - [t2b0, t4b1, t6b2, t7b3, t8b5]
+answer: ok
 ---
 Es sind höchstens 5 Pärchen möglich. Dafür gibt es zwei Möglichkeiten:
 

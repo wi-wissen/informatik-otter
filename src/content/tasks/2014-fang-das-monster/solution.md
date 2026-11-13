@@ -1,5 +1,5 @@
 ---
-answer: "6"
+answer: ok
 ---
 Die 127 gelben Zellen bilden eine lange Reihe. Die beste Fang-Strategie ist es, immer auf die mittlere gelbe Zelle zu klicken. Nach dem ersten Klick bleiben dann 63 Zellen übrig. Nach dem zweiten Klick bleiben 31, dann 15, 7 und 3 Zellen übrig. Nach dem sechsten Klick bleibt nur eine gelbe Zelle übrig.
 

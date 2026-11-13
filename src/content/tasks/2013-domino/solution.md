@@ -1,5 +1,5 @@
 ---
-answers: [[a, c, d, e, g, h, i], [a, c, d, f, g, h, i]]
+answer: ok
 ---
 ![Die beiden übrig bleibenden Steine (1|4 und 2|5) und drei Beispiele für Dominoringe aus sieben Steinen](./img/solution.png)
 

@@ -12,8 +12,9 @@ topics: [modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: sort-list
+  format: custom
   props:
+    mode: swap
     direction: horizontal
     startLabel: zuerst
     endLabel: zuletzt
@@ -36,4 +37,4 @@ Der Biber spaziert um einen Teich. Er beginnt an der im Bild gezeigten Stelle un
 
 Auf seinem Spaziergang macht er diese 4 Fotos, aber nicht in dieser Reihenfolge.
 
-**Bringe die Fotos in die richtige zeitliche Reihenfolge!**
+**Bringe die Fotos in die richtige zeitliche Reihenfolge!** Schiebst du ein Foto über ein anderes, dann tauschen sie die Plätze.
