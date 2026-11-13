@@ -14,6 +14,7 @@ interaction:
   format: graph-pick
   props:
     pick: nodes
+    max: 1
     width: 948
     height: 428
     background: ./img/kids.png

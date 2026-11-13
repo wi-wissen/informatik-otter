@@ -58,6 +58,8 @@ export const interaction = z.discriminatedUnion('format', [
       nodeRadius: z.number().default(16),
       /** Do not draw nodes (e.g. when the background image already shows them). */
       hideNodes: z.boolean().default(false),
+      /** At most this many picks; with 1 a new click replaces the previous pick. */
+      max: z.number().int().min(1).optional(),
       directed: z.boolean().default(false),
       pick: z.enum(['nodes', 'edges', 'path']),
       nodes: z.array(z.object({ id: z.string(), x: z.number(), y: z.number(), label: z.string().optional(), image: z.string().optional() })),

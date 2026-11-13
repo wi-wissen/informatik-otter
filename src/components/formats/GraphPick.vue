@@ -5,7 +5,7 @@ type Node = { id: string; x: number; y: number; label?: string; image?: string }
 type Edge = { id?: string; from: string; to: string; label?: string };
 const props = defineProps<{
   width?: number; height?: number; background?: string; nodeImage?: string; nodeRadius?: number;
-  directed?: boolean; hideNodes?: boolean; pick: 'nodes' | 'edges' | 'path'; nodes: Node[]; edges?: Edge[];
+  directed?: boolean; hideNodes?: boolean; max?: number; pick: 'nodes' | 'edges' | 'path'; nodes: Node[]; edges?: Edge[];
 }>();
 const emit = defineEmits<{ answer: [value: string[]] }>();
 
@@ -24,7 +24,10 @@ function send() {
 }
 function clickNode(id: string) {
   if (props.pick === 'nodes') {
-    chosen.value = chosen.value.includes(id) ? chosen.value.filter((x) => x !== id) : [...chosen.value, id];
+    if (chosen.value.includes(id)) chosen.value = chosen.value.filter((x) => x !== id);
+    else if (props.max === 1) chosen.value = [id];
+    else if (props.max && chosen.value.length >= props.max) return;
+    else chosen.value = [...chosen.value, id];
   } else if (props.pick === 'path') {
     const last = chosen.value[chosen.value.length - 1];
     if (last === id) chosen.value = chosen.value.slice(0, -1);
@@ -35,7 +38,10 @@ function clickNode(id: string) {
 }
 function clickEdge(id: string) {
   if (props.pick !== 'edges') return;
-  chosen.value = chosen.value.includes(id) ? chosen.value.filter((x) => x !== id) : [...chosen.value, id];
+  if (chosen.value.includes(id)) chosen.value = chosen.value.filter((x) => x !== id);
+  else if (props.max === 1) chosen.value = [id];
+  else if (props.max && chosen.value.length >= props.max) return;
+  else chosen.value = [...chosen.value, id];
   send();
 }
 function reset() { chosen.value = []; send(); }

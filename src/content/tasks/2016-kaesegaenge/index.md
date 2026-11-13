@@ -15,6 +15,7 @@ interaction:
   format: graph-pick
   props:
     pick: nodes
+    max: 1
     width: 772
     height: 536
     background: ./img/maze.png

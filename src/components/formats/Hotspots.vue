@@ -47,7 +47,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 .board > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 .spot { position: absolute; transform: translate(-50%, -50%); display: grid; place-items: center; padding: 2px 6px; border: 2px dashed var(--primary); border-radius: 999px; background: color-mix(in srgb, #fff 75%, transparent); color: #10313a; font: 700 .85rem var(--font-body); cursor: pointer; }
 .spot.set { border-style: solid; border-color: #0a6f7d; background: #fff2c7; }
-.spot img { max-width: 32px; max-height: 32px; }
+.spot img { max-width: 72px; max-height: 72px; width: auto; height: auto; }
 .spot:focus-visible { outline: 3px solid var(--sun); }
 .hint { font-size: .85rem; color: var(--muted); }
 </style>

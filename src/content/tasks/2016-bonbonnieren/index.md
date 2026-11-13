@@ -15,6 +15,7 @@ interaction:
   format: graph-pick
   props:
     pick: nodes
+    max: 1
     width: 1062
     height: 310
     background: ./img/jars.png
