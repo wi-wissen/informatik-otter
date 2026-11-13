@@ -79,7 +79,11 @@ python3 tools/biber_pdf.py crop .import/biber<YEAR>.pdf --page 62 --bbox 52.2,28
   of a drawing (e.g. an island outline without its label); enlarge the bbox by hand then.
 - A crop can pull in neighbouring text from the page. Choose the bbox so it does not, or crop smaller.
 - Small inline icons in a sentence (a red flag, an apple): write the word instead.
-- Coordinates: a `figures`/`crop` bbox is in PDF points; a page rendered at 80 dpi has 1.111 px per point.
+- Coordinates: a `figures`/`crop` bbox is in PDF points; a page rendered at 80 dpi has 1.111 px per point
+  (point = pixel × 0.9).
+- `figures` does not find raster pictures (photos, scanned plans) and sometimes splits or merges drawings.
+  Then read the bbox from the rendered page and crop by hand.
+- A task can span one, two or three pages; check where the next title starts.
 
 ## 5. Write `index.md`
 
@@ -158,6 +162,10 @@ Text of the "Das ist Informatik!" box.
 Older booklets call the box "Dies ist Informatik!" – use the heading `## Das ist Informatik!` anyway.
 
 ## 7. Choose the interaction
+
+- `choice` labels its options A, B, C … by position. Keep the booklet's order so the letters match,
+  and don't put "A)" into the labels.
+- To click places on a picture use `graph-pick` with `pick: nodes`, `hideNodes: true` and `background`.
 
 Several correct answers: list them all with `answers: [...]`. If there are very many (any valid plan,
 any conflict-free colouring), use `custom` and let `Task.vue` check validity and emit `"ok"`; the key is then `answer: ok`.
