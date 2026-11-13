@@ -84,6 +84,10 @@ python3 tools/biber_pdf.py crop .import/biber<YEAR>.pdf --page 62 --bbox 52.2,28
 - `figures` does not find raster pictures (photos, scanned plans) and sometimes splits or merges drawings.
   Then read the bbox from the rendered page and crop by hand.
 - A task can span one, two or three pages; check where the next title starts.
+- `--page` is always the PDF page. Some older booklets (e.g. 2016) put two printed pages on one PDF page;
+  `source.page` is the printed page number.
+- Custom `Task.vue`: fixed colours are fine where the colour carries meaning in the task (red ball, yellow
+  goal); everything else uses the design tokens.
 
 ## 5. Write `index.md`
 
