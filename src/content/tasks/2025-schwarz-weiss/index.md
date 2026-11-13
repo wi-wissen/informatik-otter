@@ -12,11 +12,13 @@ topics: [compression, recursion]
 methods: [divide-and-conquer]
 mascot: beaver
 interaction:
-  format: input
+  format: command-sequence
   props:
-    kind: text
-    caseSensitive: true
-    placeholder: Buchstaben-Beschreibung
+    maxLength: 14
+    commands:
+      - { id: x, label: x }
+      - { id: W, label: W }
+      - { id: S, label: S }
 source:
   type: original
   work: Informatik-Biber 2025
@@ -43,6 +45,6 @@ Hier siehst du für einige Kästchen-Folgen, welche Buchstaben-Beschreibung der 
 - Zwei schwarze, zwei weiße, vier schwarze: **xxSWS**
 - Vier schwarze, zwei weiße, ein schwarzes, ein weißes: **xSxWxSW**
 
-**Welche Buchstaben-Beschreibung gibt Sarahs Algorithmus für diese Kästchen-Folge aus?** Achte auf Groß- und Kleinschreibung.
+**Welche Buchstaben-Beschreibung gibt Sarahs Algorithmus für diese Kästchen-Folge aus?**
 
 ![Kästchen-Folge von links nach rechts: weiß, schwarz, weiß, weiß, schwarz, schwarz, schwarz, weiß](./img/sequence.png)

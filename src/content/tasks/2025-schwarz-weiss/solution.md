@@ -1,5 +1,5 @@
 ---
-answer: xxxWSWxSxSW
+answer: [x, x, x, W, S, W, x, S, x, S, W]
 ---
 Die richtige Beschreibung ist **xxxWSWxSxSW**.
 

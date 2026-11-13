@@ -13,11 +13,14 @@ topics: [cryptography, images]
 methods: [visual-cryptography, xor]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: custom
   props:
     rows: 5
     cols: 5
-    palette: ["#e6e6e6", "#2b2b2b"]
+    secret: ./img/secret.png
+    secretAlt: "Geheimes Bild aus 5×5 Pixeln: In den Spalten 2 bis 4 schwarze Pixel in den Zeilen 1, 3 und 5, in Spalte 2 durchgehend schwarz (ein „E“); die übrigen Pixel sind weiß"
+    foil1: ./img/foil1.png
+    foil1Alt: "Folie 1 aus 5×5 Pixeln, dunkle Pixel (Zeile für Zeile, 1 = dunkel): 01100, 01101, 11010, 01111, 10000"
 source:
   type: original
   work: Informatik-Biber 2025
@@ -38,8 +41,4 @@ Die Bilder für die beiden Folien werden so erstellt: Zuerst wird für Folie 1 e
 
 Für das folgende geheime Bild wurde Folie 1 bereits erzeugt.
 
-![Geheimes Bild aus 5×5 Pixeln: In den Spalten 2 bis 4 schwarze Pixel in den Zeilen 1, 3 und 5, in Spalte 2 durchgehend schwarz (ein „E“); die übrigen Pixel sind weiß](./img/secret.png)
-
-![Folie 1 aus 5×5 Pixeln, dunkle Pixel (Zeile für Zeile, 1 = dunkel): 01100, 01101, 11010, 01111, 10000](./img/foil1.png)
-
-**Erstelle nun Folie 2. Tippe die Pixel an, die dunkel sein sollen.**
+**Erstelle nun Folie 2.**

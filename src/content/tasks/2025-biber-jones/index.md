@@ -11,27 +11,11 @@ topics: [optimization, programming]
 methods: [pareto-optimum, brute-force]
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: custom
   props:
-    maxLength: 10
-    commands:
-      - { id: w1, label: wait(1) }
-      - { id: w2, label: wait(2) }
-      - { id: w3, label: wait(3) }
-      - { id: w4, label: wait(4) }
-      - { id: w5, label: wait(5) }
-      - { id: w6, label: wait(6) }
-      - { id: w7, label: wait(7) }
-      - { id: w8, label: wait(8) }
-      - { id: w9, label: wait(9) }
-      - { id: w10, label: wait(10) }
-      - { id: w11, label: wait(11) }
-      - { id: w12, label: wait(12) }
-      - { id: gA, label: goto_block(A) }
-      - { id: gB, label: goto_block(B) }
-      - { id: gC, label: goto_block(C) }
-      - { id: gD, label: goto_block(D) }
-      - { id: gt, label: goto_treasure }
+    periods: [3, 5, 8, 4]
+    minTime: 12
+    minLength: 4
 source:
   type: original
   work: Informatik-Biber 2025
@@ -71,4 +55,4 @@ Er kommt zum nächsten Gang. Der hat vier Blöcke, mit Takt 3, 5, 8 und 4.
 
 ![Der Gang mit den Blöcken A (Takt 3), B (Takt 5), C (Takt 8) und D (Takt 4), Jones links, der Schatz rechts](./img/gang2.png)
 
-**Baue die kürzeste Folge von Anweisungen, mit denen Jones so schnell wie möglich den Schatz erreicht.**
+**Was ist die kürzeste Folge von Anweisungen, mit denen Jones so schnell wie möglich den Schatz erreicht?**

@@ -12,10 +12,12 @@ topics: [modelling, trees]
 methods: []
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: custom
   props:
-    maxLength: 3
-    commands:
+    left: Vater(Mutter(Annika))
+    right: Daniel
+    gaps: 3
+    words:
       - { id: vater, label: Vater }
       - { id: mutter, label: Mutter }
 source:
@@ -47,8 +49,4 @@ Ihre Verwandtschaft mit Christina kann Annika auch mit nur einer Gleichung besch
 
 Nun hätte sie gerne eine Gleichung für ihre Verwandtschaft mit Daniel.
 
-**Ergänze die folgende Gleichung so, dass sie die Verwandtschaft zwischen Annika und Daniel beschreibt:**
-
-`Vater(Mutter(Annika)) = ___( ___( ___( Daniel )))`
-
-Wähle die drei Wörter von außen nach innen, also in der Reihenfolge, in der sie in der Gleichung stehen.
+**Ergänze die folgende Gleichung so, dass sie die Verwandtschaft zwischen Annika und Daniel beschreibt.**

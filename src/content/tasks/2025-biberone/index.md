@@ -16,12 +16,12 @@ interaction:
   props:
     maxLength: 6
     commands:
-      - { id: g12, label: "1 → 2" }
-      - { id: g13, label: "1 → 3" }
-      - { id: g21, label: "2 → 1" }
-      - { id: g23, label: "2 → 3" }
-      - { id: g31, label: "3 → 1" }
-      - { id: g32, label: "3 → 2" }
+      - { id: g12, image: ./img/op-g12.png, alt: "1 → 2" }
+      - { id: g13, image: ./img/op-g13.png, alt: "1 → 3" }
+      - { id: g21, image: ./img/op-g21.png, alt: "2 → 1" }
+      - { id: g23, image: ./img/op-g23.png, alt: "2 → 3" }
+      - { id: g31, image: ./img/op-g31.png, alt: "3 → 1" }
+      - { id: g32, image: ./img/op-g32.png, alt: "3 → 2" }
 source:
   type: original
   work: Informatik-Biber 2025
@@ -45,8 +45,7 @@ Im Labor gibt es drei Behälter 1, 2 und 3 mit den Biberonen CAC, ACA und AAC.
 
 ![Behälter 1 mit CAC, Behälter 2 mit ACA, Behälter 3 mit AAC](./img/containers.png)
 
-Eine Anweisung „2 → 3“ bedeutet, dass ein Tropfen des Biberons in Behälter 2 dem Biberon in Behälter 3 hinzugefügt wird. Es gibt sechs verschiedene Anweisungen.
+Mit einer solchen Anweisung („2 → 3“) kannst du bestimmen, dass ein Tropfen des Biberons in einem Behälter (z. B. Behälter 2) dem Biberon in einem anderen Behälter (z. B. Behälter 3) hinzugefügt wird.
 
-Verwende möglichst wenige davon, um die Biberone in den Behältern 1 und 3 zu vertauschen: Am Ende soll in Behälter 1 AAC sein, in Behälter 2 bleibt ACA, und in Behälter 3 soll CAC sein.
+Unten siehst du sechs verschiedene Anweisungen. Verwende möglichst wenige davon, um die Biberone in den Behältern 1 und 3 zu vertauschen: Am Ende soll in Behälter 1 AAC sein, in Behälter 2 bleibt ACA, und in Behälter 3 soll CAC sein.
 
-**Baue die Folge der Anweisungen mit der kleinsten möglichen Anzahl.**

@@ -11,19 +11,22 @@ topics: [automata, data-structures]
 methods: [stack, pushdown-automaton]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: d, label: "David (D)" }
-      - { id: e, label: "Emir (E)" }
-      - { id: f, label: "Frank (F)" }
-      - { id: g, label: "Gabi (G)" }
-      - { id: h, label: "Harald (H)" }
-      - { id: j, label: "Julia (J)" }
-    right:
-      - { id: s1, label: Spur 1 }
-      - { id: s2, label: Spur 2 }
-      - { id: s3, label: Spur 3 }
+    background: ./img/lot.png
+    width: 177.3
+    height: 225.3
+    lanes:
+      - { id: s1, label: "Spur 1", x: 18, y: 124, w: 20, h: 40, capacity: 1 }
+      - { id: s2, label: "Spur 2", x: 42.5, y: 80.5, w: 20, h: 83.5, capacity: 2 }
+      - { id: s3, label: "Spur 3", x: 67.5, y: 37, w: 20, h: 127, capacity: 3 }
+    items:
+      - { id: d, image: ./img/car-d.png, alt: Auto D (David) }
+      - { id: e, image: ./img/car-e.png, alt: Auto E (Emir) }
+      - { id: f, image: ./img/car-f.png, alt: Auto F (Frank) }
+      - { id: g, image: ./img/car-g.png, alt: Auto G (Gabi) }
+      - { id: h, image: ./img/car-h.png, alt: Auto H (Harald) }
+      - { id: j, image: ./img/car-j.png, alt: Auto J (Julia) }
 source:
   type: original
   work: Informatik-Biber 2025
@@ -45,6 +48,6 @@ Die Gäste wollen in dieser Reihenfolge von der Party wegfahren:
 
 Die Autos von Ana, Beata und Clara sind bereits geparkt. Nun parken die anderen Gäste nach und nach ein. Sie wollen so parken, dass beim Wegfahren kein Auto von einem anderen blockiert ist, das später wegfährt.
 
-![Der Parkplatz vor dem Haus mit drei Parkspuren nebeneinander, die vorne (oben) beginnen. Das Auto A steht vorne in der linken Spur, B vorne in der mittleren Spur, C in der linken Spur dahinter. Die rechte Spur ist leer. Die Autos D, E, F, G, H und J warten rechts neben dem Parkplatz. Die Straße verläuft unten](./img/lot.png)
-
-**Zeige den Gästen, wie sie so parken können! Wähle für die restlichen 6 Autos eine der Parkspuren 1 bis 3 (von links nach rechts).** Du musst die Reihenfolgen beim Ankommen und beim Wegfahren berücksichtigen.
+**Zeige den Gästen, wie sie so parken können!**
+Platziere die restlichen 6 Autos in den Parkspuren.
+Du musst die Reihenfolgen beim Ankommen und beim Wegfahren berücksichtigen.

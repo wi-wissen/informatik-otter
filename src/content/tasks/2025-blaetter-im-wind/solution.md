@@ -1,5 +1,5 @@
 ---
-answer: { a: erdbeere, b: wassermelone, c: weintraube, d: apfel, e: banane }
+answer: { l1: erdbeere, l3: wassermelone, l4: weintraube, l5: banane, l6: apfel }
 ---
 ![Der Entscheidungsbaum mit allen Blättern](./img/solution.png)
 
