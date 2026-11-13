@@ -1,7 +1,7 @@
 ---
 short: Ur93
 title: Sparsames Bewässern 2
-summary: Fünf Blumenfelder, fünf trockene Felder und viele Wassertore: Welche sollen geöffnet werden?
+summary: "Fünf Blumenfelder, fünf trockene Felder und viele Wassertore. Welche sollen geöffnet werden?"
 grades:
   "5-6": easy
 gi:
