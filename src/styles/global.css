@@ -73,6 +73,13 @@ code { font-family: var(--font-mono); }
 .btn.sun { background: var(--sun); color: #3b2a00; }
 .btn.teacher { background: var(--teacher); color: var(--surface); }
 .btn.small { padding: 6px 14px; font-size: .9rem; }
+/* Press effect (only on press, never on hover): the button sits on a small edge and sinks when pressed */
+.btn { box-shadow: 0 3px 0 color-mix(in srgb, var(--primary) 55%, #000); }
+.btn.secondary { box-shadow: 0 3px 0 var(--line); }
+.btn.sun { box-shadow: 0 3px 0 color-mix(in srgb, var(--sun) 60%, #000); }
+.btn.teacher { box-shadow: 0 3px 0 color-mix(in srgb, var(--teacher) 55%, #000); }
+.btn:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--primary) 55%, #000); }
+.btn.secondary:active:not(:disabled) { box-shadow: 0 1px 0 var(--line); }
 .btn:hover { filter: brightness(1.08); }
 .btn.secondary:hover { filter: none; }
 

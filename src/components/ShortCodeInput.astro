@@ -74,7 +74,8 @@ const chars = [...value].slice(0, 4);
   input { width: 48px; height: 56px; text-align: center; font: 700 1.55rem var(--font-mono); color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 10px; caret-color: var(--primary); padding: 0; }
   input:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px var(--primary-soft); }
   input.bad { border-color: var(--bad); box-shadow: 0 0 0 4px var(--bad-soft); }
-  .go { height: 56px; min-width: 56px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #3b2a00; font: 700 1.2rem var(--font-display); cursor: pointer; }
+  .go { height: 56px; min-width: 56px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #3b2a00; font: 700 1.2rem var(--font-display); cursor: pointer; box-shadow: 0 3px 0 color-mix(in srgb, var(--sun) 60%, #000); }
+  .go:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--sun) 60%, #000); }
   .msg { font-size: .92rem; color: var(--muted); }
   .msg :global(.err) { color: var(--bad); font-weight: 700; }
   .msg :global(a) { font-family: var(--font-mono); font-weight: 700; }
