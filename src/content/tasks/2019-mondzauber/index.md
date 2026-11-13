@@ -11,12 +11,10 @@ topics: [logic]
 methods: [xor]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: custom
   props:
-    rows: 3
-    cols: 3
-    palette: ["#2b2830", "#d9ccb8"]
-    initial: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+    a: ["110", "110", "000"]
+    b: ["011", "000", "110"]
 source:
   type: original
   work: Informatik-Biber 2019
@@ -32,8 +30,4 @@ Hier ein Beispiel, links die zwei Eingabekarten, rechts die Ausgabekarte:
 
 ![Beispiel. Erste Karte, Vollmond in den Feldern oben links, mittlere Reihe links und Mitte, unten links. Zweite Karte, Vollmond oben rechts, in der Mitte und unten rechts. Ausgabekarte: Vollmond oben links, oben rechts, Mitte links, unten links und unten rechts.](./img/example.png)
 
-Verstehst du die Regel? Dann gib die Ausgabekarte für diese beiden Eingabekarten ein:
-
-![Erste Eingabekarte: Vollmond oben links, oben Mitte, mittlere Reihe links und Mitte. Zweite Eingabekarte: Vollmond oben Mitte, oben rechts, unten links und unten Mitte.](./img/inputs.png)
-
-**Klicke auf die Felder der Ausgabekarte, bis alle das richtige Mondsymbol zeigen.** Dunkel ist Neumond, hell ist Vollmond.
+Verstehst du die Regel? Dann klicke auf die Felder der Ausgabekarte rechts, bis alle das richtige Mondsymbol zeigen.

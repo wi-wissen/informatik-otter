@@ -1,7 +1,7 @@
 ---
 answers:
-  - [B, B, B, G, G, G]
-  - [B, B, G, B, G, G]
+  - { e1: B, e2: B, e3: B, e4: G, e5: G, e6: G }
+  - { e1: B, e2: B, e3: G, e4: B, e5: G, e6: G }
 ---
 Damit am linken Ausgang ein blauer Biber ankommen kann, müssen an den beiden linken Eingängen zwei blaue Biber los schwimmen. Ansonsten würde nämlich ein grüner Biber ganz links ankommen. Damit am rechten Ausgang ein grüner Biber ankommen kann, müssen an den beiden rechten Eingängen zwei grüne Biber los schwimmen. Ansonsten würde nämlich ein blauer Biber ganz rechts ankommen.
 

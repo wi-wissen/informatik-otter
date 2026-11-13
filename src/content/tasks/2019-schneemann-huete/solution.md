@@ -1,5 +1,5 @@
 ---
-answer: { l1: r1, l2: r3, l3: r2, l4: r4 }
+answer: { z1: s1, z2: s3, z3: s2, z4: s4 }
 ---
 Der oberste Hutstapel passt zur obersten Schneemannreihe. In der Reihe stehen die Schneemänner nach Größe geordnet, der kleinste zuerst. Auf dem Stapel liegen die Hüte nach Größe geordnet, der kleinste zuoberst.
 
