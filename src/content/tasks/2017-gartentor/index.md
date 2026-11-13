@@ -30,7 +30,7 @@ Die Biber besuchen einander oft. Aber … manchmal ist man nicht zu Hause. Dann 
 
 Die Biber haben diese vier Gartentor-Nachrichten miteinander verabredet:
 
-![Vier Nachrichten: Kein Holzstab: „Wir sind da, kommt doch rein.“ Ein Holzstab oben: „Wir werden schon mittags zurück sein.“ Ein Holzstab unten: „Wir sind leider erst am Abend wieder da.“ Drei Holzstäbe: „Wir besuchen jemand und kommen um Mitternacht heim.“](./img/messages.png)
+![Vier Nachrichten: Kein Holzstab: „Wir sind da, kommt doch rein.“ Ein Holzstab (im unteren Bohrlochpaar): „Wir werden schon mittags zurück sein.“ Ein Holzstab (im oberen Bohrlochpaar): „Wir sind leider erst am Abend wieder da.“ Drei Holzstäbe: „Wir besuchen jemand und kommen um Mitternacht heim.“](./img/messages.png)
 
 Die Biber könnten noch weitere Nachrichten verabreden, ohne zusätzliche Holzstäbe oder Bohrlöcher zu verwenden.
 

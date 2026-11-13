@@ -16,16 +16,16 @@ interaction:
   format: graph-pick
   props:
     pick: edges
-    width: 241
-    height: 233
+    width: 270
+    height: 269
     background: ./img/islands.png
     hideNodes: true
     nodes:
-      - { id: Ho, x: 59, y: 124, label: Ho }
-      - { id: No, x: 123, y: 27, label: No }
-      - { id: Ma, x: 226, y: 90, label: Ma }
-      - { id: Ka, x: 151, y: 112, label: Ka }
-      - { id: To, x: 127, y: 216, label: To }
+      - { id: Ho, x: 63, y: 146, label: Ho }
+      - { id: No, x: 127, y: 49, label: No }
+      - { id: Ma, x: 230, y: 112, label: Ma }
+      - { id: Ka, x: 155, y: 134, label: Ka }
+      - { id: To, x: 131, y: 238, label: To }
     edges:
       - { id: HoMa, from: Ho, to: Ma }
       - { id: HoTo, from: Ho, to: To }

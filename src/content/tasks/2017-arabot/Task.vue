@@ -25,17 +25,20 @@ function label(id: string) {
 
 <template>
   <div class="wrap">
+    <div class="stage">
     <img :src="image" :alt="alt" draggable="false" />
     <button v-for="s in spots" :key="s.id" type="button" class="spot" :class="{ set: chosen[s.id] }"
             :style="{ left: s.x + '%', top: s.y + '%' }"
             :aria-label="`Markierung ${s.id}: ${label(s.id) === '?' ? 'noch nicht gewählt' : label(s.id)}`"
             @click="cycle(s.id)">{{ label(s.id) }}</button>
+    </div>
     <p class="hint">Klicke auf ein Fragezeichen, bis die gewünschte Markierung erscheint.</p>
   </div>
 </template>
 
 <style scoped>
-.wrap { position: relative; max-width: 560px; }
+.wrap { max-width: 560px; }
+.stage { position: relative; }
 img { display: block; width: 100%; height: auto; }
 .spot { position: absolute; transform: translate(-50%, -50%); min-width: 34px; min-height: 34px; padding: 2px 6px;
   border: 2px solid var(--primary); border-radius: 8px; background: var(--surface); color: var(--ink);
