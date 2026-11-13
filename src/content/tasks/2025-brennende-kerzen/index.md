@@ -13,13 +13,11 @@ topics: [algorithm-analysis]
 methods: [invariant]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: custom
   props:
-    rows: 5
-    cols: 5
-    palette: ["#b3261e", "#f5b301"]
-    initial: [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[1,1,1,1,1]]
-    locked: [[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],[true,true,true,true,true]]
+    days: 5
+    on: ./img/candle-on.png
+    off: ./img/candle-off.png
 source:
   type: original
   work: Informatik-Biber 2025
@@ -41,4 +39,6 @@ Wenn die Tradition nur drei Sonntage (und Kerzen) umfassen würde, wäre es mög
 
 Auch mit fünf Sonntagen (und Kerzen) wäre es möglich.
 
-**Zeige Chris, wie er jede Kerze gleich oft anzünden kann.** Am 1. Sonntag brennt 1 Kerze, am 2. Sonntag 2 Kerzen, und so weiter. Für den fünften Sonntag sind die Kerzen bereits angezündet.
+**Zeige Chris, wie er jede Kerze gleich oft anzünden kann.**
+
+Für den fünften Sonntag sind die Kerzen bereits angezündet.

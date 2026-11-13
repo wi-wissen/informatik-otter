@@ -12,14 +12,17 @@ topics: [optimization, sorting]
 methods: [scheduling]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: t1045, label: "10:45 Uhr" }
-      - { id: t1055, label: "10:55 Uhr" }
-      - { id: t1100, label: "11:00 Uhr" }
-      - { id: t1111, label: "11:11 Uhr" }
-    right:
+    background: ./img/plan.png
+    width: 166.4
+    height: 320.4
+    zones:
+      - { id: t1045, label: "10:45 Uhr", x: 76, y: 36, w: 64, h: 44 }
+      - { id: t1055, label: "10:55 Uhr", x: 76, y: 116, w: 64, h: 44 }
+      - { id: t1100, label: "11:00 Uhr", x: 76, y: 196, w: 64, h: 44 }
+      - { id: t1111, label: "11:11 Uhr", x: 76, y: 276, w: 64, h: 44 }
+    items:
       - { id: yellow, image: ./img/p-yellow.png, alt: Gelbes Flugzeug mit blauen Punkten }
       - { id: red, image: ./img/p-red.png, alt: Rotes Flugzeug mit Dreiecksmuster }
       - { id: green, image: ./img/p-green.png, alt: Hellgrünes Flugzeug }
@@ -39,6 +42,4 @@ Heute Morgen wollen sieben Flugzeuge starten. Alle starten auf derselben Startba
 
 Der Startplan zeigt, in welcher Reihenfolge die sieben Flugzeuge starten. Einige Flugzeuge fehlen aber noch.
 
-![Startplan: 10:45 fehlt, 10:52 blau gestreiftes Flugzeug, 10:55 fehlt, 10:59 grün gestreiftes Flugzeug, 11:00 fehlt, 11:10 pink-blaues Flugzeug, 11:11 fehlt](./img/plan.png)
-
-**Ergänze die fehlenden Flugzeuge im Startplan. Ordne jeder Startzeit ein Flugzeug zu.**
+**Ergänze die fehlenden Flugzeuge im Startplan.**

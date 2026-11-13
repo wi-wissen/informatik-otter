@@ -11,20 +11,24 @@ topics: [trees, ai]
 methods: [decision-tree]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: a, label: Blatt-Stelle A }
-      - { id: b, label: Blatt-Stelle B }
-      - { id: c, label: Blatt-Stelle C }
-      - { id: d, label: Blatt-Stelle D }
-      - { id: e, label: Blatt-Stelle E }
-    right:
-      - { id: banane, label: Banane }
-      - { id: erdbeere, label: Erdbeere }
-      - { id: apfel, label: Apfel }
-      - { id: wassermelone, label: Wassermelone }
-      - { id: weintraube, label: Weintraube }
+    background: ./img/tree.png
+    width: 244
+    height: 278
+    trayLabel: Blätter mit Früchten
+    zones:
+      - { id: l1, label: "Blatt-Stelle ganz links", x: 3, y: 139, w: 42, h: 50 }
+      - { id: l3, label: "Blatt-Stelle unten, zweite von links", x: 64, y: 220, w: 42, h: 50 }
+      - { id: l4, label: "Blatt-Stelle unten, dritte von links", x: 120, y: 218, w: 44, h: 50 }
+      - { id: l5, label: "Blatt-Stelle rechts unten", x: 176, y: 193, w: 44, h: 50 }
+      - { id: l6, label: "Blatt-Stelle rechts oben", x: 196, y: 120, w: 44, h: 50 }
+    items:
+      - { id: wassermelone, image: ./img/fruit-wassermelone.png, alt: Wassermelone }
+      - { id: banane, image: ./img/fruit-banane.png, alt: Banane }
+      - { id: apfel, image: ./img/fruit-apfel.png, alt: Apfel }
+      - { id: weintraube, image: ./img/fruit-weintraube.png, alt: Weintraube }
+      - { id: erdbeere, image: ./img/fruit-erdbeere.png, alt: Erdbeere }
 source:
   type: original
   work: Informatik-Biber 2025
@@ -49,12 +53,10 @@ In einer Schulklasse werden Früchte analysiert. Für jede Frucht werden drei Ei
 | orange | 10 | nein | Orange |
 | rot | 173 | ja | Erdbeere |
 
-![Entscheidungsbaum mit den Fragen „Mehr als 7 Samen?“, „Weniger als 4 Samen?“, zweimal „Schale essbar?“ und „Farbe orange?“. Die sechs Blatt-Stellen von links nach rechts: A, die Orange, B, C, D, E](./img/tree.png)
-
 Die Fruchtsorten werden mit dem Entscheidungsbaum oben bestimmt. Ein Entscheidungsbaum sieht aus wie ein Baum, der auf dem Kopf steht: Oben ist die Wurzel und unten sind die Blätter. Außerdem sind die Wurzel und die Astgabeln mit Fragen beschriftet, die man mit ja oder nein beantworten kann.
 
 Zur Bestimmung der Fruchtsorte werden die Fragen im Baum anhand der Werte beantwortet. Das geht so: Beginne oben an der Wurzel. Beantworte die Frage dort und gehe auf den passenden Ast mit der richtigen Antwort (ja oder nein). Beantworte die nächste Frage und gehe auf den nächsten passenden Ast. Mache so weiter, bis du ein Blatt erreicht hast. Das Blatt zeigt die Fruchtsorte.
 
 Nach den zehn Früchten ist der Entscheidungsbaum leider kaputt gegangen: Fast alle Blätter sind abgefallen. Nur das Blatt mit der Orange ist noch da.
 
-**An welchen Stellen waren die Blätter? Ordne jeder Blatt-Stelle die passende Frucht zu.**
+**An welchen Stellen waren die Blätter?**

@@ -18,7 +18,7 @@ interaction:
     width: 336
     height: 238
     background: ./img/map.png
-    nodeImage: ./img/hit.png
+    hideNodes: true
     nodeRadius: 12
     nodes:
       - { id: A, x: 32, y: 52 }
@@ -51,4 +51,4 @@ Marcus wohnt bei Haltestelle A. Von dort aus möchte er mit dem ersten Bus zum T
 
 ![Karte mit den Haltestellen A bis J und vier farbigen Buslinien. Gelb: A, B, E, F; Takt 3; Abschnitte A–B 1, B–E 4, E–F 3. Grün: B, G, H, I; Takt 2; B–G 7, G–H 3, H–I 2. Blau: C, E, G, I, J; Takt 4; C–E 2, E–G 1, G–I 8, I–J 6. Rosa: D, F, H, J; Takt 5; D–F 1, F–H 5, H–J 9. Das Theater liegt bei J](./img/map.png)
 
-**Welche Haltestellen liegen auf dieser Route? Tippe sie an.**
+**Welche Haltestellen liegen auf dieser Route?**

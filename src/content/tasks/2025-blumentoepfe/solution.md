@@ -1,37 +1,5 @@
 ---
-answers:
-  - [a, e]
-  - [a, f]
-  - [a, g]
-  - [a, h]
-  - [a, e, f, g]
-  - [a, e, f, h]
-  - [a, e, g, h]
-  - [a, f, g, h]
-  - [a, c, d, e]
-  - [a, c, d, f]
-  - [a, c, d, g]
-  - [a, c, d, h]
-  - [a, c, d, e, f, g]
-  - [a, c, d, e, f, h]
-  - [a, c, d, e, g, h]
-  - [a, c, d, f, g, h]
-  - [b, e]
-  - [b, f]
-  - [b, g]
-  - [b, h]
-  - [b, e, f, g]
-  - [b, e, f, h]
-  - [b, e, g, h]
-  - [b, f, g, h]
-  - [b, c, d, e]
-  - [b, c, d, f]
-  - [b, c, d, g]
-  - [b, c, d, h]
-  - [b, c, d, e, f, g]
-  - [b, c, d, e, f, h]
-  - [b, c, d, e, g, h]
-  - [b, c, d, f, g, h]
+answer: ok
 ---
 Eine richtige Antwort ist:
 

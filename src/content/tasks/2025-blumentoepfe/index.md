@@ -12,19 +12,19 @@ topics: [encoding, searching]
 methods: [binary-search]
 mascot: beaver
 interaction:
-  format: choice
+  format: custom
   props:
-    multiple: true
-    columns: 8
-    options:
-      - { id: a, label: A }
-      - { id: b, label: B }
-      - { id: c, label: C }
-      - { id: d, label: D }
-      - { id: e, label: E }
-      - { id: f, label: F }
-      - { id: g, label: G }
-      - { id: h, label: H }
+    flower: ./img/flower.png
+    keyPot: c
+    pots:
+      - { id: a, image: ./img/pot-a.png, alt: "Topf A" }
+      - { id: b, image: ./img/pot-b.png, alt: "Topf B" }
+      - { id: c, image: ./img/pot-c.png, alt: "Topf C" }
+      - { id: d, image: ./img/pot-d.png, alt: "Topf D" }
+      - { id: e, image: ./img/pot-e.png, alt: "Topf E" }
+      - { id: f, image: ./img/pot-f.png, alt: "Topf F" }
+      - { id: g, image: ./img/pot-g.png, alt: "Topf G" }
+      - { id: h, image: ./img/pot-h.png, alt: "Topf H" }
 source:
   type: original
   work: Informatik-Biber 2025

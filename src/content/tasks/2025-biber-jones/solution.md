@@ -1,5 +1,5 @@
 ---
-answer: [w9, gC, w3, gt]
+answer: ok
 ---
 Das Bild zeigt, wie sich Jones durch den Gang bewegen kann:
 

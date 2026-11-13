@@ -1,5 +1,5 @@
 ---
-answer: { d: s2, e: s1, f: s3, g: s2, h: s3, j: s3 }
+answer: { s1: [e], s2: [d, g], s3: [f, h, j] }
 ---
 ![Die richtige Aufstellung: Spur 1 von vorne nach hinten A, C, E; Spur 2 B, D, G; Spur 3 F, H, J](./img/solution.png)
 

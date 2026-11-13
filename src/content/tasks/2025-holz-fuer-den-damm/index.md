@@ -18,7 +18,7 @@ interaction:
     width: 460
     height: 130
     background: ./img/trees.png
-    nodeImage: ./img/hit.png
+    hideNodes: true
     nodeRadius: 22
     nodes:
       - { id: t8, x: 95, y: 90 }
@@ -48,4 +48,4 @@ Ein Beispiel: Wenn sie den 6m-Baum fällen, dürfen sie danach nur noch den 5m-B
 
 ![Sechs Bäume von links nach rechts mit 8 m, 6 m, 9 m, 7 m, 10 m und 5 m Holz; ganz links steht ein Biber mit Axt](./img/trees.png)
 
-**Welche Bäume können die Biber nach ihren Regeln fällen, damit sie am Ende möglichst viele Meter Holz haben? Tippe die Bäume an.**
+**Welche Bäume können die Biber nach ihren Regeln fällen, damit sie am Ende möglichst viele Meter Holz haben?**
