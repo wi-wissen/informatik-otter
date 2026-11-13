@@ -27,7 +27,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 <template>
   <div class="hot">
-    <div class="board" :style="{ aspectRatio: `${W} / ${H}` }">
+    <div class="board" :style="{ aspectRatio: `${W} / ${H}`, width: `min(100%, 720px, calc(78vh * ${W / H}))` }">
       <img :src="background" alt="" draggable="false" />
       <button v-for="s in spots" :key="s.id" type="button" class="spot" :class="{ set: value[s.id] !== 0 }"
               :style="{ left: pct(s.x, W), top: pct(s.y, H), minWidth: s.w ? pct(s.w, W) : `${S}px`, minHeight: s.h ? pct(s.h, H) : `${S}px` }"
@@ -43,7 +43,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 <style scoped>
 .hot { display: grid; gap: 8px; }
-.board { position: relative; width: 100%; max-width: 720px; margin-inline: auto; background: #fff; border-radius: 10px; overflow: hidden; }
+.board { position: relative; margin-inline: auto; background: #fff; border-radius: 10px; overflow: hidden; }
 .board > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 .spot { position: absolute; transform: translate(-50%, -50%); display: grid; place-items: center; padding: 2px 6px; border: 2px dashed var(--primary); border-radius: 999px; background: color-mix(in srgb, #fff 75%, transparent); color: #10313a; font: 700 .85rem var(--font-body); cursor: pointer; }
 .spot.set { border-style: solid; border-color: #0a6f7d; background: #fff2c7; }

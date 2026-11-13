@@ -78,7 +78,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 <template>
   <div class="place">
-    <div v-if="background" class="board" :style="{ aspectRatio: `${W} / ${H}` }">
+    <div v-if="background" class="board" :style="{ aspectRatio: `${W} / ${H}`, width: `min(100%, 720px, calc(78vh * ${W / H}))` }">
       <img :src="background" alt="" draggable="false" />
       <div v-for="z in zones" :key="z.id" class="zone on-pic" :class="{ target: !!selected }"
            :style="{ left: pct(z.x ?? 0, W), top: pct(z.y ?? 0, H), width: pct(z.w ?? 40, W), height: pct(z.h ?? 40, H) }"
@@ -121,7 +121,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
 
 <style scoped>
 .place { display: grid; gap: 12px; }
-.board { position: relative; width: 100%; max-width: 720px; margin-inline: auto; background: #fff; border-radius: 10px; overflow: hidden; }
+.board { position: relative; margin-inline: auto; background: #fff; border-radius: 10px; overflow: hidden; }
 .board img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 .zone { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; border: 2px dashed var(--primary); border-radius: 8px; cursor: pointer; }
 .zone.on-pic { position: absolute; background: color-mix(in srgb, var(--primary-soft) 45%, transparent); }
