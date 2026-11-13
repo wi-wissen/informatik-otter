@@ -87,7 +87,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
            @dragover.prevent @drop="drop($event, z.id)">
         <button v-for="(id, i) in placed[z.id]" :key="`${id}-${i}`" type="button" class="chip-item" draggable="true"
                 :aria-label="`${byId[id].label ?? byId[id].alt ?? id} entfernen`"
-                @click.stop="removeFrom(z.id, i)" @dragstart="dragStart($event, id, { zone: z.id, index: i })">
+                @click.stop="selected ? tapZone(z.id) : removeFrom(z.id, i)" @dragstart="dragStart($event, id, { zone: z.id, index: i })">
           <ItemFace :item="byId[id]" />
         </button>
       </div>
@@ -100,7 +100,7 @@ const pct = (v: number, of: number) => `${(v / of) * 100}%`;
              @dragover.prevent @drop="drop($event, z.id)">
           <button v-for="(id, i) in placed[z.id]" :key="`${id}-${i}`" type="button" class="chip-item" draggable="true"
                   :aria-label="`${byId[id].label ?? byId[id].alt ?? id} entfernen`"
-                  @click.stop="removeFrom(z.id, i)" @dragstart="dragStart($event, id, { zone: z.id, index: i })">
+                  @click.stop="selected ? tapZone(z.id) : removeFrom(z.id, i)" @dragstart="dragStart($event, id, { zone: z.id, index: i })">
             <ItemFace :item="byId[id]" />
           </button>
           <span v-if="!placed[z.id].length" class="empty">hier ablegen</span>
