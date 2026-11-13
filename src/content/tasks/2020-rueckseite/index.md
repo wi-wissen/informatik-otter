@@ -11,15 +11,19 @@ topics: [logic]
 methods: [boolean-logic]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    multiple: true
-    columns: 4
-    options:
-      - { id: e, label: "E" }
-      - { id: v, label: "V" }
-      - { id: "2", label: "2" }
-      - { id: "7", label: "7" }
+    pick: nodes
+    width: 726
+    height: 213
+    background: ./img/cards.png
+    hideNodes: true
+    nodeRadius: 80
+    nodes:
+      - { id: e, x: 80, y: 105, label: "Karte E" }
+      - { id: v, x: 272, y: 105, label: "Karte V" }
+      - { id: c2, x: 462, y: 105, label: "Karte 2" }
+      - { id: c7, x: 650, y: 105, label: "Karte 7" }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -33,6 +37,4 @@ Dein Freund Aristo hat Spielkarten mitgebracht. Auf der einen Seite jeder Karte 
 
 Aristo legt vier Karten vor dich hin. Du weißt, dass E ein Vokal, V ein Konsonant, 2 gerade und 7 ungerade sind. Aber weißt du auch, ob Aristo die Wahrheit gesagt hat? Du willst seine Behauptung sicher überprüfen.
 
-![Vier Karten mit den sichtbaren Seiten E, V, 2 und 7](./img/cards.png)
-
-**Welche Karten musst du dazu unbedingt umdrehen?**
+**Welche Karten musst du dazu unbedingt umdrehen?** Klicke auf die Karten.

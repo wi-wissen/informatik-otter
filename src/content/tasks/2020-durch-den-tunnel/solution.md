@@ -1,21 +1,7 @@
 ---
 answers:
-  - { p1a: a, p1b: b, p2: a, p3a: m, p3b: v, p4: b, p5a: a, p5b: b }
-  - { p1a: a, p1b: b, p2: a, p3a: m, p3b: v, p4: b, p5a: b, p5b: a }
-  - { p1a: a, p1b: b, p2: a, p3a: v, p3b: m, p4: b, p5a: a, p5b: b }
-  - { p1a: a, p1b: b, p2: a, p3a: v, p3b: m, p4: b, p5a: b, p5b: a }
-  - { p1a: a, p1b: b, p2: b, p3a: m, p3b: v, p4: a, p5a: a, p5b: b }
-  - { p1a: a, p1b: b, p2: b, p3a: m, p3b: v, p4: a, p5a: b, p5b: a }
-  - { p1a: a, p1b: b, p2: b, p3a: v, p3b: m, p4: a, p5a: a, p5b: b }
-  - { p1a: a, p1b: b, p2: b, p3a: v, p3b: m, p4: a, p5a: b, p5b: a }
-  - { p1a: b, p1b: a, p2: a, p3a: m, p3b: v, p4: b, p5a: a, p5b: b }
-  - { p1a: b, p1b: a, p2: a, p3a: m, p3b: v, p4: b, p5a: b, p5b: a }
-  - { p1a: b, p1b: a, p2: a, p3a: v, p3b: m, p4: b, p5a: a, p5b: b }
-  - { p1a: b, p1b: a, p2: a, p3a: v, p3b: m, p4: b, p5a: b, p5b: a }
-  - { p1a: b, p1b: a, p2: b, p3a: m, p3b: v, p4: a, p5a: a, p5b: b }
-  - { p1a: b, p1b: a, p2: b, p3a: m, p3b: v, p4: a, p5a: b, p5b: a }
-  - { p1a: b, p1b: a, p2: b, p3a: v, p3b: m, p4: a, p5a: a, p5b: b }
-  - { p1a: b, p1b: a, p2: b, p3a: v, p3b: m, p4: a, p5a: b, p5b: a }
+  - { z1: [anna, benno], z2: [anna], z3: [mutter, vater], z4: [benno], z5: [anna, benno] }
+  - { z1: [anna, benno], z2: [benno], z3: [mutter, vater], z4: [anna], z5: [anna, benno] }
 ---
 Dass alle innerhalb von 60 Minuten am Ausgang sind, ist nur möglich, wenn Mutter und Vater (die beiden langsamsten) nur einmal den Tunnel passieren. Das wiederum ist nur möglich, wenn vorher Anna und Benno den Tunnel passieren und einer von ihnen zurück geht. Der eine kann dann die Lampe Vater und Mutter geben, und der andere bringt sie durch den Tunnel zurück, damit dann beide rechtzeitig zusammen zum Ausgang gehen können. Dabei ist es egal, ob in Passage 2 Anna zurückgeht oder Benno: In Passage 4 ist der jeweils andere dran, so dass diese beiden Passagen in beiden Fällen zusammen 15 Minuten dauern.
 

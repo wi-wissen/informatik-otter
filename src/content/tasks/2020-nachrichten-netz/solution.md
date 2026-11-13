@@ -1,5 +1,5 @@
 ---
-answer: b
+answer: [b]
 ---
 Biber B kann in nur zwei Runden eine Nachricht an alle anderen Biber verbreiten. In der ersten Runde leitet Biber B die Nachricht an alle seine Nachbarn weiter: A, D und J. Das Bild zeigt, wer nach dieser Runde die Nachricht hat.
 

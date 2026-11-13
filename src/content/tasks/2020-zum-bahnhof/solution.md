@@ -1,7 +1,7 @@
 ---
 answers:
-  - { d1: p3, d2: p2 }
-  - { d1: p1, d2: p4 }
+  - { z1: p3, z2: p2 }
+  - { z1: p1, z2: p4 }
 ---
 Es gibt zwei Möglichkeiten, Schienenstücke so auf die freien Stellen zu legen, dass der Zug zum Bahnhof fahren kann:
 

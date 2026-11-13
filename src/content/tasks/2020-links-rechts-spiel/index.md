@@ -12,18 +12,23 @@ topics: [games, trees]
 methods: [decision-tree]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    columns: 8
-    options:
-      - { id: "1", label: "1" }
-      - { id: "2", label: "2" }
-      - { id: "3", label: "3" }
-      - { id: "4", label: "4" }
-      - { id: "5", label: "5" }
-      - { id: "6", label: "6" }
-      - { id: "7", label: "7" }
-      - { id: "8", label: "8" }
+    pick: nodes
+    width: 788
+    height: 259
+    background: ./img/depots.png
+    hideNodes: true
+    nodeRadius: 40
+    nodes:
+      - { id: d1, x: 68, y: 62, label: "Depot 1" }
+      - { id: d2, x: 160, y: 62, label: "Depot 2" }
+      - { id: d3, x: 255, y: 62, label: "Depot 3" }
+      - { id: d4, x: 350, y: 62, label: "Depot 4" }
+      - { id: d5, x: 448, y: 62, label: "Depot 5" }
+      - { id: d6, x: 545, y: 62, label: "Depot 6" }
+      - { id: d7, x: 625, y: 62, label: "Depot 7" }
+      - { id: d8, x: 720, y: 62, label: "Depot 8" }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -39,6 +44,4 @@ Ein Beispiel: Wenn Bob die Figur zur Verzweigung ganz links zieht, dann weiß Bo
 
 Ein neues Spiel beginnt, die Spiel-Chips sind verteilt.
 
-![Das Startfeld unten, darüber drei Ebenen von Verzweigungen und acht Depots mit Spiel-Chips (von links gezählt: 2, 7, 5, 4, 8, 6, 1 und 3 Chips)](./img/depots.png)
-
-**Welches Depot wird die Spielfigur erreichen?** (Die Depots sind von links nach rechts von 1 bis 8 nummeriert.)
+**Welches Depot wird die Spielfigur erreichen?** Klicke auf das Depot.

@@ -12,22 +12,24 @@ topics: [optimization]
 methods: [scheduling]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: p1a, label: "Passage 1 (Hin), Person 1" }
-      - { id: p1b, label: "Passage 1 (Hin), Person 2" }
-      - { id: p2, label: "Passage 2 (Zurück)" }
-      - { id: p3a, label: "Passage 3 (Hin), Person 1" }
-      - { id: p3b, label: "Passage 3 (Hin), Person 2" }
-      - { id: p4, label: "Passage 4 (Zurück)" }
-      - { id: p5a, label: "Passage 5 (Hin), Person 1" }
-      - { id: p5b, label: "Passage 5 (Hin), Person 2" }
-    right:
-      - { id: a, label: "Anna (10 min)" }
-      - { id: b, label: "Benno (5 min)" }
-      - { id: m, label: "Mutter (20 min)" }
-      - { id: v, label: "Vater (25 min)" }
+    background: ./img/board.png
+    width: 895
+    height: 760
+    reusable: true
+    trayLabel: Personen
+    zones:
+      - { id: z1, label: "Passage 1 (Hin)", x: 302, y: 5, w: 590, h: 142, capacity: 2 }
+      - { id: z2, label: "Passage 2 (Zurück)", x: 302, y: 157, w: 590, h: 142, capacity: 2 }
+      - { id: z3, label: "Passage 3 (Hin)", x: 302, y: 309, w: 590, h: 142, capacity: 2 }
+      - { id: z4, label: "Passage 4 (Zurück)", x: 302, y: 461, w: 590, h: 142, capacity: 2 }
+      - { id: z5, label: "Passage 5 (Hin)", x: 302, y: 613, w: 590, h: 142, capacity: 2 }
+    items:
+      - { id: anna, image: ./img/anna.png, alt: Anna (10 min) }
+      - { id: benno, image: ./img/benno.png, alt: Benno (5 min) }
+      - { id: mutter, image: ./img/mutter.png, alt: Mutter (20 min) }
+      - { id: vater, image: ./img/vater.png, alt: Vater (25 min) }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -43,6 +45,6 @@ Den dunklen und engen Tunnel kann man nur alleine oder zu zweit passieren. Sie m
 
 Als sie an den Eingang des Tunnels kommen, stellen sie fest: Der Akku ihrer einzigen Lampe reicht nur noch für 60 Minuten. Können sie innerhalb dieser 60 Minuten alle durch den Tunnel kommen?
 
-Anna hat einen Plan: „Ja, können wir, und zwar mit fünf Passagen!“ Dabei geht es abwechselnd hin (zu zweit) und zurück (allein), insgesamt dreimal hin und zweimal zurück.
+Anna hat einen Plan: „Ja, können wir, und zwar mit fünf Passagen!“
 
-**Wähle für jede Stelle im Plan die passende Person aus, so dass Annas Plan umgesetzt wird.**
+**Ziehe die Namen so in die passenden Felder, dass Annas Plan umgesetzt wird.**

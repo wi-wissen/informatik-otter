@@ -11,17 +11,22 @@ topics: [error-detection, encoding]
 methods: [hamming-code, parity-bit]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    columns: 7
-    options:
-      - { id: "1", label: "1" }
-      - { id: "2", label: "2" }
-      - { id: "3", label: "3" }
-      - { id: "4", label: "4" }
-      - { id: "5", label: "5" }
-      - { id: "6", label: "6" }
-      - { id: "7", label: "7" }
+    pick: nodes
+    width: 1319
+    height: 376
+    background: ./img/flags.png
+    hideNodes: true
+    nodeRadius: 90
+    nodes:
+      - { id: b1, x: 95, y: 170, label: "Biber 1" }
+      - { id: b2, x: 285, y: 170, label: "Biber 2" }
+      - { id: b3, x: 450, y: 170, label: "Biber 3" }
+      - { id: b4, x: 625, y: 170, label: "Biber 4" }
+      - { id: b5, x: 800, y: 170, label: "Biber 5" }
+      - { id: b6, x: 975, y: 170, label: "Biber 6" }
+      - { id: b7, x: 1160, y: 170, label: "Biber 7" }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -49,6 +54,4 @@ Der Boss gibt Nachrichten-Bibern und Prüf-Bibern Nummern und ordnet sie so eina
 
 Der Biber-Boss sieht die Nachricht unten. Er weiß sofort, dass genau einer der sieben Biber die falsche Flagge hochhält.
 
-![Sieben Biber mit Flaggen, von links: 1 rot, 2 gelb, 3 rot, 4 gelb, 5 rot, 6 rot, 7 gelb](./img/flags.png)
-
-**Welcher Biber hält die falsche Flagge hoch?**
+**Welcher Biber hält die falsche Flagge hoch?** Klicke auf den Biber.
