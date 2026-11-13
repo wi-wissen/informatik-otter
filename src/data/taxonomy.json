@@ -108,6 +108,7 @@
     "neural-network": { "label": "Neuronales Netz", "topic": "ai" },
     "instruction-set": { "label": "Befehlssatz", "topic": "computer-architecture" },
     "gnome-sort": { "label": "Gnomesort", "topic": "sorting" },
+    "game-tree": { "label": "Spielbaum", "topic": "games" },
     "routing": { "label": "Routing", "topic": "networks" }
   }
 }
