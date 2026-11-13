@@ -8,7 +8,7 @@ Paths in `props` that start with `./` are files in the task folder (usually `./i
 
 | format | use it for | props | answer in `solution.md` |
 |---|---|---|---|
-| `choice` | pick one (or several) of A–D, a number, a picture (the component adds A, B, C … itself; don't prefix labels) | `options: [{id, label?, image?, alt?}]`, `multiple?`, `columns?` | single: `answer: b` · multiple: `answer: [a, c]` (order does not matter) |
+| `choice` | pick one (or several) of A–D, a number, a picture (the component adds A, B, C … itself; don't prefix labels) | `options: [{id, label?, image?, alt?}]`, `multiple?`, `columns?`, `keys?` (false when the option pictures already show their letter) | single: `answer: b` · multiple: `answer: [a, c]` (order does not matter) |
 | `sort-list` | put things in an order | `items: [{id, label?, image?, alt?}]` in the **start order shown in the booklet**, `direction?: horizontal\|vertical`, `startLabel?`, `endLabel?` | `answer: [b, d, a, c, e]` |
 | `match` | assign each left item one right item (a right item may be used several times) | `left: [...]`, `right: [...]` | `answer: { l1: r3, l2: r1 }` |
 | `graph-pick` | click nodes, edges or a path in a graph/map | `pick: nodes\|edges\|path`, `nodes: [{id, x, y, label?, image?}]`, `edges: [{id?, from, to, label?}]`, `width`, `height` (coordinate system), `background?` (picture under the graph, crop with `--alpha`), `max?` (1 = single pick, a new click replaces the old one), `hideNodes?` (nodes invisible but still clickable; chosen ones get a yellow ring), `nodeImage?`, `nodeRadius?`, `directed?` | nodes/edges: list of ids, order does not matter (edge id defaults to `from-to`) · path: ordered list of node ids |

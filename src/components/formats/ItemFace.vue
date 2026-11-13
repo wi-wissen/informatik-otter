@@ -12,6 +12,7 @@ defineProps<{ item: { id: string; label?: string; image?: string; alt?: string }
 
 <style scoped>
 .face { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; pointer-events: none; }
-img { max-height: 110px; max-width: 160px; object-fit: contain; }
+img { max-height: 110px; max-width: 100%; object-fit: contain; }
+.face { max-width: 100%; }
 .label { font-weight: 700; }
 </style>

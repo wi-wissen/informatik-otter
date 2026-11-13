@@ -30,6 +30,8 @@ export const interaction = z.discriminatedUnion('format', [
       options: z.array(item).min(2),
       multiple: z.boolean().default(false),
       columns: z.number().int().min(1).max(10).optional(),
+      /** Show A, B, C … badges (off when the pictures already carry their letters). */
+      keys: z.boolean().default(true),
     }),
   }),
   z.object({

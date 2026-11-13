@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import ItemFace from './ItemFace.vue';
 
 type Item = { id: string; label?: string; image?: string; alt?: string };
-const props = defineProps<{ options: Item[]; multiple?: boolean; columns?: number }>();
+const props = withDefaults(defineProps<{ options: Item[]; multiple?: boolean; columns?: number; keys?: boolean }>(), { keys: true });
 const emit = defineEmits<{ answer: [value: string | string[] | null] }>();
 
 const picked = ref<string[]>([]);
@@ -25,7 +25,7 @@ function toggle(id: string) {
             :class="{ on: picked.includes(o.id) }"
             :role="multiple ? 'checkbox' : 'radio'" :aria-checked="picked.includes(o.id)"
             @click="toggle(o.id)">
-      <span v-if="!o.label || o.label.length > 3 || o.image" class="key">{{ String.fromCharCode(65 + i) }}</span>
+      <span v-if="keys && (!o.label || o.label.length > 3 || o.image)" class="key">{{ String.fromCharCode(65 + i) }}</span>
       <ItemFace :item="o" />
     </button>
   </div>
