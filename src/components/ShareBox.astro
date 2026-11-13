@@ -1,46 +1,68 @@
 ---
-// Short code for the board, a share button and a QR code (rendered at build time).
+// Short code in the sidebar; "Teilen" opens a dialog with the full link (for copying from the board) and a QR code.
 import QRCode from 'qrcode';
 import { SITE } from '../lib/tasks';
 interface Props { short: string; title: string }
 const { short, title } = Astro.props;
 const url = `${SITE}/${short}`;
+const host = new URL(SITE).host;
 const svg = await QRCode.toString(url, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#10313a', light: '#ffffff' } });
 ---
 <section class="share" aria-label="Teilen">
   <h2>Code für die Klasse</h2>
-  <p class="code" translate="no">{short}</p>
-  <p class="hint">auf {new URL(SITE).host} eingeben</p>
   <div class="row">
-    <button type="button" class="btn secondary small" data-share={url} data-title={title}>Link teilen</button>
-    <details>
-      <summary class="btn secondary small">QR-Code</summary>
-      <div class="qr" set:html={svg} />
-    </details>
+    <p class="code" translate="no">{short}</p>
+    <button type="button" class="btn secondary small" data-open-share>Teilen</button>
   </div>
+  <p class="hint">auf {host} eingeben</p>
 </section>
+
+<dialog class="share-dialog" aria-labelledby="share-title">
+  <div class="inner">
+    <div class="top">
+      <h2 id="share-title">{title}</h2>
+      <button type="button" class="close" data-close aria-label="Schließen">×</button>
+    </div>
+    <p class="link" translate="no"><span class="dim">https://</span>{host}/<b>{short}</b></p>
+    <div class="qr" set:html={svg} />
+    <div class="actions">
+      <button type="button" class="btn small" data-copy={url}>Link kopieren</button>
+      <button type="button" class="btn secondary small" data-close>Schließen</button>
+    </div>
+  </div>
+</dialog>
+
 <script>
-  document.querySelectorAll<HTMLButtonElement>('[data-share]').forEach((b) => {
-    const label = b.textContent;
-    b.addEventListener('click', async () => {
-      const url = b.dataset.share!;
-      try {
-        if (navigator.share && matchMedia('(pointer: coarse)').matches) { await navigator.share({ title: b.dataset.title, url }); return; }
-        await navigator.clipboard.writeText(url);
-        b.textContent = 'Link kopiert';
-      } catch { b.textContent = url; }
-      setTimeout(() => (b.textContent = label), 2000);
+  document.querySelectorAll<HTMLButtonElement>('[data-open-share]').forEach((b) => {
+    const dialog = b.closest('section')!.nextElementSibling as HTMLDialogElement;
+    b.addEventListener('click', () => dialog.showModal());
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    dialog.querySelectorAll('[data-close]').forEach((c) => c.addEventListener('click', () => dialog.close()));
+    const copy = dialog.querySelector<HTMLButtonElement>('[data-copy]')!;
+    copy.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(copy.dataset.copy!); copy.textContent = 'Kopiert'; }
+      catch { copy.textContent = 'Bitte Link markieren'; }
+      setTimeout(() => (copy.textContent = 'Link kopieren'), 2000);
     });
   });
 </script>
 <style>
-  .share { display: grid; gap: 4px; }
+  .share { display: grid; gap: 2px; }
   h2 { font: 700 .75rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   .code { font: 700 2.4rem/1.1 var(--font-mono); color: var(--primary); letter-spacing: .06em; }
-  .hint { font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
-  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: start; }
-  summary { list-style: none; }
-  summary::-webkit-details-marker { display: none; }
-  .qr { margin-top: 10px; width: 200px; background: #fff; border-radius: 10px; padding: 8px; }
+  .hint { font-size: .85rem; color: var(--muted); }
+
+  .share-dialog { border: 0; border-radius: 20px; padding: 0; background: var(--surface); color: var(--ink); width: min(880px, calc(100vw - 32px)); max-height: calc(100vh - 32px); }
+  .share-dialog::backdrop { background: rgba(6, 20, 24, .6); }
+  .inner { display: grid; gap: 22px; justify-items: center; padding: clamp(20px, 4vw, 40px); text-align: center; }
+  .top { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; width: 100%; }
+  .top h2 { font: 600 1.4rem var(--font-display); letter-spacing: 0; text-transform: none; color: var(--ink); text-align: left; }
+  .close { border: 0; background: var(--sunk); color: var(--ink); width: 40px; height: 40px; border-radius: 50%; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+  .link { font: 600 clamp(.95rem, 3.6vw, 2.1rem)/1.2 var(--font-mono); white-space: nowrap; max-width: 100%; overflow-x: auto; }
+  .link .dim { color: var(--muted); opacity: .55; font-weight: 500; }
+  .link b { color: var(--primary); }
+  .qr { width: min(320px, 70vw); background: #fff; border-radius: 14px; padding: 10px; }
   .qr :global(svg) { width: 100%; height: auto; display: block; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 </style>

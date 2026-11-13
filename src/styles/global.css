@@ -101,7 +101,8 @@ a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
 .prose h2 { font-size: 1.35rem; margin-top: 1.4em; }
 .prose h3 { font-size: 1.15rem; margin-top: 1.2em; }
 .prose img { border-radius: 8px; display: block; margin-inline: auto; }
-.prose table { border-collapse: collapse; display: block; overflow-x: auto; max-width: 100%; }
+.prose table { border-collapse: collapse; display: block; overflow-x: auto; max-width: 100%; width: fit-content; margin-inline: auto; }
+.prose figure, .prose svg, .prose video { display: block; margin-inline: auto; max-width: 100%; }
 .prose th, .prose td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; }
 .prose th { background: var(--sunk); }
 .prose ul, .prose ol { padding-left: 1.4em; }

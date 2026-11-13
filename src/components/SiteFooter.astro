@@ -1,11 +1,14 @@
 ---
 // Footer: left = where the content comes from, right = contact, privacy, imprint (external pages).
-interface Props { source?: string }
-const { source = 'Aufgaben: Informatik-Biber (BWINF) · eigene Varianten mit Otter' } = Astro.props;
+interface Props { source?: string; sourceHref?: string; centered?: boolean }
+const {
+  source = 'Aufgaben: Informatik-Biber (BWINF), freie Lizenz',
+  sourceHref = 'https://bwinf.de/informatik-biber/aufgaben/',
+} = Astro.props;
 ---
 <footer class="site-footer">
   <div class="in">
-    <span class="src"><slot>{source}</slot></span>
+    <span class="src">{sourceHref ? <a href={sourceHref} rel="noopener">{source}</a> : source}</span>
     <nav aria-label="Rechtliches">
       <a href="https://juliandorn.de/contact.php" rel="noopener">Kontakt</a>
       <a href="https://juliandorn.de/datenschutz.html" rel="noopener">Datenschutz</a>

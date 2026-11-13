@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 const { task } = Astro.props;
 ---
-<Base title={task.data.title} description={task.data.summary} variant="focus" noindex footerSource={sourceNote(task)}>
+<Base title={task.data.title} description={task.data.summary} variant="focus" noindex footerSource={sourceNote(task)} footerSourceHref={task.data.source.url}>
   <div class="in narrow focus"><TaskView task={task} /></div>
 </Base>
 <style>.focus { padding-block: 16px 0; }</style>

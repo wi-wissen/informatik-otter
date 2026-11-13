@@ -17,8 +17,9 @@ interface Props {
   variant?: 'full' | 'focus';
   noindex?: boolean;
   footerSource?: string;
+  footerSourceHref?: string;
 }
-const { title, description = 'Knobelaufgaben, in denen Informatik steckt. Aus dem Informatik-Biber, verortet nach GI-Bildungsstandards.', variant = 'full', noindex = false, footerSource } = Astro.props;
+const { title, description = 'Knobelaufgaben, in denen Informatik steckt. Aus dem Informatik-Biber, verortet nach GI-Bildungsstandards.', variant = 'full', noindex = false, footerSource, footerSourceHref } = Astro.props;
 const fullTitle = title === 'Informatik-Otter' ? title : `${title} · Informatik-Otter`;
 const path = Astro.url.pathname;
 ---
@@ -35,7 +36,7 @@ const path = Astro.url.pathname;
   <meta name="theme-color" content="#0a6f7d" />
 </head>
 <body>
-  <header class="site-header">
+  <header class:list={["site-header", { focus: variant === "focus" }]}>
     <div class="in">
       {variant === 'full'
         ? <a class="wordmark" href="/" aria-label="Informatik-Otter Startseite"><Otter size={40} /><span>Informatik-<b>Otter</b></span></a>
@@ -50,11 +51,12 @@ const path = Astro.url.pathname;
     </div>
   </header>
   <main><slot /></main>
-  <SiteFooter source={footerSource} />
+  <SiteFooter source={footerSource} sourceHref={footerSource ? footerSourceHref : undefined} />
 </body>
 </html>
 <style>
   .site-header .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+  .focus .in { justify-content: center; }
   .wordmark { display: flex; align-items: center; gap: 10px; font: 700 1.25rem var(--font-display); color: var(--ink); text-decoration: none; }
   .wordmark b { color: var(--primary); font-weight: 700; }
   nav { display: flex; gap: 18px; font-weight: 700; font-size: .95rem; flex-wrap: wrap; }
