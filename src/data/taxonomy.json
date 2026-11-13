@@ -107,6 +107,7 @@
     "regular-expression": { "label": "Regulärer Ausdruck", "topic": "formal-languages" },
     "neural-network": { "label": "Neuronales Netz", "topic": "ai" },
     "instruction-set": { "label": "Befehlssatz", "topic": "computer-architecture" },
+    "gnome-sort": { "label": "Gnomesort", "topic": "sorting" },
     "routing": { "label": "Routing", "topic": "networks" }
   }
 }
