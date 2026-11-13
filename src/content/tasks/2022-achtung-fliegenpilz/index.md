@@ -12,17 +12,21 @@ topics: [logic]
 methods: []
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    multiple: true
-    columns: 2
-    options:
-      - { id: a, label: oben links }
-      - { id: b, label: oben (dritte Spalte) }
-      - { id: c, label: oben rechts }
-      - { id: d, label: unten links }
-      - { id: e, label: Mitte rechts }
-      - { id: f, label: unten rechts }
+    pick: nodes
+    width: 338
+    height: 257
+    background: ./img/board.png
+    hideNodes: true
+    nodeRadius: 38
+    nodes:
+      - { id: a, x: 42, y: 42, label: "zugedecktes Feld oben links" }
+      - { id: b, x: 212, y: 42, label: "zugedecktes Feld oben, dritte Spalte" }
+      - { id: c, x: 297, y: 42, label: "zugedecktes Feld oben rechts" }
+      - { id: d, x: 42, y: 213, label: "zugedecktes Feld unten links" }
+      - { id: e, x: 297, y: 128, label: "zugedecktes Feld Mitte rechts" }
+      - { id: f, x: 297, y: 213, label: "zugedecktes Feld unten rechts" }
 source:
   type: original
   work: Informatik-Biber 2022
@@ -40,6 +44,4 @@ Hier ist ein Beispiel für ein vollständig aufgedecktes Spielbrett:
 
 Du hast ein neues Spiel begonnen und bereits einige Felder aufgedeckt – siehe unten.
 
-![Spielbrett mit 3 Zeilen und 4 Spalten. Zeile 1: zugedeckt, 1, zugedeckt, zugedeckt. Zeile 2: 1, 2, 1, zugedeckt. Zeile 3: zugedeckt, 1, Pilz, zugedeckt](./img/board.png)
-
-**Auf welchen der übrigen (zugedeckten) Felder ist sicher kein Fliegenpilz?** Wähle alle diese Felder aus. Die zugedeckten Felder heißen A bis F: A ist oben links, B und C stehen rechts daneben (in der obersten Zeile), D ist unten links, E steht rechts in der mittleren Zeile und F unten rechts.
+**Auf welchen der übrigen Felder ist sicher kein Fliegenpilz?**

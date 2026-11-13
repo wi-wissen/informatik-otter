@@ -1,5 +1,5 @@
 ---
-answer: "6"
+answer: ok
 ---
 Hier siehst du alle Möglichkeiten, das Bild richtig auszumalen – also so, dass die Bedingung aus der Aufgabe erfüllt ist:
 

@@ -18,7 +18,7 @@ interaction:
     width: 362
     height: 119
     background: ./img/track.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 12
     nodes:
       - { id: start, x: 21.3, y: 76.2 }
@@ -48,4 +48,4 @@ Sie starten gleichzeitig auf dem Feld **S**. Sie gehen von Feld zu Feld, den Pfe
 - … die Schildkröte ein Feld vorwärts und
 - … der Hase zwei Felder vorwärts.
 
-**Wo treffen sich Schildkröte und Hase nach dem Start zum ersten Mal wieder?** Tippe auf das Feld.
+**Wo treffen sich Schildkröte und Hase nach dem Start zum ersten Mal wieder?**

@@ -12,21 +12,25 @@ topics: [sorting]
 methods: []
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    multiple: true
-    columns: 5
-    options:
-      - { id: "1", label: "1" }
-      - { id: "2", label: "2" }
-      - { id: "3", label: "3" }
-      - { id: "4", label: "4" }
-      - { id: "5", label: "5" }
-      - { id: "6", label: "6" }
-      - { id: "7", label: "7" }
-      - { id: "8", label: "8" }
-      - { id: "9", label: "9" }
-      - { id: "10", label: "10" }
+    pick: nodes
+    width: 1050
+    height: 233
+    background: ./img/trees.png
+    hideNodes: true
+    nodeRadius: 40
+    nodes:
+      - { id: "1", x: 42, y: 150, label: "Baum 1" }
+      - { id: "2", x: 136, y: 150, label: "Baum 2" }
+      - { id: "3", x: 247, y: 150, label: "Baum 3" }
+      - { id: "4", x: 328, y: 150, label: "Baum 4" }
+      - { id: "5", x: 413, y: 150, label: "Baum 5" }
+      - { id: "6", x: 504, y: 150, label: "Baum 6" }
+      - { id: "7", x: 589, y: 150, label: "Baum 7" }
+      - { id: "8", x: 713, y: 150, label: "Baum 8" }
+      - { id: "9", x: 852, y: 150, label: "Baum 9" }
+      - { id: "10", x: 985, y: 150, label: "Baum 10" }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -41,6 +45,4 @@ Ein Biber möchte einen Damm bauen. Damit er immer die richtigen Bäume fällt, 
 - direkt links daneben ein kleinerer Baum steht und
 - direkt rechts daneben ein größerer Baum steht.
 
-![Zehn Bäume in einer Reihe, von links nach rechts unterschiedlich hoch: kleine Tanne, große Tanne, kleiner Laubbaum, Laubbaum, Tanne, kleiner Laubbaum, größerer Laubbaum, großer Laubbaum, kleiner Laubbaum, große Tanne](./img/trees.png)
-
-**Welche Bäume wird der Biber fällen? Wähle die Nummern der Bäume, von links gezählt.**
+**Welche Bäume wird der Biber fällen?**

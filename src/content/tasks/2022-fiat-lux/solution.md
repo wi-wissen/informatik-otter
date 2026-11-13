@@ -1,21 +1,21 @@
 ---
 answers:
-  - [a, b, c, e, f]
-  - [a, b, c, e, f, g, h]
-  - [a, b, c, g]
-  - [a, b, c, h]
-  - [a, b, c, e, g]
-  - [a, b, c, f, g]
-  - [a, b, c, e, h]
-  - [a, b, c, f, h]
-  - [a, b, d, e, f]
-  - [a, b, d, e, f, g, h]
-  - [a, b, d, g]
-  - [a, b, d, h]
-  - [a, b, d, e, g]
-  - [a, b, d, f, g]
-  - [a, b, d, e, h]
-  - [a, b, d, f, h]
+  - { a: on, b: on, c: on, e: on, f: on }
+  - { a: on, b: on, c: on, e: on, f: on, g: on, h: on }
+  - { a: on, b: on, c: on, g: on }
+  - { a: on, b: on, c: on, h: on }
+  - { a: on, b: on, c: on, e: on, g: on }
+  - { a: on, b: on, c: on, f: on, g: on }
+  - { a: on, b: on, c: on, e: on, h: on }
+  - { a: on, b: on, c: on, f: on, h: on }
+  - { a: on, b: on, d: on, e: on, f: on }
+  - { a: on, b: on, d: on, e: on, f: on, g: on, h: on }
+  - { a: on, b: on, d: on, g: on }
+  - { a: on, b: on, d: on, h: on }
+  - { a: on, b: on, d: on, e: on, g: on }
+  - { a: on, b: on, d: on, f: on, g: on }
+  - { a: on, b: on, d: on, e: on, h: on }
+  - { a: on, b: on, d: on, f: on, h: on }
 ---
 Es gibt insgesamt 16 richtige Schalterstellungen, zum Beispiel A, B, C, E, F. Wenn man die Schalter so stellt wie im Bild, leuchtet das Schild.
 

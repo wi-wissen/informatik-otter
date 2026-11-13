@@ -1,5 +1,5 @@
 ---
-answer: [d, f, g]
+answer: { team: [d, f, g] }
 ---
 Die Biber **D, F und G** waren in Adas Team in Runde 1.
 

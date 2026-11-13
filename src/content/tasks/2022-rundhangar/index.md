@@ -13,11 +13,19 @@ topics: [algorithm-analysis]
 methods: []
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: zuerst abgeholt
-    endLabel: zuletzt abgeholt
+    background: ./img/slots.png
+    width: 785
+    height: 120
+    trayLabel: Parkpositionen 1 bis 6
+    zones:
+      - { id: p1, label: "1. abgeholt", x: 25, y: 22, w: 80, h: 80 }
+      - { id: p2, label: "2. abgeholt", x: 157, y: 22, w: 80, h: 80 }
+      - { id: p3, label: "3. abgeholt", x: 289, y: 22, w: 80, h: 80 }
+      - { id: p4, label: "4. abgeholt", x: 421, y: 22, w: 80, h: 80 }
+      - { id: p5, label: "5. abgeholt", x: 554, y: 22, w: 80, h: 80 }
+      - { id: p6, label: "6. abgeholt", x: 686, y: 22, w: 80, h: 80 }
     items:
       - { id: "1", label: "1" }
       - { id: "2", label: "2" }
@@ -44,4 +52,5 @@ Morgens, wenn die Piloten ihre Flugzeuge abholen, ist die Parkposition 1 immer b
 
 Aber was ist der schlechteste Fall? Bei welcher Reihenfolge müssen die Tasten am häufigsten gedrückt werden? Natürlich drücken die Piloten die Tasten nur so oft wie unbedingt nötig, damit ihr Flugzeug herausrollen kann.
 
-**Gib ein Beispiel für eine solche Reihenfolge.** Ordne die Positionen 1 bis 6 in der Reihenfolge an, in der die Flugzeuge abgeholt werden.
+**Gib ein Beispiel für eine solche Reihenfolge.**
+Ordne die Positionen 1 bis 6 in der Reihenfolge an, in der die Flugzeuge abgeholt werden.

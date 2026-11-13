@@ -76,4 +76,4 @@ Das Bild zeigt ein Beispiel: Um die beiden Blätter zu entfernen, kann Bruno ent
 
 Unten siehst du den gesamten Baum. (Der Ast zum untersten Blatt rechts hat die Zahl 1; sie ist im Bild nicht eingetragen.)
 
-**Welche Äste wird Bruno absägen, um so schnell wie möglich fertig zu sein? Tippe die Äste im Bild an.**
+**Welche Äste wird Bruno absägen, um so schnell wie möglich fertig zu sein?**

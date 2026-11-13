@@ -12,14 +12,18 @@ topics: [modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    multiple: true
-    columns: 3
-    options:
-      - { id: links, label: Geschäft links }
-      - { id: mitte, label: Geschäft in der Mitte }
-      - { id: rechts, label: Geschäft rechts }
+    pick: nodes
+    width: 994
+    height: 216
+    background: ./img/shops.png
+    hideNodes: true
+    nodeRadius: 95
+    nodes:
+      - { id: links, x: 218, y: 100, label: "Geschäft links (Schere, Hammer, Nägel)" }
+      - { id: mitte, x: 525, y: 95, label: "Geschäft in der Mitte (Ziegelsteine, Bretter)" }
+      - { id: rechts, x: 835, y: 100, label: "Geschäft rechts (Eimer Butter, Seil)" }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -35,6 +39,4 @@ Bella möchte eine Brücke bauen, über einen Bach. Sie braucht: einen Hammer, N
 
 Unten siehst du drei Geschäfte, und was sie verkaufen.
 
-![Drei Geschäfte: Das linke verkauft eine Schere, einen Hammer und Nägel. Das mittlere verkauft Ziegelsteine und Bretter. Das rechte verkauft einen Eimer Butter und ein Seil.](./img/shops.png)
-
-**Wo kann Bella die anderen Sachen einkaufen? Wähle alle Geschäfte, die sie dafür braucht.**
+**Wo kann Bella die anderen Sachen einkaufen?**

@@ -18,7 +18,7 @@ interaction:
     width: 319
     height: 239
     background: ./img/map.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 10
     nodes:
       - { id: r0c0, x: 41.7, y: 25.0 }
@@ -88,4 +88,4 @@ Zur Verwirrung markiert Bilbo weitere Felder mit einem Kreuz. Das macht er so, d
 
 Danach entfernt er die beiden Kreuze von den Feldern mit seinen Verstecken. Unten siehst du das Ergebnis: Die Gitterlinien der Karte sind schwach zu sehen; vier Felder tragen noch ein Kreuz.
 
-**In welchen Feldern liegen Bilbos Verstecke?** Tippe die beiden Felder an.
+**In welchen Feldern liegen Bilbos Verstecke?**

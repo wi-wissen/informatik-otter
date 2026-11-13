@@ -18,7 +18,7 @@ interaction:
     width: 520
     height: 164
     background: ./img/box.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 16
     nodes:
       - { id: A, x: 45, y: 44, label: Tür A }
@@ -53,4 +53,4 @@ Zu Beginn hat Bastian einen runden (dunkelblauen) Baustein.
 
 Er will höchstens fünf Türen öffnen, um das Geschenk zu erreichen.
 
-**Welche Tür muss Bastian dafür zuerst öffnen? Tippe sie an.**
+**Welche Tür muss Bastian dafür zuerst öffnen?**

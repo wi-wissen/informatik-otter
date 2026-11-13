@@ -11,10 +11,12 @@ topics: [graphs]
 methods: [graph-coloring]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: number
-    placeholder: Anzahl
+    patterns:
+      - { id: green, name: grün mit Dreiecken }
+      - { id: blue, name: blau mit Wellen }
+      - { id: yellow, name: gelb mit Punkten }
 source:
   type: original
   work: Informatik-Biber 2022
@@ -24,10 +26,8 @@ source:
   country: AT
   license: CC BY-SA 4.0
 ---
-Eine Blume soll ausgemalt werden, und zwar das ganze Bild mit den drei farbigen Mustern (grün mit Dreiecken, blau mit Wellen, gelb mit Punkten). Zwei Flächen, die sich berühren, dürfen nicht das gleiche Muster haben.
+Male das ganze Bild aus, mit den drei farbigen Mustern (grün mit Dreiecken, blau mit Wellen, gelb mit Punkten).
 
-![Eine Blume mit Mitte, acht Blütenblättern, Stiel und Blatt in einer großen äußeren Fläche, daneben die Farbpalette mit grünem, blauem und gelbem Muster](./img/task.png)
+Zwei Flächen, die sich berühren, dürfen nicht die gleiche Farbe haben.
 
-Überlege dir, wie du das ganze Bild ausmalen kannst. Wie viele verschiedene richtige Möglichkeiten gibt es dafür?
-
-**Wie viele verschiedene Möglichkeiten gibt es, das Bild richtig auszumalen?**
+**Male das ganze Bild aus!**

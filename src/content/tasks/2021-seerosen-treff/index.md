@@ -18,7 +18,7 @@ interaction:
     width: 363
     height: 204
     background: ./img/lake.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 12
     nodes:
       - { id: A1, x: 37.6, y: 178.6 }
@@ -72,4 +72,4 @@ source:
 ---
 Auf einem See können zwei Frösche von Seerosenblatt zu Seerosenblatt springen – aber nur entlang der Pfeile.
 
-**Auf welchem Seerosenblatt können sie sich treffen? Tippe das Blatt an.**
+**Auf welchem Seerosenblatt können sie sich treffen?**

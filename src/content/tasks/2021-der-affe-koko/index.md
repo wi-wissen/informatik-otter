@@ -18,7 +18,7 @@ interaction:
     width: 297
     height: 297
     background: ./img/forest.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 8
     nodes:
       - { id: r0c2, x: 68.5, y: 15.3 }

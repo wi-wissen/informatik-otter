@@ -18,7 +18,7 @@ interaction:
     width: 292
     height: 162
     background: ./img/beach.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 13
     nodes:
       - { id: m1, x: 81.3, y: 57.3 }
@@ -44,4 +44,4 @@ Abwechselnd setzen sie eine ihrer Spielfiguren in eine freie Mulde. Verloren hat
 
 Unten siehst du den Spielstand nach einigen Zügen (zwei Muscheln von Ann, zwei Steine von Bob). Ann ist an der Reihe.
 
-**In welche Mulde muss Ann ihre nächste Muschel setzen, um sich den Sieg zu sichern?** Tippe auf die freie Mulde.
+**In welche Mulde muss Ann ihre nächste Muschel setzen, um sich den Sieg zu sichern?**

@@ -19,7 +19,7 @@ interaction:
     width: 305
     height: 304
     background: ./img/map.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 10
     nodes:
       - { id: a, x: 45.7, y: 45.6 }
@@ -46,4 +46,4 @@ Die Tabelle zeigt, was Tinas Sensoren auf jedem Feld ihres Weges erkannt haben. 
 
 ![Tabelle mit acht Zeilen (links, vor, rechts). Zeile 1: Baum, Straße, Haus. Zeile 2: Straße, Straße, Wiese. Zeile 3: Baum, Straße, Baum. Zeile 4: Straße, Straße, Straße. Zeile 5: Baum, Straße, Baum. Zeile 6: Baum, Haus, Straße. Zeile 7: Straße, Straße, Baum. Zeile 8: Haus, Straße, Baum](./img/sensors.png)
 
-**An welchem der dunkelblauen Punkte befindet sich Tina am Ende ihres Weges?** Tippe den Punkt an.
+**An welchem der dunkelblauen Punkte befindet sich Tina am Ende ihres Weges?**

@@ -18,7 +18,7 @@ interaction:
     width: 454
     height: 238
     background: ./img/forest.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 14
     nodes:
       - { id: T, x: 178, y: 42, label: Lichtung oben Mitte }
@@ -39,4 +39,4 @@ source:
 ---
 Im Wald gibt es Lichtungen und Wege dazwischen. Von jeder Lichtung aus kann man die von dort ausgehenden Wege genau bis zur nächsten Lichtung überblicken. Eine Gruppe von Helfern soll insgesamt alle Wege überblicken können. Die Försterin will dazu möglichst wenige Lichtungen mit Helfern besetzen.
 
-**Welche Lichtungen soll die Försterin besetzen? Tippe die Lichtungen an.**
+**Welche Lichtungen soll die Försterin besetzen?**

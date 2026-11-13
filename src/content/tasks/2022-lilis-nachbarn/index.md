@@ -18,7 +18,7 @@ interaction:
     width: 324
     height: 126
     background: ./img/map.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 12
     nodes:
       - { id: b1, x: 37.5, y: 38.3 }
@@ -46,4 +46,4 @@ Das ist bekannt:
 - Lili, Simon und Peter haben je vier Nachbarn.
 - Simon und Peter sind Ninas einzige Nachbarn.
 
-**Wo wohnt Lili?** Tippe auf die Burg von Lili.
+**Wo wohnt Lili?**

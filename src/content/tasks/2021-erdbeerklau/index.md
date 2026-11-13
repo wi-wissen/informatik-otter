@@ -13,32 +13,30 @@ topics: [graphs, modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: custom
   props:
-    pick: edges
-    width: 313
-    height: 176
     background: ./img/art.png
-    hideNodes: true
-    nodes:
-      - { id: TL, x: 35, y: 18, label: Eichel links oben }
-      - { id: TM, x: 162, y: 18, label: Haselnuss oben }
-      - { id: TR, x: 289, y: 18, label: Eichel rechts oben }
-      - { id: BL, x: 37, y: 156, label: Stein links unten }
-      - { id: BM, x: 164, y: 156, label: Stelle der Erdbeere }
-      - { id: BR, x: 289, y: 156, label: Stein rechts unten }
+    width: 783
+    height: 441
+    fixed: { TL: acorn, TM: hazelnut, TR: acorn, BL: stone, BR: stone }
+    gap: { id: BM, x: 362, y: 352, w: 106, h: 86, label: Stelle der Erdbeere }
+    labels: { TL: Eichel links oben, TM: Haselnuss oben, TR: Eichel rechts oben, BL: Stein links unten, BM: die Stelle der Erdbeere, BR: Stein rechts unten }
+    pieces:
+      - { id: acorn, label: Eichel, image: ./img/acorn.png }
+      - { id: hazelnut, label: Haselnuss, image: ./img/hazelnut.png }
+      - { id: stone, label: Stein, image: ./img/stone.png }
     edges:
-      - { id: TL-TM, from: TL, to: TM }
-      - { id: TM-TR, from: TM, to: TR }
-      - { id: TL-BL, from: TL, to: BL }
-      - { id: TR-BR, from: TR, to: BR }
-      - { id: TL-BM, from: TL, to: BM }
-      - { id: BL-TM, from: BL, to: TM }
-      - { id: TM-BM, from: TM, to: BM }
-      - { id: TM-BR, from: TM, to: BR }
-      - { id: BM-TR, from: BM, to: TR }
-      - { id: BL-BM, from: BL, to: BM }
-      - { id: BM-BR, from: BM, to: BR }
+      - { id: tl-tm, from: TL, to: TM, x1: 140, y1: 65, x2: 352, y2: 28 }
+      - { id: tm-tr, from: TM, to: TR, x1: 457, y1: 30, x2: 668, y2: 38 }
+      - { id: tl-bl, from: TL, to: BL, x1: 95, y1: 108, x2: 70, y2: 322 }
+      - { id: tr-br, from: TR, to: BR, x1: 715, y1: 95, x2: 755, y2: 335 }
+      - { id: tl-bm, from: TL, to: BM, x1: 112, y1: 92, x2: 352, y2: 342 }
+      - { id: tm-bl, from: TM, to: BL, x1: 360, y1: 100, x2: 95, y2: 342 }
+      - { id: tm-br, from: TM, to: BR, x1: 455, y1: 95, x2: 700, y2: 345 }
+      - { id: tr-bm, from: TR, to: BM, x1: 690, y1: 90, x2: 440, y2: 345 }
+      - { id: tm-bm, from: TM, to: BM, x1: 415, y1: 98, x2: 403, y2: 332 }
+      - { id: bl-bm, from: BL, to: BM, x1: 145, y1: 408, x2: 355, y2: 410 }
+      - { id: bm-br, from: BM, to: BR, x1: 470, y1: 410, x2: 665, y2: 390 }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -56,6 +54,5 @@ Das ist das fertige Kunstwerk:
 
 Als Anja weg ist, kommt ihr Bruder und isst die Erdbeere.
 
-Kannst du ihm helfen, die Tat zu verschleiern? Er legt eine andere Sache an die Stelle der Erdbeere (Eichel, Haselnuss oder Stein) und entfernt genau einen Ast. Am Ende soll Anjas Regel auch für das veränderte Kunstwerk gelten.
-
-**Welchen Ast muss er entfernen? Tippe ihn im Bild an. Überlege dir dazu, welche Sache er an die Stelle der Erdbeere legt.**
+**Kannst du ihm helfen, die Tat zu verschleiern?**
+Lege eine andere Sache an die Stelle der Erdbeere und entferne genau einen Ast. Am Ende soll Anjas Regel auch für das veränderte Kunstwerk gelten.

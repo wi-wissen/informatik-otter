@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 
-type Job = { id: string; hours: number; after: string[] };
+type Job = { id: string; hours: number; after: string[]; color?: string };
 const props = defineProps<{ jobs: Job[] }>();
 const emit = defineEmits<{ answer: [value: unknown] }>();
 
@@ -42,29 +42,38 @@ watch(plan, () => {
   emit('answer', schedule.value.stuck ? 'unmöglich' : schedule.value.total);
 }, { deep: true });
 
-function add(id: string, b: number) { plan.value[b].push(id); }
+const selected = ref<string | null>(null);
+const ready = (id: string) => byId.value[id].after.every((a) => placed.value.has(a)); // grey while predecessors are not in the plan
+function add(id: string, b: number) { remove(id); plan.value[b].push(id); selected.value = null; }
 function remove(id: string) { plan.value = plan.value.map((l) => l.filter((x) => x !== id)); }
+function tapJob(id: string) { selected.value = selected.value === id ? null : id; }
+function tapLane(b: number) { if (selected.value) add(selected.value, b); }
+function dragStart(e: DragEvent, id: string) { e.dataTransfer?.setData('text/plain', id); selected.value = id; }
+function dropLane(e: DragEvent, b: number) { e.preventDefault(); const id = e.dataTransfer?.getData('text/plain'); if (id && byId.value[id]) add(id, b); }
+function dropPool(e: DragEvent) { e.preventDefault(); const id = e.dataTransfer?.getData('text/plain'); if (id && byId.value[id]) { remove(id); selected.value = null; } }
 function reset() { plan.value = [[], []]; }
 const scale = 14;
 </script>
 
 <template>
   <div class="plan">
-    <div class="pool" aria-label="Noch nicht eingeplante Aufgaben">
-      <span v-if="!pool.length" class="muted">Alle Aufgaben sind eingeplant.</span>
-      <div v-for="j in pool" :key="j.id" class="card">
-        <strong>{{ j.id }}</strong> <span class="muted">({{ j.hours }} h)</span>
-        <button type="button" class="mini" @click="add(j.id, 0)" :aria-label="`${j.id} zu Biber 1`">→ Biber 1</button>
-        <button type="button" class="mini" @click="add(j.id, 1)" :aria-label="`${j.id} zu Biber 2`">→ Biber 2</button>
-      </div>
+    <div class="pool" role="group" aria-label="Noch nicht eingeplante Aufgaben" @dragover.prevent @drop="dropPool">
+      <span v-if="!pool.length" class="muted">Alle Aufgaben sind eingeplant. Tippe oder ziehe eine Aufgabe aus dem Plan hierher, um sie zurückzulegen.</span>
+      <button v-for="j in pool" :key="j.id" type="button" class="block" :class="{ grey: !ready(j.id), sel: selected === j.id }"
+              :style="{ width: j.hours * scale + 'px', '--c': j.color }" draggable="true" :aria-pressed="selected === j.id"
+              :aria-label="`Aufgabe ${j.id}, ${j.hours} Stunden${ready(j.id) ? '' : ', kann noch nicht begonnen werden'}`"
+              @click="tapJob(j.id)" @dragstart="dragStart($event, j.id)">
+        {{ j.id }}
+      </button>
     </div>
 
     <div v-for="(list, b) in plan" :key="b" class="lane">
-      <div class="name">Biber {{ b + 1 }}</div>
-      <div class="track">
-        <button v-for="id in list" :key="id" type="button" class="job" :title="`${id} wieder herausnehmen`"
-                :style="{ left: (schedule.start[id] ?? 0) * scale + 'px', width: byId[id].hours * scale + 'px' }"
-                :class="{ idle: !(id in schedule.start) }" @click="remove(id)">
+      <button type="button" class="name" :class="{ target: !!selected }" :aria-label="`Biber ${b + 1}: ausgewählte Aufgabe hier einplanen`" @click="tapLane(b)">Biber {{ b + 1 }}</button>
+      <div class="track" :class="{ target: !!selected }" @click="tapLane(b)" @dragover.prevent @drop="dropLane($event, b)">
+        <button v-for="id in list" :key="id" type="button" class="job" :title="`${id} wieder herausnehmen`" draggable="true"
+                :style="{ left: (schedule.start[id] ?? 0) * scale + 'px', width: byId[id].hours * scale + 'px', '--c': byId[id].color }"
+                :class="{ idle: !(id in schedule.start) }" :aria-label="`${id} aus dem Plan nehmen`"
+                @click.stop="remove(id)" @dragstart="dragStart($event, id)">
           {{ id }}
         </button>
       </div>
@@ -74,22 +83,24 @@ const scale = 14;
       <template v-else>Der Damm wäre nach <strong>{{ schedule.total }}</strong> Stunden fertig.</template>
       <button type="button" class="mini" @click="reset">Plan leeren</button>
     </p>
-    <p class="muted small">Tippe auf einen Block im Plan, um die Aufgabe wieder herauszunehmen.</p>
+    <p class="muted small">Ziehe die Aufgaben in den Plan (oder tippe erst eine Aufgabe an und dann den Biber). Aufgaben, die noch nicht begonnen werden können, sind grau. Tippe auf einen Block im Plan, um die Aufgabe wieder herauszunehmen.</p>
   </div>
 </template>
 
 <style scoped>
-.plan { display: grid; gap: 12px; }
-.pool { display: flex; flex-wrap: wrap; gap: 8px; }
-.card { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 6px 10px; border: 2px solid var(--line); border-radius: 12px; background: var(--surface); }
+.plan { display: grid; gap: 12px; overflow-x: auto; }
+.pool { display: flex; flex-wrap: wrap; gap: 6px; min-height: 48px; padding: 6px; border: 1px dashed var(--line); border-radius: 10px; align-items: center; }
+.block, .job { box-sizing: border-box; height: 38px; border: 2px solid var(--ink); border-radius: 4px; background: var(--c, var(--primary-soft)); color: #10313a; font: 700 1rem var(--font-body); cursor: grab; padding: 0; }
+.block.grey { background: #b8b8b8; border-color: #777; }
+.block.sel { outline: 3px solid var(--sun); }
 .mini { font: inherit; font-size: .85rem; padding: 4px 8px; border: 1px solid var(--primary); border-radius: 8px; background: var(--primary-soft); color: var(--ink); cursor: pointer; }
 .lane { display: flex; align-items: center; gap: 10px; }
-.name { width: 70px; font-weight: 700; flex: none; }
-.track { position: relative; flex: 1; height: 40px; min-width: 330px; background: var(--sunk); border-radius: 8px; overflow-x: auto; }
-.job { position: absolute; top: 4px; height: 32px; box-sizing: border-box; border: 2px solid var(--primary); background: var(--primary-soft); color: var(--ink); border-radius: 6px; font: 700 1rem var(--font-body); cursor: pointer; }
+.name { width: 78px; flex: none; font: 700 1rem var(--font-body); color: var(--ink); text-align: left; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--sunk); cursor: pointer; }
+.name.target, .track.target { outline: 2px dashed var(--sun); }
+.track { position: relative; flex: 1; height: 46px; min-width: 330px; background: var(--sunk); border-radius: 8px; overflow-x: auto; }
+.job { position: absolute; top: 4px; }
 .job.idle { border-style: dashed; opacity: .6; }
 .muted { color: var(--muted); }
 .small { font-size: .85rem; margin: 0; }
 .status { margin: 0; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-.plan { overflow-x: auto; }
 </style>

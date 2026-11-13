@@ -13,20 +13,24 @@ topics: [trees, data-structures]
 methods: [binary-tree]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: d1, label: "1. Dotti (4 Punkte)" }
-      - { id: d2, label: "2. Dotti (2 Punkte)" }
-      - { id: d3, label: "3. Dotti (3 Punkte)" }
-      - { id: d4, label: "4. Dotti (1 Punkt)" }
-      - { id: d5, label: "5. Dotti (5 Punkte)" }
-    right:
-      - { id: n-left, label: "Nest ganz links" }
-      - { id: n-lowleft, label: "Nest links vom Stamm, zweites von links" }
-      - { id: n-bottom, label: "unterstes Nest am Stamm" }
-      - { id: n-top, label: "höchstes Nest oben in der Mitte" }
-      - { id: n-right, label: "Nest ganz rechts" }
+    background: ./img/tree-only.png
+    width: 372
+    height: 264
+    trayLabel: Die fünf Dottis, von links nach rechts
+    zones:
+      - { id: n-top, label: "höchstes Nest oben in der Mitte", x: 188, y: 54, w: 48, h: 36 }
+      - { id: n-left, label: "Nest ganz links", x: 58, y: 99, w: 48, h: 36 }
+      - { id: n-lowleft, label: "Nest links vom Stamm, zweites von links", x: 147, y: 126, w: 48, h: 36 }
+      - { id: n-right, label: "Nest rechts", x: 253, y: 108, w: 48, h: 36 }
+      - { id: n-bottom, label: "unterstes Nest am Stamm", x: 190, y: 144, w: 48, h: 36 }
+    items:
+      - { id: d1, image: ./img/dotti-1.png, alt: "1. Dotti (4 Punkte)" }
+      - { id: d2, image: ./img/dotti-2.png, alt: "2. Dotti (2 Punkte)" }
+      - { id: d3, image: ./img/dotti-3.png, alt: "3. Dotti (3 Punkte)" }
+      - { id: d4, image: ./img/dotti-4.png, alt: "4. Dotti (1 Punkt)" }
+      - { id: d5, image: ./img/dotti-5.png, alt: "5. Dotti (5 Punkte)" }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -45,7 +49,5 @@ Er beginnt unten am Baum. Er führt solange die folgenden Schritte aus, bis er e
 3. Wenn das Nest schon besetzt ist, klettert er weiter: Wenn der Dotti im Nest
    - mehr Punkte hat, klettert er nach links.
    - gleich viele oder weniger Punkte hat, klettert er nach rechts.
-
-![Ein Baum mit fünf Nestern: eines unten am Stamm, links davon ein zweites, von diesem aus ein Nest ganz links und ein Nest oben in der Mitte, rechts vom untersten Nest ein weiteres Nest. Rechts neben dem Baum stehen fünf Dottis mit 4, 2, 3, 1 und 5 Punkten.](./img/tree.png)
 
 **In welche Nester klettern die Dottis?**

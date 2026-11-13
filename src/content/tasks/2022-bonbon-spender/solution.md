@@ -1,5 +1,5 @@
 ---
-answer: [c1, c2, c3, c4, c5]
+answer: { s1: c1, s2: c2, s3: c3, s4: c4, s5: c5 }
 ---
 Der Spender gibt immer nur das oberste Bonbon aus. Das Bonbon, das ganz unten in den Spender gefüllt wird, kommt also als letztes heraus. Damit die Bonbons so nacheinander herauskommen, wie Anna sie essen möchte, muss der Spender so gefüllt werden:
 

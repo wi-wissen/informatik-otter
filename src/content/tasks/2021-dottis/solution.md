@@ -1,5 +1,5 @@
 ---
-answer: { d1: n-bottom, d2: n-lowleft, d3: n-top, d4: n-left, d5: n-right }
+answer: { n-bottom: d1, n-lowleft: d2, n-top: d3, n-left: d4, n-right: d5 }
 ---
 Der erste Dotti, der mit 4 Punkten, bleibt gleich im untersten Nest.
 

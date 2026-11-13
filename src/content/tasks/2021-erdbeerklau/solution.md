@@ -1,5 +1,5 @@
 ---
-answer: [TM-BM]
+answer: ok
 ---
 Der Ast in der Mitte zwischen der Haselnuss oben und der Stelle der Erdbeere muss entfernt werden, und an die Stelle der Erdbeere gehört eine Haselnuss.
 

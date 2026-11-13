@@ -11,18 +11,22 @@ topics: [programming]
 methods: [loop]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: loop, label: "wiederhole bis …" }
-      - { id: wait1, label: "1. warte bis …" }
-      - { id: wait2, label: "2. warte bis …" }
-    right:
-      - { id: gt0, label: Nasenlänge > 0 }
-      - { id: gt08, label: Nasenlänge > 0,8 }
-      - { id: gt12, label: Nasenlänge > 1,2 }
-      - { id: lt08, label: Nasenlänge < 0,8 }
-      - { id: lt11, label: Nasenlänge < 1,1 }
+    background: ./img/program.png
+    width: 321
+    height: 156
+    trayLabel: Bedingungen
+    zones:
+      - { id: loop, label: "wiederhole bis …", x: 126, y: 27, w: 186, h: 22 }
+      - { id: wait1, label: "1. warte bis …", x: 126, y: 49, w: 186, h: 22 }
+      - { id: wait2, label: "2. warte bis …", x: 126, y: 71, w: 186, h: 22 }
+    items:
+      - { id: gt0, label: "Nasenlänge > 0" }
+      - { id: gt08, label: "Nasenlänge > 0,8" }
+      - { id: gt12, label: "Nasenlänge > 1,2" }
+      - { id: lt08, label: "Nasenlänge < 0,8" }
+      - { id: lt11, label: "Nasenlänge < 1,1" }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -38,15 +42,6 @@ Der Automat hat dazu eine Kamera eingebaut. Sie kann die Nasen der Kunden erkenn
 
 ![Tabelle: Beim Wert Nasenlänge 1 schaut der Kunde geradeaus. Beim Wert 1,3 hat der Kunde den Kopf gesenkt. Beim Wert 0,7 hat der Kunde den Kopf gehoben.](./img/table.png)
 
-Das Steuerungsprogramm ist fast fertig – siehe unten. Die Schleife „wiederhole bis …“ wiederholt die eingerückten Anweisungen, bis ihre Bedingung erfüllt ist.
+Das Steuerungsprogramm ist fast fertig – siehe unten.
 
-```
-setze Zähler auf 0
-wiederhole bis [ … ]
-    warte bis [ … ]
-    warte bis [ … ]
-    erhöhe Zähler um 1
-gib Zähler Karten aus
-```
-
-**Vervollständige das Steuerungsprogramm! Ordne jeder Lücke die passende Bedingung zu.**
+**Vervollständige das Steuerungsprogramm!**
