@@ -150,7 +150,11 @@
     },
     "bubble-sort": {
       "label": "Bubblesort",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Sortieren durch Vertauschen",
+        "Nachbarn tauschen"
+      ]
     },
     "merge-sort": {
       "label": "Mergesort",
@@ -173,13 +177,19 @@
     },
     "lexicographic-order": {
       "label": "Lexikographische Ordnung",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "alphabetisch",
+        "Wörterbuchordnung",
+        "Sortierreihenfolge"
+      ]
     },
     "linear-search": {
       "label": "Lineare Suche",
       "topic": "searching",
       "aliases": [
-        "sequentielle Suche"
+        "sequentielle Suche",
+        "Durchprobieren"
       ]
     },
     "binary-search": {
@@ -240,7 +250,8 @@
       "topic": "graphs",
       "aliases": [
         "Färbung",
-        "Graphfärbung"
+        "Graphfärbung",
+        "Landkarte färben"
       ]
     },
     "euler-path": {
@@ -248,7 +259,9 @@
       "topic": "graphs",
       "aliases": [
         "Euler",
-        "Haus vom Nikolaus"
+        "Haus vom Nikolaus",
+        "Eulerkreis",
+        "Königsberger Brücken"
       ]
     },
     "hamilton-path": {
@@ -256,7 +269,10 @@
       "topic": "graphs",
       "aliases": [
         "Hamilton",
-        "Rundreise"
+        "Rundreise",
+        "Hamiltonkreis",
+        "Handlungsreisender",
+        "TSP"
       ]
     },
     "topological-sort": {
@@ -277,11 +293,22 @@
     },
     "matching": {
       "label": "Paarung (Matching)",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Zuordnung",
+        "Paarung",
+        "Matching",
+        "Zuweisung"
+      ]
     },
     "flood-fill": {
       "label": "Flood-Fill",
-      "topic": "images"
+      "topic": "images",
+      "aliases": [
+        "Füllalgorithmus",
+        "Region füllen",
+        "Zusammenhangskomponente"
+      ]
     },
     "greedy": {
       "label": "Greedy-Verfahren",
@@ -300,47 +327,108 @@
     },
     "backtracking": {
       "label": "Backtracking",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Zurückverfolgen",
+        "Rücknahme",
+        "Ausprobieren mit Rücknahme"
+      ]
     },
     "scheduling": {
       "label": "Ablaufplanung (Scheduling)",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Zeitplanung",
+        "Ablaufplanung",
+        "Parallelisierung",
+        "Prozessorzuteilung"
+      ]
     },
     "brute-force": {
       "label": "Vollständige Suche (Brute Force)",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Ausprobieren",
+        "vollständige Suche",
+        "erschöpfende Suche",
+        "Brute Force"
+      ]
     },
     "divide-and-conquer": {
       "label": "Teile und herrsche",
-      "topic": "algorithm-analysis"
+      "topic": "algorithm-analysis",
+      "aliases": [
+        "Divide and Conquer",
+        "Halbieren"
+      ]
     },
     "invariant": {
       "label": "Invariante",
-      "topic": "algorithm-analysis"
+      "topic": "algorithm-analysis",
+      "aliases": [
+        "Schleifeninvariante",
+        "unveränderliche Eigenschaft"
+      ]
     },
     "sequence": {
       "label": "Sequenz von Anweisungen",
-      "topic": "programming"
+      "topic": "programming",
+      "aliases": [
+        "Programm",
+        "Anweisungsfolge",
+        "Befehle"
+      ]
     },
     "loop": {
       "label": "Wiederholung (Schleife)",
-      "topic": "programming"
+      "topic": "programming",
+      "aliases": [
+        "Schleife",
+        "Wiederholung",
+        "for",
+        "while"
+      ]
     },
     "conditional": {
       "label": "Verzweigung",
-      "topic": "programming"
+      "topic": "programming",
+      "aliases": [
+        "if",
+        "Bedingung",
+        "Fallunterscheidung",
+        "wenn-dann"
+      ]
     },
     "postfix-notation": {
       "label": "Postfix-Notation",
-      "topic": "programming"
+      "topic": "programming",
+      "aliases": [
+        "umgekehrte polnische Notation",
+        "RPN",
+        "Stapelrechner"
+      ]
     },
     "boolean-logic": {
       "label": "Boolesche Logik",
-      "topic": "logic"
+      "topic": "logic",
+      "aliases": [
+        "Logik",
+        "UND",
+        "ODER",
+        "NICHT",
+        "Schaltung",
+        "AND",
+        "OR"
+      ]
     },
     "xor": {
       "label": "XOR (exklusives Oder)",
-      "topic": "logic"
+      "topic": "logic",
+      "aliases": [
+        "XOR",
+        "exklusiv oder",
+        "Antivalenz"
+      ]
     },
     "binary-numbers": {
       "label": "Binärzahlen",
@@ -386,7 +474,11 @@
     },
     "checksum": {
       "label": "Prüfsumme",
-      "topic": "error-detection"
+      "topic": "error-detection",
+      "aliases": [
+        "Prüfziffer",
+        "Kontrollziffer"
+      ]
     },
     "caesar-cipher": {
       "label": "Caesar-Verschlüsselung",
@@ -407,11 +499,21 @@
     },
     "visual-cryptography": {
       "label": "Visuelle Kryptografie",
-      "topic": "cryptography"
+      "topic": "cryptography",
+      "aliases": [
+        "Folien",
+        "One-Time-Pad"
+      ]
     },
     "hashing": {
       "label": "Hashing (Streuspeicherung)",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Hash",
+        "Hashfunktion",
+        "Streuspeicherung",
+        "Hashtabelle"
+      ]
     },
     "stack": {
       "label": "Stapel (Stack, LIFO)",
@@ -434,15 +536,29 @@
     },
     "binary-tree": {
       "label": "Binärbaum",
-      "topic": "trees"
+      "topic": "trees",
+      "aliases": [
+        "Baum",
+        "Binärer Baum",
+        "Morsebaum"
+      ]
     },
     "decision-tree": {
       "label": "Entscheidungsbaum",
-      "topic": "trees"
+      "topic": "trees",
+      "aliases": [
+        "Baumdiagramm"
+      ]
     },
     "database-query": {
       "label": "Datenbankabfrage",
-      "topic": "databases"
+      "topic": "databases",
+      "aliases": [
+        "SQL",
+        "Abfrage",
+        "Datenbank",
+        "Tabelle"
+      ]
     },
     "finite-automaton": {
       "label": "Endlicher Automat",
@@ -455,15 +571,26 @@
     },
     "turing-machine": {
       "label": "Turingmaschine",
-      "topic": "automata"
+      "topic": "automata",
+      "aliases": [
+        "Turing",
+        "Berechenbarkeit"
+      ]
     },
     "pushdown-automaton": {
       "label": "Kellerautomat",
-      "topic": "automata"
+      "topic": "automata",
+      "aliases": [
+        "Stapelautomat"
+      ]
     },
     "regular-expression": {
       "label": "Regulärer Ausdruck",
-      "topic": "formal-languages"
+      "topic": "formal-languages",
+      "aliases": [
+        "Regex",
+        "Muster"
+      ]
     },
     "neural-network": {
       "label": "Neuronales Netz",
@@ -476,103 +603,416 @@
     },
     "instruction-set": {
       "label": "Befehlssatz",
-      "topic": "computer-architecture"
+      "topic": "computer-architecture",
+      "aliases": [
+        "Assembler",
+        "Maschinensprache",
+        "Prozessorbefehle"
+      ]
     },
     "routing": {
       "label": "Routing",
-      "topic": "networks"
+      "topic": "networks",
+      "aliases": [
+        "Routenplanung",
+        "Wegsuche",
+        "Netzwerk"
+      ]
     },
     "strongly-connected-components": {
       "label": "Starke Zusammenhangskomponenten",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Zusammenhangskomponenten",
+        "SCC",
+        "Tarjan"
+      ]
     },
     "min-cost-flow": {
       "label": "Kostenminimaler Fluss",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Transportproblem",
+        "Kosten",
+        "Fluss"
+      ]
     },
     "pareto-optimum": {
       "label": "Pareto-Optimum",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Pareto",
+        "Kompromiss",
+        "Mehrkriterien"
+      ]
     },
     "diffusion-model": {
       "label": "Diffusionsmodell",
-      "topic": "ai"
+      "topic": "ai",
+      "aliases": [
+        "Diffusion",
+        "Bildgenerierung",
+        "KI-Bilder"
+      ]
     },
     "context-free-grammar": {
       "label": "Kontextfreie Grammatik",
-      "topic": "formal-languages"
+      "topic": "formal-languages",
+      "aliases": [
+        "Grammatik",
+        "kontextfrei",
+        "Ableitung",
+        "Chomsky"
+      ]
     },
     "game-tree": {
       "label": "Spielbaum",
-      "topic": "games"
+      "topic": "games",
+      "aliases": [
+        "Minimax",
+        "Spielstrategie"
+      ]
     },
     "gnome-sort": {
       "label": "Gnomesort",
-      "topic": "sorting"
+      "topic": "sorting",
+      "aliases": [
+        "Zwergensortierung"
+      ]
     },
     "linked-list": {
       "label": "Verkettete Liste",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Liste",
+        "Zeiger",
+        "Pointer"
+      ]
     },
     "deque": {
       "label": "Deque (Warteschlange mit zwei Enden)",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Deque",
+        "Doppelschlange"
+      ]
     },
     "soundex": {
       "label": "Soundex (phonetische Suche)",
-      "topic": "searching"
+      "topic": "searching",
+      "aliases": [
+        "phonetische Suche",
+        "Klangähnlichkeit"
+      ]
     },
     "state-space-search": {
       "label": "Zustandsraumsuche",
-      "topic": "searching"
+      "topic": "searching",
+      "aliases": [
+        "Zustandsraum",
+        "Zustandsgraph",
+        "Puzzle lösen"
+      ]
     },
     "convex-hull": {
       "label": "Konvexe Hülle",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Gummiband",
+        "Umriss"
+      ]
     },
     "cellular-automaton": {
       "label": "Zellulärer Automat",
-      "topic": "automata"
+      "topic": "automata",
+      "aliases": [
+        "Zellularautomat",
+        "Game of Life",
+        "Zellen"
+      ]
     },
     "pledge-algorithm": {
       "label": "Pledge-Algorithmus",
-      "topic": "graphs"
+      "topic": "graphs",
+      "aliases": [
+        "Irrgarten",
+        "Labyrinth",
+        "Rechte-Hand-Regel"
+      ]
     },
     "syntax-diagram": {
       "label": "Syntaxdiagramm",
-      "topic": "formal-languages"
+      "topic": "formal-languages",
+      "aliases": [
+        "Grammatik",
+        "Eisenbahndiagramm"
+      ]
     },
     "aggregate": {
       "label": "Aggregat (zusammengesetzte Datenstruktur)",
-      "topic": "data-structures"
+      "topic": "data-structures",
+      "aliases": [
+        "Struktur",
+        "Record",
+        "zusammengesetzter Datentyp"
+      ]
     },
     "chain-code": {
       "label": "Kettencode",
-      "topic": "images"
+      "topic": "images",
+      "aliases": [
+        "Freeman-Kette",
+        "Umrisskodierung",
+        "Richtungscode"
+      ]
     },
     "variable-assignment": {
       "label": "Variable und Zuweisung",
-      "topic": "modelling"
+      "topic": "modelling",
+      "aliases": [
+        "Variable",
+        "Zuweisung",
+        "Tauschen",
+        "Swap"
+      ]
     },
     "knapsack": {
       "label": "Rucksackproblem",
-      "topic": "optimization"
+      "topic": "optimization",
+      "aliases": [
+        "Rucksack",
+        "Packproblem"
+      ]
     },
     "constraint-satisfaction": {
       "label": "Constraint-Satisfaction",
-      "topic": "logic"
+      "topic": "logic",
+      "aliases": [
+        "Nebenbedingungen",
+        "Sudoku",
+        "Rätsel",
+        "Constraints"
+      ]
     },
     "josephus-problem": {
       "label": "Josephus-Problem (Abzählen)",
-      "topic": "algorithm-analysis"
+      "topic": "algorithm-analysis",
+      "aliases": [
+        "Abzählreim",
+        "Josephus",
+        "Kreis abzählen"
+      ]
     },
     "prefix-code": {
       "label": "Präfixcode",
-      "topic": "compression"
+      "topic": "compression",
+      "aliases": [
+        "Eindeutigkeit",
+        "Codewörter"
+      ]
     },
     "minimax": {
       "label": "Minimax-Verfahren",
-      "topic": "games"
+      "topic": "games",
+      "aliases": [
+        "Minimax",
+        "Spielbaum",
+        "Spielstrategie"
+      ]
+    },
+    "recursion": {
+      "label": "Rekursion",
+      "topic": "recursion",
+      "aliases": [
+        "rekursiv",
+        "Selbstaufruf",
+        "Fraktal",
+        "recursion"
+      ]
+    },
+    "deadlock": {
+      "label": "Verklemmung (Deadlock)",
+      "topic": "parallelism",
+      "aliases": [
+        "Deadlock",
+        "Verklemmung",
+        "gegenseitiges Warten"
+      ]
+    },
+    "transposition-cipher": {
+      "label": "Transpositionsverfahren (Umordnen)",
+      "topic": "cryptography",
+      "aliases": [
+        "Transposition",
+        "Skytale",
+        "Spaltentausch",
+        "Zeichen umordnen"
+      ]
+    },
+    "raid": {
+      "label": "RAID (redundante Festplatten)",
+      "topic": "computer-architecture",
+      "aliases": [
+        "RAID",
+        "Festplattenverbund",
+        "Redundanz",
+        "Spiegelung"
+      ]
+    },
+    "rewriting-system": {
+      "label": "Ersetzungssystem",
+      "topic": "formal-languages",
+      "aliases": [
+        "Ersetzungsregeln",
+        "Markov-Algorithmus",
+        "Semi-Thue",
+        "L-System",
+        "Termersetzung"
+      ]
+    },
+    "adjacency-matrix": {
+      "label": "Adjazenzmatrix",
+      "topic": "graphs",
+      "aliases": [
+        "Nachbarschaftsmatrix",
+        "Graph als Tabelle",
+        "Matrix"
+      ]
+    },
+    "graph-connectivity": {
+      "label": "Graphzusammenhang (Brücken, Artikulationspunkte)",
+      "topic": "graphs",
+      "aliases": [
+        "Zusammenhang",
+        "Artikulationspunkt",
+        "Brücke",
+        "Ausfallsicherheit",
+        "Netzwerk"
+      ]
+    },
+    "set-cover": {
+      "label": "Mengenüberdeckung (Set Cover)",
+      "topic": "optimization",
+      "aliases": [
+        "Überdeckung",
+        "Set Cover",
+        "Abdeckung"
+      ]
+    },
+    "inheritance": {
+      "label": "Vererbung (Objektorientierung)",
+      "topic": "modelling",
+      "aliases": [
+        "Klasse",
+        "Oberklasse",
+        "Unterklasse",
+        "OOP",
+        "Objektorientierung"
+      ]
+    },
+    "graph-isomorphism": {
+      "label": "Graphisomorphie",
+      "topic": "graphs",
+      "aliases": [
+        "isomorph",
+        "Gleichheit von Graphen",
+        "Graphvergleich"
+      ]
+    },
+    "median-filter": {
+      "label": "Medianfilter",
+      "topic": "images",
+      "aliases": [
+        "Median",
+        "Bildfilter",
+        "Rauschunterdrückung"
+      ]
+    },
+    "winning-strategy": {
+      "label": "Gewinnstrategie (Nim)",
+      "topic": "games",
+      "aliases": [
+        "Nim",
+        "Spielstrategie",
+        "Gewinnposition",
+        "Zwei-Personen-Spiel"
+      ]
+    },
+    "quadtree": {
+      "label": "Quadtree (Vierteilung)",
+      "topic": "images",
+      "aliases": [
+        "Quad-Tree",
+        "Bildkompression",
+        "Viertelung"
+      ]
+    },
+    "edit-distance": {
+      "label": "Editierdistanz (Levenshtein)",
+      "topic": "algorithm-analysis",
+      "aliases": [
+        "Levenshtein",
+        "Abstand von Wörtern",
+        "Editierabstand"
+      ]
+    },
+    "pattern-matching": {
+      "label": "Mustervergleich (Pattern Matching)",
+      "topic": "searching",
+      "aliases": [
+        "Muster",
+        "Mustersuche",
+        "Pattern Matching",
+        "Textsuche"
+      ]
+    },
+    "delta-encoding": {
+      "label": "Differenzkodierung (Delta-Kodierung)",
+      "topic": "compression",
+      "aliases": [
+        "Delta",
+        "Differenzbild",
+        "Videokompression"
+      ]
+    },
+    "dominating-set": {
+      "label": "Dominierende Menge (Dominating Set)",
+      "topic": "graphs",
+      "aliases": [
+        "Dominating Set",
+        "Überwachung",
+        "Abdeckung",
+        "Standortwahl"
+      ]
+    },
+    "k-nearest-neighbors": {
+      "label": "k-nächste-Nachbarn (kNN)",
+      "topic": "ai",
+      "aliases": [
+        "kNN",
+        "Nachbarn",
+        "Klassifikation",
+        "maschinelles Lernen"
+      ]
+    },
+    "cycle-detection": {
+      "label": "Zyklenerkennung (Floyd)",
+      "topic": "algorithm-analysis",
+      "aliases": [
+        "Floyd",
+        "Schildkröte und Hase",
+        "Zyklus",
+        "Kreis finden"
+      ]
+    },
+    "vertex-cover": {
+      "label": "Knotenüberdeckung (Vertex Cover)",
+      "topic": "graphs",
+      "aliases": [
+        "Vertex Cover",
+        "Überdeckung",
+        "Kanten überwachen"
+      ]
     }
   }
 }

@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, optimization]
-methods: [scheduling]
+methods: [scheduling, topological-sort]
 mascot: beaver
 interaction:
   format: input

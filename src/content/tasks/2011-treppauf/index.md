@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [algorithm-analysis, recursion]
-methods: [brute-force]
+methods: [brute-force, recursion]
 mascot: beaver
 interaction:
   format: input

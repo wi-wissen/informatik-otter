@@ -11,7 +11,7 @@ gi:
   content: [information-data]
   process: [representing, reasoning]
 topics: [databases, modelling]
-methods: []
+methods: [database-query]
 mascot: beaver
 interaction:
   format: choice

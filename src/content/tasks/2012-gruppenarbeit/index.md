@@ -10,7 +10,7 @@ gi:
   content: [systems]
   process: [modelling, representing]
 topics: [parallelism, graphs]
-methods: []
+methods: [deadlock]
 mascot: beaver
 interaction:
   format: choice
