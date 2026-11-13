@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, structuring]
 topics: [programming, parallelism]
-methods: [sequence]
+methods: [sequence, variable-assignment]
 mascot: beaver
 interaction:
   format: custom

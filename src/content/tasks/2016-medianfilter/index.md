@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [images, algorithm-analysis]
-methods: []
+methods: [median-filter]
 mascot: beaver
 interaction:
   format: choice

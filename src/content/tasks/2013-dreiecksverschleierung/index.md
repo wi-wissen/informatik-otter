@@ -8,7 +8,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [cryptography]
-methods: []
+methods: [transposition-cipher]
 mascot: beaver
 interaction:
   format: input

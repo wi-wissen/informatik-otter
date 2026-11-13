@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [compression, images]
-methods: []
+methods: [delta-encoding]
 mascot: beaver
 interaction:
   format: choice

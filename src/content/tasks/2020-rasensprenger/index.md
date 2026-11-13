@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [optimization]
-methods: []
+methods: [set-cover]
 mascot: beaver
 interaction:
   format: pixel-grid

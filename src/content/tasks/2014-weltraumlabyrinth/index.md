@@ -10,7 +10,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [cryptography]
-methods: []
+methods: [substitution-cipher]
 mascot: beaver
 interaction:
   format: choice

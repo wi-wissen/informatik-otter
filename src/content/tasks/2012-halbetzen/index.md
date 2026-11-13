@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [recursion]
-methods: [divide-and-conquer]
+methods: [divide-and-conquer, recursion]
 mascot: beaver
 interaction:
   format: choice

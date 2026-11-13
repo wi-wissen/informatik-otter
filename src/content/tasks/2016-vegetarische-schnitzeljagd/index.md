@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [data-structures]
-methods: []
+methods: [linked-list]
 mascot: beaver
 interaction:
   format: choice

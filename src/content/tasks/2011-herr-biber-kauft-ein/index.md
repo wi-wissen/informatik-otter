@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, optimization]
-methods: [dynamic-programming]
+methods: [dynamic-programming, dijkstra]
 mascot: beaver
 interaction:
   format: choice

@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [data-structures, algorithm-analysis]
-methods: []
+methods: [cycle-detection]
 mascot: beaver
 interaction:
   format: graph-pick

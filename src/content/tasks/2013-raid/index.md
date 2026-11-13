@@ -8,7 +8,7 @@ gi:
   content: [systems]
   process: [modelling, reasoning]
 topics: [computer-architecture, data-structures]
-methods: []
+methods: [raid]
 mascot: beaver
 interaction:
   format: choice

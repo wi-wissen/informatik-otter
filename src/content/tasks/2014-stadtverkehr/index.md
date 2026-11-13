@@ -8,7 +8,7 @@ gi:
   content: [information-data]
   process: [modelling, representing]
 topics: [graphs, modelling]
-methods: []
+methods: [adjacency-matrix]
 mascot: beaver
 interaction:
   format: pixel-grid

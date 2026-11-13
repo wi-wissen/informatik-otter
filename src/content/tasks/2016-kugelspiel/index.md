@@ -9,7 +9,7 @@ gi:
   content: [languages-automata]
   process: [modelling, reasoning]
 topics: [formal-languages]
-methods: []
+methods: [rewriting-system]
 mascot: beaver
 interaction:
   format: pixel-grid

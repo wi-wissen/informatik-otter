@@ -9,7 +9,7 @@ gi:
   content: [systems]
   process: [modelling, reasoning]
 topics: [computer-architecture, automata]
-methods: []
+methods: [binary-numbers]
 mascot: beaver
 interaction:
   format: choice

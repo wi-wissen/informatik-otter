@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, optimization]
-methods: []
+methods: [vertex-cover]
 mascot: beaver
 interaction:
   format: graph-pick

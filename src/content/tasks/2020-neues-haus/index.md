@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [ai, algorithm-analysis]
-methods: []
+methods: [k-nearest-neighbors]
 mascot: beaver
 interaction:
   format: input

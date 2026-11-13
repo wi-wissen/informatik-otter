@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [representing, modelling]
 topics: [recursion, trees]
-methods: []
+methods: [recursion]
 mascot: beaver
 interaction:
   format: choice

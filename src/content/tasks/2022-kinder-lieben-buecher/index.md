@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [representing]
 topics: [databases, modelling]
-methods: []
+methods: [database-query]
 mascot: beaver
 interaction:
   format: choice

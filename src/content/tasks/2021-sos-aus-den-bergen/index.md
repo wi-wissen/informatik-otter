@@ -10,7 +10,7 @@ gi:
   content: [systems]
   process: [modelling, reasoning]
 topics: [networks, graphs]
-methods: []
+methods: [graph-connectivity]
 mascot: beaver
 interaction:
   format: custom

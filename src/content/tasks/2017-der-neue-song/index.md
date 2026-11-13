@@ -8,7 +8,7 @@ gi:
   content: [information-data, algorithms]
   process: [modelling, reasoning]
 topics: [graphs, modelling]
-methods: []
+methods: [bfs]
 mascot: beaver
 interaction:
   format: choice
