@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [reasoning, modelling]
 topics: [logic]
-methods: [boolean-logic]
+methods: [boolean-logic, binary-search]
 mascot: beaver
 interaction:
   format: choice

@@ -8,7 +8,7 @@ gi:
   content: [information-data, algorithms]
   process: [modelling, structuring]
 topics: [graphs, modelling]
-methods: []
+methods: [graph-isomorphism]
 mascot: beaver
 interaction:
   format: match

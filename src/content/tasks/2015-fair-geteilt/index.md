@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [programming, optimization]
-methods: []
+methods: [state-space-search, bfs]
 mascot: beaver
 interaction:
   format: command-sequence

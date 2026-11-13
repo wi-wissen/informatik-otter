@@ -8,7 +8,7 @@ gi:
   content: [systems]
   process: [modelling, reasoning]
 topics: [graphs, parallelism]
-methods: [topological-sort]
+methods: [topological-sort, deadlock]
 mascot: beaver
 interaction:
   format: choice

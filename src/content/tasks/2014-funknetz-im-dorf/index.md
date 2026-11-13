@@ -10,7 +10,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [optimization]
-methods: [brute-force]
+methods: [brute-force, set-cover]
 mascot: beaver
 interaction:
   format: input

@@ -8,7 +8,7 @@ gi:
   content: [systems]
   process: [reasoning, modelling]
 topics: [computer-architecture, error-detection]
-methods: []
+methods: [raid]
 mascot: beaver
 interaction:
   format: choice
