@@ -28,7 +28,12 @@ source:
 ---
 Ein Biber möchte seinen Bau zur Sicherheit als Labyrinth anlegen. Sein Bauplan zeigt die beiden Etagen seines Baus als Raster von quadratischen Feldern. Die weißen Felder bilden die Gänge.
 
+*Bauplan der unteren Etage*
+
 ![Bauplan der unteren Etage: Raster mit weißen Gängen und grünen Wänden, Pfeile in den Feldern, der Eingang 5 oben links und rechts ein Ausgang](./img/untere-etage.png)
+
+*Bauplan der oberen Etage*
+
 ![Bauplan der oberen Etage: Raster mit weißen Gängen und grünen Wänden, Pfeile, Kreise und Kreuze in den Feldern, die Eingänge 4, 3, 2 und 1](./img/obere-etage.png)
 
 Der Bauplan zeigt, wie man sich in den Gängen von Feld zu Feld bewegen darf:
