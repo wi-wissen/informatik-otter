@@ -1,5 +1,5 @@
 ---
-answer: vulkan
+answer: [vulkan]
 ---
 Das Gold ist in der Schatzkiste am Fuß des Vulkans.
 

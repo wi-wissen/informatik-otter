@@ -1,11 +1,11 @@
 ---
 answers:
-  - { s3: ga, s7: gc, s8: gb, s9: gc, s10: gb, s11: ga, s12: gb, s13: ga, s14: gc }
-  - { s3: ga, s7: gb, s8: gc, s9: gb, s10: gc, s11: ga, s12: gc, s13: ga, s14: gb }
-  - { s3: gb, s7: gc, s8: ga, s9: gc, s10: ga, s11: gb, s12: ga, s13: gb, s14: gc }
-  - { s3: gb, s7: ga, s8: gc, s9: ga, s10: gc, s11: gb, s12: gc, s13: gb, s14: ga }
-  - { s3: gc, s7: gb, s8: ga, s9: gb, s10: ga, s11: gc, s12: ga, s13: gc, s14: gb }
-  - { s3: gc, s7: ga, s8: gb, s9: ga, s10: gb, s11: gc, s12: gb, s13: gc, s14: ga }
+  - { ga: [s11, s13, s3], gb: [s10, s12, s8], gc: [s14, s7, s9] }
+  - { ga: [s11, s13, s3], gc: [s10, s12, s8], gb: [s14, s7, s9] }
+  - { gb: [s11, s13, s3], ga: [s10, s12, s8], gc: [s14, s7, s9] }
+  - { gb: [s11, s13, s3], gc: [s10, s12, s8], ga: [s14, s7, s9] }
+  - { gc: [s11, s13, s3], ga: [s10, s12, s8], gb: [s14, s7, s9] }
+  - { gc: [s11, s13, s3], gb: [s10, s12, s8], ga: [s14, s7, s9] }
 ---
 So sind die Steine in Gruppen eingeteilt, wie Otto es machen würde. Die Gruppen heißen hier 1 bis 3; welche der Gruppen A, B und C man dafür wählt, ist egal.
 

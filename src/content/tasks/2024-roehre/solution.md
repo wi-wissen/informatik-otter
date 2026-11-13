@@ -1,5 +1,5 @@
 ---
-answer: [[0, 1, 1]]
+answer: { s1: white, s2: black, s3: black }
 ---
 Es werden zwei Kugeln von rechts in die Röhre geschoben, zuerst eine schwarze und dann eine weiße Kugel. Daher fallen links zwei Kugeln raus, zuerst die schwarze, dann die weiße.
 

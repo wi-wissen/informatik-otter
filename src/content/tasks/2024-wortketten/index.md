@@ -17,10 +17,10 @@ interaction:
   props:
     columns: 2
     options:
-      - { id: a, label: "A) ROT – RAT – TAT" }
-      - { id: b, label: "B) BAU – BAR – RAR" }
-      - { id: c, label: "C) BAR – BAD – FAD" }
-      - { id: d, label: "D) BAD – FAD – RAD" }
+      - { id: a, label: "ROT – RAT – TAT" }
+      - { id: b, label: "BAU – BAR – RAR" }
+      - { id: c, label: "BAR – BAD – FAD" }
+      - { id: d, label: "BAD – FAD – RAD" }
 source:
   type: original
   work: Informatik-Biber 2024

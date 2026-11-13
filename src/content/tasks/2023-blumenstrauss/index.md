@@ -12,13 +12,22 @@ topics: [programming]
 methods: [conditional, loop]
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: place
   props:
-    maxLength: 4
-    commands:
-      - { id: margarite, label: Margarite, image: ./img/margarite.png }
-      - { id: tulpe, label: Tulpe, image: ./img/tulpe.png }
-      - { id: zweig, label: Zweig, image: ./img/zweig.png }
+    background: ./img/strauss.png
+    width: 616
+    height: 235
+    trayLabel: Eimer A und Eimer B
+    zones:
+      - { id: strauss, label: "Blumenstrauß", x: 60, y: 25, w: 490, h: 175, capacity: 4 }
+    items:
+      - { id: a1, label: "Eimer A", image: ./img/margarite.png, alt: Margarite }
+      - { id: a2, label: "Eimer A", image: ./img/margarite.png, alt: Margarite }
+      - { id: a3, label: "Eimer A", image: ./img/tulpe.png, alt: Tulpe }
+      - { id: a4, label: "Eimer A", image: ./img/tulpe.png, alt: Tulpe }
+      - { id: b1, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
+      - { id: b2, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
+      - { id: b3, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -36,4 +45,6 @@ Florian verkauft Blumensträuße. Jeden Blumenstrauß bindet Florian nach dieser
 
 ![Eimer A enthält zwei Margariten und zwei Tulpen, Eimer B enthält drei Zweige](./img/eimer.png)
 
-**Hilf Florian: Folge der Anleitung und wähle Blumen und Zweige für einen Strauß aus. Wähle die Teile in der Reihenfolge, in der Florian sie nimmt.**
+**Hilf Florian: Folge der Anleitung und wähle Blumen und Zweige für einen Strauß aus.**
+
+Ziehe dazu die Blumen und Zweige in den Blumenstrauß.

@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 4
     options:
-      - { id: a, label: "A) Anna" }
-      - { id: b, label: "B) Ben" }
-      - { id: c, label: "C) Tim" }
-      - { id: d, label: "D) Niemand hat einen Fehler gemacht" }
+      - { id: a, label: "Anna" }
+      - { id: b, label: "Ben " }
+      - { id: c, label: "Tim " }
+      - { id: d, label: "Niemand hat einen Fehler gemacht" }
 source:
   type: original
   work: Informatik-Biber 2024

@@ -12,18 +12,24 @@ topics: [data-structures, programming]
 methods: []
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: name, label: Name, image: ./img/icon-name.png, alt: Name }
-      - { id: eyes, label: Augen, image: ./img/icon-eyes.png, alt: Augen }
-      - { id: legs, label: Beine, image: ./img/icon-legs.png, alt: Beine }
-      - { id: wings, label: Flügel, image: ./img/icon-wings.png, alt: Flügel }
-      - { id: teeth, label: Zähne, image: ./img/icon-teeth.png, alt: Zähne }
-    right:
-      - { id: text, label: Text }
-      - { id: numbers, label: Zahlen }
-      - { id: yesno, label: ja/nein }
+    background: ./img/table-leer.png
+    width: 960
+    height: 211
+    trayLabel: Typen
+    zones:
+      - { id: name, label: "Name", x: 25, y: 118, w: 160, h: 72 }
+      - { id: eyes, label: "Augen", x: 215, y: 118, w: 160, h: 72 }
+      - { id: legs, label: "Beine", x: 406, y: 118, w: 160, h: 72 }
+      - { id: wings, label: "Flügel", x: 597, y: 118, w: 160, h: 72 }
+      - { id: teeth, label: "Zähne", x: 787, y: 118, w: 160, h: 72 }
+    items:
+      - { id: yn1, image: ./img/tag-yn1.png, alt: "Typ ja/nein" }
+      - { id: yn2, image: ./img/tag-yn2.png, alt: "Typ ja/nein" }
+      - { id: text, image: ./img/tag-text.png, alt: "Typ Text" }
+      - { id: num1, image: ./img/tag-num1.png, alt: "Typ Zahlen" }
+      - { id: num2, image: ./img/tag-num2.png, alt: "Typ Zahlen" }
 source:
   type: original
   work: Informatik-Biber 2024
@@ -47,4 +53,6 @@ Barbara erkennt, dass es nur drei verschiedene Arten von Werten auf den Karten g
 | **Zahlen** | also 1, 2, 3 usw. |
 | **ja/nein** | die Zeichen ✓ und X, die „ja“ und „nein“ bedeuten |
 
-**Ordne den Eigenschaften (Name, Augen, Beine, Flügel, Zähne) die richtigen Typen zu.**
+**Ordne den Eigenschaften die richtigen Typen zu.**
+
+Ziehe dazu die Typen unter die Eigenschaften: Name, Augen, Beine, Flügel und Zähne (von links nach rechts).

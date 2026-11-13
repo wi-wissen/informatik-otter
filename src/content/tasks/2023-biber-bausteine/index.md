@@ -12,9 +12,14 @@ topics: [databases, modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
+    trayLabel: Biber-Bausteine
+    zones:
+      - { id: ga, label: "Gruppe A", capacity: 3 }
+      - { id: gb, label: "Gruppe B", capacity: 3 }
+      - { id: gc, label: "Gruppe C", capacity: 3 }
+    items:
       - { id: s3, image: ./img/s3.png, alt: "breit, klein, 2 Noppen, 2 Nuten" }
       - { id: s7, image: ./img/s7.png, alt: "schmal, groß, 1 Noppe, keine Nuten" }
       - { id: s8, image: ./img/s8.png, alt: "breit, groß, keine Noppen, keine Nuten" }
@@ -24,10 +29,6 @@ interaction:
       - { id: s12, image: ./img/s12.png, alt: "mittel breit, klein, keine Noppen, 2 Nuten" }
       - { id: s13, image: ./img/s13.png, alt: "schmal, klein, 2 Noppen, 1 Nut" }
       - { id: s14, image: ./img/s14.png, alt: "breit, klein, keine Noppen, keine Nuten" }
-    right:
-      - { id: ga, label: Gruppe A }
-      - { id: gb, label: Gruppe B }
-      - { id: gc, label: Gruppe C }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -60,4 +61,6 @@ Denn diese drei Steine haben alle
 - unterschiedlich viele Noppen und
 - unterschiedlich viele Nuten.
 
-**Teile diese Bausteine in Dreier-Gruppen ein, so wie Otto es machen würde. Weise dazu jedem Baustein eine der Gruppen A, B oder C zu. In jeder Gruppe sind genau drei Steine.**
+**Teile diese Bausteine in Dreier-Gruppen ein, so wie Otto es machen würde.**
+
+Ziehe dazu jeden Baustein in eine der Gruppen A, B oder C. In jeder Gruppe sind genau drei Steine.

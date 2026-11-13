@@ -11,13 +11,17 @@ topics: [data-structures]
 methods: [linked-list]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: p1, label: "Platz 1 (direkt rechts von der violetten Kugel)" }
-      - { id: p2, label: "Platz 2 (in der Mitte)" }
-      - { id: p3, label: "Platz 3 (ganz rechts, hinter der grünen Kugel)" }
-    right:
+    background: ./img/rassel.png
+    width: 412
+    height: 409
+    trayLabel: Kugeln
+    zones:
+      - { id: p1, label: "Platz 1 (rechts von der violetten Kugel)", x: 104, y: 320, w: 60, h: 60 }
+      - { id: p2, label: "Platz 2 (in der Mitte)", x: 162, y: 338, w: 60, h: 60 }
+      - { id: p3, label: "Platz 3 (rechts von der grünen Kugel)", x: 276, y: 305, w: 60, h: 60 }
+    items:
       - { id: red, image: ./img/ball-red.png, alt: rote Kugel }
       - { id: yellow, image: ./img/ball-yellow.png, alt: gelbe Kugel }
       - { id: blue, image: ./img/ball-blue.png, alt: blaue Kugel }
@@ -36,8 +40,6 @@ Oliver hat eine durchsichtige Rassel mit bunten Kugeln. Wenn er die Rassel schü
 
 Oliver schüttelt die Rassel noch einmal.
 
-![Die Rassel mit fünf Plätzen unten, von links: violette Kugel, drei Plätze davon zwei leer, grüne Kugel, ein leerer Platz. Daneben liegen die rote, gelbe und blaue Kugel](./img/question.png)
+**Wie liegen die Kugeln nun? Fülle die leeren Plätze in der Rassel.**
 
-**Wie liegen die Kugeln nun? Ordne den leeren Plätzen die passenden Kugeln zu.**
-
-(Von links nach rechts liegen unten in der Rassel: violette Kugel, Platz 1, Platz 2, grüne Kugel, Platz 3.)
+Ziehe dazu die Kugeln auf die leeren Plätze. (Von links nach rechts liegen unten in der Rassel: violette Kugel, Platz 1, Platz 2, grüne Kugel, Platz 3.)

@@ -11,10 +11,9 @@ topics: [encoding, compression]
 methods: [huffman]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: text
-    placeholder: "z. B. 12 3 45"
+    digits: "12112233321"
 source:
   type: original
   work: Informatik-Biber 2023
@@ -30,4 +29,6 @@ Der Buchstabe X wird beispielsweise durch 12 kodiert. Nun kann Y durch 2 kodiert
 
 Das Wort MEMORY wird durch die Ziffernfolge 12112233321 kodiert.
 
-**Teile die Ziffernfolge in die Codewörter der einzelnen Buchstaben! Schreibe die Codewörter nacheinander auf, jeweils durch ein Leerzeichen getrennt.**
+**Teile die Ziffernfolge in die Codewörter der einzelnen Buchstaben!**
+
+Klicke dazu zwischen zwei Ziffern, um dort einen Trennstrich zu setzen oder wieder zu entfernen.

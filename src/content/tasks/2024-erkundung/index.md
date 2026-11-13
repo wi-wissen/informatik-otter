@@ -11,12 +11,16 @@ topics: [graphs, searching]
 methods: [dfs]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
-      - { id: g1, label: "Gelbe Lücke: Wenn es eine Nachbarinsel gibt, auf der … steht" }
-      - { id: g2, label: "Grüne Lücke: Betritt diejenige Insel, … , und erkunde sie" }
-    right:
+    background: ./img/instructions-box.png
+    width: 1023
+    height: 580
+    trayLabel: Textbausteine
+    zones:
+      - { id: g1, label: "Gelbe Lücke", x: 575, y: 258, w: 256, h: 56 }
+      - { id: g2, label: "Grüne Lücke", x: 388, y: 400, w: 474, h: 56 }
+    items:
       - { id: r1, label: kein Schild }
       - { id: r2, label: ein Pfeil }
       - { id: r3, label: ein START-Schild }
@@ -39,8 +43,6 @@ Auf dem Bild hat Harry bereits drei Inseln betreten. Er bewegt sich nach der fol
 
 Leider hat die Anleitung noch Lücken.
 
-![Die Anleitung mit zwei Lücken; der Text steht unten.](./img/instructions.png)
-
 > Betritt eine beliebige Insel, setze dort das START-Schild und erkunde diese Insel.
 >
 > **Jedes Mal**, wenn du eine Insel erkundest, tue Folgendes:
@@ -50,3 +52,5 @@ Leider hat die Anleitung noch Lücken.
 > - **Sonst**: **Wenn** auf der aktuellen Insel ein Pfeil steht, **dann**: Betritt diejenige Insel, **[grüne Lücke]**, und erkunde sie. **Sonst**: Bleibe stehen. Du hast jede Insel wenigstens einmal betreten.
 
 **Fülle die Lücken mit passenden Textbausteinen, so dass die Anleitung funktioniert.**
+
+Ziehe dazu die Textbausteine in die gelbe und die grüne Lücke der Anleitung.

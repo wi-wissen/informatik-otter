@@ -11,11 +11,20 @@ topics: [data-structures]
 methods: [deque]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: place
   props:
-    rows: 1
-    cols: 3
-    palette: ["#ffffff", "#2d3436"]
+    background: ./img/tube-leer.png
+    width: 523
+    height: 185
+    reusable: true
+    trayLabel: Kugeln
+    zones:
+      - { id: s1, label: "Platz 1 von links", x: 72, y: 32, w: 122, h: 128 }
+      - { id: s2, label: "Platz 2 von links", x: 200, y: 32, w: 122, h: 128 }
+      - { id: s3, label: "Platz 3 von links", x: 328, y: 32, w: 122, h: 128 }
+    items:
+      - { id: black, image: ./img/ball-black.svg, alt: schwarze Kugel }
+      - { id: white, image: ./img/ball-white.svg, alt: weiße Kugel }
 source:
   type: original
   work: Informatik-Biber 2024
@@ -47,4 +56,6 @@ Nun werden nacheinander vier Kugeln in die Röhre geschoben: Zuerst eine schwarz
 
 ![Die vier Kugeln: zwei kommen von rechts (zuerst schwarz, dann weiß), zwei von links (zuerst schwarz, dann weiß)](./img/balls.png)
 
-**Welche drei Kugeln sind am Ende in der Röhre? Färbe die Kugeln von links nach rechts schwarz oder lasse sie weiß.**
+**Welche drei Kugeln sind am Ende in der Röhre?**
+
+Ziehe dazu schwarze und weiße Kugeln in die Röhre.

@@ -1,5 +1,5 @@
 ---
-answer: [[2, 1, 1, 2, 2, 2, 1, 1]]
+answer: { s1: blue, s2: red, s3: red, s4: blue, s5: blue, s6: blue, s7: red, s8: red }
 ---
 ![Die gesuchte Bälle-Folge: blau, rot, rot, blau, blau, blau, rot, rot](./img/solution.png)
 

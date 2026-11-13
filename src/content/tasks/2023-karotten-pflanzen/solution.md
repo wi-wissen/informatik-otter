@@ -1,5 +1,11 @@
 ---
-answer: [A, C, D]
+answers:
+  - { A: s1, C: s2, D: s3 }
+  - { A: s1, C: s3, D: s2 }
+  - { A: s2, C: s1, D: s3 }
+  - { A: s2, C: s3, D: s1 }
+  - { A: s3, C: s1, D: s2 }
+  - { A: s3, C: s2, D: s1 }
 ---
 Die Karottensamen liegen auf den Hügeln A, C und D.
 

@@ -11,16 +11,20 @@ topics: [ai, logic]
 methods: [neural-network, xor]
 mascot: beaver
 interaction:
-  format: match
+  format: hotspots
   props:
-    left:
-      - { id: a1, label: "A → obere Einheit" }
-      - { id: a2, label: "A → untere Einheit" }
-      - { id: b1, label: "B → obere Einheit" }
-      - { id: b2, label: "B → untere Einheit" }
-      - { id: z1, label: "obere Einheit → Z" }
-      - { id: z2, label: "untere Einheit → Z" }
-    right:
+    background: ./img/machine.png
+    width: 513
+    height: 277
+    spots:
+      - { id: a1, x: 153, y: 42, w: 36, h: 36, label: "Kabel von A zur oberen Einheit" }
+      - { id: a2, x: 112, y: 103, w: 36, h: 36, label: "Kabel von A zur unteren Einheit" }
+      - { id: b1, x: 110, y: 172, w: 36, h: 36, label: "Kabel von B zur oberen Einheit" }
+      - { id: b2, x: 158, y: 240, w: 36, h: 36, label: "Kabel von B zur unteren Einheit" }
+      - { id: z1, x: 367, y: 86, w: 36, h: 36, label: "Kabel von der oberen Einheit zu Z" }
+      - { id: z2, x: 367, y: 190, w: 36, h: 36, label: "Kabel von der unteren Einheit zu Z" }
+    states:
+      - { id: none, label: "?" }
       - { id: plus, label: "+" }
       - { id: minus, label: "–" }
 source:
@@ -43,7 +47,5 @@ Zuerst bauen Anna und Ben diese Maschine:
 Sie bemerken, dass die Einheit Z nur dann Ja ist, wenn A Ja und B Nein ist. Das ist nicht das, was sie wollen.
 
 Dann bauen Anna und Ben eine größere Maschine (unten im Bild) und sind sicher, dass sie der Konflikt-Detektor sein kann: Z soll nur dann Ja sein, wenn A und B in unterschiedlichen Zuständen sind (Ja und Nein bzw. Nein und Ja). Ansonsten soll Z im Zustand Nein sein. Jetzt müssen nur noch die Kabel richtig eingestellt werden.
-
-![Die größere Maschine: A und B sind jeweils mit beiden Einheiten der mittleren Schicht verbunden (vier Kabel), und beide mittleren Einheiten sind mit Z verbunden (zwei Kabel)](./img/machine.png)
 
 **Stelle für jedes Kabel ein, ob es ein Signal positiv (+) oder negativ (–) übermittelt, damit der Konflikt-Detektor korrekt arbeitet.**

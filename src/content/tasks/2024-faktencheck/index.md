@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 2
     options:
-      - { id: a, label: "A) Alfred hatte einen Hut auf und benutzte keinen Stock." }
-      - { id: b, label: "B) Alfred trug eine Krawatte oder eine Fliege." }
-      - { id: c, label: "C) Alfred hatte einen Hut auf und trug eine Fliege." }
-      - { id: d, label: "D) Alfred hatte Flipflops an oder sogar keine Schuhe an." }
+      - { id: a, label: "Alfred hatte einen Hut auf und benutzte keinen Stock." }
+      - { id: b, label: "Alfred trug eine Krawatte oder eine Fliege." }
+      - { id: c, label: "Alfred hatte einen Hut auf und trug eine Fliege." }
+      - { id: d, label: "Alfred hatte Flipflops an oder sogar keine Schuhe an." }
 source:
   type: original
   work: Informatik-Biber 2024

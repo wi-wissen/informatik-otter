@@ -11,13 +11,18 @@ topics: [logic]
 methods: [boolean-logic]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    columns: 3
-    options:
-      - { id: vulkan, label: Kiste am Fuß des Vulkans }
-      - { id: palme, label: Kiste unter der Palme }
-      - { id: strand, label: Kiste am Strand }
+    pick: nodes
+    width: 720
+    height: 455
+    nodeRadius: 42
+    background: ./img/insel.png
+    hideNodes: true
+    nodes:
+      - { id: vulkan, x: 340, y: 138, label: Kiste am Fuß des Vulkans }
+      - { id: palme, x: 239, y: 260, label: Kiste unter der Palme }
+      - { id: strand, x: 558, y: 328, label: Kiste am Strand }
 source:
   type: original
   work: Informatik-Biber 2023
@@ -29,8 +34,6 @@ source:
 ---
 Auf einer Insel gibt es drei Schatzkisten: Eine Kiste ist am Fuß des Vulkans, die zweite ist unter einer Palme, und die dritte ist am Strand. Alle Kisten sind leer.
 
-![Die Insel mit Vulkan, Palme und Strand und je einer Schatzkiste](./img/insel.png)
-
 An einem Tag kreuzt der Pirat Biberbart auf, füllt eine der Kisten mit Gold und verschließt sie. Am gleichen Tag sind drei Touristinnen auf der Insel: Anita, Britta und Carla. Jede macht ein Foto: eine, bevor Biberbart Gold in eine Kiste gefüllt hat, die anderen beiden danach.
 
 | Anitas Foto … | Brittas Foto … | Carlas Foto … |
@@ -41,3 +44,5 @@ An einem Tag kreuzt der Pirat Biberbart auf, füllt eine der Kisten mit Gold und
 Auf den Fotos sind alle Kisten leer. Biberbart hatte also Glück, dass keine Touristin sein Gold gefunden hat.
 
 **In welcher Schatzkiste ist das Gold?**
+
+Klicke die Kiste auf der Insel an, in der das Gold ist.

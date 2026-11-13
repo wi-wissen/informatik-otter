@@ -11,12 +11,15 @@ topics: [modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: oben, label: Lücke oben rechts }
-      - { id: unten, label: Lücke unten links }
-    right:
+    board: ./img/brett.png
+    width: 491
+    height: 510
+    gaps:
+      - { id: oben, label: "Lücke oben rechts", x: 246, y: 52, w: 210, h: 210 }
+      - { id: unten, label: "Lücke unten links", x: 35, y: 264, w: 210, h: 210 }
+    tiles:
       - { id: t1, image: ./img/t1.png, alt: "Kärtchen mit Wasser links und Land mit Büschen und fünf Vogelspuren" }
       - { id: t2, image: ./img/t2.png, alt: "Kärtchen mit Land, einem roten Haus und einer Hecke, Wasser unten links" }
       - { id: t3, image: ./img/t3.png, alt: "Kärtchen mit Wasser oben, einem Sandstrand mit Sonnenschirmen und Land unten" }
@@ -38,6 +41,6 @@ Edu hat ein neues Spiel. Das Spiel hat Kärtchen mit Wasser und Land. Edu legt d
 
 Edu legt zwei Kärtchen hin und lässt zwei Lücken.
 
-![Das Spielfeld: oben links und unten rechts liegt je ein Kärtchen, oben rechts und unten links sind Lücken](./img/brett.png)
+**Welche Kärtchen passen in die Lücken?**
 
-**Welche Kärtchen passen in die Lücken? Wähle für jede Lücke eines der sechs Kärtchen. Die Kärtchen dürfen nicht gedreht werden.**
+Ziehe dazu zwei der sechs Kärtchen in die Lücken. Die Kärtchen dürfen nicht gedreht werden.
