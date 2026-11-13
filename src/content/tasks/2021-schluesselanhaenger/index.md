@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [reasoning, representing]
 topics: [encoding]
-methods: []
+methods: [prefix-code]
 mascot: beaver
 interaction:
   format: choice

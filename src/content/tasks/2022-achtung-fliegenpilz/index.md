@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [reasoning, modelling]
 topics: [logic]
-methods: []
+methods: [constraint-satisfaction]
 mascot: beaver
 interaction:
   format: choice

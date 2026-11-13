@@ -9,7 +9,7 @@ gi:
   content: [information-data, algorithms]
   process: [modelling, representing]
 topics: [graphs, data-structures]
-methods: []
+methods: [adjacency-matrix]
 mascot: beaver
 interaction:
   format: choice

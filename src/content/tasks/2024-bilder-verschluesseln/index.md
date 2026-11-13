@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [reasoning, modelling]
 topics: [cryptography, images]
-methods: []
+methods: [transposition-cipher]
 mascot: beaver
 interaction:
   format: choice

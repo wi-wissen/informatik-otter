@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [searching, graphs]
-methods: []
+methods: [topological-sort]
 mascot: beaver
 interaction:
   format: graph-pick
