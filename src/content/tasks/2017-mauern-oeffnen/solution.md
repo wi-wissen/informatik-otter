@@ -1,10 +1,5 @@
 ---
-answer:
-  - [1, 0, 1, 1, 1, 1, 0]
-  - [0, 0, 0, 0, 1, 1, 0]
-  - [0, 1, 1, 0, 0, 1, 0]
-  - [0, 0, 1, 1, 0, 0, 0]
-  - [0, 1, 1, 0, 1, 0, 1]
+answer: ok
 ---
 Es müssen mindestens drei Mauern entfernt werden, damit für Peter ein Weg zum Schatz frei wird: die Mauer direkt über Peters Feld, die Mauer in der zweiten Zeile von oben in der zweiten Spalte von links und die Mauer in der dritten Zeile von oben in der letzten Spalte.
 

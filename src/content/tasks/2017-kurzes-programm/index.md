@@ -12,15 +12,12 @@ topics: [programming]
 methods: [loop, conditional]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: free, label: "Wenn der Weg vorne frei ist, dann:" }
-      - { id: blocked, label: "Sonst:" }
-    right:
-      - { id: forward, label: gehe vorwärts }
-      - { id: left, label: drehe nach links }
-      - { id: right, label: drehe nach rechts }
+    rows: ["........", "........", "........", "........", "........"]
+    start: [4, 1]
+    goal: [0, 5]
+    maxBlocks: 4
 source:
   type: original
   work: Informatik-Biber 2017
@@ -30,10 +27,8 @@ source:
   country: GB
   license: CC BY-SA 4.0
 ---
-Der dreieckige Roboter soll vom roten Startfeld zum grünen Zielfeld gehen. Der Roboter kann nur sehr kurze Programme verarbeiten: Du darfst höchstens vier Bausteine für dein Programm benutzen.
+Der dreieckige Roboter soll vom roten Startfeld zum grünen Zielfeld gehen. Der Roboter kann nur sehr kurze Programme verarbeiten.
 
-![Der Raum: Ein Rechteck mit 8 mal 5 Feldern. Der Roboter steht auf dem roten Startfeld unten links an der Wand und schaut nach rechts, das grüne Zielfeld liegt oben rechts an der Wand.](./img/room.png)
+**Programmiere den Roboter!** Ziehe dazu Programmbausteine in dein Programm und füge sie zusammen. Du darfst höchstens vier Bausteine für dein Programm benutzen.
 
-Das Programm besteht aus diesen vier Bausteinen: **wiederhole** – darin **wenn der Weg vorne frei ist, mache …, sonst mache …**. Der Roboter kennt die Befehle „gehe vorwärts“, „drehe nach links“ und „drehe nach rechts“.
-
-**Programmiere den Roboter! Welcher Befehl muss im Programm jeweils stehen?**
+Der Roboter kennt die Befehle „gehe vorwärts“, „drehe nach links“ und „drehe nach rechts“. Außerdem gibt es die Bausteine „wenn vorne frei, mache …, sonst mache …“ und „wiederhole, mache …“. Der Raum ist 8 mal 5 Felder groß; der Roboter steht unten links an der Wand und schaut nach rechts, das Zielfeld liegt oben an der Wand.

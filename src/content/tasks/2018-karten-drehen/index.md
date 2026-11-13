@@ -11,9 +11,9 @@ topics: [encoding]
 methods: [binary-numbers]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: number
+    count: 16
 source:
   type: original
   work: Informatik-Biber 2018
@@ -38,6 +38,6 @@ Das Bild zeigt, wie sich die Karten in einem Spielzug verändern können.
 
 Diesmal beginnt das Spiel mit 16 verdeckten Karten.
 
-![Eine Reihe aus verdeckten Karten](./img/start.png)
-
 **Wie viele Karten sind nach 16 Spielzügen aufgedeckt?**
+
+Zum Ausprobieren: Unten liegen 16 verdeckte Karten. Mit „Spielzug“ führst du einen Spielzug aus.

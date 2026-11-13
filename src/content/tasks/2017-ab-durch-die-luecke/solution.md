@@ -1,5 +1,5 @@
 ---
-answer: [forward, left, forward, forward, right, forward, forward, forward]
+answer: ok
 ---
 Damit der Roboter von seinem Startfeld auf das Zielfeld gelangt, muss er zunächst ein Feld nach vorne gehen, damit er neben der Lücke in der Mauer steht. Wenn er sich nach links dreht und zwei Felder nach vorne geht, ist er durch die Lücke in der Mauer durch. Nun braucht er sich nur noch nach rechts zu drehen und drei Felder nach vorne zu gehen, um beim Zielfeld anzukommen.
 

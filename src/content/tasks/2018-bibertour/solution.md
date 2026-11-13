@@ -1,7 +1,7 @@
 ---
 answers:
-  - [b, e, c, a, d]
-  - [d, a, c, e, b]
+  - { s1: b, s2: e, s3: c, s4: a, s5: d }
+  - { s1: d, s2: a, s3: c, s4: e, s5: b }
 ---
 Es gibt zwei Bibertouren, die möglichst wenig kosten:
 

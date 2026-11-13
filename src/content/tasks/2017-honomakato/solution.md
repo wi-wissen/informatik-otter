@@ -1,11 +1,5 @@
 ---
-answers:
-  - [HoMa, NoTo]
-  - [HoTo, NoMa]
-  - [NoTo, NoMa]
-  - [NoTo, MaTo]
-  - [NoKa, MaTo]
-  - [NoMa, MaTo]
+answer: ok
 ---
 Durch das Verlegen zweier weiterer Kabel kann dafür gesorgt werden, dass Honomakato eine robuste Verbindung mit dem Internet bekommt. Dabei gibt es sechs verschiedene Möglichkeiten. Die einzelnen Kabel schützen jeweils bestimmte Inseln davor, durch die Beschädigung eines Kabels nicht mehr mit dem Internet verbunden zu sein.
 

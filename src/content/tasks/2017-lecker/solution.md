@@ -1,5 +1,5 @@
 ---
-answer: [c, e, a, d, b]
+answer: { s1: c, s2: e, s3: a, s4: d, s5: b }
 ---
 Die richtige Reihenfolge ist: Stamm C (5 Blätter), Stamm E (4 Blätter), Stamm A (3 Blätter), Stamm D (2 Blätter), Stamm B (1 Blatt).
 

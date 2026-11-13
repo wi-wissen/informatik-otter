@@ -11,10 +11,9 @@ topics: [encoding, compression]
 methods: [huffman]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: text
-    placeholder: Codewörter mit Leerzeichen getrennt
+    digits: "12112233321"
 source:
   type: original
   work: Informatik-Biber 2017
@@ -28,6 +27,4 @@ In einem speziellen Code für Texte wird jeder Buchstabe durch ein Codewort aus 
 
 Das Wort **BEBRAS** wird durch die Ziffernfolge unten kodiert:
 
-**1 2 1 1 2 2 3 3 3 2 1**
-
-**Teile die Ziffernfolge in die Codewörter der einzelnen Buchstaben!** Schreibe die sechs Codewörter nacheinander auf und trenne sie durch Leerzeichen.
+**Teile die Ziffernfolge in die Codewörter der einzelnen Buchstaben!**

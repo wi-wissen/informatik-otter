@@ -1,5 +1,5 @@
 ---
-answer: { free: forward, blocked: left }
+answer: ok
 ---
 Startfeld und Zielfeld liegen an der Wand. Wenn der Roboter immer an der Wand entlang geht, erreicht er sicher das Zielfeld. Dazu kann er wiederholt Folgendes tun: Wenn der Weg vorne frei ist, geht er vorwärts; sonst (dann steht er vor einer Wand) dreht er nach links. Dieses Vorgehen kann man auch mit vier Programmbausteinen beschreiben:
 

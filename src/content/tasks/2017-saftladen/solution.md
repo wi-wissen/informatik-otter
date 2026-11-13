@@ -1,7 +1,5 @@
 ---
-answers:
-  - { anna: pear, bernard: apple, christine: orange, daniel: currant }
-  - { anna: pear, bernard: orange, christine: apple, daniel: currant }
+answer: ok
 ---
 Mit dieser Bestellung können die Freunde insgesamt 14 Herzen sammeln: Anna bekommt Birnensaft, Bernard Apfelsaft, Christine Orangensaft und Daniel Johannisbeersaft. (Ebenso gut: Bernard Orangensaft und Christine Apfelsaft.)
 

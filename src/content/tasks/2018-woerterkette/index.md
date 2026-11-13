@@ -11,10 +11,9 @@ topics: [graphs, optimization]
 methods: [hamilton-path]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: number
-    suffix: Wörter
+    words: [sand, strand, gras, lehmig, luchs, reisigbündel, seelachs, strudel, laubhölzer]
 source:
   type: original
   work: Informatik-Biber 2018

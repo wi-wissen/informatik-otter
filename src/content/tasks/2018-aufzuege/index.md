@@ -12,22 +12,19 @@ topics: [optimization]
 methods: [greedy]
 mascot: beaver
 interaction:
-  format: match
+  format: custom
   props:
-    left:
-      - { id: w2, image: ./img/b2.png, alt: Biber 2 kg }
-      - { id: w3, image: ./img/b3.png, alt: Biber 3 kg }
-      - { id: w5, image: ./img/b5.png, alt: Biber 5 kg }
-      - { id: w8, image: ./img/b8.png, alt: Biber 8 kg }
-      - { id: w9a, image: ./img/b9a.png, alt: Erster Biber mit 9 kg }
-      - { id: w9b, image: ./img/b9b.png, alt: Zweiter Biber mit 9 kg }
-      - { id: w12a, image: ./img/b12a.png, alt: Erster Biber mit 12 kg }
-      - { id: w12b, image: ./img/b12b.png, alt: Zweiter Biber mit 12 kg }
-      - { id: w22, image: ./img/b22.png, alt: Biber 22 kg }
-    right:
-      - { id: l1, label: Aufzug 1 }
-      - { id: l2, label: Aufzug 2 }
-      - { id: out, label: Wartet draußen }
+    limit: 30
+    beavers:
+      - { id: w2, kg: 2, image: ./img/b2.png }
+      - { id: w3, kg: 3, image: ./img/b3.png }
+      - { id: w5, kg: 5, image: ./img/b5.png }
+      - { id: w8, kg: 8, image: ./img/b8.png }
+      - { id: w9a, kg: 9, image: ./img/b9a.png }
+      - { id: w9b, kg: 9, image: ./img/b9b.png }
+      - { id: w12a, kg: 12, image: ./img/b12a.png }
+      - { id: w12b, kg: 12, image: ./img/b12b.png }
+      - { id: w22, kg: 22, image: ./img/b22.png }
 source:
   type: original
   work: Informatik-Biber 2018
@@ -39,6 +36,8 @@ source:
 ---
 Auf einer Reise sind die Biber an einem Aussichtsturm angekommen. Der Turm hat zwei Aufzüge. Jeder Aufzug kann höchstens 30 kg transportieren.
 
-Die Biber wollen schnell auf den Turm. Es gibt neun Biber mit diesen Gewichten: 2 kg, 3 kg, 5 kg, 8 kg, 9 kg, 9 kg, 12 kg, 12 kg und 22 kg.
+Die Biber wollen schnell auf den Turm.
 
-**Verteile die Biber so auf die Aufzüge, dass möglichst viele Biber gleichzeitig hineinpassen.** Biber, die nicht mitfahren, bleiben draußen.
+**Verteile die Biber so auf die Aufzüge, dass möglichst viele Biber gleichzeitig hineinpassen.**
+
+Ziehe die Biber in die Aufzüge. Die Biber wiegen 2 kg, 3 kg, 5 kg, 8 kg, 9 kg, 9 kg, 12 kg, 12 kg und 22 kg.

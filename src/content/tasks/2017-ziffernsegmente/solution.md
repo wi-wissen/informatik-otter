@@ -1,5 +1,5 @@
 ---
-answer: [top, ul, ur, mid, ll]
+answer: { top: on, ul: on, ur: on, mid: on, ll: on }
 ---
 Es müssen fünf Segmente immer funktionieren: das obere, das mittlere, die beiden oberen senkrechten und das linke untere (zusammen sieht das aus wie ein „P“). Nur das untere und das rechte untere Segment dürfen ausfallen.
 

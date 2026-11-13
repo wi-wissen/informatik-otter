@@ -1,9 +1,5 @@
 ---
-answers:
-  - { w12a: l1, w9a: l1, w9b: l1, w12b: l2, w8: l2, w5: l2, w3: l2, w2: l2, w22: out }
-  - { w12a: l2, w9a: l2, w9b: l2, w12b: l1, w8: l1, w5: l1, w3: l1, w2: l1, w22: out }
-  - { w12b: l1, w9a: l1, w9b: l1, w12a: l2, w8: l2, w5: l2, w3: l2, w2: l2, w22: out }
-  - { w12b: l2, w9a: l2, w9b: l2, w12a: l1, w8: l1, w5: l1, w3: l1, w2: l1, w22: out }
+answer: ok
 ---
 So können acht Biber auf die Aufzüge verteilt werden: In einen Aufzug kommen 12 kg, 2 kg, 3 kg, 5 kg und 8 kg (zusammen 30 kg), in den anderen 12 kg, 9 kg und 9 kg (zusammen 30 kg). Der Biber mit 22 kg bleibt draußen.
 

@@ -13,12 +13,12 @@ mascot: beaver
 interaction:
   format: choice
   props:
-    columns: 4
+    columns: 1
     options:
-      - { id: a, label: A }
-      - { id: b, label: B }
-      - { id: c, label: C }
-      - { id: d, label: D }
+      - { id: a, label: "links = X · rechts = X O · vor = X O O X · zurück = O X O" }
+      - { id: b, label: "links = O · rechts = X · vor = O X · zurück = X O" }
+      - { id: c, label: "links = X O O · rechts = X O O O · vor = X · zurück = X O" }
+      - { id: d, label: "links = X O O · rechts = O X · vor = X O O X · zurück = X" }
 source:
   type: original
   work: Informatik-Biber 2018
@@ -43,11 +43,3 @@ Diese Schilderfolge kann bedeuten: links, vor, links. Sie kann aber auch bedeute
 Jana und Robin überlegen sich deshalb einen neuen Code. Damit kann es keine Schilderfolge geben, die mehrere Bedeutungen hat.
 
 **Welcher ist der neue Code?**
-
-![Code A: links = X, rechts = X O, vor = X O O X, zurück = O X O](./img/option-a.png)
-
-![Code B: links = O, rechts = X, vor = O X, zurück = X O](./img/option-b.png)
-
-![Code C: links = X O O, rechts = X O O O, vor = X, zurück = X O](./img/option-c.png)
-
-![Code D: links = X O O, rechts = O X, vor = X O O X, zurück = X](./img/option-d.png)

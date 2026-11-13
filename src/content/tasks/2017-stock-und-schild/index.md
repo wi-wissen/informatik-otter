@@ -13,11 +13,19 @@ topics: [optimization, logic]
 methods: [backtracking]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: Feld 1 (oben links)
-    endLabel: Feld 7 (unten, drittes Feld)
+    background: ./img/field.png
+    width: 604
+    height: 292
+    zones:
+      - { id: f1, label: "Feld oben 1", x: 9, y: 14, w: 140, h: 129 }
+      - { id: f2, label: "Feld oben 2", x: 157, y: 14, w: 140, h: 129 }
+      - { id: f3, label: "Feld oben 3", x: 305, y: 14, w: 140, h: 129 }
+      - { id: f4, label: "Feld oben 4", x: 453, y: 14, w: 140, h: 129 }
+      - { id: f5, label: "Feld unten 1", x: 9, y: 151, w: 140, h: 129 }
+      - { id: f6, label: "Feld unten 2", x: 157, y: 151, w: 140, h: 129 }
+      - { id: f7, label: "Feld unten 3", x: 305, y: 151, w: 140, h: 129 }
     items:
       - { id: t1, image: ./img/t1.png, alt: "Biber 1: Stock nach links, Schild nach rechts" }
       - { id: t2, image: ./img/t2.png, alt: "Biber 2: schlafend, Schild nach rechts" }
@@ -35,10 +43,6 @@ source:
   country: JP
   license: CC BY-SA 4.0
 ---
-Lucia und ihre Freunde sind Anhänger eines japanischen Spiels mit Stock und Schild. Für ein Foto möchten sie sich auf dem Schulhof so aufstellen, dass jeder Stock auf ein Schild zeigt. Dafür wurden Felder auf den Schulhof gezeichnet (zwei Reihen mit je vier Feldern). Lucia hat sich bereits in Pose gestellt: Sie steht im letzten Feld der unteren Reihe.
+Lucia und ihre Freunde sind Anhänger eines japanischen Spiels mit Stock und Schild. Für ein Foto möchten sie sich auf dem Schulhof so aufstellen, dass jeder Stock auf ein Schild zeigt. Dafür wurden Felder auf den Schulhof gezeichnet. Lucia hat sich bereits in Pose gestellt. Die Bilder darunter zeigen die Freunde in ihren Lieblingsposen.
 
-![Der Schulhof mit zwei Reihen zu je vier Feldern. Lucia steht im letzten Feld der unteren Reihe; alle anderen Felder sind leer.](./img/field.png)
-
-Die Bilder der sieben Freunde zeigen sie in ihren Lieblingsposen. Am Ende muss jeder Stock auf ein Schild zeigen.
-
-**Bringe die Bilder der Freunde in die Reihenfolge, in der sie auf die Felder gehören.** Die Felder werden von links nach rechts gezählt, zuerst die obere Reihe (Feld 1 bis 4), dann die untere Reihe (Feld 5 bis 7 – das achte Feld gehört Lucia).
+**Schiebe die Bilder der Freunde in die Felder auf dem Schulhof.** Am Ende muss jeder Stock auf ein Schild zeigen.

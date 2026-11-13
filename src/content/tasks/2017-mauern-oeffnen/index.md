@@ -13,23 +13,11 @@ topics: [graphs, optimization]
 methods: [bfs]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: custom
   props:
-    rows: 5
-    cols: 7
-    palette: ["#d0d0d0", "#7a4a35"]
-    initial:
-      - [1, 0, 1, 1, 1, 1, 0]
-      - [0, 1, 0, 0, 1, 1, 0]
-      - [0, 1, 1, 0, 0, 1, 1]
-      - [1, 0, 1, 1, 0, 0, 0]
-      - [0, 1, 1, 0, 1, 0, 1]
-    locked:
-      - [false, false, false, false, false, false, true]
-      - [false, false, false, false, false, false, false]
-      - [false, false, false, false, false, false, false]
-      - [false, false, false, false, false, false, false]
-      - [true, false, false, false, false, false, false]
+    map: ["#.####.", ".#..##.", ".##..##", "#.##...", ".##.#.#"]
+    start: [4, 0]
+    treasure: [0, 6]
 source:
   type: original
   work: Informatik-Biber 2017
@@ -41,8 +29,6 @@ source:
 ---
 Eine Schatzkarte ist in Felder eingeteilt. Peter ist im Feld links unten und will zum Schatz rechts oben. Er kann immer zum nächsten Nachbarfeld gehen: nach oben, unten, rechts und links – aber nicht schräg.
 
-![Die Schatzkarte mit 7 Spalten und 5 Zeilen. Braune Felder sind Mauern, graue Felder sind frei. Peter steht unten links, der Schatz liegt oben rechts.](./img/map.png)
-
 Peter muss alle Mauern auf seinem Weg zum Schatz öffnen. Das ist anstrengend! Er sucht deshalb einen Weg, auf dem er möglichst wenige Mauern öffnen muss.
 
-**Finde diesen Weg!** Entferne möglichst wenige Mauern, so dass ein Weg zum Schatz frei wird. Klicke auf ein braunes Mauerfeld im Raster unten, um die Mauer zu öffnen. Klicke erneut auf das Feld, um die Mauer wieder zu schließen. Das Raster entspricht der Karte; Peters Feld (unten links) und das Schatzfeld (oben rechts) sind gesperrt.
+**Finde diesen Weg!** Entferne möglichst wenige Mauern, so dass ein Weg zum Schatz frei wird. Klicke auf ein Mauerfeld, um die Mauer zu öffnen. Klicke erneut auf das Mauerfeld, um die Mauer wieder zu schließen.

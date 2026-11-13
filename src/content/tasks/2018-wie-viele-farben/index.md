@@ -12,10 +12,10 @@ topics: [graphs, optimization]
 methods: [graph-coloring]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: number
-    suffix: Farben
+    image: ./img/picture.png
+    alt: "Ein Quadrat mit einem Kreis, einem kleinen Kreis in der Mitte und mehreren Balken, die das Bild in viele Flächen teilen."
 source:
   type: original
   work: Informatik-Biber 2018
@@ -25,8 +25,6 @@ source:
   country: GB
   license: CC BY-SA 4.0
 ---
-Das Bild unten soll schön bunt werden. Aber: Wenn zwei Flächen nebeneinander liegen, müssen sie verschiedene Farben haben. Probiere es zum Beispiel mit Buntstiften auf einem Ausdruck aus. Verwende so wenige Farben wie möglich!
-
-![Ein Quadrat mit einem Kreis, einem kleinen Kreis in der Mitte und mehreren Balken, die das Bild in viele Flächen teilen](./img/picture.png)
+Das Bild unten soll schön bunt werden. Aber: Wenn zwei Flächen nebeneinander liegen, müssen sie verschiedene Farben haben. Zum Ausprobieren kannst du Farben aus der Palette auf das Bild setzen. Verwende so wenige Farben wie möglich!
 
 **Wie viele verschiedene Farben genügen?**

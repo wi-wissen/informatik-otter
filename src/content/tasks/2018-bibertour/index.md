@@ -13,11 +13,17 @@ topics: [graphs, optimization]
 methods: [brute-force, hamilton-path]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: Bau
-    endLabel: Bau
+    background: ./img/tour.png
+    width: 991
+    height: 613
+    zones:
+      - { id: s1, label: "Feld 1", x: 208, y: 497, w: 84, h: 83 }
+      - { id: s2, label: "Feld 2", x: 351, y: 497, w: 84, h: 83 }
+      - { id: s3, label: "Feld 3", x: 494, y: 497, w: 84, h: 83 }
+      - { id: s4, label: "Feld 4", x: 637, y: 497, w: 84, h: 83 }
+      - { id: s5, label: "Feld 5", x: 779, y: 497, w: 84, h: 83 }
     items:
       - { id: a, label: A }
       - { id: b, label: B }
@@ -35,10 +41,10 @@ source:
 ---
 Biber Livia will ihre Freunde mit dem Bus besuchen. Die Freunde leben in den Dörfern A, B, C, D und E. Zwischen den Dörfern gibt es Busverbindungen. Das Bild zeigt, wie viel die einfache Fahrt jeweils kostet. Livia plant eine Bibertour: Sie startet an ihrem Bau, besucht jedes Dorf genau einmal und kehrt dann zu ihrem Bau zurück.
 
-![Livias Bau und die Dörfer A bis E mit Busverbindungen; die Münzen an den Linien zeigen die Kosten: Bau–A 3, Bau–B 3, Bau–C 3, Bau–D 2, A–C 1, A–D 1, A–E 2, B–C 1, B–E 1, C–D 1, C–E 1](./img/map.png)
-
 Zum Beispiel ist das eine Bibertour: Bau → B → E → A → D → C → Bau. Diese Bibertour kostet 11 Bibertaler.
 
 **Finde eine Bibertour, die so wenig wie möglich kostet.**
 
-Bringe die Dorf-Buchstaben A bis E in die richtige Reihenfolge, um die Bibertour zu beschreiben. Gibt es mehrere Bibertouren, die gleich wenig kosten, kannst du irgendeine davon beschreiben.
+Ziehe die Dorf-Buchstaben A bis E in die Felder unten, um die Bibertour zu beschreiben. Gibt es mehrere Bibertouren, die gleich wenig kosten, kannst du irgendeine davon beschreiben.
+
+<details><summary>Das Bild als Text</summary><p>Livias Bau und die Dörfer A bis E mit Busverbindungen; die Münzen an den Linien zeigen die Kosten: Bau–A 3, Bau–B 3, Bau–C 3, Bau–D 2, A–C 1, A–D 1, A–E 2, B–C 1, B–E 1, C–D 1, C–E 1</p></details>
