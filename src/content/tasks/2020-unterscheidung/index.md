@@ -17,10 +17,10 @@ interaction:
   props:
     columns: 4
     options:
-      - { id: a, label: "A", image: ./img/a.png, alt: "Bild A: das Pixel-Bild des Buchstabens T" }
-      - { id: b, label: "B", image: ./img/b.png, alt: "Bild B: das Pixel-Bild des Buchstabens O (schwarzer Rahmen, weißes Pixel in der Mitte)" }
-      - { id: c, label: "C", image: ./img/c.png, alt: "Bild C: das Pixel-Bild des Buchstabens C" }
-      - { id: d, label: "D", image: ./img/d.png, alt: "Bild D: das Pixel-Bild des Buchstabens L" }
+      - { id: a, image: ./img/a.png, alt: "Bild A: das Pixel-Bild des Buchstabens T" }
+      - { id: b, image: ./img/b.png, alt: "Bild B: das Pixel-Bild des Buchstabens O (schwarzer Rahmen, weißes Pixel in der Mitte)" }
+      - { id: c, image: ./img/c.png, alt: "Bild C: das Pixel-Bild des Buchstabens C" }
+      - { id: d, image: ./img/d.png, alt: "Bild D: das Pixel-Bild des Buchstabens L" }
 source:
   type: original
   work: Informatik-Biber 2020

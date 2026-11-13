@@ -17,18 +17,18 @@ interaction:
   props:
     columns: 6
     options:
-      - { id: a, label: "A" }
-      - { id: b, label: "B" }
-      - { id: c, label: "C" }
-      - { id: d, label: "D" }
-      - { id: e, label: "E" }
-      - { id: f, label: "F" }
-      - { id: g, label: "G" }
-      - { id: h, label: "H" }
-      - { id: i, label: "I" }
-      - { id: j, label: "J" }
-      - { id: k, label: "K" }
-      - { id: l, label: "L" }
+      - { id: a }
+      - { id: b }
+      - { id: c }
+      - { id: d }
+      - { id: e }
+      - { id: f }
+      - { id: g }
+      - { id: h }
+      - { id: i }
+      - { id: j }
+      - { id: k }
+      - { id: l }
 source:
   type: original
   work: Informatik-Biber 2020

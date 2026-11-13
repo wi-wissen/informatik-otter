@@ -17,10 +17,10 @@ interaction:
   props:
     columns: 2
     options:
-      - { id: a, label: "A", image: ./img/a.png, alt: "Plan A" }
-      - { id: b, label: "B", image: ./img/b.png, alt: "Plan B" }
-      - { id: c, label: "C", image: ./img/c.png, alt: "Plan C" }
-      - { id: d, label: "D", image: ./img/d.png, alt: "Plan D" }
+      - { id: a, image: ./img/a.png, alt: "Plan A" }
+      - { id: b, image: ./img/b.png, alt: "Plan B" }
+      - { id: c, image: ./img/c.png, alt: "Plan C" }
+      - { id: d, image: ./img/d.png, alt: "Plan D" }
 source:
   type: original
   work: Informatik-Biber 2020

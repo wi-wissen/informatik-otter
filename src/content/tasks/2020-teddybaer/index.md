@@ -15,10 +15,10 @@ interaction:
   props:
     columns: 4
     options:
-      - { id: a, label: "A", image: ./img/a.png, alt: "Rosa Teddybär mit roter Schleife" }
-      - { id: b, label: "B", image: ./img/b.png, alt: "Gelber Teddybär mit blauer Schleife" }
-      - { id: c, label: "C", image: ./img/c.png, alt: "Lachsroter Teddybär mit roter Schleife" }
-      - { id: d, label: "D", image: ./img/d.png, alt: "Hellorangefarbener Teddybär mit blauer Schleife" }
+      - { id: a, image: ./img/a.png, alt: "Rosa Teddybär mit roter Schleife" }
+      - { id: b, image: ./img/b.png, alt: "Gelber Teddybär mit blauer Schleife" }
+      - { id: c, image: ./img/c.png, alt: "Lachsroter Teddybär mit roter Schleife" }
+      - { id: d, image: ./img/d.png, alt: "Hellorangefarbener Teddybär mit blauer Schleife" }
 source:
   type: original
   work: Informatik-Biber 2020

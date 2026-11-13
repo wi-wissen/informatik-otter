@@ -15,10 +15,10 @@ interaction:
   format: choice
   props:
     options:
-      - { id: a, label: "A) 1 weißen Stein" }
-      - { id: b, label: "B) 2 schwarze Steine" }
-      - { id: c, label: "C) 3 weiße Steine" }
-      - { id: d, label: "D) Das ist egal, Susi gewinnt auf jeden Fall." }
+      - { id: a, label: "1 weißen Stein" }
+      - { id: b, label: "2 schwarze Steine" }
+      - { id: c, label: "3 weiße Steine" }
+      - { id: d, label: "Das ist egal, Susi gewinnt auf jeden Fall." }
 source:
   type: original
   work: Informatik-Biber 2020

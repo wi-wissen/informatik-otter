@@ -14,10 +14,10 @@ interaction:
   format: choice
   props:
     options:
-      - { id: a, label: "A) Ada" }
-      - { id: b, label: "B) Belle" }
-      - { id: c, label: "C) Cody" }
-      - { id: d, label: "D) Niemand kann den Schatz erreichen." }
+      - { id: a, label: "Ada" }
+      - { id: b, label: "Belle" }
+      - { id: c, label: "Cody" }
+      - { id: d, label: "Niemand kann den Schatz erreichen." }
 source:
   type: original
   work: Informatik-Biber 2020

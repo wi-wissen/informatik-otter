@@ -16,10 +16,10 @@ interaction:
   format: choice
   props:
     options:
-      - { id: a, label: "A) Prinzessin und Ritter" }
-      - { id: b, label: "B) König und Drache" }
-      - { id: c, label: "C) König und Prinzessin" }
-      - { id: d, label: "D) Ritter und Drache" }
+      - { id: a, label: "Prinzessin und Ritter" }
+      - { id: b, label: "König und Drache" }
+      - { id: c, label: "König und Prinzessin" }
+      - { id: d, label: "Ritter und Drache" }
 source:
   type: original
   work: Informatik-Biber 2020

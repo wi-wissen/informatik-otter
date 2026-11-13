@@ -16,10 +16,10 @@ interaction:
   props:
     columns: 1
     options:
-      - { id: a, label: "A", image: ./img/a.png, alt: "Passwort A: Ast, Ast, Baumscheibe, Baumscheibe, Ast, Ast, Ast, Baumscheibe, Ast" }
-      - { id: b, label: "B", image: ./img/b.png, alt: "Passwort B: Baumscheibe, Ast, Ast, Baumscheibe, Ast, Ast" }
-      - { id: c, label: "C", image: ./img/c.png, alt: "Passwort C: Ast, Baumscheibe, Ast, Baumscheibe, Ast, Ast, Baumscheibe" }
-      - { id: d, label: "D", image: ./img/d.png, alt: "Passwort D: Ast, Ast, Baumscheibe, Baumscheibe, Ast, Ast, Baumscheibe, Ast, Baumscheibe" }
+      - { id: a, image: ./img/a.png, alt: "Passwort A: Ast, Ast, Baumscheibe, Baumscheibe, Ast, Ast, Ast, Baumscheibe, Ast" }
+      - { id: b, image: ./img/b.png, alt: "Passwort B: Baumscheibe, Ast, Ast, Baumscheibe, Ast, Ast" }
+      - { id: c, image: ./img/c.png, alt: "Passwort C: Ast, Baumscheibe, Ast, Baumscheibe, Ast, Ast, Baumscheibe" }
+      - { id: d, image: ./img/d.png, alt: "Passwort D: Ast, Ast, Baumscheibe, Baumscheibe, Ast, Ast, Baumscheibe, Ast, Baumscheibe" }
 source:
   type: original
   work: Informatik-Biber 2020

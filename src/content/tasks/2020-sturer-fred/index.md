@@ -15,12 +15,12 @@ interaction:
   format: choice
   props:
     options:
-      - { id: a, label: "A) Mehr als 10 Kängurus." }
-      - { id: b, label: "B) Genau 10 Kängurus." }
-      - { id: c, label: "C) Genau 6 Kängurus." }
-      - { id: d, label: "D) Genau 4 Kängurus." }
-      - { id: e, label: "E) Weniger als 4 Kängurus." }
-      - { id: f, label: "F) Das kann man nicht genau sagen." }
+      - { id: a, label: "Mehr als 10 Kängurus." }
+      - { id: b, label: "Genau 10 Kängurus." }
+      - { id: c, label: "Genau 6 Kängurus." }
+      - { id: d, label: "Genau 4 Kängurus." }
+      - { id: e, label: "Weniger als 4 Kängurus." }
+      - { id: f, label: "Das kann man nicht genau sagen." }
 source:
   type: original
   work: Informatik-Biber 2020
