@@ -1,7 +1,7 @@
 ---
 short: 3Ufo
 title: Wer war's?
-summary: Eine Scheibe klirrt, ein Kind rennt weg: lange Haare, lange Hose. Welches der sechs Kinder war es?
+summary: "Eine Scheibe klirrt, ein Kind rennt weg: lange Haare, lange Hose. Welches der sechs Kinder war es?"
 grades:
   "3-4": easy
 gi:
