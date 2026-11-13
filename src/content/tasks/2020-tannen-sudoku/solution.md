@@ -1,5 +1,5 @@
 ---
-answer: [[1, 2, 3], [2, 3, 1], [3, 1, 2]]
+answer: ok
 ---
 Die beiden Schilder mit der 3 sagen, dass man drei Tannen sehen soll
 

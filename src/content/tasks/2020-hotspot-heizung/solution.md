@@ -1,8 +1,5 @@
 ---
-answers:
-  - [r0c2, r1c12, r2c7, r4c2]
-  - [r0c2, r2c7, r2c12, r4c2]
-  - [r0c2, r2c7, r3c12, r4c2]
+answer: ok
 ---
 Man kann die 4 Hotspots so montieren, dass alle Fliesen des Badezimmers nach 2 Minuten warm sind. Jeder Hotspot kann in der ersten Minute höchstens 9 Fliesen erwärmen, nach 2 Minuten höchstens 25 Fliesen. Vier Hotspots erwärmen in der ersten Minute höchstens 36 Fliesen, in 2 Minuten höchstens 100 Fliesen. Das Badezimmer hat 48 Fliesen. Es ist also unmöglich, mit vier Hotspots alle Fliesen in nur einer Minute zu erwärmen, aber 2 Minuten könnten ausreichen.
 

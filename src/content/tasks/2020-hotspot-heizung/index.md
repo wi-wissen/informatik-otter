@@ -13,62 +13,68 @@ topics: [graphs, optimization]
 methods: []
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: custom
   props:
-    pick: nodes
-    width: 471.1
-    height: 158.7
     background: ./img/bath.png
-    nodeRadius: 9
-    nodes:
-      - { id: r0c0, x: 17.6, y: 17.5 }
-      - { id: r0c1, x: 48.7, y: 17.5 }
-      - { id: r0c2, x: 79.8, y: 17.5 }
-      - { id: r0c3, x: 111.0, y: 17.5 }
-      - { id: r0c4, x: 142.1, y: 17.5 }
-      - { id: r0c5, x: 173.3, y: 17.5 }
-      - { id: r0c6, x: 204.4, y: 17.5 }
-      - { id: r0c7, x: 235.6, y: 17.5 }
-      - { id: r0c8, x: 266.7, y: 17.5 }
-      - { id: r1c5, x: 173.3, y: 48.4 }
-      - { id: r1c6, x: 204.4, y: 48.4 }
-      - { id: r1c7, x: 235.6, y: 48.4 }
-      - { id: r1c8, x: 266.7, y: 48.4 }
-      - { id: r1c9, x: 297.8, y: 48.4 }
-      - { id: r1c10, x: 329.0, y: 48.4 }
-      - { id: r1c11, x: 360.1, y: 48.4 }
-      - { id: r1c12, x: 391.2, y: 48.4 }
-      - { id: r1c13, x: 422.4, y: 48.4 }
-      - { id: r1c14, x: 453.5, y: 48.4 }
-      - { id: r2c5, x: 173.3, y: 79.3 }
-      - { id: r2c6, x: 204.4, y: 79.3 }
-      - { id: r2c7, x: 235.6, y: 79.3 }
-      - { id: r2c8, x: 266.7, y: 79.3 }
-      - { id: r2c9, x: 297.8, y: 79.3 }
-      - { id: r2c10, x: 329.0, y: 79.3 }
-      - { id: r2c11, x: 360.1, y: 79.3 }
-      - { id: r2c12, x: 391.2, y: 79.3 }
-      - { id: r2c13, x: 422.4, y: 79.3 }
-      - { id: r2c14, x: 453.5, y: 79.3 }
-      - { id: r3c5, x: 173.3, y: 110.3 }
-      - { id: r3c6, x: 204.4, y: 110.3 }
-      - { id: r3c7, x: 235.6, y: 110.3 }
-      - { id: r3c8, x: 266.7, y: 110.3 }
-      - { id: r3c9, x: 297.8, y: 110.3 }
-      - { id: r3c10, x: 329.0, y: 110.3 }
-      - { id: r3c11, x: 360.1, y: 110.3 }
-      - { id: r3c12, x: 391.2, y: 110.3 }
-      - { id: r3c13, x: 422.4, y: 110.3 }
-      - { id: r3c14, x: 453.5, y: 110.3 }
-      - { id: r4c0, x: 17.6, y: 141.2 }
-      - { id: r4c1, x: 48.7, y: 141.2 }
-      - { id: r4c2, x: 79.8, y: 141.2 }
-      - { id: r4c3, x: 111.0, y: 141.2 }
-      - { id: r4c4, x: 142.1, y: 141.2 }
-      - { id: r4c5, x: 173.3, y: 141.2 }
-      - { id: r4c6, x: 204.4, y: 141.2 }
-      - { id: r4c7, x: 235.6, y: 141.2 }
-      - { id: r4c8, x: 266.7, y: 141.2 }
+    width: 1179
+    height: 397
+    minutes: 2
+    trayLabel: Hotspots
+    tiles: ["r0c0", "r0c1", "r0c2", "r0c3", "r0c4", "r0c5", "r0c6", "r0c7", "r0c8", "r1c5", "r1c6", "r1c7", "r1c8", "r1c9", "r1c10", "r1c11", "r1c12", "r1c13", "r1c14", "r2c5", "r2c6", "r2c7", "r2c8", "r2c9", "r2c10", "r2c11", "r2c12", "r2c13", "r2c14", "r3c5", "r3c6", "r3c7", "r3c8", "r3c9", "r3c10", "r3c11", "r3c12", "r3c13", "r3c14", "r4c0", "r4c1", "r4c2", "r4c3", "r4c4", "r4c5", "r4c6", "r4c7", "r4c8"]
+    zones:
+      - { id: r0c0, label: "Fliese Zeile 1, Spalte 1", x: 8, y: 8, w: 72, h: 72 }
+      - { id: r0c1, label: "Fliese Zeile 1, Spalte 2", x: 86, y: 8, w: 72, h: 72 }
+      - { id: r0c2, label: "Fliese Zeile 1, Spalte 3", x: 164, y: 8, w: 72, h: 72 }
+      - { id: r0c3, label: "Fliese Zeile 1, Spalte 4", x: 241, y: 8, w: 72, h: 72 }
+      - { id: r0c4, label: "Fliese Zeile 1, Spalte 5", x: 319, y: 8, w: 72, h: 72 }
+      - { id: r0c5, label: "Fliese Zeile 1, Spalte 6", x: 397, y: 8, w: 72, h: 72 }
+      - { id: r0c6, label: "Fliese Zeile 1, Spalte 7", x: 475, y: 8, w: 72, h: 72 }
+      - { id: r0c7, label: "Fliese Zeile 1, Spalte 8", x: 553, y: 8, w: 72, h: 72 }
+      - { id: r0c8, label: "Fliese Zeile 1, Spalte 9", x: 630, y: 8, w: 72, h: 72 }
+      - { id: r1c5, label: "Fliese Zeile 2, Spalte 6", x: 397, y: 86, w: 72, h: 72 }
+      - { id: r1c6, label: "Fliese Zeile 2, Spalte 7", x: 475, y: 86, w: 72, h: 72 }
+      - { id: r1c7, label: "Fliese Zeile 2, Spalte 8", x: 553, y: 86, w: 72, h: 72 }
+      - { id: r1c8, label: "Fliese Zeile 2, Spalte 9", x: 630, y: 86, w: 72, h: 72 }
+      - { id: r1c9, label: "Fliese Zeile 2, Spalte 10", x: 708, y: 86, w: 72, h: 72 }
+      - { id: r1c10, label: "Fliese Zeile 2, Spalte 11", x: 786, y: 86, w: 72, h: 72 }
+      - { id: r1c11, label: "Fliese Zeile 2, Spalte 12", x: 864, y: 86, w: 72, h: 72 }
+      - { id: r1c12, label: "Fliese Zeile 2, Spalte 13", x: 942, y: 86, w: 72, h: 72 }
+      - { id: r1c13, label: "Fliese Zeile 2, Spalte 14", x: 1019, y: 86, w: 72, h: 72 }
+      - { id: r1c14, label: "Fliese Zeile 2, Spalte 15", x: 1097, y: 86, w: 72, h: 72 }
+      - { id: r2c5, label: "Fliese Zeile 3, Spalte 6", x: 397, y: 164, w: 72, h: 72 }
+      - { id: r2c6, label: "Fliese Zeile 3, Spalte 7", x: 475, y: 164, w: 72, h: 72 }
+      - { id: r2c7, label: "Fliese Zeile 3, Spalte 8", x: 553, y: 164, w: 72, h: 72 }
+      - { id: r2c8, label: "Fliese Zeile 3, Spalte 9", x: 630, y: 164, w: 72, h: 72 }
+      - { id: r2c9, label: "Fliese Zeile 3, Spalte 10", x: 708, y: 164, w: 72, h: 72 }
+      - { id: r2c10, label: "Fliese Zeile 3, Spalte 11", x: 786, y: 164, w: 72, h: 72 }
+      - { id: r2c11, label: "Fliese Zeile 3, Spalte 12", x: 864, y: 164, w: 72, h: 72 }
+      - { id: r2c12, label: "Fliese Zeile 3, Spalte 13", x: 942, y: 164, w: 72, h: 72 }
+      - { id: r2c13, label: "Fliese Zeile 3, Spalte 14", x: 1019, y: 164, w: 72, h: 72 }
+      - { id: r2c14, label: "Fliese Zeile 3, Spalte 15", x: 1097, y: 164, w: 72, h: 72 }
+      - { id: r3c5, label: "Fliese Zeile 4, Spalte 6", x: 397, y: 241, w: 72, h: 72 }
+      - { id: r3c6, label: "Fliese Zeile 4, Spalte 7", x: 475, y: 241, w: 72, h: 72 }
+      - { id: r3c7, label: "Fliese Zeile 4, Spalte 8", x: 553, y: 241, w: 72, h: 72 }
+      - { id: r3c8, label: "Fliese Zeile 4, Spalte 9", x: 630, y: 241, w: 72, h: 72 }
+      - { id: r3c9, label: "Fliese Zeile 4, Spalte 10", x: 708, y: 241, w: 72, h: 72 }
+      - { id: r3c10, label: "Fliese Zeile 4, Spalte 11", x: 786, y: 241, w: 72, h: 72 }
+      - { id: r3c11, label: "Fliese Zeile 4, Spalte 12", x: 864, y: 241, w: 72, h: 72 }
+      - { id: r3c12, label: "Fliese Zeile 4, Spalte 13", x: 942, y: 241, w: 72, h: 72 }
+      - { id: r3c13, label: "Fliese Zeile 4, Spalte 14", x: 1019, y: 241, w: 72, h: 72 }
+      - { id: r3c14, label: "Fliese Zeile 4, Spalte 15", x: 1097, y: 241, w: 72, h: 72 }
+      - { id: r4c0, label: "Fliese Zeile 5, Spalte 1", x: 8, y: 319, w: 72, h: 72 }
+      - { id: r4c1, label: "Fliese Zeile 5, Spalte 2", x: 86, y: 319, w: 72, h: 72 }
+      - { id: r4c2, label: "Fliese Zeile 5, Spalte 3", x: 164, y: 319, w: 72, h: 72 }
+      - { id: r4c3, label: "Fliese Zeile 5, Spalte 4", x: 241, y: 319, w: 72, h: 72 }
+      - { id: r4c4, label: "Fliese Zeile 5, Spalte 5", x: 319, y: 319, w: 72, h: 72 }
+      - { id: r4c5, label: "Fliese Zeile 5, Spalte 6", x: 397, y: 319, w: 72, h: 72 }
+      - { id: r4c6, label: "Fliese Zeile 5, Spalte 7", x: 475, y: 319, w: 72, h: 72 }
+      - { id: r4c7, label: "Fliese Zeile 5, Spalte 8", x: 553, y: 319, w: 72, h: 72 }
+      - { id: r4c8, label: "Fliese Zeile 5, Spalte 9", x: 630, y: 319, w: 72, h: 72 }
+    items:
+      - { id: h1, image: ./img/hotspot.png, alt: Hotspot }
+      - { id: h2, image: ./img/hotspot.png, alt: Hotspot }
+      - { id: h3, image: ./img/hotspot.png, alt: Hotspot }
+      - { id: h4, image: ./img/hotspot.png, alt: Hotspot }
 source:
   type: original
   work: Informatik-Biber 2020
@@ -88,6 +94,4 @@ Hier ist ein Beispiel. Die Zahlen sagen für jede Fliese, nach wie vielen Minute
 
 Luis kann sich 4 Hotspots leisten. Luis wünscht, dass nach möglichst wenigen Minuten alle Fliesen im Bad warm sind. Die Hotspots werden gleichzeitig angeschaltet.
 
-Hier ist das neue Bad. Tippe die Fliesen an, unter denen du einen Hotspot montieren willst.
-
-**Montiere die 4 Hotspots so, dass Luis' Wunsch erfüllt wird.**
+**Hier ist das neue Bad. Montiere die 4 Hotspots so, dass Luis' Wunsch erfüllt wird.** Ziehe die Hotspots auf die Fliesen.

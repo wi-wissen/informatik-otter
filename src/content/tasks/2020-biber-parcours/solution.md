@@ -1,5 +1,5 @@
 ---
-answer: "5"
+answer: ok
 ---
 5 ist die richtige Antwort:
 

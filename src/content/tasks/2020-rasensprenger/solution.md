@@ -1,6 +1,5 @@
 ---
-answers:
-  - [[0, 0, 2, 0, 0], [2, 1, 0, 0, 2], [0, 2, 0, 1, 0], [0, 0, 2, 0, 0]]
+answer: ok
 ---
 Man kann zwei Rasensprenger aufstellen und damit alle Blumen gießen:
 

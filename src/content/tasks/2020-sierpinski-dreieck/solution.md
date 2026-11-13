@@ -1,5 +1,5 @@
 ---
-answer: [t10d, t20d, t21u, t21d, t30d, t31d, t32d, t50d, t54d, t60d, t61u, t61d, t64d, t65u, t65d, t70d, t71d, t72d, t74d, t75d, t76d]
+answer: ok
 ---
 Im ersten Schritt wird das ursprüngliche weiße Dreieck unterteilt. Das mittlere der vier bei der Unterteilung entstandenen kleineren Dreiecke wird schwarz gefärbt. Danach gibt es drei weiße Dreiecke.
 
