@@ -1,5 +1,11 @@
 ---
-answer: { pizza: [kaese, pilze, zwiebeln] }
+answers:
+  - { p1: kaese, p2: pilze, p3: zwiebeln }
+  - { p1: kaese, p2: zwiebeln, p3: pilze }
+  - { p1: pilze, p2: kaese, p3: zwiebeln }
+  - { p1: pilze, p2: zwiebeln, p3: kaese }
+  - { p1: zwiebeln, p2: kaese, p3: pilze }
+  - { p1: zwiebeln, p2: pilze, p3: kaese }
 ---
 Um die richtige Antwort zu finden, könnte man alle Kombinationen von drei Belägen ausprobieren und für jede Kombination zählen, wie viele Wünsche sie erfüllt. Es gibt aber 20 solcher Kombinationen, sodass dieses Vorgehen mühsam und fehleranfällig ist.
 

@@ -12,10 +12,10 @@ topics: [cryptography, encoding]
 methods: [caesar-cipher, substitution-cipher]
 mascot: beaver
 interaction:
-  format: input
+  format: custom
   props:
-    kind: text
     placeholder: Bestellung
+    length: 5
 source:
   type: original
   work: Informatik-Biber 2017
@@ -49,4 +49,4 @@ Für eine andere Bestellung hat Anna mit den Dreh-Zahlen 3, 2, 1, 3 und 2 die Bo
 | Dreh-Zahlen | 3 | 2 | 1 | 3 | 2 |
 | Botschaft | S | C | T | W | C |
 
-**Wie lautet die Bestellung?** Schreibe die fünf Buchstaben der Bestellung auf.
+**Wie lautet die Bestellung?** Schreibe die fünf Buchstaben der Bestellung auf. Zur Hilfe kannst du den inneren Ring drehen.

@@ -1,5 +1,5 @@
 ---
-answer: [b, d, c, a, e]
+answer: { z1: b, z2: d, z3: c, z4: a, z5: e }
 ---
 Die Biber-Bilder müssen so angeordnet sein: Von einem Bild zum nächsten ändert sich immer nur ein Merkmal.
 

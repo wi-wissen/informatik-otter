@@ -18,11 +18,12 @@ interaction:
     width: 888
     height: 204
     trayLabel: Karottensamen
+    itemSize: 78
     zones:
-      - { id: A, label: "Hügel 1", x: 10, y: 15, w: 205, h: 180 }
-      - { id: B, label: "Hügel 2", x: 227, y: 15, w: 205, h: 180 }
-      - { id: C, label: "Hügel 3", x: 444, y: 15, w: 205, h: 180 }
-      - { id: D, label: "Hügel 4", x: 662, y: 15, w: 205, h: 180 }
+      - { id: A, label: "Hügel 1", x: 68, y: 24, w: 100, h: 78 }
+      - { id: B, label: "Hügel 2", x: 285, y: 24, w: 100, h: 78 }
+      - { id: C, label: "Hügel 3", x: 503, y: 24, w: 100, h: 78 }
+      - { id: D, label: "Hügel 4", x: 721, y: 24, w: 100, h: 78 }
     items:
       - { id: s1, image: ./img/samen.png, alt: Karottensamen }
       - { id: s2, image: ./img/samen.png, alt: Karottensamen }

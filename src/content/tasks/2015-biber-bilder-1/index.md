@@ -11,11 +11,18 @@ topics: [compression, modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: erstes Bild
-    endLabel: fünftes Bild
+    background: ./img/frames.png
+    width: 524
+    height: 64
+    itemSize: 96
+    zones:
+      - { id: z1, label: "Bild 1", x: 5.5, y: 6, w: 64, h: 52.5 }
+      - { id: z2, label: "Bild 2", x: 95.5, y: 6, w: 64, h: 52.5 }
+      - { id: z3, label: "Bild 3", x: 185.5, y: 6, w: 64, h: 52.5 }
+      - { id: z4, label: "Bild 4", x: 275.5, y: 6, w: 64, h: 52.5 }
+      - { id: z5, label: "Bild 5", x: 365.5, y: 6, w: 64, h: 52.5 }
     items:
       - { id: a, image: ./img/a.png, alt: "Bild A: Biber mit kleinen Ohren, gerade schwarzen Barthaaren, großer Nase, neutralem Mund und drei Zähnen" }
       - { id: b, image: ./img/b.png, alt: "Bild B: Biber mit großen Ohren, kraus-roten Barthaaren, kleiner Nase, neutralem Mund und drei Zähnen" }
@@ -33,8 +40,4 @@ source:
 ---
 Von einem Bild zum nächsten darf sich nur eine Sache ändern: Barthaare, Mund, Nase, Ohren oder Zähne.
 
-Das sechste und letzte Bild steht schon fest:
-
-![Das letzte Bild: Biber mit kleinen Ohren, gerade schwarzen Barthaaren, großer Nase, lächelndem Mund und zwei Zähnen](./img/last.png)
-
-**Bringe die fünf Biber-Bilder A bis E in die richtige Reihenfolge, so dass sie zusammen mit dem letzten Bild eine Animation ergeben.**
+**Ziehe die Biber-Bilder in die Rahmen!**

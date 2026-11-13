@@ -19,8 +19,8 @@ interaction:
     height: 100
     trayLabel: Textbausteine
     zones:
-      - { id: weather, label: "Erste Lücke (orange)", x: 404, y: 8, w: 230, h: 84 }
-      - { id: ponds, label: "Zweite Lücke (blau)", x: 709, y: 8, w: 815, h: 84 }
+      - { id: weather, label: "Erste Lücke (orange)", x: 404, y: 8, w: 230, h: 84, accepts: [sunny, notsunny] }
+      - { id: ponds, label: "Zweite Lücke (blau)", x: 709, y: 8, w: 815, h: 84, accepts: [all, waterfall, michael-all, michael-none] }
     items:
       - { id: sunny, label: sonnig }
       - { id: notsunny, label: nicht sonnig }

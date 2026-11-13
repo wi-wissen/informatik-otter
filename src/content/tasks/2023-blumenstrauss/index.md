@@ -18,16 +18,17 @@ interaction:
     width: 616
     height: 235
     trayLabel: Eimer A und Eimer B
+    itemSize: 110
     zones:
-      - { id: strauss, label: "Blumenstrauß", x: 60, y: 25, w: 490, h: 175, capacity: 4 }
+      - { id: strauss, label: "Blumenstrauß", x: 60, y: 40, w: 490, h: 115, capacity: 4 }
     items:
-      - { id: a1, label: "Eimer A", image: ./img/margarite.png, alt: Margarite }
-      - { id: a2, label: "Eimer A", image: ./img/margarite.png, alt: Margarite }
-      - { id: a3, label: "Eimer A", image: ./img/tulpe.png, alt: Tulpe }
-      - { id: a4, label: "Eimer A", image: ./img/tulpe.png, alt: Tulpe }
-      - { id: b1, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
-      - { id: b2, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
-      - { id: b3, label: "Eimer B", image: ./img/zweig.png, alt: Zweig }
+      - { id: a1, image: ./img/margarite.png, alt: Margarite }
+      - { id: a2, image: ./img/margarite.png, alt: Margarite }
+      - { id: a3, image: ./img/tulpe.png, alt: Tulpe }
+      - { id: a4, image: ./img/tulpe.png, alt: Tulpe }
+      - { id: b1, image: ./img/zweig.png, alt: Zweig }
+      - { id: b2, image: ./img/zweig.png, alt: Zweig }
+      - { id: b3, image: ./img/zweig.png, alt: Zweig }
 source:
   type: original
   work: Informatik-Biber 2023

@@ -19,14 +19,16 @@ interaction:
     height: 486
     trayLabel: Beläge
     zones:
-      - { id: pizza, label: "Pizza", x: 40, y: 40, w: 424, h: 406, capacity: 3 }
+      - { id: p1, label: "Belag 1", x: 104, y: 195, w: 100, h: 100 }
+      - { id: p2, label: "Belag 2", x: 204, y: 195, w: 100, h: 100 }
+      - { id: p3, label: "Belag 3", x: 304, y: 195, w: 100, h: 100 }
     items:
-      - { id: chili, label: Chili, image: ./img/chili.png, alt: Chili }
-      - { id: pilze, label: Pilze, image: ./img/pilze.png, alt: Pilze }
-      - { id: kaese, label: Käse, image: ./img/kaese.png, alt: Käse }
-      - { id: ananas, label: Ananas, image: ./img/ananas.png, alt: Ananas }
-      - { id: zwiebeln, label: Zwiebeln, image: ./img/zwiebeln.png, alt: Zwiebelringe }
-      - { id: kraeuter, label: Kräuter, image: ./img/kraeuter.png, alt: Kräuter }
+      - { id: chili, image: ./img/chili.png, alt: Chili }
+      - { id: pilze, image: ./img/pilze.png, alt: Pilze }
+      - { id: kaese, image: ./img/kaese.png, alt: Käse }
+      - { id: ananas, image: ./img/ananas.png, alt: Ananas }
+      - { id: zwiebeln, image: ./img/zwiebeln.png, alt: Zwiebelringe }
+      - { id: kraeuter, image: ./img/kraeuter.png, alt: Kräuter }
 source:
   type: original
   work: Informatik-Biber 2024

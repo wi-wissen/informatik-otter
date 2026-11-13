@@ -18,8 +18,8 @@ interaction:
     height: 580
     trayLabel: Textbausteine
     zones:
-      - { id: g1, label: "Gelbe Lücke", x: 575, y: 258, w: 256, h: 56 }
-      - { id: g2, label: "Grüne Lücke", x: 388, y: 400, w: 474, h: 56 }
+      - { id: g1, label: "Gelbe Lücke", x: 575, y: 258, w: 256, h: 56, accepts: [r1, r2, r3] }
+      - { id: g2, label: "Grüne Lücke", x: 388, y: 400, w: 474, h: 56, accepts: [r4, r5] }
     items:
       - { id: r1, label: kein Schild }
       - { id: r2, label: ein Pfeil }
