@@ -29,7 +29,7 @@ source:
   country: CA
   license: CC BY-SA 4.0
 ---
-Spinne Thekla möchte möglichst viele verschiedene Netze bbauen. Deshalb notiert sie sich die Struktur jedes ihrer Netze, und zwar so:
+Spinne Thekla möchte möglichst viele verschiedene Netze bauen. Deshalb notiert sie sich die Struktur jedes ihrer Netze, und zwar so:
 
 Sie nummeriert die Endpunkte des Netzes mit 1, 2, usw. Die Struktur notiert sie dann in einem Raster, das so viele Zeilen und Spalten hat wie das Netz Endpunkte hat. Dann kreuzt sie die Felder im Raster nach dieser Regel an:
 
