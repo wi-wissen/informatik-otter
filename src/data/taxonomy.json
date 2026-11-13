@@ -105,6 +105,7 @@
     "finite-automaton": { "label": "Endlicher Automat", "topic": "automata" },
     "pushdown-automaton": { "label": "Kellerautomat", "topic": "automata" },
     "regular-expression": { "label": "Regulärer Ausdruck", "topic": "formal-languages" },
+    "context-free-grammar": { "label": "Kontextfreie Grammatik", "topic": "formal-languages" },
     "neural-network": { "label": "Neuronales Netz", "topic": "ai" },
     "instruction-set": { "label": "Befehlssatz", "topic": "computer-architecture" },
     "routing": { "label": "Routing", "topic": "networks" },
