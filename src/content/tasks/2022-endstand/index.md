@@ -38,7 +38,7 @@ Wer zuerst drei (gleiche) Zeichen in eine Zeile, Spalte oder Diagonale setzen ka
 
 Hier siehst du die Spielstände aus einem möglichen Spielverlauf: nach den ersten vier Spielzügen und nach dem letzten Zug. Der Spieler mit X gewinnt.
 
-![Fünf Spielstände: nach dem 1. Zug X oben rechts; nach dem 2. Zug zusätzlich O oben links; nach dem 3. Zug zusätzlich X unten links; nach dem 4. Zug zusätzlich O in der Mitte; Endstand: X O in einer Zeile und X gewinnt mit einer Diagonale](./img/example.png)
+![Fünf Spielstände: X oben rechts; dazu O oben links; dazu X unten links; dazu O in der Mitte; Endstand: X gewinnt mit drei X in der unteren Zeile]](./img/example.png)
 
 Den Spielstand am Ende eines Spiels nennen wir Endstand. Die Spielregeln legen genau fest, wie ein Endstand aussehen kann.
 
