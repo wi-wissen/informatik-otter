@@ -20,8 +20,8 @@ interaction:
       - { id: a, label: oben links }
       - { id: b, label: oben (dritte Spalte) }
       - { id: c, label: oben rechts }
-      - { id: d, label: Mitte rechts }
-      - { id: e, label: unten links }
+      - { id: d, label: unten links }
+      - { id: e, label: Mitte rechts }
       - { id: f, label: unten rechts }
 source:
   type: original
@@ -42,4 +42,4 @@ Du hast ein neues Spiel begonnen und bereits einige Felder aufgedeckt – siehe 
 
 ![Spielbrett mit 3 Zeilen und 4 Spalten. Zeile 1: zugedeckt, 1, zugedeckt, zugedeckt. Zeile 2: 1, 2, 1, zugedeckt. Zeile 3: zugedeckt, 1, Pilz, zugedeckt](./img/board.png)
 
-**Auf welchen der übrigen (zugedeckten) Felder ist sicher kein Fliegenpilz?** Wähle alle diese Felder aus.
+**Auf welchen der übrigen (zugedeckten) Felder ist sicher kein Fliegenpilz?** Wähle alle diese Felder aus. Die zugedeckten Felder heißen A bis F: A ist oben links, B und C stehen rechts daneben (in der obersten Zeile), D ist unten links, E steht rechts in der mittleren Zeile und F unten rechts.

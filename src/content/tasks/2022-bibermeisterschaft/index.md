@@ -16,6 +16,7 @@ interaction:
     multiple: true
     columns: 4
     options:
+      - { id: a, label: A (Ada) }
       - { id: b, label: B }
       - { id: c, label: C }
       - { id: d, label: D }
@@ -48,4 +49,4 @@ Biber Ada (A) erreicht Platz 1 der Bibermeisterschaft. Hier siehst du die Punkte
 | Runde 2  | 20 | 27 | 30 | 24 | 28 | 24 | 30 | 30 |
 | Runde 3  | 10 | 14 | 11 | 15 | 16 | 13 | 9  | 12 |
 
-**Welche drei Biber waren in Adas Team in Runde 1?**
+**Welche drei Biber waren in Adas Team in Runde 1?** Wähle die drei Biber aus, die zusammen mit Ada in einem Team waren (Ada selbst wählst du nicht aus).
