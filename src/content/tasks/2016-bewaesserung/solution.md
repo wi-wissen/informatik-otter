@@ -1,5 +1,5 @@
 ---
-answer: [mitte]
+answer: { mitte: nass }
 ---
 Nur die mittlere Blume bekommt Wasser bei dieser Stellung der Ventile.
 

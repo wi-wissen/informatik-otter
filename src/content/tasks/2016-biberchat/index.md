@@ -11,17 +11,19 @@ topics: [society]
 methods: []
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
+    reusable: true
+    trayLabel: Bilder
+    zones:
       - { id: a, label: "A) Liebe Freunde, der Sommer kommt, und ich suche nach einer netten Unterkunft nahe am Rhein. Danke für eure Vorschläge, Richie." }
       - { id: b, label: "B) Arriba! Jemand hier?" }
       - { id: c, label: "C) @Mia: <3 <3 <3" }
       - { id: d, label: "D) das passt. gr8. thx" }
-    right:
+    items:
       - { id: strand, image: ./img/strand.png, alt: Strandbild }
       - { id: surf, image: ./img/surf.png, alt: Surfbild }
-      - { id: eiffel, image: ./img/eiffel.png, alt: Eiffelturm }
+      - { id: eiffel, image: ./img/eiffel.png, alt: Bild des Eiffelturms }
 source:
   type: original
   work: Informatik-Biber 2016
@@ -48,4 +50,4 @@ Sendet ein Biber eine Nachricht, wird er anhand der Gesamtpunktzahl seiner Nachr
 | < 0 (kleiner Null) | Jugendlich | Surfbild |
 | = 0 (gleich Null) | keine Zuordnung | Eiffelturm |
 
-**Welche Bilder werden zu den folgenden Nachrichten angezeigt?**
+**Welche Bilder werden zu den folgenden Nachrichten angezeigt?** Ziehe zu jeder Nachricht das passende Bild (Strand, Surfer oder Eiffelturm). Ein Bild kann mehrfach verwendet werden.

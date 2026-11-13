@@ -11,16 +11,21 @@ topics: [databases]
 methods: [database-query]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    columns: 6
-    options:
-      - { id: a, label: "A) Jana" }
-      - { id: b, label: "B) Eva" }
-      - { id: c, label: "C) Jojo" }
-      - { id: d, label: "D) Anne" }
-      - { id: e, label: "E) David" }
-      - { id: f, label: "F) Tobi" }
+    pick: nodes
+    width: 948
+    height: 428
+    background: ./img/kids.png
+    hideNodes: true
+    nodeRadius: 62
+    nodes:
+      - { id: jana, x: 100, y: 205, label: Jana }
+      - { id: eva, x: 230, y: 225, label: Eva }
+      - { id: jojo, x: 365, y: 205, label: Jojo }
+      - { id: anne, x: 535, y: 205, label: Anne }
+      - { id: david, x: 725, y: 205, label: David }
+      - { id: tobi, x: 875, y: 225, label: Tobi }
 source:
   type: original
   work: Informatik-Biber 2016
@@ -36,4 +41,4 @@ Sechs Kinder spielen draußen mit dem Ball.
 
 Es scheppert und klirrt! Ich laufe zum Fenster und sehe durch die zerbrochene Scheibe ein Kind wegrennen. Es hat lange Haare und trägt eine lange Hose.
 
-**Wer war's?**
+**Wer war's?** Klicke das Kind im Bild an.

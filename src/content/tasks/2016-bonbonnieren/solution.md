@@ -1,5 +1,5 @@
 ---
-answer: c
+answer: [c]
 ---
 **Antwort C ist richtig:** Carls Bonbonnieren A, B und C haben zwei gemeinsame Eigenschaften:
 

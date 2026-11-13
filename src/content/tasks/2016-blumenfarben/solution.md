@@ -1,5 +1,5 @@
 ---
-answer: { zweite: blau, vierte: pink }
+answer: { f2: blau, f4: pink }
 ---
 Für die Blumen links, in der Mitte und rechts stehen die Farben bereits fest: pink, blau und orange.
 

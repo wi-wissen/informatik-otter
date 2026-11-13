@@ -1,5 +1,5 @@
 ---
-answer: b
+answer: [eva]
 ---
 **Antwort B ist richtig:** Drei Kinder haben lange Haare: Jana, Eva und Anne. Drei Kinder tragen lange Hosen: Eva, David und Tobi. Also muss es Eva sein, denn nur für sie trifft beides zu.
 
