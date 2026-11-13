@@ -18,8 +18,8 @@ interaction:
     width: 336
     height: 238
     background: ./img/map.png
-    hideNodes: true
-    nodeRadius: 14
+    nodeImage: ./img/hit.png
+    nodeRadius: 12
     nodes:
       - { id: A, x: 32, y: 52 }
       - { id: B, x: 87, y: 52 }

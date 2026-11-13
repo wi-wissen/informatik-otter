@@ -19,7 +19,7 @@ interaction:
     width: 555
     height: 103
     background: ./img/field.png
-    hideNodes: true
+    nodeImage: ./img/hit.png
     nodeRadius: 16
     nodes:
       - { id: f1, x: 65, y: 55 }

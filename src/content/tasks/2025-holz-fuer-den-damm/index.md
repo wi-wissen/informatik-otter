@@ -18,15 +18,15 @@ interaction:
     width: 460
     height: 130
     background: ./img/trees.png
-    hideNodes: true
-    nodeRadius: 30
+    nodeImage: ./img/hit.png
+    nodeRadius: 22
     nodes:
-      - { id: t8, x: 95, y: 90, label: 8 m }
-      - { id: t6, x: 149, y: 95, label: 6 m }
-      - { id: t9, x: 220, y: 88, label: 9 m }
-      - { id: t7, x: 284, y: 92, label: 7 m }
-      - { id: t10, x: 344, y: 85, label: 10 m }
-      - { id: t5, x: 420, y: 95, label: 5 m }
+      - { id: t8, x: 95, y: 90 }
+      - { id: t6, x: 149, y: 95 }
+      - { id: t9, x: 220, y: 88 }
+      - { id: t7, x: 284, y: 92 }
+      - { id: t10, x: 344, y: 85 }
+      - { id: t5, x: 420, y: 95 }
     edges: []
 source:
   type: original

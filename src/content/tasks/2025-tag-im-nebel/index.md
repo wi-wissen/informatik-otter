@@ -18,8 +18,8 @@ interaction:
     width: 242
     height: 212
     background: ./img/map.png
-    hideNodes: true
-    nodeRadius: 14
+    nodeImage: ./img/hit.png
+    nodeRadius: 8
     nodes:
       - { id: h1, x: 106, y: 45 }
       - { id: h2, x: 76, y: 106 }
@@ -44,6 +44,6 @@ Ein Beispiel:
 
 ![Drei Raster aus 5×5 Regionen: bei Sonnenaufgang, nach 1 Stunde und nach 2 Stunden. Nebelregionen sind Wolken, Berge sind Dreiecke, Häuser sind kleine Häuser. Mit jeder Stunde breiten sich die Wolken in alle Nachbarregionen aus, nur nicht in Berge](./img/example.png)
 
-![Raster aus 8 Spalten und 7 Zeilen. Wolken: Zeile 1 Spalte 1 und 8, Zeile 2 Spalte 1, Zeile 7 Spalte 1 und 2. Berge: Zeile 1 Spalte 3 und 4; Zeile 3 Spalte 4, 6 und 7; Zeile 4 Spalte 1, 4 und 7; Zeile 5 Spalte 5 und 7; Zeile 6 Spalte 1 und 5; Zeile 7 Spalte 6. Häuser: Zeile 2 Spalte 4, Zeile 4 Spalte 3 und 6, Zeile 5 Spalte 1, Zeile 6 Spalte 8]](./img/map.png)
+![Raster aus 8 Spalten und 7 Zeilen. Wolken: Zeile 1 Spalte 1 und 8, Zeile 2 Spalte 1, Zeile 7 Spalte 1 und 2. Berge: Zeile 1 Spalte 3 und 4; Zeile 3 Spalte 4, 6 und 7; Zeile 4 Spalte 1, 4 und 7; Zeile 5 Spalte 5 und 7; Zeile 6 Spalte 1 und 5; Zeile 7 Spalte 6. Häuser: Zeile 2 Spalte 4, Zeile 4 Spalte 3 und 6, Zeile 5 Spalte 1, Zeile 6 Spalte 8](./img/map.png)
 
 **Welches Haus im Land wird als letztes vom Nebel bedeckt? Tippe das Haus an.**

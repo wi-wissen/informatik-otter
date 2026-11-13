@@ -17,8 +17,8 @@ interaction:
     width: 228
     height: 217
     background: ./img/star.png
-    hideNodes: true
-    nodeRadius: 14
+    nodeImage: ./img/hit.png
+    nodeRadius: 11
     nodes:
       - { id: m1, x: 72, y: 61 }
       - { id: m2, x: 151, y: 61 }
