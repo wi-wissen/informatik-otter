@@ -48,6 +48,4 @@ Sie bemerken, dass die Einheit Z nur dann Ja ist, wenn A Ja und B Nein ist. Das 
 
 Dann bauen Anna und Ben eine größere Maschine (unten im Bild) und sind sicher, dass sie der Konflikt-Detektor sein kann: Z soll nur dann Ja sein, wenn A und B in unterschiedlichen Zuständen sind (Ja und Nein bzw. Nein und Ja). Ansonsten soll Z im Zustand Nein sein. Jetzt müssen nur noch die Kabel richtig eingestellt werden.
 
-![Die größere Maschine: A und B sind jeweils mit beiden Einheiten der mittleren Schicht verbunden (vier Kabel), und beide mittleren Einheiten sind mit Z verbunden (zwei Kabel)](./img/machine.png)
-
 **Stelle für jedes Kabel ein, ob es ein Signal positiv (+) oder negativ (–) übermittelt, damit der Konflikt-Detektor korrekt arbeitet.**

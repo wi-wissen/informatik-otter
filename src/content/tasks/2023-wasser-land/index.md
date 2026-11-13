@@ -41,8 +41,6 @@ Edu hat ein neues Spiel. Das Spiel hat Kärtchen mit Wasser und Land. Edu legt d
 
 Edu legt zwei Kärtchen hin und lässt zwei Lücken.
 
-![Das Spielfeld: oben links und unten rechts liegt je ein Kärtchen, oben rechts und unten links sind Lücken](./img/brett.png)
-
 **Welche Kärtchen passen in die Lücken?**
 
 Ziehe dazu zwei der sechs Kärtchen in die Lücken. Die Kärtchen dürfen nicht gedreht werden.

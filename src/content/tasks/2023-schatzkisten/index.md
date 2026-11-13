@@ -34,8 +34,6 @@ source:
 ---
 Auf einer Insel gibt es drei Schatzkisten: Eine Kiste ist am Fuß des Vulkans, die zweite ist unter einer Palme, und die dritte ist am Strand. Alle Kisten sind leer.
 
-![Die Insel mit Vulkan, Palme und Strand und je einer Schatzkiste](./img/insel.png)
-
 An einem Tag kreuzt der Pirat Biberbart auf, füllt eine der Kisten mit Gold und verschließt sie. Am gleichen Tag sind drei Touristinnen auf der Insel: Anita, Britta und Carla. Jede macht ein Foto: eine, bevor Biberbart Gold in eine Kiste gefüllt hat, die anderen beiden danach.
 
 | Anitas Foto … | Brittas Foto … | Carlas Foto … |
