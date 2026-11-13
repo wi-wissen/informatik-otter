@@ -114,6 +114,7 @@
     "strongly-connected-components": { "label": "Starke Zusammenhangskomponenten", "topic": "graphs" },
     "min-cost-flow": { "label": "Kostenminimaler Fluss", "topic": "graphs" },
     "pareto-optimum": { "label": "Pareto-Optimum", "topic": "optimization" },
+    "minimax": { "label": "Minimax-Verfahren", "topic": "games" },
     "diffusion-model": { "label": "Diffusionsmodell", "topic": "ai" }
   }
 }
