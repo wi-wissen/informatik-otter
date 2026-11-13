@@ -1,13 +1,13 @@
 ---
-answer: b
+answer: ok
 ---
-**Antwort B ist richtig:** Mit den Befehlen N, O, O, S, O steuerst du die Roboter entlang der grünen Linien. Am Ende nehmen sie einen Ball, einen Ring und einen Kegel.
+**Zum Beispiel:** Mit den Befehlen N, O, O, S, O steuerst du die Roboter entlang der grünen Linien. Am Ende nehmen sie einen Ball, einen Ring und einen Kegel.
 
-![Die Wege der drei Roboter für die vier Antworten: grün für B, blau für A, gelb für C und rot für D](./img/solution.png)
+![Die Wege der drei Roboter für vier Befehlsfolgen: grün die richtige, blau, gelb und rot falsche](./img/solution.png)
 
-- Antwort A ist falsch: Mit den Befehlen N, O, O, O steuerst du die Roboter entlang der blauen Linien. Am Ende nehmen sie zwei Ringe und einen Kegel.
-- Antwort C ist falsch: Mit den Befehlen N, N, S, O, N steuerst du die Roboter entlang der gelben Linien. Am Ende nehmen sie zwei Bälle und einen Kegel.
-- Antwort D ist falsch: Mit den Befehlen N, O, O, S, W steuerst du die Roboter entlang der roten Linien. Am Ende nehmen sie zwei Kegel und einen Ring.
+- Nicht richtig: Mit den Befehlen N, O, O, O steuerst du die Roboter entlang der blauen Linien. Am Ende nehmen sie zwei Ringe und einen Kegel.
+- Nicht richtig: Mit den Befehlen N, N, S, O, N steuerst du die Roboter entlang der gelben Linien. Am Ende nehmen sie zwei Bälle und einen Kegel.
+- Nicht richtig: Mit den Befehlen N, O, O, S, W steuerst du die Roboter entlang der roten Linien. Am Ende nehmen sie zwei Kegel und einen Ring.
 
 ## Das ist Informatik!
 

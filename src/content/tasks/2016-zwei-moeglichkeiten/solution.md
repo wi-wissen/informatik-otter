@@ -1,5 +1,14 @@
 ---
-answer: [[1, 0, 1], [1, 1, 0], [1, 1, 0]]
+answer:
+  c00: vollmond
+  c01: neumond
+  c02: vollmond
+  c10: vollmond
+  c11: vollmond
+  c12: neumond
+  c20: vollmond
+  c21: vollmond
+  c22: neumond
 ---
 Die Regel ist: Wenn auf den beiden Eingabekarten im gleichen Feld genau einmal Vollmond vorkommt, dann zeigt das entsprechende Feld der Ausgabekarte das Mondsymbol Vollmond, andernfalls das Mondsymbol Neumond.
 

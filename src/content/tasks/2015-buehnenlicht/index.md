@@ -12,22 +12,24 @@ topics: [encoding, images]
 methods: [binary-numbers]
 mascot: beaver
 interaction:
-  format: match
+  format: place
   props:
-    left:
+    reusable: true
+    trayLabel: Farben
+    zones:
       - { id: m1, label: Minute 1 }
       - { id: m2, label: Minute 2 }
       - { id: m3, label: Minute 3 }
       - { id: m4, label: Minute 4 }
-    right:
-      - { id: schwarz, label: Schwarz }
-      - { id: blau, label: Blau }
-      - { id: gruen, label: Grün }
-      - { id: cyan, label: Cyan }
-      - { id: rot, label: Rot }
-      - { id: magenta, label: Magenta }
-      - { id: gelb, label: Gelb }
-      - { id: weiss, label: Weiß }
+    items:
+      - { id: schwarz, label: Schwarz, image: ./img/c-schwarz.png, alt: Schwarz }
+      - { id: blau, label: Blau, image: ./img/c-blau.png, alt: Blau }
+      - { id: gruen, label: Grün, image: ./img/c-gruen.png, alt: Grün }
+      - { id: cyan, label: Cyan, image: ./img/c-cyan.png, alt: Cyan }
+      - { id: rot, label: Rot, image: ./img/c-rot.png, alt: Rot }
+      - { id: magenta, label: Magenta, image: ./img/c-magenta.png, alt: Magenta }
+      - { id: gelb, label: Gelb, image: ./img/c-gelb.png, alt: Gelb }
+      - { id: weiss, label: Weiß, image: ./img/c-weiss.png, alt: Weiß }
 source:
   type: original
   work: Informatik-Biber 2015
@@ -51,4 +53,4 @@ Sobald die Vorstellung beginnt, wird jeder Scheinwerfer in einem eigenen Rhythmu
 - Der grüne Scheinwerfer strahlt im Rhythmus „eine Minute aus, eine Minute an“.
 - Der blaue Scheinwerfer strahlt im Rhythmus „vier Minuten an, vier Minuten aus“.
 
-**Welche Farben hat das Bühnenlicht in den ersten vier Minuten der Vorstellung?** Ordne jeder Minute die richtige Farbe zu.
+**Welche Farben hat das Bühnenlicht in den ersten vier Minuten der Vorstellung?** Schiebe die richtigen Farben über die Minuten (ziehe sie auf die Felder oder tippe erst die Farbe und dann die Minute an). Eine Farbe kann mehrfach vorkommen.

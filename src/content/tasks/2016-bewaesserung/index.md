@@ -11,18 +11,19 @@ topics: [computer-architecture, logic]
 methods: [boolean-logic]
 mascot: beaver
 interaction:
-  format: graph-pick
+  format: hotspots
   props:
-    pick: nodes
-    width: 154
-    height: 188
     background: ./img/valves.png
-    hideNodes: true
-    nodeRadius: 20
-    nodes:
-      - { id: links, x: 27, y: 172, label: linke Blume }
-      - { id: mitte, x: 79, y: 172, label: mittlere Blume }
-      - { id: rechts, x: 132, y: 172, label: rechte Blume }
+    width: 385
+    height: 470
+    spotSize: 56
+    spots:
+      - { id: links, x: 68, y: 436, label: linke Blume }
+      - { id: mitte, x: 205, y: 436, label: mittlere Blume }
+      - { id: rechts, x: 338, y: 436, label: rechte Blume }
+    states:
+      - { id: trocken, label: bekommt kein Wasser, image: ./img/flower-dry.png }
+      - { id: nass, label: bekommt Wasser, image: ./img/flower-wet.png }
 source:
   type: original
   work: Informatik-Biber 2016
@@ -34,6 +35,6 @@ source:
 ---
 Wenn das Ventil zu ist (der rote Strich liegt quer zum Rohr), fließt kein Wasser. Wenn das Ventil offen ist (der rote Strich liegt längs im Rohr), fließt Wasser durch.
 
-**Welche der drei durstigen Blumen bekommen Wasser bei dieser Stellung der Ventile?** Klicke auf die Blumen!
+Blumen, die Wasser bekommen, sollen rosa aussehen. Blumen, die kein Wasser bekommen, sollen violett aussehen.
 
-![Zwei gefüllte Wasserbehälter und ein leerer oben, darunter Rohre mit Ventilen, die zu drei Blumen führen](./img/valves.png)
+**Welche der drei durstigen Blumen bekommen Wasser bei dieser Stellung der Ventile?** Klicke auf die Blumen! Im Bild sieht man zwei gefüllte Wasserbehälter und einen leeren Behälter oben, darunter Rohre mit Ventilen, die zu den drei Blumen führen.

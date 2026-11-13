@@ -12,11 +12,20 @@ topics: [formal-languages]
 methods: [rewriting-system]
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: place
   props:
-    rows: 3
-    cols: 1
-    palette: ["#d8d8d8", "#e53a26", "#1f4fe0"]
+    reusable: true
+    trayLabel: Farben
+    background: ./img/tube.png
+    width: 480
+    height: 300
+    zones:
+      - { id: oben, label: oben, x: 210, y: 25, w: 60, h: 60 }
+      - { id: mitte, label: Mitte, x: 210, y: 120, w: 60, h: 60 }
+      - { id: unten, label: unten, x: 210, y: 215, w: 60, h: 60 }
+    items:
+      - { id: rot, image: ./img/ball-red.png, alt: rote Kugel }
+      - { id: blau, image: ./img/ball-blue.png, alt: blaue Kugel }
 source:
   type: original
   work: Informatik-Biber 2016
@@ -40,4 +49,4 @@ Ein Beispiel: Wenn Emil mit dieser Kugelfolge beginnt, bleiben nach fünf Klicks
 
 Emil findet heraus, dass es zu Spielbeginn Kugelfolgen geben kann, so dass das Spiel niemals endet, egal wie oft er klickt. Er nennt solche Kugelfolgen „Endlos-Folgen“.
 
-**Bilde eine Endlos-Folge aus drei Kugeln.** Wähle eine Farbe und klicke auf die drei Kugelplätze (oben, Mitte, unten).
+**Bilde eine Endlos-Folge aus drei Kugeln.** Ziehe dazu von rechts passende Farben auf die drei Kugelplätze (oben, Mitte, unten).

@@ -1,5 +1,5 @@
 ---
-answer: "3"
+answer: [g3]
 ---
 Die Maus muss in **Gang 3** hineinlaufen, damit sie zum Käse kommt. Die grüne Linie zeigt, wie sie läuft.
 

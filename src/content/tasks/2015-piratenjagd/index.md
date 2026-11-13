@@ -12,13 +12,8 @@ topics: [games, graphs]
 methods: [minimax]
 mascot: beaver
 interaction:
-  format: choice
-  props:
-    options:
-      - { id: a, label: Die Polizei kann in 2 Zügen gewinnen. }
-      - { id: b, label: Die Polizei kann in 3 Zügen gewinnen. }
-      - { id: c, label: Die Polizei kann in 5 Zügen gewinnen. }
-      - { id: d, label: Die Polizei hat keine Chance zu gewinnen. }
+  format: custom
+  props: {}
 source:
   type: original
   work: Informatik-Biber 2015
@@ -36,4 +31,4 @@ Das Spiel beginnt in der abgebildeten Situation – aber die Polizei ist am Zug.
 
 ![Sieben Felder im Kreis: Der Pirat steht oben, ein Polizist links und ein Polizist rechts, jeweils zwei Felder vom Piraten entfernt. Die drei anderen Felder sind frei.](./img/board.png)
 
-**Wenn der Pirat keine Fehler macht, hat dann die Polizei eine Chance zu gewinnen? Wenn ja, nach wie vielen Zügen?**
+**Wenn der Pirat keine Fehler macht, hat dann die Polizei eine Chance zu gewinnen? Wenn ja, nach wie vielen Zügen?** Du kannst selbst Züge machen, um die Möglichkeiten zu probieren.

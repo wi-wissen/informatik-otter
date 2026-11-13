@@ -1,9 +1,9 @@
 ---
 answers:
-  - [[1], [1], [2]]
-  - [[1], [2], [2]]
-  - [[2], [1], [2]]
-  - [[2], [2], [2]]
+  - { oben: rot, mitte: rot, unten: blau }
+  - { oben: rot, mitte: blau, unten: blau }
+  - { oben: blau, mitte: rot, unten: blau }
+  - { oben: blau, mitte: blau, unten: blau }
 ---
 Wenn die unterste Kugel einer Dreierfolge rot ist, endet das Spiel schon nach dem ersten Klick: Dann sind nur noch zwei Kugeln in der Röhre.
 

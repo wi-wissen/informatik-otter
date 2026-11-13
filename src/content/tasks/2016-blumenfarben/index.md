@@ -13,15 +13,19 @@ topics: [logic]
 methods: [constraint-satisfaction]
 mascot: beaver
 interaction:
-  format: match
+  format: hotspots
   props:
-    left:
-      - { id: zweite, label: zweite Blume von links }
-      - { id: vierte, label: vierte Blume von links }
-    right:
-      - { id: pink, label: pink }
+    background: ./img/second.png
+    width: 640
+    height: 230
+    spots:
+      - { id: f2, x: 199, y: 207, w: 110, h: 36, label: zweite Blume von links }
+      - { id: f4, x: 451, y: 207, w: 110, h: 36, label: zweite Blume von rechts }
+    states:
+      - { id: "?", label: "?" }
       - { id: blau, label: blau }
       - { id: orange, label: orange }
+      - { id: pink, label: pink }
 source:
   type: original
   work: Informatik-Biber 2016
@@ -37,8 +41,6 @@ Jana rät zuerst die Farben so: orange, pink, blau, orange und orange. Sie hat z
 
 ![Die fünf Blumen mit Janas Tipps orange, pink, blau, orange, orange; nur die dritte (blau) und die fünfte (orange) sind aufgegangen](./img/first.png)
 
-Für die falschen Blumen rät sie andere Farben. Nun ist noch eine Blume richtig:
+Für die falschen Blumen rät sie andere Farben. Nun ist noch eine Blume richtig: Die erste Blume (pink) geht auf. Die zweite und die vierte Blume (Tipps: orange und blau) bleiben geschlossen; die dritte (blau) und die fünfte (orange) sind schon offen.
 
-![Janas zweite Tipps von links: pink (die erste Blume geht auf), orange (geschlossen), blau (offen), blau (geschlossen), orange (offen)](./img/second.png)
-
-**Rate die Farben der beiden anderen Blumen.**
+**Rate die Farben der beiden anderen Blumen.** Klicke unter den beiden geschlossenen Blumen, bis die richtige Farbe dort steht.

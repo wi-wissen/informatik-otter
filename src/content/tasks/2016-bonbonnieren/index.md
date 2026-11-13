@@ -12,16 +12,21 @@ topics: [databases, modelling]
 methods: [database-query]
 mascot: beaver
 interaction:
-  format: choice
+  format: graph-pick
   props:
-    columns: 6
-    options:
-      - { id: a, label: A }
-      - { id: b, label: B }
-      - { id: c, label: C }
-      - { id: d, label: D }
-      - { id: e, label: E }
-      - { id: f, label: F }
+    pick: nodes
+    width: 1062
+    height: 310
+    background: ./img/jars.png
+    hideNodes: true
+    nodeRadius: 68
+    nodes:
+      - { id: a, x: 88, y: 160, label: Bonbonniere A }
+      - { id: b, x: 250, y: 170, label: Bonbonniere B }
+      - { id: c, x: 420, y: 160, label: Bonbonniere C }
+      - { id: d, x: 655, y: 170, label: Bonbonniere D }
+      - { id: e, x: 815, y: 160, label: Bonbonniere E }
+      - { id: f, x: 975, y: 170, label: Bonbonniere F }
 source:
   type: original
   work: Informatik-Biber 2016

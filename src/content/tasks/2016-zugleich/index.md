@@ -12,13 +12,8 @@ topics: [parallelism]
 methods: [sequence]
 mascot: beaver
 interaction:
-  format: choice
-  props:
-    options:
-      - { id: a, label: "A) N, O, O, O" }
-      - { id: b, label: "B) N, O, O, S, O" }
-      - { id: c, label: "C) N, N, S, O, N" }
-      - { id: d, label: "D) N, O, O, S, W" }
+  format: custom
+  props: {}
 source:
   type: original
   work: Informatik-Biber 2016
@@ -34,8 +29,6 @@ Du sollst die Roboter zu den Dingen steuern, die sie am Ende nehmen sollen. Dami
 
 Ein Beispiel: Du steuerst die Roboter mit diesen Befehlen: N, N, S, S, O. Dann nehmen die Roboter am Ende zwei Kegel und einen Ring.
 
-![Ein Spielfeld mit sechs Spalten und sechs Zeilen. Es enthält drei Roboter (zwei in Spalte 3, einer unten links), Bälle, Ringe und Kegel](./img/board.png)
-
 Die Roboter sollen einen Ball, einen Ring und einen Kegel nehmen.
 
-**Mit welchen Befehlen musst du sie steuern?**
+**Mit welchen Befehlen musst du sie steuern?** Tippe die Befehle an; die Roboter laufen sofort mit. Das Feld hat sechs Spalten und sechs Zeilen; die Roboter stehen am Anfang in Zeile 3 (Spalte 3), Zeile 5 (Spalte 3) und Zeile 6 (Spalte 1). Ein Befehl, der aus dem Feld hinausführen würde, wird übersprungen.
