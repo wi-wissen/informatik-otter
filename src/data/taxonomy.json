@@ -379,6 +379,18 @@
     "game-tree": {
       "label": "Spielbaum",
       "topic": "games"
+    },
+    "gnome-sort": {
+      "label": "Gnomesort",
+      "topic": "sorting"
+    },
+    "linked-list": {
+      "label": "Verkettete Liste",
+      "topic": "data-structures"
+    },
+    "deque": {
+      "label": "Deque (Warteschlange mit zwei Enden)",
+      "topic": "data-structures"
     }
   }
 }
