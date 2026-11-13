@@ -111,6 +111,7 @@
     "game-tree": { "label": "Spielbaum", "topic": "games" },
     "linked-list": { "label": "Verkettete Liste", "topic": "data-structures" },
     "hashing": { "label": "Hashing", "topic": "data-structures" },
+    "deque": { "label": "Deque (Warteschlange mit zwei Enden)", "topic": "data-structures" },
     "routing": { "label": "Routing", "topic": "networks" }
   }
 }
