@@ -107,6 +107,7 @@
     "regular-expression": { "label": "Regulärer Ausdruck", "topic": "formal-languages" },
     "neural-network": { "label": "Neuronales Netz", "topic": "ai" },
     "instruction-set": { "label": "Befehlssatz", "topic": "computer-architecture" },
-    "routing": { "label": "Routing", "topic": "networks" }
+    "routing": { "label": "Routing", "topic": "networks" },
+    "game-tree": { "label": "Spielbaum", "topic": "games" }
   }
 }
