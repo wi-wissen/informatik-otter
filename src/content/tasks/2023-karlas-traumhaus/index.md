@@ -18,9 +18,10 @@ interaction:
     pick: nodes
     width: 143
     height: 142
-    nodeRadius: 7
+    nodeRadius: 5
     background: ./img/haeuser.png
-    hideNodes: true
+    hideNodes: false
+    nodeImage: ./img/pick.png
     nodes:
       - { id: h1, x: 13, y: 10 }
       - { id: h2, x: 47, y: 71 }

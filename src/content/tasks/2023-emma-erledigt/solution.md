@@ -1,7 +1,7 @@
 ---
 answers:
-  - [H, S, A, S, C, B, K, B, M, H]
-  - [H, M, B, K, B, C, S, A, S, H]
+  - [zuhause, schule, apotheke, schule, rathaus, baeckerei, kiosk, baeckerei, markt, zuhause]
+  - [zuhause, markt, baeckerei, kiosk, baeckerei, rathaus, schule, apotheke, schule, zuhause]
 ---
 Emma kann so entlang der ausgewählten Strecken gehen (oder in die Gegenrichtung):
 

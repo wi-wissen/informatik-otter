@@ -18,9 +18,10 @@ interaction:
     pick: nodes
     width: 345
     height: 199
-    nodeRadius: 20
+    nodeRadius: 14
     background: ./img/brett.png
-    hideNodes: true
+    hideNodes: false
+    nodeImage: ./img/pick.png
     nodes:
       - { id: A1, x: 26, y: 26 }
       - { id: B1, x: 75, y: 26 }

@@ -19,30 +19,31 @@ interaction:
     height: 210
     background: ./img/map.png
     hideNodes: false
-    nodeRadius: 9
+    nodeImage: ./img/pick.png
+    nodeRadius: 14
     nodes:
-      - { id: H, x: 173, y: 179, label: Zuhause }
-      - { id: C, x: 151, y: 95, label: Rathaus }
-      - { id: P, x: 157, y: 17, label: Park }
-      - { id: K, x: 40, y: 34, label: Kiosk }
-      - { id: B, x: 24, y: 105, label: Bäckerei }
-      - { id: M, x: 82, y: 145, label: Markt }
-      - { id: S, x: 262, y: 129, label: Schule }
-      - { id: A, x: 256, y: 62, label: Apotheke }
+      - { id: zuhause, x: 173, y: 179 }
+      - { id: rathaus, x: 151, y: 95 }
+      - { id: park, x: 157, y: 17 }
+      - { id: kiosk, x: 40, y: 34 }
+      - { id: baeckerei, x: 24, y: 105 }
+      - { id: markt, x: 82, y: 145 }
+      - { id: schule, x: 262, y: 129 }
+      - { id: apotheke, x: 256, y: 62 }
     edges:
-      - { from: K, to: B }
-      - { from: K, to: P }
-      - { from: P, to: A }
-      - { from: P, to: C }
-      - { from: C, to: A }
-      - { from: C, to: S }
-      - { from: A, to: S }
-      - { from: C, to: B }
-      - { from: C, to: M }
-      - { from: C, to: H }
-      - { from: B, to: M }
-      - { from: M, to: H }
-      - { from: H, to: S }
+      - { from: kiosk, to: baeckerei }
+      - { from: kiosk, to: park }
+      - { from: park, to: apotheke }
+      - { from: park, to: rathaus }
+      - { from: rathaus, to: apotheke }
+      - { from: rathaus, to: schule }
+      - { from: apotheke, to: schule }
+      - { from: rathaus, to: baeckerei }
+      - { from: rathaus, to: markt }
+      - { from: rathaus, to: zuhause }
+      - { from: baeckerei, to: markt }
+      - { from: markt, to: zuhause }
+      - { from: zuhause, to: schule }
 source:
   type: original
   work: Informatik-Biber 2023

@@ -17,14 +17,15 @@ interaction:
     pick: nodes
     width: 296
     height: 38
-    nodeRadius: 16
+    nodeRadius: 12
     background: ./img/huegel.png
-    hideNodes: true
+    hideNodes: false
+    nodeImage: ./img/pick.png
     nodes:
-      - { id: A, x: 36, y: 22, label: A }
-      - { id: B, x: 114, y: 22, label: B }
-      - { id: C, x: 192, y: 22, label: C }
-      - { id: D, x: 270, y: 22, label: D }
+      - { id: A, x: 36, y: 19 }
+      - { id: B, x: 114, y: 19 }
+      - { id: C, x: 192, y: 19 }
+      - { id: D, x: 270, y: 19 }
 source:
   type: original
   work: Informatik-Biber 2023

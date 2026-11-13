@@ -17,9 +17,10 @@ interaction:
     pick: nodes
     width: 394
     height: 247
-    nodeRadius: 11
+    nodeRadius: 9
     background: ./img/map.png
-    hideNodes: true
+    hideNodes: false
+    nodeImage: ./img/pick.png
     nodes:
       - { id: n1, x: 109, y: 12 }
       - { id: n2, x: 194, y: 16 }
