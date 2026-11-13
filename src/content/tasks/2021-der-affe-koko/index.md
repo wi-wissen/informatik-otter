@@ -9,7 +9,7 @@ gi:
   content: [information-data, algorithms]
   process: [modelling]
 topics: [graphs]
-methods: []
+methods: [bfs, dfs]
 mascot: beaver
 interaction:
   format: graph-pick

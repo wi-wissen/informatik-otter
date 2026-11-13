@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [reasoning]
 topics: [sorting, algorithm-analysis]
-methods: [insertion-sort]
+methods: [insertion-sort, gnome-sort]
 mascot: beaver
 interaction:
   format: choice
