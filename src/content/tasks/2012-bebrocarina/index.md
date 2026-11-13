@@ -1,7 +1,7 @@
 ---
 short: 4Q7S
 title: Bebrocarina
-summary: Eine Okarina mit nur sechs Tönen: Welche Melodie lässt sich darauf nicht spielen?
+summary: "Eine Okarina mit nur sechs Tönen: Welche Melodie lässt sich darauf nicht spielen?"
 grades:
   "7-8": hard
   "9-10": medium

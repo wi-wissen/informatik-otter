@@ -1,7 +1,7 @@
 ---
 short: Ky1o
 title: Bibers Geheimcode
-summary: Biber und Hase verschlüsseln ihre Nachrichten: Vokale bleiben, Konsonanten rücken weiter. Wie lautet „HALB ACHT IM WALD“?
+summary: "Biber und Hase verschlüsseln ihre Nachrichten: Vokale bleiben, Konsonanten rücken weiter. Wie lautet „HALB ACHT IM WALD“?"
 grades:
   "5-6": easy
   "7-8": easy
