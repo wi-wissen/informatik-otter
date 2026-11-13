@@ -19,7 +19,7 @@ interaction:
     width: 311
     height: 234
     background: ./img/mills.png
-    nodeImage: ./img/none.png
+    hideNodes: true
     nodeRadius: 12
     nodes:
       - { id: A, x: 15, y: 45 }
@@ -46,4 +46,4 @@ Bei drei Mühlen muss der Müller noch das Mühlrad einbauen. Zu diesen Mühlen 
 
 Im Bild haben die braune, die blaue und die rote Mühle schon ein Mühlrad; bei der grünen, der gelben und der violetten Mühle fehlt es noch.
 
-**Welche Sperren soll der Müller schließen? Tippe die Sperren im Bild an.**
+**Welche Sperren soll der Müller schließen?**

@@ -13,19 +13,23 @@ topics: [logic, computer-architecture]
 methods: [boolean-logic, xor]
 mascot: beaver
 interaction:
-  format: choice
+  format: hotspots
   props:
-    multiple: true
-    columns: 4
-    options:
-      - { id: a, label: Schalter A }
-      - { id: b, label: Schalter B }
-      - { id: c, label: Schalter C }
-      - { id: d, label: Schalter D }
-      - { id: e, label: Schalter E }
-      - { id: f, label: Schalter F }
-      - { id: g, label: Schalter G }
-      - { id: h, label: Schalter H }
+    background: ./img/circuit.png
+    width: 885
+    height: 501
+    spots:
+      - { id: a, x: 45, y: 30, w: 78, h: 40, label: "Schalter A" }
+      - { id: b, x: 45, y: 92, w: 78, h: 40, label: "Schalter B" }
+      - { id: c, x: 45, y: 155, w: 78, h: 40, label: "Schalter C" }
+      - { id: d, x: 45, y: 217, w: 78, h: 40, label: "Schalter D" }
+      - { id: e, x: 45, y: 282, w: 78, h: 40, label: "Schalter E" }
+      - { id: f, x: 45, y: 344, w: 78, h: 40, label: "Schalter F" }
+      - { id: g, x: 45, y: 407, w: 78, h: 40, label: "Schalter G" }
+      - { id: h, x: 45, y: 470, w: 78, h: 40, label: "Schalter H" }
+    states:
+      - { id: off, label: aus }
+      - { id: on, label: an }
 source:
   type: original
   work: Informatik-Biber 2022
@@ -45,6 +49,4 @@ Von den Schaltern aus gehen Drähte zu Bauteilen, von diesen wieder zu anderen B
 
 Das Leuchtschild leuchtet, wenn sein Eingangsdraht Strom hat.
 
-![Schaltplan: Schalter A und B führen in ein gelbes Bauteil, C und D in ein blaues; deren Ausgänge führen in ein gelbes Bauteil. E und F führen in ein gelbes Bauteil, G und H in ein blaues; deren Ausgänge führen in ein blaues Bauteil. Die Ausgänge der beiden mittleren Bauteile führen in ein gelbes Bauteil und von dort zum Leuchtschild](./img/circuit.png)
-
-**Stelle die Schalter so, dass das Leuchtschild leuchtet.** Wähle dazu alle Schalter aus, die an sein sollen.
+**Stelle die Schalter so, dass das Leuchtschild leuchtet.**

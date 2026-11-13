@@ -11,11 +11,18 @@ topics: [data-structures]
 methods: [stack]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: vertical
-    startLabel: oben im Spender
-    endLabel: unten im Spender
+    background: ./img/dispenser-board.png
+    width: 330
+    height: 458
+    trayLabel: Die fünf Bonbons
+    zones:
+      - { id: s1, label: "Platz 1 von oben", x: 110, y: 138, w: 76, h: 50 }
+      - { id: s2, label: "Platz 2 von oben", x: 110, y: 188, w: 76, h: 50 }
+      - { id: s3, label: "Platz 3 von oben", x: 110, y: 238, w: 76, h: 50 }
+      - { id: s4, label: "Platz 4 von oben", x: 110, y: 288, w: 76, h: 50 }
+      - { id: s5, label: "Platz 5 von oben", x: 110, y: 338, w: 76, h: 50 }
     items:
       - { id: c2, image: ./img/candy-2.png, alt: Bonbon 2 (rot mit Kirsche) }
       - { id: c3, image: ./img/candy-3.png, alt: Bonbon 3 (gelb mit Ananas) }
@@ -35,6 +42,5 @@ Anna füllt fünf Bonbons in einen Spender. Danach isst sie die Bonbons so nache
 
 ![Die fünf Bonbons in der Reihenfolge, in der Anna sie essen möchte: 1 grün mit Birne, 2 rot mit Kirsche, 3 gelb mit Ananas, 4 lila mit Trauben, 5 orange mit Apfel](./img/order.png)
 
-![Der Spender: ein langes, schmales Rohr mit einem Biberkopf oben, aus dem die Bonbons herauskommen, und einer Feder unten](./img/dispenser.png)
-
-**Wie muss Anna die Bonbons in den Spender füllen?** Bringe die Bonbons in die Reihenfolge, in der sie im Spender von oben nach unten liegen müssen.
+**Wie muss Anna die Bonbons in den Spender füllen?**
+Ziehe die Bonbons richtig in den Spender.

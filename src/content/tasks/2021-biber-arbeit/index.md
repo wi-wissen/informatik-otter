@@ -14,14 +14,14 @@ interaction:
   format: custom
   props:
     jobs:
-      - { id: A, hours: 2, after: [] }
-      - { id: B, hours: 3, after: [] }
-      - { id: C, hours: 5, after: [] }
-      - { id: D, hours: 7, after: [] }
-      - { id: E, hours: 10, after: [A, B] }
-      - { id: F, hours: 9, after: [C] }
-      - { id: G, hours: 4, after: [D] }
-      - { id: H, hours: 6, after: [E] }
+      - { id: A, hours: 2, after: [], color: "#477fff" }
+      - { id: B, hours: 3, after: [], color: "#9ef552" }
+      - { id: C, hours: 5, after: [], color: "#73cce5" }
+      - { id: D, hours: 7, after: [], color: "#269ea3" }
+      - { id: E, hours: 10, after: [A, B], color: "#d9ed78" }
+      - { id: F, hours: 9, after: [C], color: "#e3bd45" }
+      - { id: G, hours: 4, after: [D], color: "#52f5b0" }
+      - { id: H, hours: 6, after: [E], color: "#21cca1" }
 source:
   type: original
   work: Informatik-Biber 2021
@@ -37,8 +37,10 @@ Die Biber machen sich erstmal ein Bild. Für jede Aufgabe gibt es einen Buchstab
 
 ![Abhängigkeitsgraph: A(2), B(3), C(5), D(7) beginnen sofort; A und B führen zu E(10), E zu H(6); C führt zu F(9); D führt zu G(4); H, F und G führen zu Fertig](./img/graph.png)
 
-Die Biber können gleichzeitig arbeiten, aber an unterschiedlichen Aufgaben. Ein möglicher Arbeitsplan: Biber 1 macht D, G, B, A, dann (nach einer Pause) H; Biber 2 macht C, F, dann (nach einer Pause) E. Damit wird der Damm in 32 Stunden fertig. Es geht aber schneller!
+Die Biber können gleichzeitig arbeiten, aber an unterschiedlichen Aufgaben. Hier ist ihr Arbeitsplan. Damit wird der Damm in 32 Stunden fertig. Es geht aber schneller!
+
+![Arbeitsplan der beiden Biber über 32 Stunden: Biber 1 macht D, G, B, A (mit Pause) und H; Biber 2 macht C, F (mit Pause) und E](./img/plan32.png)
 
 **Erstelle einen Arbeitsplan, mit dem der Damm so schnell wie möglich fertig wird!**
 
-Wähle dazu für jede Aufgabe einen Biber. Jeder Biber erledigt seine Aufgaben in der Reihenfolge, in der du sie gewählt hast. Aufgaben, die noch auf andere warten müssen, beginnt er erst, wenn deren Vorgänger fertig sind. Wenn du mit dem Plan noch nicht zufrieden bist, nimm Aufgaben wieder aus dem Plan heraus.
+Ziehe dazu die Aufgaben nach unten in den Plan. Aufgaben, die noch nicht begonnen werden können, sind grau gefärbt. Wenn du mit dem Plan noch nicht zufrieden bist, ziehe Aufgaben zurück nach oben.
