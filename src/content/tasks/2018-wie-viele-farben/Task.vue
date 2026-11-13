@@ -122,7 +122,7 @@ function report() { emit('answer', guess.value.trim()); }
       <span v-if="showCross" class="cross" :style="{ left: cross.x * 100 + '%', top: cross.y * 100 + '%' }" aria-hidden="true" />
     </div>
     <p class="info">Gewählte Farbe: {{ swatches[picked].label }} · Verwendete Farben im Bild: {{ colours }}</p>
-    <label class="ans">Deine Antwort: Es genügen … Farben.
+    <label class="ans">Anzahl der Farben:
       <input v-model="guess" type="text" inputmode="numeric" autocomplete="off" @input="report" />
     </label>
   </div>

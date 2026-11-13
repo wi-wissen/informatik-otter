@@ -45,11 +45,11 @@ function reset() { cuts.value = new Set(); report(); }
 <style scoped>
 .code { display: grid; gap: 10px; justify-items: start; }
 .row { display: flex; align-items: stretch; flex-wrap: wrap; row-gap: 8px; padding: 8px 4px; background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; max-width: 100%; }
-.digit { font: 600 2rem/1 var(--font-mono); padding: 8px 2px; min-width: 1.1ch; text-align: center; }
-.gap { width: 22px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+.digit { font: 600 1.6rem/1 var(--font-mono); padding: 8px 2px; min-width: 1.1ch; text-align: center; }
+.gap { width: 16px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
 .bar { width: 0; height: 100%; border-left: 2px dotted var(--line); transition: border .1s; }
 .gap:hover .bar, .gap:focus-visible .bar { border-left: 3px solid var(--primary); }
-.gap.cut { width: 30px; }
+.gap.cut { width: 22px; }
 .gap.cut .bar { border-left: 4px solid var(--primary); }
 .gap:focus-visible { outline: 3px solid var(--sun); border-radius: 6px; }
 .parts { margin: 0; font-size: .95rem; }

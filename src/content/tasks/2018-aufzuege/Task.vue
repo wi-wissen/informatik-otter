@@ -43,7 +43,11 @@ function move(id: string, to: Place) {
   report();
 }
 function tapTarget(p: Place) { if (selected.value) move(selected.value, p); }
-function tapBeaver(id: string) { selected.value = selected.value === id ? null : id; }
+// a tap on a beaver while another one is selected moves the selected one to this beaver's place
+function tapBeaver(id: string) {
+  if (selected.value && selected.value !== id) move(selected.value, where.value[id]);
+  else selected.value = selected.value === id ? null : id;
+}
 function dragStart(e: DragEvent, id: string) { e.dataTransfer?.setData('text/plain', id); selected.value = id; }
 function drop(e: DragEvent, p: Place) {
   e.preventDefault();

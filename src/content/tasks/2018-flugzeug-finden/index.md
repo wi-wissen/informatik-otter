@@ -15,10 +15,10 @@ interaction:
   props:
     columns: 1
     options:
-      - { id: a, image: ./img/option-a.png, alt: "Code A: links = X, rechts = X O, vor = X O O X, zurück = O X O" }
-      - { id: b, image: ./img/option-b.png, alt: "Code B: links = O, rechts = X, vor = O X, zurück = X O" }
-      - { id: c, image: ./img/option-c.png, alt: "Code C: links = X O O, rechts = X O O O, vor = X, zurück = X O" }
-      - { id: d, image: ./img/option-d.png, alt: "Code D: links = X O O, rechts = O X, vor = X O O X, zurück = X" }
+      - { id: a, label: "links = X · rechts = X O · vor = X O O X · zurück = O X O" }
+      - { id: b, label: "links = O · rechts = X · vor = O X · zurück = X O" }
+      - { id: c, label: "links = X O O · rechts = X O O O · vor = X · zurück = X O" }
+      - { id: d, label: "links = X O O · rechts = O X · vor = X O O X · zurück = X" }
 source:
   type: original
   work: Informatik-Biber 2018

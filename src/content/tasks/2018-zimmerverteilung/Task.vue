@@ -34,7 +34,11 @@ function report() {
 onMounted(report);
 function move(id: string, to: Spot) { where.value = { ...where.value, [id]: to }; selected.value = null; report(); }
 function tapTarget(s: Spot) { if (selected.value) move(selected.value, s); }
-function tapCard(id: string) { selected.value = selected.value === id ? null : id; }
+// a tap on a card while another one is selected moves the selected one to this card's place
+function tapCard(id: string) {
+  if (selected.value && selected.value !== id) move(selected.value, where.value[id]);
+  else selected.value = selected.value === id ? null : id;
+}
 function dragStart(e: DragEvent, id: string) { e.dataTransfer?.setData('text/plain', id); selected.value = id; }
 function drop(e: DragEvent, s: Spot) {
   e.preventDefault();
@@ -74,14 +78,14 @@ function drop(e: DragEvent, s: Spot) {
 <style scoped>
 .rooms { display: grid; gap: 12px; }
 .tray { display: flex; flex-wrap: wrap; gap: 8px; min-height: 84px; padding: 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
 .room { min-height: 150px; padding: 8px; border: 2px solid #8cc56a; border-radius: 10px; background: var(--sunk); cursor: pointer; }
 .room.target { border-color: var(--sun); }
 .room:focus-visible { outline: 3px solid var(--sun); }
 .room h4 { margin: 0 0 6px; font-size: .95rem; }
 .in { display: grid; gap: 6px; }
-.card { display: grid; gap: 0; text-align: left; min-width: 112px; padding: 5px 9px; border: 2px solid transparent; border-radius: 6px; background: #ffeb3b; color: #10313a; font: inherit; font-size: .9rem; line-height: 1.3; cursor: grab; }
+.card { display: grid; gap: 0; text-align: left; min-width: 0; padding: 5px 9px; border: 2px solid transparent; border-radius: 6px; background: #ffeb3b; color: #10313a; font: inherit; font-size: .9rem; line-height: 1.3; cursor: grab; }
 .card b { font-size: 1rem; border-bottom: 1px solid #10313a55; margin-bottom: 2px; }
 .card.sel { border-color: #10313a; box-shadow: 0 0 0 3px var(--sun); }
 .card.bad { border-color: var(--bad); }
