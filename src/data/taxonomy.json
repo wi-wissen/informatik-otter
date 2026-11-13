@@ -423,6 +423,10 @@
     "constraint-satisfaction": {
       "label": "Constraint-Satisfaction",
       "topic": "logic"
+    },
+    "josephus-problem": {
+      "label": "Josephus-Problem (Abzählen)",
+      "topic": "algorithm-analysis"
     }
   }
 }
