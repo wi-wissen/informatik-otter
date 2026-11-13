@@ -415,6 +415,14 @@
     "variable-assignment": {
       "label": "Variable und Zuweisung",
       "topic": "modelling"
+    },
+    "knapsack": {
+      "label": "Rucksackproblem",
+      "topic": "optimization"
+    },
+    "constraint-satisfaction": {
+      "label": "Constraint-Satisfaction",
+      "topic": "logic"
     }
   }
 }
