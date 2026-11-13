@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import TaskView from '../../components/TaskView.astro';
 import ShareBox from '../../components/ShareBox.astro';
-import { getTasks, label, formatLabel } from '../../lib/tasks';
+import { getTasks, label, formatLabel, sourceNote } from '../../lib/tasks';
 
 export async function getStaticPaths() {
   return (await getTasks()).map((task) => ({ params: { id: task.id }, props: { task } }));
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { task } = Astro.props;
 const d = task.data;
 ---
-<Base title={d.title} description={d.summary}>
+<Base title={d.title} description={d.summary} footerSource={sourceNote(task)} footerSourceHref={d.source.url}>
   <div class="in layout">
     <div class="main"><TaskView task={task} /></div>
     <aside>
@@ -20,12 +20,6 @@ const d = task.data;
         <dt>GI-Inhaltsbereich</dt><dd>{d.gi.content.map((c) => <span class="chip outline">{label.giContent(c)}</span>)}</dd>
         {d.gi.process.length > 0 && <><dt>GI-Prozessbereich</dt><dd>{d.gi.process.map((p) => <span class="chip outline">{label.giProcess(p)}</span>)}</dd></>}
         <dt>Format</dt><dd><span class="chip outline">{formatLabel[d.interaction.format]}</span></dd>
-        <dt>Quelle</dt><dd class="src">
-          {d.source.type === 'synthetic' ? <span class="chip otter">Otter-Variante</span> : null}
-          {d.source.url ? <a href={d.source.url} rel="noopener">{d.source.work}</a> : d.source.work}{d.source.page && `, S. ${d.source.page}`}
-          {d.source.bebras_id && <span class="muted"> · Bebras {d.source.bebras_id}</span>}
-          <span class="muted"> · {d.source.license}</span>
-        </dd>
       </dl>
       <ShareBox short={d.short} title={d.title} />
     </aside>
