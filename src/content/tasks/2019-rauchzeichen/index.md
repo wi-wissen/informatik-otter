@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [reasoning, representing]
 topics: [error-detection, encoding]
-methods: []
+methods: [hamming-code]
 mascot: beaver
 interaction:
   format: choice

@@ -10,7 +10,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, optimization]
-methods: []
+methods: [dominating-set]
 mascot: beaver
 interaction:
   format: graph-pick

@@ -8,7 +8,7 @@ gi:
   content: [information-data]
   process: [modelling, representing]
 topics: [compression, trees, images]
-methods: []
+methods: [quadtree, divide-and-conquer]
 mascot: beaver
 interaction:
   format: choice

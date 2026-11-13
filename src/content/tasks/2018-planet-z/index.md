@@ -9,7 +9,7 @@ gi:
   content: [languages-automata]
   process: [modelling, reasoning]
 topics: [formal-languages]
-methods: []
+methods: [context-free-grammar]
 mascot: beaver
 interaction:
   format: choice

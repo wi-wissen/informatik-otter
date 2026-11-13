@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [graphs, optimization]
-methods: []
+methods: [kruskal]
 mascot: beaver
 interaction:
   format: input

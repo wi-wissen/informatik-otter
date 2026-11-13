@@ -10,7 +10,7 @@ gi:
   content: [information-data]
   process: [reasoning, modelling]
 topics: [compression, logic]
-methods: []
+methods: [constraint-satisfaction]
 mascot: beaver
 interaction:
   format: pixel-grid

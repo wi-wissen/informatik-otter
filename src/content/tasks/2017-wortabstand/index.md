@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [modelling, reasoning]
 topics: [algorithm-analysis, encoding]
-methods: []
+methods: [edit-distance]
 mascot: beaver
 interaction:
   format: input

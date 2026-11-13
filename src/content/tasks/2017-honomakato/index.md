@@ -10,7 +10,7 @@ gi:
   content: [information-data, algorithms]
   process: [modelling, reasoning]
 topics: [graphs, networks]
-methods: []
+methods: [graph-connectivity]
 mascot: beaver
 interaction:
   format: graph-pick

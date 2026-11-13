@@ -9,7 +9,7 @@ gi:
   content: [information-data]
   process: [modelling, representing]
 topics: [searching, modelling]
-methods: []
+methods: [pattern-matching]
 mascot: beaver
 interaction:
   format: pixel-grid

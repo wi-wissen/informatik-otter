@@ -9,7 +9,7 @@ gi:
   content: [algorithms]
   process: [reasoning, modelling]
 topics: [games, algorithm-analysis]
-methods: []
+methods: [winning-strategy]
 mascot: beaver
 interaction:
   format: choice

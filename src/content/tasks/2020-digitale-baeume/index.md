@@ -8,7 +8,7 @@ gi:
   content: [languages-automata]
   process: [modelling, reasoning]
 topics: [formal-languages, recursion]
-methods: []
+methods: [rewriting-system, recursion]
 mascot: beaver
 interaction:
   format: choice

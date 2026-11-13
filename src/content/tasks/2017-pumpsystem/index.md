@@ -8,7 +8,7 @@ gi:
   content: [algorithms]
   process: [reasoning]
 topics: [algorithm-analysis, error-detection]
-methods: []
+methods: [binary-search]
 mascot: beaver
 interaction:
   format: choice
