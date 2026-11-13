@@ -8,11 +8,11 @@ Paths in `props` that start with `./` are files in the task folder (usually `./i
 
 | format | use it for | props | answer in `solution.md` |
 |---|---|---|---|
-| `choice` | pick one (or several) of A–D, a number, a picture | `options: [{id, label?, image?, alt?}]`, `multiple?`, `columns?` | single: `answer: b` · multiple: `answer: [a, c]` (order does not matter) |
+| `choice` | pick one (or several) of A–D, a number, a picture (the component adds A, B, C … itself; don't prefix labels) | `options: [{id, label?, image?, alt?}]`, `multiple?`, `columns?` | single: `answer: b` · multiple: `answer: [a, c]` (order does not matter) |
 | `sort-list` | put things in an order | `items: [{id, label?, image?, alt?}]` in the **start order shown in the booklet**, `direction?: horizontal\|vertical`, `startLabel?`, `endLabel?` | `answer: [b, d, a, c, e]` |
-| `match` | assign each left item one right item | `left: [...]`, `right: [...]` | `answer: { l1: r3, l2: r1 }` |
+| `match` | assign each left item one right item (a right item may be used several times) | `left: [...]`, `right: [...]` | `answer: { l1: r3, l2: r1 }` |
 | `graph-pick` | click nodes, edges or a path in a graph/map | `pick: nodes\|edges\|path`, `nodes: [{id, x, y, label?, image?}]`, `edges: [{id?, from, to, label?}]`, `width`, `height` (coordinate system), `background?` (picture under the graph, crop with `--alpha`), `hideNodes?` (nodes invisible but still clickable; chosen ones get a yellow ring), `nodeImage?`, `nodeRadius?`, `directed?` | nodes/edges: list of ids, order does not matter (edge id defaults to `from-to`) · path: ordered list of node ids |
-| `pixel-grid` | colour cells in a grid | `rows`, `cols`, `palette: ["#fff", "#000"]`, `initial?: [[0,1],...]`, `locked?` | `answer: [[0,1,0],[1,1,0]]` (palette indices) |
+| `pixel-grid` | colour cells in a grid (index 0 = empty colour; wide grids scroll sideways) | `rows`, `cols`, `palette: ["#fff", "#000"]`, `initial?: [[0,1],...]`, `locked?` | `answer: [[0,1,0],[1,1,0]]` (palette indices) |
 | `command-sequence` | build a program from command buttons | `commands: [{id, label?, image?}]`, `maxLength?` | `answer: [up, up, right]` |
 | `input` | type a number or a word | `kind: number\|text`, `placeholder?`, `prefix?`, `suffix?`, `caseSensitive?` | `answer: "42"` (compared trimmed, case-insensitive unless `caseSensitive`) |
 | `custom` | anything else | free | free; `Task.vue` in the task folder must `emit('answer', value)` |

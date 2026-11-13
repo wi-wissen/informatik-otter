@@ -37,7 +37,7 @@ const single = [
             <div class="chips">{grp.topics.map((k) => <button type="button" class="chip outline" data-value={k} aria-pressed="false">{label.topic(k)}</button>)}</div>
           </div>
         ))}
-        <p class="note">Mehrere Themen: nur Aufgaben, die alle gewählten Themen haben.</p>
+        <p class="note">Mehrere Themen: nur Aufgaben, die alle gewählten Themen haben. Die Zahl zeigt, wie viele übrig bleiben.</p>
       </fieldset>
       <details class="more">
         <summary>Weitere Filter</summary>
@@ -106,6 +106,16 @@ const single = [
       c.hidden = !ok;
       if (ok) n++;
     }
+    // Topic chips: how many of the currently shown tasks have this topic; 0 → disabled.
+    const visible = cards.filter((c) => !c.hidden);
+    document.querySelectorAll<HTMLButtonElement>('[data-facet="topics"] button').forEach((b) => {
+      const v = b.dataset.value!;
+      const k = state.topics.has(v) ? visible.length : visible.filter((c) => c.dataset.topics!.split(' ').includes(v)).length;
+      let badge = b.querySelector('.n');
+      if (!badge) { badge = document.createElement('span'); badge.className = 'n'; b.append(badge); }
+      badge.textContent = String(k);
+      b.disabled = k === 0 && !state.topics.has(v);
+    });
     document.getElementById('count')!.textContent = String(n);
     document.getElementById('empty')!.hidden = n > 0;
     const url = new URL(location.href);
@@ -129,6 +139,9 @@ const single = [
   .chip.wide { justify-content: flex-start; text-align: left; border-radius: 10px; padding: 6px 11px; }
   .chip[aria-pressed="true"] { background: var(--primary); color: var(--primary-ink); border-color: var(--primary); }
   .group { display: grid; gap: 6px; }
+  .chip :global(.n) { font-weight: 500; opacity: .7; font-variant-numeric: tabular-nums; }
+  .chip:disabled { opacity: .4; cursor: default; }
+  .chip:disabled:hover { background: transparent; color: var(--ink); }
   .group[hidden] { display: none; }
   .group + .group { margin-top: 6px; }
   .sub { font-size: .8rem; color: var(--muted); }

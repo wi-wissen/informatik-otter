@@ -65,16 +65,16 @@ code { font-family: var(--font-mono); }
 /* Buttons */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  border: 0; border-radius: 999px; background: var(--primary); color: var(--primary-ink);
-  font: 700 1rem var(--font-display); padding: 11px 20px; cursor: pointer; text-decoration: none;
-  box-shadow: 0 3px 0 color-mix(in srgb, var(--primary) 55%, #000);
+  border: 2px solid transparent; border-radius: 999px; background: var(--primary); color: var(--primary-ink);
+  font: 700 1rem/1.2 var(--font-display); padding: 9px 18px; cursor: pointer; text-decoration: none;
 }
-.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--primary) 55%, #000); }
 .btn.secondary { background: var(--surface); color: var(--ink); border: 2px solid var(--line); box-shadow: none; }
 .btn.secondary:hover { border-color: var(--primary); }
-.btn.sun { background: var(--sun); color: #3b2a00; box-shadow: 0 3px 0 color-mix(in srgb, var(--sun) 60%, #000); }
-.btn.teacher { background: var(--teacher); color: var(--surface); box-shadow: 0 3px 0 color-mix(in srgb, var(--teacher) 55%, #000); }
-.btn.small { padding: 7px 14px; font-size: .9rem; }
+.btn.sun { background: var(--sun); color: #3b2a00; }
+.btn.teacher { background: var(--teacher); color: var(--surface); }
+.btn.small { padding: 6px 14px; font-size: .9rem; }
+.btn:hover { filter: brightness(1.08); }
+.btn.secondary:hover { filter: none; }
 
 /* Chips & tags */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -93,8 +93,8 @@ a.chip:hover, button.chip:hover { background: var(--primary); color: var(--prima
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 16px; display: grid; gap: 10px; align-content: start; min-width: 0;
 }
-a.card { color: var(--ink); text-decoration: none; transition: transform .15s, border-color .15s; }
-a.card:hover { border-color: var(--primary); transform: translateY(-2px); }
+a.card { color: var(--ink); text-decoration: none; }
+a.card:hover { border-color: var(--primary); }
 
 .prose { max-width: 68ch; }
 .prose > * + * { margin-top: .9em; }

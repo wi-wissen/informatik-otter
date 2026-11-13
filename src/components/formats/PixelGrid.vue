@@ -36,11 +36,11 @@ function paint(r: number, c: number) {
 </template>
 
 <style scoped>
-.pix { display: grid; gap: 10px; }
+.pix { display: grid; gap: 10px; min-width: 0; overflow-x: auto; }
 .palette { display: flex; gap: 8px; }
 .palette button { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--line); cursor: pointer; }
 .palette button.on { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
-.grid { display: grid; gap: 2px; background: var(--line); padding: 2px; border-radius: 8px; justify-content: start; width: max-content; max-width: 100%; }
-.cell { aspect-ratio: 1; width: 100%; min-width: 22px; border: 0; cursor: pointer; padding: 0; }
+.grid { display: grid; gap: 2px; background: var(--line); padding: 2px; border-radius: 8px; justify-content: start; width: max-content; }
+.cell { aspect-ratio: 1; width: 100%; min-width: 26px; border: 0; cursor: pointer; padding: 0; }
 .cell.locked { cursor: default; outline: 2px dashed rgba(0,0,0,.25); outline-offset: -4px; }
 </style>
