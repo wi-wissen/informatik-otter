@@ -1,5 +1,5 @@
 ---
-// Task body + interaction. Used on /tasks/<id>/ and on the short-link page.
+// A task as two white blocks: the task itself, then the answer area. Used on /tasks/<id>/ and /<short>/.
 import { render } from 'astro:content';
 import TaskPlayer from './TaskPlayer.vue';
 import { resolveAssets, type TaskEntry } from '../lib/tasks';
@@ -9,16 +9,20 @@ const { task } = Astro.props;
 const { Content } = await render(task);
 const props = resolveAssets(task.id, task.data.interaction.props ?? {});
 ---
-<article class="task">
-  <h1>{task.data.title}</h1>
-  <div class="prose body"><Content /></div>
-  <div class="play">
+<div class="task">
+  <article class="block statement">
+    <h1>{task.data.title}</h1>
+    <div class="prose body"><Content /></div>
+  </article>
+  <section class="block answer" aria-label="Deine Antwort">
     <TaskPlayer client:load taskId={task.id} format={task.data.interaction.format} props={props as Record<string, unknown>} solutionUrl={`/solutions/${task.id}/`} />
-  </div>
-</article>
+  </section>
+</div>
 <style>
-  .task { display: grid; gap: 18px; }
+  .task { display: grid; gap: 16px; }
+  .block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(18px, 3vw, 28px); min-width: 0; }
+  .statement { display: grid; gap: 16px; }
   h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
-  .body { font-size: 1.05rem; }
-  .play { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; min-width: 0; overflow-x: auto; }
+  .body { font-size: 1.05rem; max-width: none; }
+  .answer { overflow-x: auto; }
 </style>

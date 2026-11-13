@@ -63,10 +63,10 @@ async function toggleSolution() {
     <component :is="component" v-if="component" v-bind="props.props" @answer="onAnswer" />
     <p v-else class="missing">Diese Aufgabe hat noch keine Bedienoberfläche.</p>
 
-    <div v-if="teacher" class="teacher">
+    <div v-if="teacher" class="teacher-tools">
       <div class="row">
-        <button type="button" class="btn small" @click="check" :disabled="loading">Prüfen</button>
-        <button type="button" class="btn teacher small" @click="toggleSolution" :disabled="loading" :aria-expanded="showSolution">Hintergrund</button>
+        <button type="button" class="btn teacher small" @click="check" :disabled="loading">Prüfen</button>
+        <button type="button" class="btn teacher small" @click="toggleSolution" :disabled="loading" :aria-expanded="showSolution">{{ showSolution ? 'Hintergrund ausblenden' : 'Hintergrund' }}</button>
         <span v-if="feedback === 'right'" class="fb right" role="status">Richtig!</span>
         <span v-else-if="feedback === 'wrong'" class="fb wrong" role="status">Noch nicht richtig.</span>
         <span v-else-if="feedback === 'empty'" class="fb wrong" role="status">Noch keine Antwort gegeben.</span>
@@ -79,7 +79,7 @@ async function toggleSolution() {
 <style scoped>
 .player { display: grid; gap: 18px; }
 .missing { color: var(--muted); }
-.teacher { display: grid; gap: 12px; border-top: 2px dashed var(--teacher-soft); padding-top: 14px; }
+.teacher-tools { display: grid; gap: 12px; border-top: 2px dashed var(--teacher-soft); padding-top: 14px; }
 .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .fb { font-weight: 700; padding: 6px 12px; border-radius: 999px; }
 .fb.right { background: var(--good-soft); color: var(--good); }

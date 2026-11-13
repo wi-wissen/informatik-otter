@@ -1,18 +1,18 @@
 ---
-// Short link + QR code for the board. QR is rendered at build time.
+// Short code for the board, a share button and a QR code (rendered at build time).
 import QRCode from 'qrcode';
 import { SITE } from '../lib/tasks';
-interface Props { short: string }
-const { short } = Astro.props;
+interface Props { short: string; title: string }
+const { short, title } = Astro.props;
 const url = `${SITE}/${short}`;
 const svg = await QRCode.toString(url, { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#10313a', light: '#ffffff' } });
-const host = new URL(SITE).host;
 ---
 <section class="share" aria-label="Teilen">
-  <h2>Teilen</h2>
-  <p class="link"><span class="host">{host}/</span><b>{short}</b></p>
+  <h2>Code für die Klasse</h2>
+  <p class="code" translate="no">{short}</p>
+  <p class="hint">auf {new URL(SITE).host} eingeben</p>
   <div class="row">
-    <button type="button" class="btn small" data-copy={url}>Link kopieren</button>
+    <button type="button" class="btn secondary small" data-share={url} data-title={title}>Link teilen</button>
     <details>
       <summary class="btn secondary small">QR-Code</summary>
       <div class="qr" set:html={svg} />
@@ -20,20 +20,24 @@ const host = new URL(SITE).host;
   </div>
 </section>
 <script>
-  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) => {
+  document.querySelectorAll<HTMLButtonElement>('[data-share]').forEach((b) => {
+    const label = b.textContent;
     b.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(b.dataset.copy!); b.textContent = 'Kopiert!'; }
-      catch { b.textContent = b.dataset.copy!; }
-      setTimeout(() => (b.textContent = 'Link kopieren'), 2000);
+      const url = b.dataset.share!;
+      try {
+        if (navigator.share && matchMedia('(pointer: coarse)').matches) { await navigator.share({ title: b.dataset.title, url }); return; }
+        await navigator.clipboard.writeText(url);
+        b.textContent = 'Link kopiert';
+      } catch { b.textContent = url; }
+      setTimeout(() => (b.textContent = label), 2000);
     });
   });
 </script>
 <style>
-  .share { display: grid; gap: 10px; }
-  h2 { font-size: 1.1rem; }
-  .link { font: 500 1rem var(--font-mono); overflow-wrap: anywhere; }
-  .link .host { color: var(--muted); }
-  .link b { color: var(--primary); font-size: 1.3rem; }
+  .share { display: grid; gap: 4px; }
+  h2 { font: 700 .75rem var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .code { font: 700 2.4rem/1.1 var(--font-mono); color: var(--primary); letter-spacing: .06em; }
+  .hint { font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
   .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: start; }
   summary { list-style: none; }
   summary::-webkit-details-marker { display: none; }

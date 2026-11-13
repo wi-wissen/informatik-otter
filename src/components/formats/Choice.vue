@@ -25,7 +25,7 @@ function toggle(id: string) {
             :class="{ on: picked.includes(o.id) }"
             :role="multiple ? 'checkbox' : 'radio'" :aria-checked="picked.includes(o.id)"
             @click="toggle(o.id)">
-      <span class="key">{{ String.fromCharCode(65 + i) }}</span>
+      <span v-if="!o.label || o.label.length > 3 || o.image" class="key">{{ String.fromCharCode(65 + i) }}</span>
       <ItemFace :item="o" />
     </button>
   </div>
