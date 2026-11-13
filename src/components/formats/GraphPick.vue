@@ -66,6 +66,11 @@ const hint = { nodes: 'Tippe die passenden Punkte an.', edges: 'Tippe die passen
             :x1="byId[e.from].x" :y1="byId[e.from].y" :x2="byId[e.to].x" :y2="byId[e.to].y"
             :marker-end="directed ? 'url(#arrow)' : undefined" />
       <image v-if="background" :href="background" x="0" y="0" :width="W" :height="H" preserveAspectRatio="xMidYMid meet" />
+      <!-- with a background picture: repeat chosen edges on top, semi-transparent, so they stay visible over opaque drawings -->
+      <template v-if="background">
+        <line v-for="e in edges.filter(edgeOn)" :key="`o-${e.id}`" class="overlay"
+              :x1="byId[e.from].x" :y1="byId[e.from].y" :x2="byId[e.to].x" :y2="byId[e.to].y" />
+      </template>
       <g v-for="e in edges" :key="e.id" class="edge" :class="{ on: edgeOn(e), pickable: pick === 'edges' }"
          :tabindex="pick === 'edges' ? 0 : -1" :role="pick === 'edges' ? 'button' : undefined" :aria-pressed="pick === 'edges' ? edgeOn(e) : undefined"
          :aria-label="`Verbindung ${byId[e.from].label ?? e.from} – ${byId[e.to].label ?? e.to}`"
@@ -94,6 +99,7 @@ svg { width: 100%; max-width: 640px; height: auto; background: var(--surface); b
 .vis.on { stroke: var(--primary); stroke-width: 6; }
 .has-bg .vis { stroke: transparent; }
 .has-bg .vis.on { stroke: var(--sun); stroke-width: 14; stroke-linecap: round; }
+.overlay { stroke: var(--sun); stroke-width: 7; stroke-opacity: .55; stroke-linecap: round; pointer-events: none; }
 .edge .hit { stroke: transparent; stroke-width: 18; }
 .edge.pickable { cursor: pointer; }
 .edge.pickable:hover .hit { stroke: var(--primary-soft); stroke-opacity: .5; }

@@ -75,7 +75,9 @@ python3 tools/biber_pdf.py crop .import/biber<YEAR>.pdf --page 62 --bbox 52.2,28
 - Use `--alpha` for a picture that goes under a `graph-pick` (transparent background).
 - Do not crop the blue solution box into task pictures; solution pictures go into `solution.md`.
 - Combine boxes when one picture was split, or adjust the bbox by hand.
-- Always look at the cropped PNG once to check nothing is cut off.
+- Always look at the cropped PNG once to check nothing is cut off. `figures` sometimes returns only part
+  of a drawing (e.g. an island outline without its label); enlarge the bbox by hand then.
+- A crop can pull in neighbouring text from the page. Choose the bbox so it does not, or crop smaller.
 - Small inline icons in a sentence (a red flag, an apple): write the word instead.
 
 ## 5. Write `index.md`
@@ -108,6 +110,8 @@ Task text in Markdown.
 
 **Text rules**
 
+- YAML: quote values that contain `: ` or start with a special character, e.g. `summary: "Achtung: ..."`.
+- If the booklet contradicts itself (example text vs. solution), follow the solution and mention it in the commit message.
 - Copy the task text faithfully. Fix hyphenation from the PDF (`Teil­nahme` → `Teilnahme`) and line breaks.
 - Replace instructions that only make sense in the original online system (e.g. "Ziehe die Karten …")
   with wording that fits our component, or keep them if they still fit.
@@ -167,7 +171,9 @@ Rebuild what the student did in the online competition as closely as our formats
   sparingly; if a simpler format captures the question, prefer it and adapt the question text.
 
 For `graph-pick` on a picture: crop the picture with `--alpha`, use its size in points as `width`/`height`
-(pixel size divided by the scale), and read node positions from the picture.
+(pixel size divided by the scale; the crop includes the 2 pt padding), and read node positions from the
+picture. Chosen edges are highlighted under the picture and again semi-transparent on top, so opaque
+drawings are fine. Keep clickable edges apart: two edges closer than ~15 points are hard to hit.
 
 ## 8. Check
 
@@ -176,7 +182,8 @@ npm run validate
 npm run build
 ```
 
-Both must pass. Then look at one or two of your tasks in the browser (`npm run preview`, open
+Both must pass. Playwright: `require('playwright')` works from scripts outside the project, or use a
+`.cjs` file (the project is an ES module). Then look at one or two of your tasks in the browser (`npm run preview`, open
 `/tasks/<id>/`), switch on the teacher mode on `/teachers/`, solve the task and press **Prüfen**: it
 must say "Richtig!" for the correct answer.
 
