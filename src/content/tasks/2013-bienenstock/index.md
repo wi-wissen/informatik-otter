@@ -11,16 +11,25 @@ topics: [graphs, optimization]
 methods: []
 mascot: beaver
 interaction:
-  format: command-sequence
+  format: place
   props:
-    maxLength: 5
-    commands:
-      - { id: r, label: "→ rechts" }
-      - { id: l, label: "← links" }
-      - { id: ur, label: "↗ rechts oben" }
-      - { id: ul, label: "↖ links oben" }
-      - { id: dr, label: "↘ rechts unten" }
-      - { id: dl, label: "↙ links unten" }
+    reusable: true
+    background: ./img/slots.png
+    width: 169
+    height: 38
+    trayLabel: Pfeile
+    zones:
+      - { id: s1, label: "1. Bewegung", x: 8, y: 8.75, w: 24.5, h: 24.5 }
+      - { id: s2, label: "2. Bewegung", x: 39.5, y: 8.75, w: 24.5, h: 24.5 }
+      - { id: s3, label: "3. Bewegung", x: 71.25, y: 8.75, w: 24.5, h: 24.5 }
+      - { id: s5, label: "5. Bewegung", x: 134.5, y: 8.75, w: 24.5, h: 24.5 }
+    items:
+      - { id: r, image: ./img/arrow-r.png, alt: "Pfeil nach rechts" }
+      - { id: dr, image: ./img/arrow-dr.png, alt: "Pfeil nach rechts unten" }
+      - { id: dl, image: ./img/arrow-dl.png, alt: "Pfeil nach links unten" }
+      - { id: l, image: ./img/arrow-l.png, alt: "Pfeil nach links" }
+      - { id: ul, image: ./img/arrow-ul.png, alt: "Pfeil nach links oben" }
+      - { id: ur, image: ./img/arrow-ur.png, alt: "Pfeil nach rechts oben" }
 source:
   type: original
   work: Informatik-Biber 2013
@@ -35,6 +44,6 @@ Im Bienenstock kann die Biene sich von einer Wabe (Sechseck) zur nächsten beweg
 
 ![Der Bienenstock: Die Biene sitzt in der obersten Reihe ganz links, die Larve in der untersten Reihe ganz rechts. Dicke braune Wände trennen einige Waben.](./img/grid.png)
 
-Die Biene braucht 5 Bewegungen, um zur Larve zu kommen. Die vierte Bewegung steht schon fest: Sie führt nach rechts unten.
+**Zeige der Biene mit den Pfeilen einen Weg zur Larve!**
 
-**Zeige der Biene mit den Pfeilen einen Weg zur Larve!** Wähle fünf Pfeile; der vierte muss „rechts unten“ sein.
+Schiebe passende Pfeile auf die grauen Felder. Die Biene braucht 5 Bewegungen, um zur Larve zu kommen. Die vierte Bewegung steht schon fest (rechts unten).

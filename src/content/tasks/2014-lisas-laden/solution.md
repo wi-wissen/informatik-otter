@@ -1,7 +1,5 @@
 ---
-answers:
-  - { f220: b0, f130: b2, f120: b1, f100: b2, f90a: b1, f90b: b1, f60: b2 }
-  - { f220: b0, f130: b1, f120: b2, f100: b1, f90a: b2, f90b: b2, f60: b1 }
+answer: ok
 ---
 Insgesamt können die Boote mit 590 Kilogramm Fisch beladen werden: 120+90+90=300 Kilogramm auf dem einen Boot, 130+100+60=290 Kilogramm auf dem anderen. Welches der beiden Boote welche Fässer trägt, ist egal.
 

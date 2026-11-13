@@ -1,5 +1,5 @@
 ---
-answer: [r, dr, dl, dr, r]
+answer: { s1: r, s2: dr, s3: dl, s5: r }
 ---
 ![Die richtige Pfeilfolge: rechts, rechts unten, links unten, rechts unten, rechts. Darunter drei Wege mit 5 Bewegungen](./img/solution.png)
 

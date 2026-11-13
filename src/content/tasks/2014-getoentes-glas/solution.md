@@ -1,5 +1,5 @@
 ---
-answer: [[1, 1, 0, 1, 2, 0, 2, 1]]
+answer: { p1: tint, p2: tint, p4: tint, p5: dark, p7: dark, p8: tint }
 ---
 Zuerst müssen wir klären, welche der Bullaugen sich gegenüber liegen. Dafür nutzen wir den Anker als Anhaltspunkt. Wenn wir jetzt durch die Bullaugen-Paare blicken, ergeben sich folgende Durchsichten:
 

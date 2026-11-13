@@ -1,9 +1,9 @@
 ---
 answers:
-  - [alfie, charlie, berta, eddie, dora]
-  - [alfie, charlie, berta, dora, eddie]
-  - [dora, eddie, berta, charlie, alfie]
-  - [eddie, dora, berta, charlie, alfie]
+  - { s1: alfie, s2: charlie, s3: berta, s4: eddie, s5: dora }
+  - { s1: alfie, s2: charlie, s3: berta, s4: dora, s5: eddie }
+  - { s1: dora, s2: eddie, s3: berta, s4: charlie, s5: alfie }
+  - { s1: eddie, s2: dora, s3: berta, s4: charlie, s5: alfie }
 ---
 Die vier Reihenfolgen
 

@@ -11,14 +11,18 @@ topics: [logic]
 methods: [boolean-logic]
 mascot: beaver
 interaction:
-  format: choice
+  format: hotspots
   props:
-    multiple: true
-    columns: 3
-    options:
-      - { id: a, label: linke Blume }
-      - { id: b, label: mittlere Blume }
-      - { id: c, label: rechte Blume }
+    background: ./img/system.png
+    width: 388
+    height: 460
+    spots:
+      - { id: a, label: linke Blume, x: 50, y: 414, w: 60, h: 62 }
+      - { id: b, label: mittlere Blume, x: 192, y: 414, w: 60, h: 62 }
+      - { id: c, label: rechte Blume, x: 336, y: 414, w: 60, h: 62 }
+    states:
+      - { id: dry, label: durstig, image: ./img/flower-dry.png }
+      - { id: wet, label: bekommt Wasser, image: ./img/flower-wet.png }
 source:
   type: original
   work: Informatik-Biber 2014
@@ -34,6 +38,8 @@ Ein Ventil lässt Wasser nur durch, wenn es offen ist.
 | ![Geschlossenes Ventil: der rote Balken liegt quer im Rohr](./img/valve-closed.png) | ![Offenes Ventil: der rote Balken liegt längs im Rohr](./img/valve-open.png) |
 | Wenn das Ventil zu ist, fließt kein Wasser. | Wenn das Ventil offen ist, fließt Wasser durch. |
 
-![Drei Trichter, aus denen zwei Wasser in ein Rohrsystem mit Ventilen geben; unten stehen drei Blumen](./img/system.png)
+Im Bild unten geben drei Trichter, von denen zwei Wasser enthalten, ihr Wasser in ein Rohrsystem mit Ventilen. Unten stehen drei durstige Blumen.
 
-**Welche der drei durstigen Blumen bekommen Wasser bei dieser Stellung der Ventile? Wähle alle diese Blumen aus.**
+**Welche der drei durstigen Blumen bekommen Wasser bei dieser Stellung der Ventile?**
+
+Blumen, die Wasser bekommen, sollen so aussehen: ![Eine aufrechte, blühende Blume](./img/flower-wet.png) Blumen, die kein Wasser bekommen, sollen so aussehen: ![Eine hängende, durstige Blume](./img/flower-dry.png) Klicke auf die Blumen, um ihr Aussehen zu ändern.

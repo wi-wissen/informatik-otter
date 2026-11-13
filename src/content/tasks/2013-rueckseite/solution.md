@@ -1,5 +1,5 @@
 ---
-answer: [e, "7"]
+answer: ["7", e]
 ---
 ![Die Rückseiten der Karten: 4, V, 2, R](./img/solution.png)
 

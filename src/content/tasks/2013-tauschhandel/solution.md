@@ -1,5 +1,5 @@
 ---
-answer: [bert, gustav, jeanine, norbert]
+answer: ok
 ---
 Benny tauscht nacheinander: bei Bert die Bürste gegen einen Korb, bei Gustav den Korb gegen einen Hund, bei Jeanine den Hund gegen einen Teppich und bei Norbert den Teppich gegen ein Haus.
 

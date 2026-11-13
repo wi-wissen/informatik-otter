@@ -1,5 +1,5 @@
 ---
-answer: [[0, 0, 0, 0, 1], [1, 0, 1, 1, 0], [0, 0, 0, 1, 0], [0, 0, 1, 0, 1], [1, 0, 0, 1, 0]]
+answer: { ae: check, ba: check, bc: check, bd: check, cd: check, dc: check, de: check, ea: check, ed: check }
 ---
 Ein Häkchen im Tabellenfeld in Zeile X und Spalte Y (kurz: im Feld (X,Y)) bedeutet, dass Jack vom Knotenpunkt X zum Knotenpunkt Y fahren kann. Für eine in beiden Richtungen befahrbare Straße wie Mulberry Alley zwischen den Knotenpunkten D und E müssen also zwei Häkchen gesetzt werden: eines ins Feld (D,E) und eines ins Feld (E,D). Verläuft zwischen zwei Knotenpunkten eine Einbahnstraße, wie etwa die Plum Lane von B nach C, darf nur ein Häkchen gesetzt werden, in diesem Fall ins Feld (B,C).
 

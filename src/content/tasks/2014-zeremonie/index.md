@@ -13,8 +13,9 @@ topics: [graphs]
 methods: [topological-sort]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: custom
   props:
+    mode: insert
     direction: vertical
     startLabel: zuerst
     endLabel: zuletzt
@@ -39,4 +40,6 @@ Eine feierliche Zeremonie besteht aus einzelnen Aktionen, die unbedingt in der r
 
 ![Die Aktionen und ihre Vorrang-Pfeile: Chorgesang → Trommelwirbel, Chorgesang → Lange Rede, Trommelwirbel → Tanzeinlage, Lange Rede → Tanzeinlage, Lange Rede → Preisverleihung, Lange Rede → Feuerwerk, Tanzeinlage → Fanfare, Fanfare → Feuerwerk, Preisverleihung → Danksagung, Feuerwerk → Danksagung](./img/plan.png)
 
-**Plane eine Zeremonie!** Bringe die einzelnen Aktionen in eine richtige Reihenfolge. Die erste Aktion der Zeremonie soll oben stehen, darunter kommt die nächste, usw.
+**Plane eine Zeremonie!**
+
+Ziehe die einzelnen Aktionen in der Box in eine richtige Reihenfolge. Die erste Aktion der Zeremonie soll oben stehen, darunter kommt die nächste, usw.

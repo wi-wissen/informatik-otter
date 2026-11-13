@@ -12,11 +12,24 @@ topics: [modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: hotspots
   props:
-    rows: 1
-    cols: 8
-    palette: ["#ffffff", "#b3b3b3", "#2b2b2b"]
+    background: ./img/yacht.png
+    width: 618
+    height: 280
+    spots:
+      - { id: p1, label: "Bullauge 1", x: 58, y: 156, w: 38, h: 38 }
+      - { id: p2, label: "Bullauge 2", x: 120, y: 156, w: 38, h: 38 }
+      - { id: p3, label: "Bullauge 3", x: 183, y: 156, w: 38, h: 38 }
+      - { id: p4, label: "Bullauge 4", x: 246, y: 156, w: 38, h: 38 }
+      - { id: p5, label: "Bullauge 5", x: 308, y: 156, w: 38, h: 38 }
+      - { id: p6, label: "Bullauge 6", x: 371, y: 156, w: 38, h: 38 }
+      - { id: p7, label: "Bullauge 7", x: 434, y: 156, w: 38, h: 38 }
+      - { id: p8, label: "Bullauge 8", x: 496, y: 156, w: 38, h: 38 }
+    states:
+      - { id: clear, label: klar, image: ./img/glass-clear.png }
+      - { id: tint, label: getönt, image: ./img/glass-tint.png }
+      - { id: dark, label: stark getönt, image: ./img/glass-dark.png }
 source:
   type: original
   work: Informatik-Biber 2014
@@ -39,8 +52,4 @@ Da sich immer zwei Bullaugen genau gegenüber liegen, kann man von jeder Seite d
 
 ![Zwei klare Gläser ergeben eine klare Durchsicht, ein getöntes Glas ergibt eine getönte, zwei getönte Gläser eine stark getönte Durchsicht](./img/views.png)
 
-Die Yacht hat den Anker auf der rechten Seite:
-
-![Die Yacht von der Seite mit acht Bullaugen; der Anker ist rechts](./img/yacht.png)
-
-**Stelle die acht Durchsichten so ein, dass sie dem Auftrag des Glasermeisters entsprechen. Die Durchsichten sind so angeordnet, wie man sie auf der Yacht mit dem Anker rechts sieht. Tipp: Achte auf die Position der Anker.**
+**Klicke auf die Bullaugen.** Ändere die Durchsichten so, dass sie dem Auftrag des Glasermeisters entsprechen. Tipp: Achte auf die Position der Anker.

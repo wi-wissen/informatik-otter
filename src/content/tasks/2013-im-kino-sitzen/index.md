@@ -13,11 +13,18 @@ topics: [graphs, optimization]
 methods: [hamilton-path, brute-force]
 mascot: beaver
 interaction:
-  format: sort-list
+  format: place
   props:
-    direction: horizontal
-    startLabel: links
-    endLabel: rechts
+    background: ./img/seats.png
+    width: 263.7
+    height: 52.7
+    trayLabel: Freunde
+    zones:
+      - { id: s1, label: "Sitz 1", x: 1.7, y: 2, w: 50, h: 49 }
+      - { id: s2, label: "Sitz 2", x: 53.7, y: 2, w: 50, h: 49 }
+      - { id: s3, label: "Sitz 3", x: 105.7, y: 2, w: 50, h: 49 }
+      - { id: s4, label: "Sitz 4", x: 157.7, y: 2, w: 50, h: 49 }
+      - { id: s5, label: "Sitz 5", x: 209.7, y: 2, w: 50, h: 49 }
     items:
       - { id: alfie, label: Alfie }
       - { id: berta, label: Berta }
@@ -44,4 +51,4 @@ Und dies ist das Netz ihrer Beziehungen:
 
 ![Netz der Beziehungen: Alfie–Berta befreundet (blau gestrichelt), Alfie–Charlie dick befreundet (grün), Charlie–Berta verliebt (rot doppelt), Berta–Dora dick befreundet (grün), Berta–Eddie dick befreundet (grün), Charlie–Dora befreundet (blau gestrichelt), Dora–Eddie verliebt (rot doppelt)](./img/net.png)
 
-**Wie können sich die Freunde im Kino setzen, damit ihr Gruppen-Wohlsein so groß wie möglich ist?** Bringe die Namen in die Reihenfolge der Sitze von links nach rechts. Es gibt mehrere richtige Lösungen. Es ist gleich, welche davon du findest.
+**Wie können sich die Freunde im Kino setzen, damit ihr Gruppen-Wohlsein so groß wie möglich ist?** Schiebe die Namen aus dem Netz auf die Sitze. Es gibt mehrere richtige Lösungen. Es ist gleich, welche davon du findest.

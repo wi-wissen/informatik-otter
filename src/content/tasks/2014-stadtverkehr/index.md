@@ -11,12 +11,36 @@ topics: [graphs, modelling]
 methods: []
 mascot: beaver
 interaction:
-  format: pixel-grid
+  format: hotspots
   props:
-    rows: 5
-    cols: 5
-    palette: ["#ffffff", "#a6e05c"]
-    locked: [[true, false, false, false, false], [false, true, false, false, false], [false, false, true, false, false], [false, false, false, true, false], [false, false, false, false, true]]
+    background: ./img/empty-table.png
+    width: 141.3
+    height: 142.5
+    spotSize: 20
+    spots:
+      - { id: ab, label: "Von A nach B", x: 60.4, y: 37.1, w: 21, h: 21 }
+      - { id: ac, label: "Von A nach C", x: 83.1, y: 37.1, w: 21, h: 21 }
+      - { id: ad, label: "Von A nach D", x: 105.9, y: 37.1, w: 21, h: 21 }
+      - { id: ae, label: "Von A nach E", x: 128.6, y: 37.1, w: 21, h: 21 }
+      - { id: ba, label: "Von B nach A", x: 37.6, y: 59.9, w: 21, h: 21 }
+      - { id: bc, label: "Von B nach C", x: 83.1, y: 59.9, w: 21, h: 21 }
+      - { id: bd, label: "Von B nach D", x: 105.9, y: 59.9, w: 21, h: 21 }
+      - { id: be, label: "Von B nach E", x: 128.6, y: 59.9, w: 21, h: 21 }
+      - { id: ca, label: "Von C nach A", x: 37.6, y: 82.6, w: 21, h: 21 }
+      - { id: cb, label: "Von C nach B", x: 60.4, y: 82.6, w: 21, h: 21 }
+      - { id: cd, label: "Von C nach D", x: 105.9, y: 82.6, w: 21, h: 21 }
+      - { id: ce, label: "Von C nach E", x: 128.6, y: 82.6, w: 21, h: 21 }
+      - { id: da, label: "Von D nach A", x: 37.6, y: 105.4, w: 21, h: 21 }
+      - { id: db, label: "Von D nach B", x: 60.4, y: 105.4, w: 21, h: 21 }
+      - { id: dc, label: "Von D nach C", x: 83.1, y: 105.4, w: 21, h: 21 }
+      - { id: de, label: "Von D nach E", x: 128.6, y: 105.4, w: 21, h: 21 }
+      - { id: ea, label: "Von E nach A", x: 37.6, y: 128.1, w: 21, h: 21 }
+      - { id: eb, label: "Von E nach B", x: 60.4, y: 128.1, w: 21, h: 21 }
+      - { id: ec, label: "Von E nach C", x: 83.1, y: 128.1, w: 21, h: 21 }
+      - { id: ed, label: "Von E nach D", x: 105.9, y: 128.1, w: 21, h: 21 }
+    states:
+      - { id: empty, label: "" }
+      - { id: check, label: Häkchen, image: ./img/check.png }
 source:
   type: original
   work: Informatik-Biber 2014
@@ -35,6 +59,8 @@ Auch im Nachbarort Beavertown wurden einige Straßen zu Einbahnstraßen gemacht.
 
 ![Karte von Beavertown mit den Knotenpunkten A bis E. E Walnut St führt als Einbahnstraße von B nach A, N Sassafras St als Einbahnstraße von B nach D, Plum Ln als Einbahnstraße von B nach C. Center St (A–E) und Mulberry Alley (E–D–C) sind in beiden Richtungen befahrbar](./img/town.png)
 
-Jack braucht also auch für Beavertown eine Tabelle mit Häkchen. Die Tabelle hat fünf Zeilen (A bis E von oben nach unten) und fünf Spalten (A bis E von links nach rechts). Ein Häkchen in Zeile X und Spalte Y bedeutet: Jack darf von X nach Y fahren. Die Felder auf der Diagonale (von A nach A usw.) sind gesperrt.
+Jack braucht also auch für Beavertown eine Tabelle mit Häkchen.
 
-**Setze die Häkchen in die richtigen Felder! Tippe dazu auf die Felder (grün = Häkchen).**
+Hier siehst du die leere Tabelle für Beavertown.
+
+**Setze die Häkchen in die richtigen Felder!** Klicke dazu auf die Felder.
