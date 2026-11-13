@@ -39,6 +39,4 @@ source:
 ---
 Im Wald gibt es Lichtungen und Wege dazwischen. Von jeder Lichtung aus kann man die von dort ausgehenden Wege genau bis zur nächsten Lichtung überblicken. Eine Gruppe von Helfern soll insgesamt alle Wege überblicken können. Die Försterin will dazu möglichst wenige Lichtungen mit Helfern besetzen.
 
-![Ein Wald mit sieben Lichtungen, durch acht Wege verbunden: Oben Mitte und oben rechts, links oben und links unten, unten in der Mitte, unten rechts der Mitte und ganz rechts unten.](./img/forest.png)
-
 **Welche Lichtungen soll die Försterin besetzen? Tippe die Lichtungen an.**

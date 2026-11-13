@@ -44,6 +44,6 @@ Müller Mert hat sechs Mühlen. Das Wasser fließt vom Berg zu den Mühlen, wie 
 
 Bei drei Mühlen muss der Müller noch das Mühlrad einbauen. Zu diesen Mühlen soll deshalb kein Wasser mehr fließen. Zu den drei Mühlen mit Mühlrad soll das Wasser aber weiter fließen.
 
-![Zwei Flusssysteme, die vom Berg oben zu den sechs Mühlen unten und rechts fließen, mit neun roten Wassersperren. Die Mühlen mit Mühlrad sind die braune ganz links unten, die blaue unten Mitte-rechts und die rote oben rechts; ohne Mühlrad sind die grüne, die gelbe und die violette.](./img/mills.png)
+Im Bild haben die braune, die blaue und die rote Mühle schon ein Mühlrad; bei der grünen, der gelben und der violetten Mühle fehlt es noch.
 
 **Welche Sperren soll der Müller schließen? Tippe die Sperren im Bild an.**

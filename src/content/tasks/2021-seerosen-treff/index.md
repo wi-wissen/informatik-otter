@@ -72,6 +72,4 @@ source:
 ---
 Auf einem See können zwei Frösche von Seerosenblatt zu Seerosenblatt springen – aber nur entlang der Pfeile.
 
-![Ein Raster aus 8 Spalten und 5 Zeilen Seerosenblättern mit Pfeilen zwischen benachbarten Blättern. Der rote Frosch sitzt auf dem Blatt ganz links unten, der blaue Frosch auf dem Blatt ganz rechts in der dritten Zeile von unten.](./img/lake.png)
-
 **Auf welchem Seerosenblatt können sie sich treffen? Tippe das Blatt an.**

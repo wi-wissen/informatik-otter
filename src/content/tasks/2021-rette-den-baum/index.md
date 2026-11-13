@@ -76,6 +76,4 @@ Das Bild zeigt ein Beispiel: Um die beiden Blätter zu entfernen, kann Bruno ent
 
 Unten siehst du den gesamten Baum. (Der Ast zum untersten Blatt rechts hat die Zahl 1; sie ist im Bild nicht eingetragen.)
 
-![Der ganze Baum. Links am Stamm der Ast 9: Von ihm gehen zwei Blattäste mit 3 und 1 sowie ein Ast 5 ab, an dem zwei Blattäste mit 1 und 3 hängen. In der Mitte der Ast 8: Von ihm gehen ein Ast 4 mit zwei Blattästen 3 und 5 sowie ein Ast 5 mit zwei Blattästen 2 und 1 ab. Rechts unten der Ast 5: Von ihm gehen drei Blattäste mit 3, 2 und 1 ab.](./img/tree.png)
-
 **Welche Äste wird Bruno absägen, um so schnell wie möglich fertig zu sein? Tippe die Äste im Bild an.**

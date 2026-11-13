@@ -53,6 +53,4 @@ Für ein Projekt sollst du acht Personen in Gruppen aufteilen. Ein Blitz zwische
 
 Nun willst du die Personen in zwei Gruppen aufteilen. Das ist möglich, wenn du die richtigen beiden Personen zur Zusammenarbeit überzeugst – also den richtigen Blitz entfernst.
 
-![Die acht Personen ohne Gruppenfarben, mit den zehn Blitzen](./img/people.png)
-
 **Entferne den richtigen Blitz! Tippe ihn im Bild an.**

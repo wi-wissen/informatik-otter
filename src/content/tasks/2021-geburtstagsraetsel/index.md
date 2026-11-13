@@ -53,6 +53,4 @@ Zu Beginn hat Bastian einen runden (dunkelblauen) Baustein.
 
 Er will höchstens fünf Türen öffnen, um das Geschenk zu erreichen.
 
-![Eine Kiste mit 15 Türen in drei Reihen zu je fünf (A bis E, F bis J, K bis O). Hinter jeder Tür liegt ein Baustein, rechts neben der Tür ist das Loch. Reihe 1, Tür/Loch: A Herz/Mond, B Quadrat/Kreis, C Kleeblatt/Tanne, D Herz/Kreis, E Quadrat/Stern. Reihe 2: F Dreieck (Spitze unten)/Quadrat, G Kreuz/Herz, H Geschenk/Kleeblatt, I Mond/Dreieck (Spitze unten), J Stern/Kreis. Reihe 3: K Tanne/Mond, L Dreieck (Spitze unten)/Kreis, M Tanne/Raute, N Raute/Kleeblatt, O Herz/Kreuz.](./img/box.png)
-
 **Welche Tür muss Bastian dafür zuerst öffnen? Tippe sie an.**

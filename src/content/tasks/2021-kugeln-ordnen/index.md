@@ -40,4 +40,4 @@ Hier ist ein Beispiel, wie du Kugeln nach diesen Regeln ordnen kannst:
 
 ![Beispiel: Die Kugeln werden in mehreren Schritten umgelegt, bis zwei Gläser nur gleichfarbige Kugeln enthalten und ein Glas leer ist.](./img/example.png)
 
-**Ordne diese Kugeln!** Glas 1 enthält von oben nach unten: blau, orange, blau. Glas 2 enthält von oben nach unten: orange, blau, orange. Glas 3 ist leer. In jedes Glas passen drei Kugeln.
+**Ordne diese Kugeln!** Glas 1 enthält von oben nach unten: blau, orange, blau. Glas 2 enthält von oben nach unten: orange, blau, orange. Glas 3 ist leer. In jedes Glas passen drei Kugeln. (Hier unten sind die einen Kugeln gestreift blau, die anderen gelb-orange.)
