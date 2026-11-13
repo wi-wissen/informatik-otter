@@ -8,7 +8,7 @@ gi:
   content: [information-data]
   process: [modelling, reasoning]
 topics: [modelling]
-methods: []
+methods: [topological-sort]
 mascot: beaver
 interaction:
   format: choice
