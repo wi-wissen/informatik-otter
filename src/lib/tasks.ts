@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { getImage } from 'astro:assets';
 import taxonomy from '../data/taxonomy.json';
 
 export type TaskEntry = CollectionEntry<'tasks'>;
@@ -10,22 +11,27 @@ export async function getTasks(): Promise<TaskEntry[]> {
   return all.sort((a, b) => (b.data.source.year ?? 0) - (a.data.source.year ?? 0) || a.id.localeCompare(b.id));
 }
 
-// Files inside task folders (img/, data/ ...) as public URLs, keyed by "/src/content/tasks/<id>/<path>".
-const assetUrls = import.meta.glob('/src/content/tasks/*/**/*.{png,jpg,jpeg,gif,svg,webp}', {
-  eager: true, query: '?url', import: 'default',
-}) as Record<string, string>;
+// Pictures inside task folders, loaded lazily so only pictures that are really used end up in the build.
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/content/tasks/*/**/*.{png,jpg,jpeg,gif,webp}');
+const svgs = import.meta.glob('/src/content/tasks/*/**/*.svg', { query: '?url', import: 'default' }) as Record<string, () => Promise<string>>;
+
+/** URL of a task file "./img/x.png": raster pictures are converted to WebP at build time. */
+export async function assetUrl(taskId: string, path: string): Promise<string> {
+  const key = `/src/content/tasks/${taskId}/${path.slice(2)}`;
+  if (svgs[key]) return svgs[key]();
+  if (!images[key]) throw new Error(`Task ${taskId}: file not found: ${path}`);
+  const meta = (await images[key]()).default;
+  const out = await getImage({ src: meta, format: 'webp', quality: 82 });
+  return out.src;
+}
 
 /** Replace every string "./something" in props with the built URL of that file in the task folder. */
-export function resolveAssets<T>(taskId: string, value: T): T {
-  if (typeof value === 'string' && value.startsWith('./')) {
-    const key = `/src/content/tasks/${taskId}/${value.slice(2)}`;
-    const url = assetUrls[key];
-    if (!url) throw new Error(`Task ${taskId}: file not found: ${value}`);
-    return url as T;
-  }
-  if (Array.isArray(value)) return value.map((v) => resolveAssets(taskId, v)) as T;
+export async function resolveAssets<T>(taskId: string, value: T): Promise<T> {
+  if (typeof value === 'string' && value.startsWith('./')) return (await assetUrl(taskId, value)) as T;
+  if (Array.isArray(value)) return (await Promise.all(value.map((v) => resolveAssets(taskId, v)))) as T;
   if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, resolveAssets(taskId, v)])) as T;
+    const entries = await Promise.all(Object.entries(value).map(async ([k, v]) => [k, await resolveAssets(taskId, v)] as const));
+    return Object.fromEntries(entries) as T;
   }
   return value;
 }

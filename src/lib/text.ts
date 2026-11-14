@@ -1,13 +1,15 @@
 // Plain-text (Markdown) renderings of tasks for llms.txt and friends.
 import { getCollection } from 'astro:content';
-import { SITE, label, formatLabel, gradeText, resolveAssets, type TaskEntry } from './tasks';
+import { SITE, label, formatLabel, gradeText, assetUrl, type TaskEntry } from './tasks';
 
-const absolute = (taskId: string, md: string) =>
-  md.replace(/\]\((\.\/[^)\s]+)\)/g, (m, p) => {
-    try { return `](${SITE}${resolveAssets(taskId, p)})`; } catch { return m; }
-  });
+async function absolute(taskId: string, md: string) {
+  const paths = [...new Set([...md.matchAll(/\]\((\.\/[^)\s]+)\)/g)].map((m) => m[1]))];
+  const urls = new Map<string, string>();
+  for (const p of paths) { try { urls.set(p, SITE + (await assetUrl(taskId, p))); } catch { /* keep relative */ } }
+  return md.replace(/\]\((\.\/[^)\s]+)\)/g, (m, p) => (urls.has(p) ? `](${urls.get(p)})` : m));
+}
 
-export function taskMarkdown(t: TaskEntry, extra = '') {
+export async function taskMarkdown(t: TaskEntry, extra = '') {
   const d = t.data;
   const s = d.source;
   return [
@@ -27,7 +29,7 @@ export function taskMarkdown(t: TaskEntry, extra = '') {
     '',
     '## Aufgabe',
     '',
-    absolute(t.id, (t.body ?? '').trim()),
+    await absolute(t.id, (t.body ?? '').trim()),
     '',
     '## Interaktion',
     '',
@@ -51,7 +53,7 @@ export async function solutionMarkdown(t: TaskEntry) {
     JSON.stringify(sol.data.answers ?? sol.data.answer),
     '```',
     '',
-    absolute(t.id, (sol.body ?? '').trim()),
+    await absolute(t.id, (sol.body ?? '').trim()),
   ].join('\n');
 }
 
