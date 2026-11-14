@@ -15,7 +15,7 @@ const byGi = Object.entries(taxonomy.giContent).map(([gi, giLabel]) => ({
     <h1>Themen</h1>
     <p class="muted">Geordnet nach den Inhaltsbereichen der GI-Bildungsstandards.</p>
     {byGi.map((g) => (
-      <section>
+      <section id={g.gi}>
         <h2>{g.giLabel}</h2>
         <div class="grid">{g.topics.map((t) => <a class="card topic" href={`/tasks/?topic=${t.k}`}><b>{t.label}</b><span class="muted">{t.n} {t.n === 1 ? 'Aufgabe' : 'Aufgaben'}</span></a>)}</div>
       </section>

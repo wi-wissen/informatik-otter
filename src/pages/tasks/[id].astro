@@ -15,12 +15,12 @@ const d = task.data;
     <div class="main"><TaskView task={task} /></div>
     <aside>
       <dl class="meta">
-        <dt>Klassen</dt><dd>{Object.entries(d.grades).map(([g, diff]) => <span class="chip sun">{g}: {label.difficulty(diff)}</span>)}</dd>
-        <dt>Themen</dt><dd>{d.topics.map((t) => <a class="chip" href={`/tasks/?topic=${t}`}>{label.topic(t)}</a>)}</dd>
-        <dt>GI-Inhaltsbereich</dt><dd>{d.gi.content.map((c) => <span class="chip outline">{label.giContent(c)}</span>)}</dd>
+        <dt>Klassen</dt><dd>{Object.entries(d.grades).map(([g, diff]) => <a class="chip sun" href={`/tasks/?grade=${g}`} title={`Alle Aufgaben für Klasse ${g}`}>{g}: {label.difficulty(diff)}</a>)}</dd>
+        <dt>Themen</dt><dd>{d.topics.map((t) => <a class="chip" href={`/tasks/?topic=${t}`} title={`Alle Aufgaben zum Thema ${label.topic(t)}`}>{label.topic(t)}</a>)}</dd>
+        <dt>GI-Inhaltsbereich</dt><dd>{d.gi.content.map((c) => <a class="chip outline" href={`/topics/#${c}`} title="Themen dieses Inhaltsbereichs">{label.giContent(c)}</a>)}</dd>
         {d.gi.process.length > 0 && <><dt>GI-Prozessbereich</dt><dd>{d.gi.process.map((p) => <span class="chip outline">{label.giProcess(p)}</span>)}</dd></>}
-        {d.methods.length > 0 && <><dt class="teacher-only">Verfahren</dt><dd class="teacher-only">{d.methods.map((m) => <span class="chip method">#{label.method(m)}</span>)}</dd></>}
-        <dt>Format</dt><dd><span class="chip outline">{formatLabel[d.interaction.format]}</span></dd>
+        {d.methods.length > 0 && <><dt class="teacher-only">Verfahren</dt><dd class="teacher-only">{d.methods.map((m) => <a class="chip method" href={`/tasks/?q=${encodeURIComponent(label.method(m).replace(/ \(.*\)$/, ''))}`} title="Alle Aufgaben mit diesem Verfahren">#{label.method(m)}</a>)}</dd></>}
+        <dt>Format</dt><dd><a class="chip outline" href={`/tasks/?format=${d.interaction.format}`} title="Alle Aufgaben mit diesem Format">{formatLabel[d.interaction.format]}</a></dd>
       </dl>
       <ShareBox short={d.short} title={d.title} />
     </aside>

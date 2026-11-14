@@ -88,9 +88,11 @@ code { font-family: var(--font-mono); }
 .chip {
   display: inline-flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 700;
   padding: 4px 11px; border-radius: 999px; background: var(--primary-soft); color: var(--ink);
-  text-decoration: none; border: 0; cursor: pointer; font-family: var(--font-body);
+  text-decoration: none; border: 0; cursor: default; font-family: var(--font-body);
 }
+a.chip, button.chip { cursor: pointer; }
 a.chip:hover, button.chip:hover { background: var(--primary); color: var(--primary-ink); }
+a.chip.method:hover { background: var(--teacher); color: var(--surface); }
 .chip.sun { background: var(--sun-soft); }
 .chip.outline { background: transparent; border: 1.5px solid var(--line); }
 .chip.on { background: var(--primary); color: var(--primary-ink); }

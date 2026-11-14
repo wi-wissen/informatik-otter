@@ -79,6 +79,8 @@ const single = [
     }));
   });
   q.value = params.get('q') ?? '';
+  // a format/source filter from a link opens 'Weitere Filter'
+  if (state.format.size || state.source.size) (document.querySelector('.more') as HTMLDetailsElement).open = true;
 
   function apply() {
     sets.forEach((fs) => fs.querySelectorAll<HTMLButtonElement>('button').forEach((b) =>
